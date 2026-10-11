@@ -1,0 +1,92 @@
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref,bookmark}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,listings,xcolor}
+\usepackage{graphicx}
+\usepackage{verbatim}
+% p18 (finding H4 of the p17 independent rebuild): straight ASCII quotes in verbatim listings (upquote.sty is not
+% installed; this is its mechanism via textcomp), so ' and ` in listings are byte-copyable from the PDF
+\usepackage{textcomp}
+\makeatletter
+\begingroup\catcode`'=\active \catcode``=\active
+\g@addto@macro\@noligs{\let'\textquotesingle \let`\textasciigrave}
+\endgroup
+\makeatother
+\lstset{extendedchars=false,basicstyle=\ttfamily\scriptsize,breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,frame=single,rulecolor=\color{gray!40},numbers=left,numberstyle=\tiny\color{gray},numbersep=4pt,
+literate=
+  {α}{{\ensuremath{\alpha}}}1 {β}{{\ensuremath{\beta}}}1 {γ}{{\ensuremath{\gamma}}}1
+  {δ}{{\ensuremath{\delta}}}1 {ζ}{{\ensuremath{\zeta}}}1 {κ}{{\ensuremath{\kappa}}}1
+  {λ}{{\ensuremath{\lambda}}}1 {μ}{{\ensuremath{\mu}}}1 {ν}{{\ensuremath{\nu}}}1
+  {π}{{\ensuremath{\pi}}}1 {ρ}{{\ensuremath{\rho}}}1 {σ}{{\ensuremath{\sigma}}}1
+  {φ}{{\ensuremath{\phi}}}1 {Π}{{\ensuremath{\Pi}}}1 {Φ}{{\ensuremath{\Phi}}}1
+  {∂}{{\ensuremath{\partial}}}1 {≤}{{\ensuremath{\le}}}1 {≥}{{\ensuremath{\ge}}}1
+  {≠}{{\ensuremath{\neq}}}1 {≡}{{\ensuremath{\equiv}}}1 {→}{{\ensuremath{\to}}}1
+  {⟨}{{\ensuremath{\langle}}}1 {⟩}{{\ensuremath{\rangle}}}1
+  {⇒}{{$\\Rightarrow$}}1 {∼}{{$\\sim$}}1 {⊂}{{$\\subset$}}1 {≠}{{$\\neq$}}1
+  {⁻}{{\textsuperscript{-}}}1 {²}{{\textsuperscript{2}}}1 {⁴}{{\textsuperscript{4}}}1
+  {₈}{{\ensuremath{_8}}}1
+}
+
+\lstdefinestyle{python}{language=Python,keywordstyle=\color{blue!60!black}\bfseries,commentstyle=\color{green!40!black}\itshape,stringstyle=\color{red!60!black}}
+\lstdefinestyle{json}{language={},morestring=[b]",morestring=[b]',sensitive=true}
+\lstdefinestyle{text}{language={}}
+\lstdefinestyle{texfrag}{language=[LaTeX]TeX,basicstyle=\ttfamily\scriptsize}
+\emergencystretch=12em
+\sloppy
+\allowdisplaybreaks
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}[proposition]{Theorem}
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem{corollary}[proposition]{Corollary}
+\newtheorem{definition}[proposition]{Definition}
+\newtheorem{gate}[proposition]{Gate}
+\newtheorem{inputstatement}[proposition]{Input}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+\newtheorem{nonclaim}[proposition]{Non-claim}
+
+\newcommand{\scopebox}[2]{%
+  \par\medskip\noindent\fbox{\begin{minipage}{0.92\textwidth}
+  \textbf{#1}\par\smallskip #2\end{minipage}}\par\medskip}
+\newcommand{\Pc}{\mathcal P}
+\newcommand{\sigeps}{\sigma_\varepsilon}
+\newcommand{\chiI}{\chi_{\mathrm I}}
+\newcommand{\Ro}{R_0}
+\newcommand{\Rp}{R_0^{\mathrm{pred}}}
+\newcommand{\Ramp}{\mathfrak R}
+\newcommand{\Dsrc}{\mathcal D}
+\newcommand{\Ncal}{\mathcal N}
+% Extra macros that appear in provenance manuscripts (no-ops / stubs if unused)
+\newcommand{\RL}{\mathfrak R_{\mathrm L}}
+\newcommand{\RK}{\mathfrak R_{\mathrm K}}
+\newcommand{\RM}{\mathfrak R_{\mathrm M}}
+\newcommand{\JD}{\mathcal J_{\mathrm D}}
+\newcommand{\Ccoh}{\mathcal C_{\mathrm{coh}}}
+\newcommand{\Creg}{\mathcal C_{\mathrm{reg}}}
+\newcommand{\Tcol}{\mathcal T_{\mathrm{collision}}}
+\newcommand{\Coll}{\mathrm{Collapse}}
+\newcommand{\EA}{E_0^{\mathrm A}}
+\newcommand{\ER}{E_0^{\mathrm R}}
+\newcommand{\EAm}{E_m^{\mathrm A}}
+\newcommand{\ERm}{E_m^{\mathrm R}}
+\newcommand{\PP}{\mathcal P}
+\newcommand{\sig}{\sigma_\varepsilon}
+\newcommand{\MT}{M_T}
+\newcommand{\MTo}{M_T^\circ}
+\newcommand{\Pmass}{P_m}
+\newcommand{\Bcal}{\mathcal B}
+\newcommand{\Isol}{\mathcal I_{\mathrm{sol}}}
+\newcommand{\mc}{\mathscr F_{\mathrm{mc,pol}}}
+\providecommand{\dd}{\mathrm{d}}
+\providecommand{\R}{\mathbb{R}}
+% p12 (kept in p13-p16): page numbers carry a text prefix so a text extraction can never merge a bare page number into typeset data
+% p16 (finding F4 of the p15 review): the footer label is NOT a literal here; it is \XVIPversion from version.tex, which
+% tools/build.py writes from the single version variable code/p5_calc/p16_conventions.py VERSION_LABEL (the PDF
+% readback checks every footer against it).  A missing version.tex is a LaTeX error (fail closed).
+\input{version.tex}
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\fancyfoot[C]{\footnotesize \XVIPversion{} \textbar{} page \thepage}}
+\pagestyle{plain}
