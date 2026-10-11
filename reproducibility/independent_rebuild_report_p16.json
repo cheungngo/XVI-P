@@ -1,0 +1,2917 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p16",
+ "kind": "independent rebuild report (separate clean environment); package evidence, not a mathematical certificate",
+ "date": "2026-10-08",
+ "reviewer": "independent executor (Grok Bot subagent), fresh dir /workspace/indep_rebuild_p16 and fresh venv; no reads from /workspace/XVI-P except reference_values_p16.json at the final comparison step",
+ "same_box_caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+ "environment": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "pdfinfo": "pdfinfo version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "venv": "/workspace/indep_rebuild_p16/venv",
+  "pip_installed": "sympy==1.14.0 mpmath==1.3.0 pytest==9.1.1 (exact versions via pip)"
+ },
+ "environment_reference": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+ },
+ "environment_differences": {},
+ "zip_sha256": "56d5887daa7a96dcc7cf2f70c6735e802125c9b19a33ac17a3ef975e330fef57",
+ "source_tree_sha256": "90b4a6659cddd341436a59d285a56eb14bdd575bb56e69faf4ba75be4d7b549e",
+ "source_tree_sha256_without_reference": "d02d30a8f5f527813068a799e79e2537c88b7ae7f3936c77dac7cd3ef2a575c1",
+ "pass": true,
+ "independent_rebuild_passed": true,
+ "checks": {
+  "1_zip_sha256_and_source_only": {
+   "pass": true,
+   "zip_sha256": "56d5887daa7a96dcc7cf2f70c6735e802125c9b19a33ac17a3ef975e330fef57",
+   "n_files": 134,
+   "generated_artifacts_or_caches_present": false
+  },
+  "2_entrypoint_rebuild_from_source": {
+   "pass": true,
+   "steps": {
+    "source_only_tree": true,
+    "inherited_pins": true,
+    "full_build": true,
+    "release_accepted": true,
+    "tests": true,
+    "pdf_readback_vs_records": true,
+    "external_manifest": true,
+    "source_only_zip_rebuilt": true,
+    "file_access_trace": true,
+    "comparison_with_reference": true
+   },
+   "comparison_with_in_zip_reference": {
+    "compared": 272,
+    "equal": 272
+   },
+   "seconds": 1373.0,
+   "source_tree_sha256": "90b4a6659cddd341436a59d285a56eb14bdd575bb56e69faf4ba75be4d7b549e",
+   "rebuilt_source_only_zip_sha256": "56d5887daa7a96dcc7cf2f70c6735e802125c9b19a33ac17a3ef975e330fef57",
+   "rebuilt_zip_equals_input": true
+  },
+  "a_frozen_p13_classical_p14r_contract_p15_layer": {
+   "pass": true,
+   "frozen_list_sha256_ok": true,
+   "p13_frozen_files": 54,
+   "p13_frozen_bad_vs_list_or_my_p13_unpack": [],
+   "p14r_contract_files": {
+    "code/p5_entry/amplitude_rules.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": true,
+     "p16_identical_to_p15": true
+    },
+    "code/p5_entry/counterterm_domain.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": true,
+     "p16_identical_to_p15": true
+    },
+    "code/p5_entry/dossier_p14.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": true,
+     "p16_identical_to_p15": true
+    },
+    "code/p5_entry/dred.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": false,
+     "p16_identical_to_p15": false
+    },
+    "code/p5_entry/feynman.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": true,
+     "p16_identical_to_p15": true
+    },
+    "code/p5_entry/freeze_p13.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": true,
+     "p16_identical_to_p15": true
+    },
+    "code/p5_entry/hessian_route.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": true,
+     "p16_identical_to_p15": true
+    },
+    "code/p5_entry/p14_conventions.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": true,
+     "p16_identical_to_p15": true
+    },
+    "code/p5_entry/prescription_d11.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": true,
+     "p16_identical_to_p15": true
+    },
+    "code/p5_entry/quantum_object.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": true,
+     "p16_identical_to_p15": true
+    },
+    "code/p5_entry/release_p14.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": true,
+     "p16_identical_to_p15": true
+    },
+    "code/p5_entry/shadow.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p16_identical_to_p14r": true,
+     "p16_identical_to_p15": true
+    }
+   },
+   "p5_entry_dir_complete": true,
+   "only_dred_differs_vs_p14r_and_p15": true,
+   "p15_dred_pin_equals_my_p15_unpack": true,
+   "p15_calc_layer": {
+    "code/p5_calc/batchA.py": {
+     "pin_eq_my_p15": true,
+     "p16_eq_p15": true
+    },
+    "code/p5_calc/d13.py": {
+     "pin_eq_my_p15": true,
+     "p16_eq_p15": true
+    },
+    "code/p5_calc/integrals.py": {
+     "pin_eq_my_p15": true,
+     "p16_eq_p15": true
+    },
+    "code/p5_calc/p15_conventions.py": {
+     "pin_eq_my_p15": true,
+     "p16_eq_p15": true
+    },
+    "code/p5_calc/release_p15.py": {
+     "pin_eq_my_p15": true,
+     "p16_eq_p15": true
+    }
+   },
+   "n_files": 134,
+   "changed_vs_p15": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "code/p5_entry/dred.py",
+    "manuscript/body/XVI-P-body.tex",
+    "manuscript/preamble.tex",
+    "tests/test_p14.py",
+    "tests/test_p15.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "added_vs_p15": [
+    "archival/p15/README.md",
+    "archival/p15/p15_source_files.json",
+    "archival/p15/reference_values_p15.json",
+    "archival/p15/reproducibility/author_rebuild_report_p15.json",
+    "archival/p15/reproducibility/independent_rebuild_report_p15.json",
+    "code/p5_calc/batchC.py",
+    "code/p5_calc/covariant.py",
+    "code/p5_calc/e2_evanescent.py",
+    "code/p5_calc/p16_conventions.py",
+    "code/p5_calc/release_p16.py",
+    "manuscript/notes/P16_E2_and_batchC.tex",
+    "reproducibility/reference_values_p16.json",
+    "tests/test_p16.py"
+   ],
+   "removed_vs_p15": [
+    "reproducibility/reference_values_p15.json"
+   ],
+   "changed_in_groups": {
+    "code/classical": [],
+    "code/matter_loop": [],
+    "code/p4_classical": [],
+    "code/p5_entry": [
+     "code/p5_entry/dred.py"
+    ],
+    "code/p5_calc": [],
+    "manuscript/notes": [],
+    "notes": [],
+    "provenance": [],
+    "ledgers": [],
+    "archival": []
+   },
+   "p15_source_list_sha_pin_ok": true,
+   "p15_source_list_n": 122,
+   "p15_source_list_bad_vs_my_p15_unpack": [],
+   "archived_p15_independent_report_is_mine": true,
+   "archived_p15_reference_eq_my_p15_copy": true,
+   "archived_p15_author_report_pin_ok": true,
+   "archived_p14r_independent_report_is_mine": true,
+   "archived_p13_independent_report_is_mine": true,
+   "archival_p13_p14r_unchanged_vs_p15": true,
+   "classical_exports": {
+    "ell2": {
+     "file_sha256": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+     "polynomial_sha256_str": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+     "terms_Add_make_args": 84
+    },
+    "ell3": {
+     "file_sha256": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+     "polynomial_sha256_str": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+     "terms_Add_make_args": 678
+    },
+    "ell4": {
+     "file_sha256": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+     "polynomial_sha256_str": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+     "terms_Add_make_args": 3360
+    }
+   },
+   "quartic_vs_master_agree": {
+    "kappa0": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    },
+    "kappa1": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    },
+    "kappa2": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    }
+   },
+   "W6_all_agree": true,
+   "amplitude_mutations_rejected": {
+    "wrong_tadpole_factor": true,
+    "wrong_ghost_loop_sign": true,
+    "offdiag_multiplicity": true,
+    "reversed_source_ghost_order": true,
+    "omit_ghost_transport_term": true
+   },
+   "dred_mutations": {
+    "premature_d4": true,
+    "trace_ghat_eq_4": true,
+    "contract_after_laurent": true
+   },
+   "p15_regression_probe_under_p16_dred": {
+    "pass": true,
+    "eta_trace": {
+     "correct": {
+      "raised": "None",
+      "value": "a1*m**4"
+     },
+     "premature_d4_enforced": {
+      "raised": "PrematureD4Substitution",
+      "msg": "d -> 4 outside substitute_d (R5: d is opaque before the Laurent expansion)"
+     },
+     "premature_d4_display": {
+      "raised": "None",
+      "value": "m**4*(a1 - 1/2)"
+     },
+     "false_positive_fixed": true,
+     "false_negative_fixed": true,
+     "display_value_is_m4(a1-1/2)": true
+    },
+    "A0_mixing": {
+     "correct_finite": "a1*m**4",
+     "correct_ok": true,
+     "mixed_enforced": "NumericTraceForbidden",
+     "mixed_refused": true,
+     "forced_display_finite": "m**4*(a1 + 1/2)",
+     "shift": "m**4/2",
+     "shift_ok": true
+    },
+    "B0_mixing": {
+     "correct_finite": "0",
+     "correct_ok": true,
+     "mixed_enforced": "NumericTraceForbidden",
+     "mixed_refused": true,
+     "forced_display_finite": "-p2/6",
+     "shift": "-p2/6",
+     "shift_ok": true
+    }
+   }
+  },
+  "1_own_E2_decoupling": {
+   "pass": true,
+   "method": "own derivation of the S0 h^2 operator from sqrt(-g)R (g = eta + t h, plane waves, x-independent t^2 part; no package imports); unique exact fit on 5 covariant structures; own abstract DRED algebra (g4 = ghat + gtilde, p in QdS) with d symbolic",
+   "own_E_times_p2": {
+    "c1": "-1/4",
+    "c2": "1/2",
+    "c3": "-1/2",
+    "c4": "1/4",
+    "c5": "0"
+   },
+   "author_E_equals_minus2_times_own": true,
+   "L1_transverse": true,
+   "E2_dot_E_zero_exact_in_d": true,
+   "T2_T3_slot_zero": true,
+   "T1_slot_nonzero": true,
+   "E1_slot_nonzero": true,
+   "T1_slot": {
+    "(('g', '4', 'r', 's'), ('v', 'p', 'nu'))": "P2**2",
+    "(('v', 'p', 'nu'), ('v', 'p', 'r'), ('v', 'p', 's'))": "-P2"
+   },
+   "E1_slot": {
+    "(('g', 't', 'r', 's'), ('v', 'p', 'nu'))": "-P2**2/2",
+    "(('g', '4', 'r', 's'), ('v', 'p', 'nu'))": "-P2**2*(d - 4)/2",
+    "(('v', 'p', 'nu'), ('v', 'p', 'r'), ('v', 'p', 's'))": "P2*(d - 4)/2"
+   },
+   "controls_nonzero": {
+    "M1_deDonder_not_transverse": true,
+    "M1_E2_slot_nonzero": true,
+    "M3_wrong_slot_nonzero": true
+   },
+   "certificate": {
+    "cert_outcome": "DECOUPLED (proof)",
+    "cert_E2_status": "decoupled_from_ch_slot_proven",
+    "cert_E2_decoupling_proven": true,
+    "cert_mutations_rejected": {
+     "M1_gauge_fixed_operator_qq2P": true,
+     "M2_E1_in_place_of_E2": true,
+     "M3_wrong_index_slot": true
+    }
+   }
+  },
+  "2_own_batchC_D03_D01": {
+   "pass": true,
+   "method": "own covariant fit of the exported component numerator (51-term ansatz in eta, l, p on free m,n,r,s with l.l, l.p, p.p scalars; exact polynomial identity on all 100 components), J[a>=1,b]=0 (S0) and (l.p)^b -> (p^2/2)^b, own tensor-bubble reduction rank 0..4 two ways (PV by projection with own abstract contractor; Feynman parameters with Gamma ratios), d symbolic; R3 lift eta->g4 on free indices, ghat=g4-gtilde; Ghat = -i*prefactor/kappa^2 * int; Laurent at d=4-2eps with MB=1/eps+2-L; 4D pole vs own 5 local 4-derivative h.h directions",
+   "D01": {
+    "input_file_sha256": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+    "prefactor": "kappa**2/2",
+    "norm_-i_pref_over_kappa2": "-I/2",
+    "ansatz_size": 51,
+    "fit_rank": 51,
+    "fit_unique": true,
+    "fit_exact_all_components": true,
+    "fit_nonzero_terms": 45,
+    "scaleless_terms_dropped": 15,
+    "bubble_PV_equals_Feynman": {
+     "0": true,
+     "1": true,
+     "2": true,
+     "3": true,
+     "4": true
+    },
+    "n_structures": 14,
+    "n_evanescent": 8,
+    "evanescent_pole_nonzero": true,
+    "gtilde_quadratic_structures": [
+     "(('g', 't', 'm', 'n'), ('g', 't', 'r', 's'))",
+     "(('g', 't', 'm', 'r'), ('g', 't', 'n', 's'))"
+    ],
+    "own_hh_directions_rank": 5,
+    "pole_4D_in_hh_span": true,
+    "pole_4D_coords": {
+     "box h_mn box h^mn": "-71*I/240",
+     "(box h)^2": "-27*I/80",
+     "box h d.d.h": "19*I/60",
+     "d.box h . d.h": "11*I/40",
+     "(d.d.h)^2": "-13*I/15"
+    },
+    "pole_4D_outside_structures": [],
+    "structures": {
+     "(('g', '4', 'm', 'n'), ('g', '4', 'r', 's'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "2",
+      "A(d)": "-I*(2*d**2 + 10*d + 9)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "-27*I/80",
+      "MSbar_finite": "27*I*L/80 - 491*I/600",
+      "evanescent": false
+     },
+     "(('g', '4', 'm', 'n'), ('v', 'p', 'r'), ('v', 'p', 's'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "1",
+      "A(d)": "I*(d**2 + 12*d + 12)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "19*I/60",
+      "MSbar_finite": "-19*I*L/60 + 181*I/225",
+      "evanescent": false
+     },
+     "(('g', '4', 'm', 'n'), ('g', 't', 'r', 's'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "2",
+      "A(d)": "I*(5*d + 6)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "13*I/120",
+      "MSbar_finite": "-13*I*L/120 + 523*I/1800",
+      "evanescent": true
+     },
+     "(('g', '4', 'm', 'r'), ('g', '4', 'n', 's'))": {
+      "orbit_size_per_member_coefficient": 2,
+      "P2_power": "2",
+      "A(d)": "-I*(6*d**2 - 4*d - 9)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "-71*I/240",
+      "MSbar_finite": "71*I*L/240 - 973*I/1800",
+      "evanescent": false
+     },
+     "(('g', '4', 'm', 'r'), ('v', 'p', 'n'), ('v', 'p', 's'))": {
+      "orbit_size_per_member_coefficient": 4,
+      "P2_power": "1",
+      "A(d)": "I*(6*d**2 - 5*d - 10)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "11*I/40",
+      "MSbar_finite": "-11*I*L/40 + 97*I/200",
+      "evanescent": false
+     },
+     "(('g', '4', 'm', 'r'), ('g', 't', 'n', 's'))": {
+      "orbit_size_per_member_coefficient": 4,
+      "P2_power": "2",
+      "A(d)": "-I*(2*d + 1)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "-3*I/80",
+      "MSbar_finite": "3*I*L/80 - 59*I/600",
+      "evanescent": true
+     },
+     "(('g', '4', 'r', 's'), ('v', 'p', 'm'), ('v', 'p', 'n'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "1",
+      "A(d)": "I*(d**2 + 12*d + 12)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "19*I/60",
+      "MSbar_finite": "-19*I*L/60 + 181*I/225",
+      "evanescent": false
+     },
+     "(('g', '4', 'r', 's'), ('g', 't', 'm', 'n'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "2",
+      "A(d)": "I*(5*d + 6)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "13*I/120",
+      "MSbar_finite": "-13*I*L/120 + 523*I/1800",
+      "evanescent": true
+     },
+     "(('v', 'p', 'm'), ('v', 'p', 'n'), ('v', 'p', 'r'), ('v', 'p', 's'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "0",
+      "A(d)": "-I*(13*d**2 + 2*d - 8)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "-13*I/15",
+      "MSbar_finite": "13*I*L/15 - 1597*I/900",
+      "evanescent": false
+     },
+     "(('g', 't', 'r', 's'), ('v', 'p', 'm'), ('v', 'p', 'n'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "1",
+      "A(d)": "-I*(7*d + 8)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "-3*I/20",
+      "MSbar_finite": "3*I*L/20 - 241*I/600",
+      "evanescent": true
+     },
+     "(('g', 't', 'm', 'r'), ('v', 'p', 'n'), ('v', 'p', 's'))": {
+      "orbit_size_per_member_coefficient": 4,
+      "P2_power": "1",
+      "A(d)": "I*(3*d + 2)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "7*I/120",
+      "MSbar_finite": "-7*I*L/120 + 277*I/1800",
+      "evanescent": true
+     },
+     "(('g', 't', 'm', 'n'), ('v', 'p', 'r'), ('v', 'p', 's'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "1",
+      "A(d)": "-I*(7*d + 8)/(16*(d - 1)*(d + 1))",
+      "UV_pole": "-3*I/20",
+      "MSbar_finite": "3*I*L/20 - 241*I/600",
+      "evanescent": true
+     },
+     "(('g', 't', 'm', 'n'), ('g', 't', 'r', 's'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "2",
+      "A(d)": "-I/(16*(d - 1)*(d + 1))",
+      "UV_pole": "-I/240",
+      "MSbar_finite": "I*L/240 - 23*I/1800",
+      "evanescent": true
+     },
+     "(('g', 't', 'm', 'r'), ('g', 't', 'n', 's'))": {
+      "orbit_size_per_member_coefficient": 2,
+      "P2_power": "2",
+      "A(d)": "-I/(16*(d - 1)*(d + 1))",
+      "UV_pole": "-I/240",
+      "MSbar_finite": "I*L/240 - 23*I/1800",
+      "evanescent": true
+     }
+    }
+   },
+   "D03": {
+    "input_file_sha256": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+    "prefactor": "-kappa**2",
+    "norm_-i_pref_over_kappa2": "I",
+    "ansatz_size": 51,
+    "fit_rank": 51,
+    "fit_unique": true,
+    "fit_exact_all_components": true,
+    "fit_nonzero_terms": 23,
+    "scaleless_terms_dropped": 8,
+    "bubble_PV_equals_Feynman": {
+     "0": true,
+     "1": true,
+     "2": true,
+     "3": true,
+     "4": true
+    },
+    "n_structures": 12,
+    "n_evanescent": 6,
+    "evanescent_pole_nonzero": true,
+    "gtilde_quadratic_structures": [],
+    "own_hh_directions_rank": 5,
+    "pole_4D_in_hh_span": true,
+    "pole_4D_coords": {
+     "box h_mn box h^mn": "I/24",
+     "(box h)^2": "7*I/48",
+     "box h d.d.h": "-I/8",
+     "d.box h . d.h": "-I/48",
+     "(d.d.h)^2": "I/6"
+    },
+    "pole_4D_outside_structures": [],
+    "structures": {
+     "(('g', '4', 'm', 'n'), ('g', '4', 'r', 's'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "2",
+      "A(d)": "I*(d + 3)/(16*(d - 1))",
+      "UV_pole": "7*I/48",
+      "MSbar_finite": "-7*I*L/48 + 25*I/72",
+      "evanescent": false
+     },
+     "(('g', '4', 'm', 'n'), ('v', 'p', 'r'), ('v', 'p', 's'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "1",
+      "A(d)": "-3*I/(8*(d - 1))",
+      "UV_pole": "-I/8",
+      "MSbar_finite": "I*L/8 - I/3",
+      "evanescent": false
+     },
+     "(('g', '4', 'm', 'n'), ('g', 't', 'r', 's'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "2",
+      "A(d)": "-I/(8*(d - 1))",
+      "UV_pole": "-I/24",
+      "MSbar_finite": "I*L/24 - I/9",
+      "evanescent": true
+     },
+     "(('g', '4', 'm', 'r'), ('g', '4', 'n', 's'))": {
+      "orbit_size_per_member_coefficient": 2,
+      "P2_power": "2",
+      "A(d)": "I*(d - 3)/(8*(d - 1))",
+      "UV_pole": "I/24",
+      "MSbar_finite": "-I*L/24 + I/36",
+      "evanescent": false
+     },
+     "(('g', '4', 'm', 'r'), ('v', 'p', 'n'), ('v', 'p', 's'))": {
+      "orbit_size_per_member_coefficient": 4,
+      "P2_power": "1",
+      "A(d)": "-I*(2*d - 7)/(16*(d - 1))",
+      "UV_pole": "-I/48",
+      "MSbar_finite": "I*L/48 + I/36",
+      "evanescent": false
+     },
+     "(('g', '4', 'm', 'r'), ('g', 't', 'n', 's'))": {
+      "orbit_size_per_member_coefficient": 4,
+      "P2_power": "2",
+      "A(d)": "I/(8*(d - 1))",
+      "UV_pole": "I/24",
+      "MSbar_finite": "-I*L/24 + I/9",
+      "evanescent": true
+     },
+     "(('g', '4', 'r', 's'), ('v', 'p', 'm'), ('v', 'p', 'n'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "1",
+      "A(d)": "-3*I/(8*(d - 1))",
+      "UV_pole": "-I/8",
+      "MSbar_finite": "I*L/8 - I/3",
+      "evanescent": false
+     },
+     "(('g', '4', 'r', 's'), ('g', 't', 'm', 'n'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "2",
+      "A(d)": "-I/(8*(d - 1))",
+      "UV_pole": "-I/24",
+      "MSbar_finite": "I*L/24 - I/9",
+      "evanescent": true
+     },
+     "(('v', 'p', 'm'), ('v', 'p', 'n'), ('v', 'p', 'r'), ('v', 'p', 's'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "0",
+      "A(d)": "I*(d - 2)/(4*(d - 1))",
+      "UV_pole": "I/6",
+      "MSbar_finite": "-I*L/6 + 5*I/18",
+      "evanescent": false
+     },
+     "(('g', 't', 'm', 'n'), ('v', 'p', 'r'), ('v', 'p', 's'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "1",
+      "A(d)": "I/(4*(d - 1))",
+      "UV_pole": "I/12",
+      "MSbar_finite": "-I*L/12 + 2*I/9",
+      "evanescent": true
+     },
+     "(('g', 't', 'm', 'r'), ('v', 'p', 'n'), ('v', 'p', 's'))": {
+      "orbit_size_per_member_coefficient": 4,
+      "P2_power": "1",
+      "A(d)": "-3*I/(16*(d - 1))",
+      "UV_pole": "-I/16",
+      "MSbar_finite": "I*L/16 - I/6",
+      "evanescent": true
+     },
+     "(('g', 't', 'r', 's'), ('v', 'p', 'm'), ('v', 'p', 'n'))": {
+      "orbit_size_per_member_coefficient": 1,
+      "P2_power": "1",
+      "A(d)": "I/(4*(d - 1))",
+      "UV_pole": "I/12",
+      "MSbar_finite": "-I*L/12 + 2*I/9",
+      "evanescent": true
+     }
+    }
+   },
+   "bubble_coefficients_over_MB": {
+    "0": [
+     "1"
+    ],
+    "1": [
+     "1/2"
+    ],
+    "2": [
+     "d/(4*(d - 1))",
+     "-P2/(4*(d - 1))"
+    ],
+    "3": [
+     "(d + 2)/(8*(d - 1))",
+     "-P2/(8*(d - 1))"
+    ],
+    "4": [
+     "(d + 2)*(d + 4)/(16*(d - 1)*(d + 1))",
+     "-P2*(d + 2)/(16*(d - 1)*(d + 1))",
+     "P2**2/(16*(d - 1)*(d + 1))"
+    ]
+   },
+   "vs_certificate": {
+    "D01": {
+     "n_own": 14,
+     "n_cert": 14,
+     "mismatches": [],
+     "longitudinal_projection_equal": true,
+     "pole_4D_in_span_cert": true,
+     "pole_4D_in_span_own": true,
+     "R5_d_retained_cert": true
+    },
+    "D03": {
+     "n_own": 12,
+     "n_cert": 12,
+     "mismatches": [],
+     "longitudinal_projection_equal": true,
+     "pole_4D_in_span_cert": true,
+     "pole_4D_in_span_own": true,
+     "R5_d_retained_cert": true
+    }
+   },
+   "span_note": "the 5 p14r h.h directions (all 4-derivative local h.h densities) span all 5 symmetric g4/p structures of degree 4, so 'in span' reduces to: the 4D pole contains only exchange-symmetric g4/p structures -- verified"
+  },
+  "3_guard_probe_and_static_scan": {
+   "pass": true,
+   "guarded_paths_all_raise": {
+    "subs": true,
+    "subs_dict": true,
+    "subs_simultaneous": true,
+    "xreplace": true,
+    "replace(d,4)": true,
+    "replace(d,Integer)": true,
+    "expr.match(d) [pattern d]": true,
+    "evalf_subs": true,
+    "N_subs": true,
+    "limit": true,
+    "series_in_d_at_4": true,
+    "Lambda_call": true,
+    "Subs_doit": true,
+    "lambdify_default": true,
+    "lambdify_math": true,
+    "lambdify_mpmath": true,
+    "lambdify_sympy": true,
+    "pycode": true,
+    "diff_then_subs": true,
+    "pickle_roundtrip_subs": true
+   },
+   "leaking_paths": [
+    "ccode_string",
+    "replace_callable_query",
+    "Poly_eval",
+    "string_roundtrip_sympify",
+    "srepr_eval_roundtrip",
+    "manual_tree_rebuild"
+   ],
+   "package_scan_on_package_clean": true,
+   "package_scan_detects_planted": {
+    "Poly_eval": true,
+    "replace_lambda": true,
+    "replace_named_callable": false,
+    "string_roundtrip": false,
+    "builtin_eval_srepr": false,
+    "manual_tree_rebuild": false,
+    "lambdify": true
+   },
+   "own_static_scan_hits": {
+    "lambdify/ufuncify/autowrap": [
+     "p5_calc/p16_conventions.py:77: \"queries for d); the code-printer hooks used by lambdify (_lambdacode, _numpycode, _scipycode, \"",
+     "p5_calc/release_p16.py:70: probes = {\"expr.replace(d, 4)\": lambda: e.replace(d, 4), \"sympy.lambdify(d, expr)\": lambda: sp.lambdify(d, e),"
+    ],
+    ".eval(": [],
+    "builtin eval/exec(": [],
+    ".replace(": [
+     "p5_calc/p16_conventions.py:74: \"why\": (\"OpaqueDimension guarded subs/xreplace/evalf(subs)/limit, but expr.replace(d, 4) and sympy.lambdify \"",
+     "p5_calc/p16_conventions.py:76: \"change\": (\"OpaqueDimension.matches raises outside substitute_d (closes expr.replace(d, value) and pattern \"",
+     "p5_calc/p16_conventions.py:80: \"(expr.replace(lambda x: x == d, ...)), Poly(.., d).eval, string round-trips -- are covered by a \"",
+     "p5_calc/release_p15.py:159: rows.append(f\"{k} & {per[k]['status'].replace('_', chr(92) + '_')} & 0 & 0 \\\\\\\\\")",
+     "p5_calc/release_p16.py:70: probes = {\"expr.replace(d, 4)\": lambda: e.replace(d, 4), \"sympy.lambdify(d, expr)\": lambda: sp.lambdify(d, e),",
+     "p5_calc/release_p16.py:181: t = str(x).replace(\"**\", \"^\").replace(\"\\\\\", \"/\").replace(\"_\", \"\\\\_\").replace(\"^\", \"\\\\^{}\").replace(\"&\", \"\\\\&\")",
+     "p5_entry/dossier_p14.py:173: t = D.table(d).replace(\"P14\\\\_\", \"\")",
+     "p5_entry/dossier_p14.py:180: return t2.replace(\"(package evidence, read from RELEASE\\\\_STATUS at build time):}\",",
+     "p5_entry/dred.py:44: independent_rebuild_report_p15.json): expr.replace(d, 4) and sympy.lambdify bypassed the opaque d.  OpaqueDime",
+     "p5_entry/dred.py:102: raise PrematureD4Substitution(\"pattern matching on d (expr.replace(d, ...) / expr.match(d)) outside \""
+    ],
+    "sympify/parse_expr/S(str": [],
+    "srepr": [
+     "p5_entry/feynman.py:379: vt = VT(f\"V{k}_grav\", [\"h\"] * k, 0, T, k - 2, f\"exports/ell{k}_generating_polynomial.srepr (sha {sha[:16]})\")"
+    ],
+    "code printers": [],
+    "Poly(": [
+     "p5_calc/batchA.py:78: P = sp.Poly(sp.expand(_poly(rows)), *ls)",
+     "p5_calc/batchC.py:273: if gts and max(sum(m) for m in sp.Poly(tot, *gts).monoms()) >= 2:",
+     "p5_calc/covariant.py:278: for mon, cf in sp.Poly(expr, *gens).terms():",
+     "p5_calc/d13.py:288: eqs += sp.Poly(e, *PS).coeffs()",
+     "p5_calc/d13.py:464: eqs += sp.Poly(e, *PS).coeffs()",
+     "p5_calc/integrals.py:142: for (i, j), cf in sp.Poly(num, D1, D2).terms():",
+     "p5_calc/integrals.py:200: P = sp.Poly(e, *ks)",
+     "p5_calc/integrals.py:208: Px = sp.Poly(sp.expand(cf * si), x)",
+     "p5_calc/p16_conventions.py:80: \"(expr.replace(lambda x: x == d, ...)), Poly(.., d).eval, string round-trips -- are covered by a \"",
+     "p5_entry/counterterm_domain.py:139: P = sp.Poly(poly, *p)",
+     "p5_entry/counterterm_domain.py:181: mono = tuple(sp.Poly(rest, *p).monoms()[0]) if rest != 1 else (0, 0, 0, 0)",
+     "p5_entry/dred.py:46: hooks outside substitute_d.  Value paths that never call back into the symbol (Poly(expr, d).eval, string",
+     "p5_entry/dred.py:291: P = sp.Poly(sp.expand(expr), ll, lp)",
+     "p5_entry/feynman.py:315: P = sp.Poly(v, *polsyms.keys()) if polsyms else None",
+     "p5_entry/hessian_route.py:53: for mon, cf in sp.Poly(e, *gens).terms():",
+     "p5_entry/prescription_d11.py:177: for mon, cf in sp.Poly(v, *p).terms():",
+     "p5_entry/prescription_d11.py:197: eqs += [cf for _, cf in sp.Poly(e, *p).terms()]",
+     "p5_entry/shadow.py:134: P = sp.Poly(sp.expand(v), q)"
+    ],
+    "subs(d,": [
+     "p5_calc/batchC.py:325: sp.sympify(a0).subs(d, 4)",
+     "p5_calc/d13.py:511: sp.sympify(fit1[\"T2\"]).subs(d, 4)",
+     "p5_calc/release_p16.py:71: \"expr.match(d)\": lambda: e.match(d), \"expr.subs(d, 4)\": lambda: e.subs(d, 4),"
+    ],
+    "xreplace({d": [
+     "p5_calc/release_p16.py:72: \"expr.xreplace({d: 4})\": lambda: e.xreplace({d: 4}), \"expr.evalf(subs={d: 4})\": lambda: e.evalf(subs={d: 4})}",
+     "p5_entry/dred.py:120: out = sp.sympify(expr).xreplace({d: sp.sympify(value)})",
+     "p5_entry/dred.py:432: v = v.xreplace({d: 4})                  # MUTATION: d -> 4 before the expansion -> raises (opaque d)"
+    ],
+    "limit(": [
+     "p5_calc/batchA.py:133: lim0 = all(sp.limit(sp.expand(v.xreplace({IL.Lm: sp.log(IL.MSQ)})), IL.MSQ, 0, \"+\") == 0"
+    ],
+    "evalf(subs": [
+     "p5_calc/p16_conventions.py:74: \"why\": (\"OpaqueDimension guarded subs/xreplace/evalf(subs)/limit, but expr.replace(d, 4) and sympy.lambdify \"",
+     "p5_calc/release_p16.py:72: \"expr.xreplace({d: 4})\": lambda: e.xreplace({d: 4}), \"expr.evalf(subs={d: 4})\": lambda: e.evalf(subs={d: 4})}"
+    ]
+   },
+   "authorised_substitute_d": "28",
+   "provenance_recorded": true
+  },
+  "4_footers_and_value_block_readback": {
+   "pass": true,
+   "own_readback_p16": {
+    "footers": {
+     "XVI-P-science": {
+      "pages": 25,
+      "labels": {
+       "XVI-P p16": 25
+      },
+      "pages_without_exactly_one_p16_footer": [],
+      "n_bad": 0,
+      "page_numbers_sequential_arabic": true
+     },
+     "XVI-P-appendix": {
+      "pages": 467,
+      "labels": {
+       "XVI-P p16": 467
+      },
+      "pages_without_exactly_one_p16_footer": [],
+      "n_bad": 0,
+      "page_numbers_sequential_arabic": true
+     },
+     "XVI-P": {
+      "pages": 491,
+      "labels": {
+       "XVI-P p16": 491
+      },
+      "pages_without_exactly_one_p16_footer": [],
+      "n_bad": 0,
+      "page_numbers_sequential_arabic": true
+     }
+    },
+    "value_blocks": {
+     "XVI-P-appendix": {
+      "certificates/P15_D13.json": {
+       "snippets": 30,
+       "found_in_order": 30,
+       "missing": [],
+       "non_ascii_snippets": 0
+      },
+      "certificates/P15_batchA.json": {
+       "snippets": 25,
+       "found_in_order": 25,
+       "missing": [],
+       "non_ascii_snippets": 0
+      },
+      "certificates/P16_batchC.json": {
+       "snippets": 156,
+       "found_in_order": 156,
+       "missing": [],
+       "non_ascii_snippets": 0
+      },
+      "certificates/P16_E2_evanescent.json": {
+       "snippets": 9,
+       "found_in_order": 9,
+       "missing": [],
+       "non_ascii_snippets": 0
+      }
+     },
+     "XVI-P": {
+      "certificates/P15_D13.json": {
+       "snippets": 30,
+       "found_in_order": 30,
+       "missing": [],
+       "non_ascii_snippets": 0
+      },
+      "certificates/P15_batchA.json": {
+       "snippets": 25,
+       "found_in_order": 25,
+       "missing": [],
+       "non_ascii_snippets": 0
+      },
+      "certificates/P16_batchC.json": {
+       "snippets": 156,
+       "found_in_order": 156,
+       "missing": [],
+       "non_ascii_snippets": 0
+      },
+      "certificates/P16_E2_evanescent.json": {
+       "snippets": 9,
+       "found_in_order": 9,
+       "missing": [],
+       "non_ascii_snippets": 0
+      }
+     }
+    },
+    "issues": [],
+    "own_values_equal_certificate": {
+     "batchC": true,
+     "E2": true
+    },
+    "pass": true
+   },
+   "residual_records_readback": {
+    "files": {
+     "XVI-P-appendix": {
+      "quartic_C7_blocks": 1,
+      "master_grav_af0_blocks": 1,
+      "quartic_C7_matches_json": true,
+      "master_grav_af0_matches_json": true,
+      "ell2_poly_sha_in_pdf": true,
+      "ell3_poly_sha_in_pdf": true,
+      "ell4_poly_sha_in_pdf": true
+     },
+     "XVI-P": {
+      "quartic_C7_blocks": 1,
+      "master_grav_af0_blocks": 1,
+      "quartic_C7_matches_json": true,
+      "master_grav_af0_matches_json": true,
+      "ell2_poly_sha_in_pdf": true,
+      "ell3_poly_sha_in_pdf": true,
+      "ell4_poly_sha_in_pdf": true
+     }
+    },
+    "issues": [],
+    "pass": true
+   },
+   "W6_and_DRED_readback": true,
+   "entrypoint_readback": {
+    "ok": true,
+    "records": 6,
+    "appendix": true,
+    "combined": true,
+    "value_blocks": {
+     "XVI-P-appendix": {
+      "certificates/P16_E2_evanescent.json": true,
+      "certificates/P16_batchC.json": true,
+      "certificates/P15_batchA.json": true,
+      "certificates/P15_D13.json": true
+     },
+     "XVI-P": {
+      "certificates/P16_E2_evanescent.json": true,
+      "certificates/P16_batchC.json": true,
+      "certificates/P15_batchA.json": true,
+      "certificates/P15_D13.json": true
+     }
+    },
+    "footer": {
+     "XVI-P-appendix": {
+      "pages": 467,
+      "footers": 467,
+      "labels": [
+       "XVI-P p16"
+      ],
+      "expected_label": "XVI-P p16",
+      "pass": true
+     },
+     "XVI-P": {
+      "pages": 491,
+      "footers": 491,
+      "labels": [
+       "XVI-P p16"
+      ],
+      "expected_label": "XVI-P p16",
+      "pass": true
+     }
+    }
+   },
+   "manifest": {
+    "n_entries": 34,
+    "failures": [],
+    "n_synced": 6
+   }
+  },
+  "5_determinism_PYTHONHASHSEED": {
+   "pass": true,
+   "certificates": {
+    "P16_E2_evanescent": {
+     "build(default seed)": {
+      "certio_content_sha_ignoring_run_specific": "ad81f29cd831f407c39b0d150f7a0c039fc4b56a236de37342bb2a7a07ca681d",
+      "own_sha_ignoring_seconds": "692866d421d86863e7d2c1f41ca236e3d20d3429c2e610e4278d51b543747039",
+      "file_sha256": "56cd328e4f7cf1456258787902c7e8bab5eb49bf0a58870a477afb5a221a6c3e"
+     },
+     "PYTHONHASHSEED=0": {
+      "certio_content_sha_ignoring_run_specific": "ad81f29cd831f407c39b0d150f7a0c039fc4b56a236de37342bb2a7a07ca681d",
+      "own_sha_ignoring_seconds": "692866d421d86863e7d2c1f41ca236e3d20d3429c2e610e4278d51b543747039",
+      "file_sha256": "6d41843376256849c4ed007164dba81f0722bc43cfa36fb2a0e5035e5a16ccc4"
+     },
+     "PYTHONHASHSEED=4242": {
+      "certio_content_sha_ignoring_run_specific": "ad81f29cd831f407c39b0d150f7a0c039fc4b56a236de37342bb2a7a07ca681d",
+      "own_sha_ignoring_seconds": "692866d421d86863e7d2c1f41ca236e3d20d3429c2e610e4278d51b543747039",
+      "file_sha256": "9d8651ade5d73574d21dbd6f348e88df30907d628c6d906ffdb318ef219f9abe"
+     },
+     "content_identical_across_seeds_and_build": true
+    },
+    "P16_batchC": {
+     "build(default seed)": {
+      "certio_content_sha_ignoring_run_specific": "cd2a5d0db4f3f2553ff9ed0817f9dc6dc27c42a5a73f63c3f97c11df2b0b77f3",
+      "own_sha_ignoring_seconds": "33a9f498accf1999f903cf9c1c2c552ef222ae4946cc5805ac3c08649143cebb",
+      "file_sha256": "3d844fc19ff0e035e65867592dd2799774c525c01f27ffb96bd77d775a7f1288"
+     },
+     "PYTHONHASHSEED=0": {
+      "certio_content_sha_ignoring_run_specific": "cd2a5d0db4f3f2553ff9ed0817f9dc6dc27c42a5a73f63c3f97c11df2b0b77f3",
+      "own_sha_ignoring_seconds": "33a9f498accf1999f903cf9c1c2c552ef222ae4946cc5805ac3c08649143cebb",
+      "file_sha256": "d48ac93200ca1d3d8ec6abae20219607a09d83d711c9730d544245df0ac2f458"
+     },
+     "PYTHONHASHSEED=4242": {
+      "certio_content_sha_ignoring_run_specific": "cd2a5d0db4f3f2553ff9ed0817f9dc6dc27c42a5a73f63c3f97c11df2b0b77f3",
+      "own_sha_ignoring_seconds": "33a9f498accf1999f903cf9c1c2c552ef222ae4946cc5805ac3c08649143cebb",
+      "file_sha256": "bb409f5f4ad46476d457959866ef894749789d1c3a0e8070f6ea0148dcd02fae"
+     },
+     "content_identical_across_seeds_and_build": true
+    }
+   },
+   "other_files_changed_by_rerun": {
+    "PYTHONHASHSEED=0": [
+     "certificates/P16_E2_evanescent.json",
+     "certificates/P16_batchC.json"
+    ],
+    "PYTHONHASHSEED=4242": [
+     "certificates/P16_E2_evanescent.json",
+     "certificates/P16_batchC.json"
+    ]
+   }
+  },
+  "e_pytest_independent_run": {
+   "pass": true,
+   "groups": {
+    "baseline": {
+     "passed": 79,
+     "failed": 0,
+     "skipped": 0
+    },
+    "certificate_mutation": {
+     "passed": 24,
+     "failed": 0,
+     "skipped": 0
+    },
+    "resumed_build": {
+     "passed": 4,
+     "failed": 0,
+     "skipped": 0
+    }
+   },
+   "summary": "107 passed in 224.16s (0:03:44)",
+   "run_in": "separate copy pytest_run/XVI-P, all of tests/, P14_SYNC_DIR redirected to pytest_run/sync (stayed empty)"
+  },
+  "e_pins": {
+   "pass": true,
+   "XVI-M_ok": true,
+   "grav_density_ok": true,
+   "xvio_bad": [],
+   "xvio_n": 24,
+   "inherited_data_ok": true
+  },
+  "6_batchA_scaleless_regression": {
+   "pass": true,
+   "own_omega_analysis": {
+    "D02": {
+     "denominators": [
+      "l^2+i0"
+     ],
+     "nu": 1,
+     "single_massless_propagator_power_no_external_momentum": true,
+     "prefactor": "-kappa**2/2",
+     "monomials": 220,
+     "rank_histogram": {
+      "0": 84,
+      "2": 136
+     },
+     "odd_rank_monomials (vanish)": 0,
+     "omega_set_even_rank": [
+      2,
+      4
+     ],
+     "omega_subset_of_{2,4}": true,
+     "log_term_possible (omega=0)": false
+    },
+    "D12": {
+     "denominators": [
+      "l^2+i0"
+     ],
+     "nu": 1,
+     "single_massless_propagator_power_no_external_momentum": true,
+     "prefactor": "-kappa**2/2",
+     "monomials": 160,
+     "rank_histogram": {
+      "2": 160
+     },
+     "odd_rank_monomials (vanish)": 0,
+     "omega_set_even_rank": [
+      4
+     ],
+     "omega_subset_of_{2,4}": true,
+     "log_term_possible (omega=0)": false
+    },
+    "D14a": {
+     "denominators": [
+      "l^2+i0"
+     ],
+     "nu": 1,
+     "single_massless_propagator_power_no_external_momentum": true,
+     "prefactor": "-kappa/2",
+     "monomials": 22,
+     "rank_histogram": {
+      "2": 22
+     },
+     "odd_rank_monomials (vanish)": 0,
+     "omega_set_even_rank": [
+      4
+     ],
+     "omega_subset_of_{2,4}": true,
+     "log_term_possible (omega=0)": false
+    },
+    "D14b": {
+     "denominators": [
+      "l^2+i0"
+     ],
+     "nu": 1,
+     "single_massless_propagator_power_no_external_momentum": true,
+     "prefactor": "kappa",
+     "monomials": 16,
+     "rank_histogram": {
+      "2": 16
+     },
+     "odd_rank_monomials (vanish)": 0,
+     "omega_set_even_rank": [
+      4
+     ],
+     "omega_subset_of_{2,4}": true,
+     "log_term_possible (omega=0)": false
+    },
+    "D14c": {
+     "denominators": [
+      "l^2+i0"
+     ],
+     "nu": 1,
+     "single_massless_propagator_power_no_external_momentum": true,
+     "prefactor": "-kappa/2",
+     "monomials": 22,
+     "rank_histogram": {
+      "2": 22
+     },
+     "odd_rank_monomials (vanish)": 0,
+     "omega_set_even_rank": [
+      4
+     ],
+     "omega_subset_of_{2,4}": true,
+     "log_term_possible (omega=0)": false
+    },
+    "pass": true
+   }
+  },
+  "7_comparison_with_author_reference": {
+   "pass": true,
+   "reference_file": "/workspace/XVI-P/reproducibility/reference_values_p16.json",
+   "reference_sha256": "a1fda1e67a4a0033014f40b8bdac57b4daacfa507588e0765bb7139587b053d9",
+   "reference_identical_to_in_zip_copy": true,
+   "entrypoint_values_compared": 272,
+   "independently_recomputed_values_compared": 197,
+   "independent_sympy_equal_comparisons": 62,
+   "environment_differences": {}
+  }
+ },
+ "mismatches": [],
+ "findings": [
+  {
+   "id": "G1_static_scan_scope_narrower_than_disclosure",
+   "severity": "low (no released value affected)",
+   "detail": "DISCLOSED_CONTRACT_REVISIONS_P16 says the unhookable value paths 'replace with a callable query, Poly(.., d).eval, string round-trips' are covered by the static AST scan (tests/test_p16.py::_forbidden_calls). The scan detects Poly(...).eval, lambda-query replace and lambdify, but NOT: a named-function callable replace (e.replace(isd, four)), string round-trips (sympify(str(e)).subs(Symbol('d'), 4)), builtin eval(srepr(e)), or a manual expression-tree rebuild -- all four leak a value at runtime (probe). My own broader grep of code/p5_calc + code/p5_entry finds no such use (no eval/exec, no sympify(str(...)), no callable replace), so no released number is affected."
+  },
+  {
+   "id": "G2_plain_symbol_d_from_stored_strings",
+   "severity": "informational",
+   "detail": "sympify() of a stored string yields a plain Symbol('d') that is NOT the OpaqueDimension: subs/has against dred.d then silently do nothing / return False. Package sites that sympify stored A(d) strings (e.g. batchC premature_d4 mutation sympify(a0).subs(d, 4), d13._opaque_d_refuses, R5_d_retained checks) currently receive sympy objects (the certificates show premature_d4 rejected=True and R5_d_retained=True), but the guard would not protect a future string-based path; e2_evanescent uses locals={'d': d} correctly."
+  },
+  {
+   "id": "G3_hook_coverage_detail",
+   "severity": "informational",
+   "detail": "Hardened guard raises for subs, subs(dict), subs(simultaneous), xreplace, replace(d, 4), evalf(subs), N(subs), limit, series in d, Lambda(d, e)(4), Subs.doit, lambdify (default, math, mpmath, sympy), pycode, pickle round-trip + subs. expr.match(d) raises. Not hooked (string outputs, not values): ccode/fcode-type printers; Wild-pattern match (d+1).match(d+w) does not raise despite the docstring 'expr.match(d)' wording (it substitutes no value)."
+  },
+  {
+   "id": "G4_change_log_omits_new_reference_file",
+   "severity": "cosmetic",
+   "detail": "change_log_vs_p15 lists reproducibility/reference_values_p15.json as removed but not reproducibility/reference_values_p16.json as added (12 vs my 13 added files); all other entries equal my own diff."
+  },
+  {
+   "id": "G5_test_p15_assertion_relaxed",
+   "severity": "informational (disclosed)",
+   "detail": "tests/test_p15.py now reads certificates/P15_release.json and accepts independent_rebuild_passed in ('pending', False) instead of == 'pending'; disclosed in DISCLOSED_TEST_REVISIONS_P16; tests/test_p14.py changes are name/prefix updates only (diff matches disclosure)."
+  },
+  {
+   "id": "G6_imaginary_normalisation",
+   "severity": "informational",
+   "detail": "All D01/D03 A(d) carry an overall factor I because Ghat = -i*prefactor/kappa^2 * int with real export prefactors (kappa^2/2, -kappa^2); D13 (prefactor I*kappa^2) is real. My values reproduce the certificate in the same stated convention; physical consistency of the relative phase between graphs of the hh slot was not independently assessed."
+  },
+  {
+   "id": "G7_scope",
+   "severity": "scope note",
+   "detail": "Batch C spot-check starts from the exported covariant integrands (file shas identical to p14r/p15 exports), not from my own Feynman-rule derivation; the p14r hh-basis coordinates (UV_pole_in_p14r_hh_basis) were not recomputed in the author's density normalisation (only span membership, with my own 5 directions). E2 proof checked with my own EH operator, which equals the author's up to the factor -2."
+  },
+  {
+   "id": "F3_F4_F5_from_p15",
+   "severity": "resolution",
+   "detail": "F3: replace(d,4) and lambdify now raise (p15 probe re-run under p16 dred); F4: all 25/467/491 page footers read 'XVI-P p16' and the D13/BatchA/BatchC/E2 value blocks (220 snippets) read back in order in appendix and combined PDF; F5: change log present (see G4)."
+  }
+ ],
+ "independent_comparisons": [
+  {
+   "key": "/exports/ell2/file_sha256",
+   "reference": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "independent": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell2/polynomial_sha256",
+   "reference": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "independent": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell2/terms",
+   "reference": 84,
+   "independent": 84,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/file_sha256",
+   "reference": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "independent": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/polynomial_sha256",
+   "reference": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "independent": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/terms",
+   "reference": 678,
+   "independent": 678,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/file_sha256",
+   "reference": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "independent": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/polynomial_sha256",
+   "reference": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "independent": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/terms",
+   "reference": 3360,
+   "independent": 3360,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/V4_grav.json",
+   "reference": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "independent": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4_conventions.json",
+   "reference": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "independent": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_vertex_tensors.json",
+   "reference": "3181424bf18a3def5339c4fe41662dd929b5e4e7ec7fc9aa913a903c5a666872",
+   "independent": "3181424bf18a3def5339c4fe41662dd929b5e4e7ec7fc9aa913a903c5a666872",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D01.json",
+   "reference": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+   "independent": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D02.json",
+   "reference": "2f7fd32985ed9161b4b5aad221a9ca6dc59e9f1cc6a069ad7f7503835ce83d1e",
+   "independent": "2f7fd32985ed9161b4b5aad221a9ca6dc59e9f1cc6a069ad7f7503835ce83d1e",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D03.json",
+   "reference": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+   "independent": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D11.json",
+   "reference": "f68904158d931faf71209cde9028d4f90e987c098ba84128fd2f6b661a4640ff",
+   "independent": "f68904158d931faf71209cde9028d4f90e987c098ba84128fd2f6b661a4640ff",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D12.json",
+   "reference": "c57d815c0f4aac641dacafa4577037fcbe0bdc4c207597c9b88f62f1153ec73a",
+   "independent": "c57d815c0f4aac641dacafa4577037fcbe0bdc4c207597c9b88f62f1153ec73a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D13.json",
+   "reference": "8fe1a4ba4ac1fae573ad896ef25d3ae5e0d8a525d546ad980b2ebae8c07cc0a5",
+   "independent": "8fe1a4ba4ac1fae573ad896ef25d3ae5e0d8a525d546ad980b2ebae8c07cc0a5",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14a.json",
+   "reference": "7ac1b6a3544ca2bb370ded6e1ee6cdcea49da94af01c22d96866aa2c30cdd61c",
+   "independent": "7ac1b6a3544ca2bb370ded6e1ee6cdcea49da94af01c22d96866aa2c30cdd61c",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14b.json",
+   "reference": "95f6d47436ba1efdcef371979f7941b782cedb625530912ec00e499bfca953f3",
+   "independent": "95f6d47436ba1efdcef371979f7941b782cedb625530912ec00e499bfca953f3",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14c.json",
+   "reference": "b50e3aabe46d548a0d9afaf182aa99143b2792927b194b84075bcdcc79c0ad79",
+   "independent": "b50e3aabe46d548a0d9afaf182aa99143b2792927b194b84075bcdcc79c0ad79",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/required_master_residuals",
+   "reference": [],
+   "independent": [],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/XVI-M.tex",
+   "reference": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "independent": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/XVI-N-r10/code/prep/grav_density.py",
+   "reference": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "independent": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/ledgers/quantum_factor_ledger.json",
+   "reference": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "independent": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/source/n_source_files",
+   "reference": 134,
+   "independent": 134,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/g4_mn g4_rs (p.p)^2",
+   "reference": "-27*I/80",
+   "independent": "-27*I/80",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/g4_mn g4_rs (p.p)^2",
+   "reference": "I*(405*L - 982)/1200",
+   "independent": "27*I*L/80 - 491*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/g4_mn gt_rs (p.p)^2",
+   "reference": "13*I/120",
+   "independent": "13*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/g4_mn gt_rs (p.p)^2",
+   "reference": "I*(523 - 195*L)/1800",
+   "independent": "-13*I*L/120 + 523*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/g4_mn p_r p_s (p.p)^1",
+   "reference": "19*I/60",
+   "independent": "19*I/60",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/g4_mn p_r p_s (p.p)^1",
+   "reference": "I*(724 - 285*L)/900",
+   "independent": "-19*I*L/60 + 181*I/225",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/g4_mr g4_ns (p.p)^2",
+   "reference": "-71*I/240",
+   "independent": "-71*I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/g4_mr g4_ns (p.p)^2",
+   "reference": "I*(1065*L - 1946)/3600",
+   "independent": "71*I*L/240 - 973*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/g4_mr gt_ns (p.p)^2",
+   "reference": "-3*I/80",
+   "independent": "-3*I/80",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/g4_mr gt_ns (p.p)^2",
+   "reference": "I*(45*L - 118)/1200",
+   "independent": "3*I*L/80 - 59*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/g4_mr p_n p_s (p.p)^1",
+   "reference": "11*I/40",
+   "independent": "11*I/40",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/g4_mr p_n p_s (p.p)^1",
+   "reference": "I*(97 - 55*L)/200",
+   "independent": "-11*I*L/40 + 97*I/200",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/g4_rs gt_mn (p.p)^2",
+   "reference": "13*I/120",
+   "independent": "13*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/g4_rs gt_mn (p.p)^2",
+   "reference": "I*(523 - 195*L)/1800",
+   "independent": "-13*I*L/120 + 523*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/g4_rs p_m p_n (p.p)^1",
+   "reference": "19*I/60",
+   "independent": "19*I/60",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/g4_rs p_m p_n (p.p)^1",
+   "reference": "I*(724 - 285*L)/900",
+   "independent": "-19*I*L/60 + 181*I/225",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/gt_mn gt_rs (p.p)^2",
+   "reference": "-I/240",
+   "independent": "-I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/gt_mn gt_rs (p.p)^2",
+   "reference": "I*(15*L - 46)/3600",
+   "independent": "I*L/240 - 23*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/gt_mn p_r p_s (p.p)^1",
+   "reference": "-3*I/20",
+   "independent": "-3*I/20",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/gt_mn p_r p_s (p.p)^1",
+   "reference": "I*(90*L - 241)/600",
+   "independent": "3*I*L/20 - 241*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/gt_mr gt_ns (p.p)^2",
+   "reference": "-I/240",
+   "independent": "-I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/gt_mr gt_ns (p.p)^2",
+   "reference": "I*(15*L - 46)/3600",
+   "independent": "I*L/240 - 23*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/gt_mr p_n p_s (p.p)^1",
+   "reference": "7*I/120",
+   "independent": "7*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/gt_mr p_n p_s (p.p)^1",
+   "reference": "I*(277 - 105*L)/1800",
+   "independent": "-7*I*L/120 + 277*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/gt_rs p_m p_n (p.p)^1",
+   "reference": "-3*I/20",
+   "independent": "-3*I/20",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/gt_rs p_m p_n (p.p)^1",
+   "reference": "I*(90*L - 241)/600",
+   "independent": "3*I*L/20 - 241*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/UV_pole/p_m p_n p_r p_s",
+   "reference": "-13*I/15",
+   "independent": "-13*I/15",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/MSbar_finite/p_m p_n p_r p_s",
+   "reference": "I*(780*L - 1597)/900",
+   "independent": "13*I*L/15 - 1597*I/900",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D01/evanescent_pole_nonzero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/graphs/D01/status",
+   "reference": "regulated",
+   "independent": "regulated",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/g4_mn g4_rs (p.p)^2",
+   "reference": "7*I/48",
+   "independent": "7*I/48",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/g4_mn g4_rs (p.p)^2",
+   "reference": "I*(50 - 21*L)/144",
+   "independent": "-7*I*L/48 + 25*I/72",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/g4_mn gt_rs (p.p)^2",
+   "reference": "-I/24",
+   "independent": "-I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/g4_mn gt_rs (p.p)^2",
+   "reference": "I*(3*L - 8)/72",
+   "independent": "I*L/24 - I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/g4_mn p_r p_s (p.p)^1",
+   "reference": "-I/8",
+   "independent": "-I/8",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/g4_mn p_r p_s (p.p)^1",
+   "reference": "I*(3*L - 8)/24",
+   "independent": "I*L/8 - I/3",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/g4_mr g4_ns (p.p)^2",
+   "reference": "I/24",
+   "independent": "I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/g4_mr g4_ns (p.p)^2",
+   "reference": "I*(2 - 3*L)/72",
+   "independent": "-I*L/24 + I/36",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/g4_mr gt_ns (p.p)^2",
+   "reference": "I/24",
+   "independent": "I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/g4_mr gt_ns (p.p)^2",
+   "reference": "I*(8 - 3*L)/72",
+   "independent": "-I*L/24 + I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/g4_mr p_n p_s (p.p)^1",
+   "reference": "-I/48",
+   "independent": "-I/48",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/g4_mr p_n p_s (p.p)^1",
+   "reference": "I*(3*L + 4)/144",
+   "independent": "I*L/48 + I/36",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/g4_rs gt_mn (p.p)^2",
+   "reference": "-I/24",
+   "independent": "-I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/g4_rs gt_mn (p.p)^2",
+   "reference": "I*(3*L - 8)/72",
+   "independent": "I*L/24 - I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/g4_rs p_m p_n (p.p)^1",
+   "reference": "-I/8",
+   "independent": "-I/8",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/g4_rs p_m p_n (p.p)^1",
+   "reference": "I*(3*L - 8)/24",
+   "independent": "I*L/8 - I/3",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/gt_mn p_r p_s (p.p)^1",
+   "reference": "I/12",
+   "independent": "I/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/gt_mn p_r p_s (p.p)^1",
+   "reference": "I*(8 - 3*L)/36",
+   "independent": "-I*L/12 + 2*I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/gt_mr p_n p_s (p.p)^1",
+   "reference": "-I/16",
+   "independent": "-I/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/gt_mr p_n p_s (p.p)^1",
+   "reference": "I*(3*L - 8)/48",
+   "independent": "I*L/16 - I/6",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/gt_rs p_m p_n (p.p)^1",
+   "reference": "I/12",
+   "independent": "I/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/gt_rs p_m p_n (p.p)^1",
+   "reference": "I*(8 - 3*L)/36",
+   "independent": "-I*L/12 + 2*I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/UV_pole/p_m p_n p_r p_s",
+   "reference": "I/6",
+   "independent": "I/6",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/MSbar_finite/p_m p_n p_r p_s",
+   "reference": "I*(5 - 3*L)/18",
+   "independent": "-I*L/6 + 5*I/18",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D03/evanescent_pole_nonzero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/graphs/D03/status",
+   "reference": "regulated",
+   "independent": "regulated",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/graphs/D13/UV_pole/T1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D13/MSbar_finite/T1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D13/UV_pole/T2",
+   "reference": "3/16",
+   "independent": "3/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D13/MSbar_finite/T2",
+   "reference": "1/3 - 3*L/16",
+   "independent": "1/3 - 3*L/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D13/UV_pole/T3",
+   "reference": "-1/4",
+   "independent": "-1/4",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D13/MSbar_finite/T3",
+   "reference": "L/4 - 5/12",
+   "independent": "L/4 - 5/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D13/UV_pole/E1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D13/MSbar_finite/E1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D13/UV_pole/E2",
+   "reference": "1/16",
+   "independent": "1/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D13/MSbar_finite/E2",
+   "reference": "1/6 - L/16",
+   "independent": "1/6 - L/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p16/graphs/D02/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/graphs/D12/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/graphs/D14a/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/graphs/D14b/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/graphs/D14c/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/D12_status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/E2_decoupling_proven",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/contract_changed_files",
+   "reference": [
+    "code/p5_entry/dred.py"
+   ],
+   "independent": [
+    "code/p5_entry/dred.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/contract_files_added",
+   "reference": [],
+   "independent": [],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/change_log_vs_p15/added",
+   "reference": [
+    "archival/p15/README.md",
+    "archival/p15/p15_source_files.json",
+    "archival/p15/reference_values_p15.json",
+    "archival/p15/reproducibility/author_rebuild_report_p15.json",
+    "archival/p15/reproducibility/independent_rebuild_report_p15.json",
+    "code/p5_calc/batchC.py",
+    "code/p5_calc/covariant.py",
+    "code/p5_calc/e2_evanescent.py",
+    "code/p5_calc/p16_conventions.py",
+    "code/p5_calc/release_p16.py",
+    "manuscript/notes/P16_E2_and_batchC.tex",
+    "tests/test_p16.py"
+   ],
+   "independent": [
+    "archival/p15/README.md",
+    "archival/p15/p15_source_files.json",
+    "archival/p15/reference_values_p15.json",
+    "archival/p15/reproducibility/author_rebuild_report_p15.json",
+    "archival/p15/reproducibility/independent_rebuild_report_p15.json",
+    "code/p5_calc/batchC.py",
+    "code/p5_calc/covariant.py",
+    "code/p5_calc/e2_evanescent.py",
+    "code/p5_calc/p16_conventions.py",
+    "code/p5_calc/release_p16.py",
+    "manuscript/notes/P16_E2_and_batchC.tex",
+    "tests/test_p16.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/change_log_vs_p15/modified",
+   "reference": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "code/p5_entry/dred.py",
+    "manuscript/body/XVI-P-body.tex",
+    "manuscript/preamble.tex",
+    "tests/test_p14.py",
+    "tests/test_p15.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "independent": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "code/p5_entry/dred.py",
+    "manuscript/body/XVI-P-body.tex",
+    "manuscript/preamble.tex",
+    "tests/test_p14.py",
+    "tests/test_p15.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p16/change_log_vs_p15/removed",
+   "reference": [
+    "reproducibility/reference_values_p15.json"
+   ],
+   "independent": [
+    "reproducibility/reference_values_p15.json"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P16_E2_evanescent",
+   "reference": "ad81f29cd831f407c39b0d150f7a0c039fc4b56a236de37342bb2a7a07ca681d",
+   "independent": "ad81f29cd831f407c39b0d150f7a0c039fc4b56a236de37342bb2a7a07ca681d",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P16_batchC",
+   "reference": "cd2a5d0db4f3f2553ff9ed0817f9dc6dc27c42a5a73f63c3f97c11df2b0b77f3",
+   "independent": "cd2a5d0db4f3f2553ff9ed0817f9dc6dc27c42a5a73f63c3f97c11df2b0b77f3",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/passed",
+   "reference": 79,
+   "independent": 79,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/passed",
+   "reference": 24,
+   "independent": 24,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/passed",
+   "reference": 4,
+   "independent": 4,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/release_claim_accepted",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/publication",
+   "reference": "accepted",
+   "independent": "accepted",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/quantum_inputs_evaluated",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/projected_defect_computed",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/projected_identity_verified",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/projected_restoration_verified",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/bulk_symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/D11_matching_verified",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/O1_closure",
+   "reference": "NOT_CLOSED",
+   "independent": "NOT_CLOSED",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/insertion_status",
+   "reference": "Frozen_negative_obstruction_preserved",
+   "independent": "Frozen_negative_obstruction_preserved",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XV_B_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XIV_J_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/Route_B_discharged",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/u_R_c_delta_added",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XVI_P_registered",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/D11_evaluated",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/quantum_action_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/quantum_prescription_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/D11_matching_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/counterterm_domain_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/amplitude_rules_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_earned",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P3_P4_frozen_as_P5_inputs",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/D11_matching_verified",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/D12_status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/classical_readiness_for_ch_identity",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/quartic_generator_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/ch_projection_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/ch_dependency_inventory_complete",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/gauge_fixing_map_constructed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/required_classical_BV_components_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.3",
+   "reference": "complete (declared ch target)",
+   "independent": "complete (declared ch target)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.4",
+   "reference": "earned (classical readiness)",
+   "independent": "earned (classical readiness)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_entry",
+   "reference": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+   "independent": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_calculation",
+   "reference": "in progress (p15: Batch A D02/D12/D14a-c and Batch B D13; p16: E2 decoupled from the ch slot (proof), Batch C D01/D03 evaluated; D11 matching M2 NOT evaluated)",
+   "independent": "in progress (p15: Batch A D02/D12/D14a-c and Batch B D13; p16: E2 decoupled from the ch slot (proof), Batch C D01/D03 evaluated; D11 matching M2 NOT evaluated)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_identity",
+   "reference": "open",
+   "independent": "open",
+   "equal": true,
+   "compared_as": "exact"
+  }
+ ],
+ "entrypoint_report": "src/XVI-P/build/rebuild_report.json",
+ "steps": {
+  "source_only_tree": {
+   "ok": true,
+   "non_source_files": [],
+   "count": 0
+  },
+  "inherited_pins": {
+   "ok": true,
+   "external": {
+    "XVI-M.tex": {
+     "sha256": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+     "ok": true,
+     "location": "vendored",
+     "vendored_copy_matches_pin": true
+    },
+    "XVI-N-r10/code/prep/grav_density.py": {
+     "sha256": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+     "ok": true,
+     "location": "vendored",
+     "vendored_copy_matches_pin": true
+    }
+   },
+   "inherited_data_files": 1,
+   "inherited_data_failures": [],
+   "xvi_o_o70_files_verified": 24,
+   "xvi_o_o70_failures": [],
+   "XVI_M_pin": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea"
+  },
+  "full_build": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 1370.2,
+   "log": "build/rebuild_build.log"
+  },
+  "release_accepted": {
+   "ok": true,
+   "milestones": {
+    "P.3": "complete (declared ch target)",
+    "P.4": "earned (classical readiness)",
+    "P.5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+    "P.5_calculation": "in progress (p15: Batch A D02/D12/D14a-c and Batch B D13; p16: E2 decoupled from the ch slot (proof), Batch C D01/D03 evaluated; D11 matching M2 NOT evaluated)",
+    "P.5_identity": "open"
+   },
+   "P5_entry_flags": {
+    "quantum_action_defined": true,
+    "quantum_prescription_defined": true,
+    "D11_matching_defined": true,
+    "counterterm_domain_defined": true,
+    "amplitude_rules_verified": true
+   }
+  },
+  "tests": {
+   "ok": true,
+   "groups": {
+    "baseline": {
+     "passed": 79,
+     "failed": 0,
+     "skipped": 0
+    },
+    "certificate_mutation": {
+     "passed": 24,
+     "failed": 0,
+     "skipped": 0
+    },
+    "resumed_build": {
+     "passed": 4,
+     "failed": 0,
+     "skipped": 0
+    }
+   },
+   "summary": "107 passed in 226.49s (0:03:46)"
+  },
+  "pdf_readback_vs_records": {
+   "ok": true,
+   "records": 6,
+   "appendix": true,
+   "combined": true,
+   "value_blocks": {
+    "XVI-P-appendix": {
+     "certificates/P16_E2_evanescent.json": true,
+     "certificates/P16_batchC.json": true,
+     "certificates/P15_batchA.json": true,
+     "certificates/P15_D13.json": true
+    },
+    "XVI-P": {
+     "certificates/P16_E2_evanescent.json": true,
+     "certificates/P16_batchC.json": true,
+     "certificates/P15_batchA.json": true,
+     "certificates/P15_D13.json": true
+    }
+   },
+   "footer": {
+    "XVI-P-appendix": {
+     "pages": 467,
+     "footers": 467,
+     "labels": [
+      "XVI-P p16"
+     ],
+     "expected_label": "XVI-P p16",
+     "pass": true
+    },
+    "XVI-P": {
+     "pages": 491,
+     "footers": 491,
+     "labels": [
+      "XVI-P p16"
+     ],
+     "expected_label": "XVI-P p16",
+     "pass": true
+    }
+   }
+  },
+  "external_manifest": {
+   "ok": true,
+   "entries": 34,
+   "failures": [],
+   "synced_inside_copy": [
+    "XVI-P-appendix.pdf",
+    "XVI-P-full.zip",
+    "XVI-P-p16-source-only.zip",
+    "XVI-P-review-focus.zip",
+    "XVI-P-science.pdf",
+    "XVI-P.pdf"
+   ]
+  },
+  "source_only_zip_rebuilt": {
+   "ok": true,
+   "differences": []
+  },
+  "file_access_trace": {
+   "ok": true,
+   "present": true,
+   "reads": 5627,
+   "writes": 5496,
+   "external_reads_pinned": [],
+   "unpinned_external_reads": [],
+   "in_tree_source_files_read": 134,
+   "in_tree_data_inputs_read": [
+    "archival/p13/frozen_p13_inputs.json",
+    "archival/p13/reference_values_p13.json",
+    "archival/p13/reproducibility/author_rebuild_report_p13.json",
+    "archival/p13/reproducibility/independent_rebuild_report_p13.json",
+    "archival/p14r/reference_values_p14r.json",
+    "archival/p14r/reproducibility/author_rebuild_report_p14r.json",
+    "archival/p14r/reproducibility/independent_rebuild_report_p14r.json",
+    "archival/p15/p15_source_files.json",
+    "archival/p15/reference_values_p15.json",
+    "archival/p15/reproducibility/author_rebuild_report_p15.json",
+    "archival/p15/reproducibility/independent_rebuild_report_p15.json",
+    "ledgers/quantum_factor_ledger.json",
+    "provenance/XVI-M_sha256.txt",
+    "provenance/XVI-O_o70_source_tree.json",
+    "provenance/predecessor_pins.json",
+    "reproducibility/inherited_data_pins.json",
+    "reproducibility/reference_values_p16.json"
+   ],
+   "unpinned_in_tree_data_inputs": [],
+   "reads_of_unknown_files": [
+    "P14_integrands",
+    "XVI-N-r10",
+    "body",
+    "classical",
+    "inherited",
+    "matter_loop",
+    "outputs",
+    "p02_p09",
+    "p10",
+    "p11",
+    "p12",
+    "p13",
+    "p14",
+    "p14r",
+    "p15",
+    "p4_classical",
+    "p5_calc",
+    "p5_entry",
+    "prep",
+    "read_trace",
+    "stale",
+    "test_f3_static_scan_detects_a_0"
+   ]
+  },
+  "comparison_with_reference": {
+   "ok": true,
+   "compared": 272,
+   "equal": 272,
+   "differences": []
+  }
+ }
+}

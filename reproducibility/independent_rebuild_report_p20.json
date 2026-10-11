@@ -1,0 +1,3027 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p20",
+ "kind": "independent rebuild report (separate clean environment); package evidence, not a mathematical certificate",
+ "date": "2026-10-09",
+ "reviewer": "independent executor (Grok Bot subagent), fresh dir /workspace/indep_rebuild_p20 and fresh venv; no reads from /workspace/XVI-P except reference_values_p20.json at the final comparison step",
+ "same_box_caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+ "environment": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "venv": "/workspace/indep_rebuild_p20/venv"
+ },
+ "environment_reference": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+ },
+ "environment_differences": {},
+ "zip_sha256": "ca32ce018933f12d1a623217d6a98d647817360dd12211e2e9469cf850a63bb2",
+ "source_tree_sha256": "2c0aa1533b5a64d65f9169cc510ea3f0761c9471f9601cdec6973a2aa8d45700",
+ "source_tree_sha256_without_reference": "bcf4313377482d9aa281deec9782b7c0fe5f04d21e74b037fba4c96ec37b0e38",
+ "pass": true,
+ "independent_rebuild_passed": true,
+ "checks": {
+  "0_zip_and_entrypoint": {
+   "pass": true,
+   "zip_sha256": "ca32ce018933f12d1a623217d6a98d647817360dd12211e2e9469cf850a63bb2",
+   "source_tree_sha256": "2c0aa1533b5a64d65f9169cc510ea3f0761c9471f9601cdec6973a2aa8d45700",
+   "n_source_files": 174,
+   "steps": {
+    "source_only_tree": true,
+    "inherited_pins": true,
+    "full_build": true,
+    "release_accepted": true,
+    "tests": true,
+    "pdf_readback_vs_records": true,
+    "external_manifest": true,
+    "source_only_zip_rebuilt": true,
+    "file_access_trace": true,
+    "comparison_with_reference": true
+   },
+   "comparison_with_in_zip_reference": {
+    "ok": true,
+    "compared": 422,
+    "equal": 422,
+    "differences": []
+   },
+   "rebuilt_zip_equals_input": true,
+   "seconds": 4509.0,
+   "note": "box load ~13-16 on 8 cores during the build (other workloads); timings inflated"
+  },
+  "1_K1_fix": {
+   "pass": true,
+   "own": "my p19 k1 code (k1_orient/probe/closure/ct) rerun on the p20 code: results identical to p19 (k1_probe differs only in an unordered listing of a non-uniform ratio set)",
+   "orientation": [
+    [
+     "-1",
+     "-1"
+    ],
+    [
+     "-1",
+     "-1"
+    ]
+   ],
+   "Sigma_routeG": [
+    [
+     "3/8",
+     "-1/4"
+    ],
+    [
+     "3/8",
+     "-1/4"
+    ]
+   ],
+   "derived_factor": [
+    "1",
+    "1",
+    "1"
+   ],
+   "full_closure_complete": [
+    {
+     "closed": true,
+     "entries": 0,
+     "sectors": []
+    },
+    {}
+   ],
+   "without_ccb": [
+    {
+     "closed": false,
+     "entries": 88,
+     "sectors": [
+      "c.b"
+     ]
+    },
+    {
+     "c.b": 88
+    }
+   ],
+   "unconverted": [
+    {
+     "closed": false,
+     "entries": 88,
+     "sectors": [
+      "c.b"
+     ],
+     "detected": true
+    },
+    {
+     "c.b": 88
+    }
+   ],
+   "tree_controls": {
+    "ghost_equation_tree_V_cbc_eq_2iD_V_Kc": true,
+    "S0_Kc_terms": 16,
+    "S0_cbc_terms": 40,
+    "sigma0_S0Kc_plus_S0cbc_entries": 0,
+    "sigma0_S0Kc_alone_entries (control, nonzero)": 16,
+    "ok": true
+   },
+   "quotient": {
+    "cert_without_Sigma": [
+     "0",
+     "0",
+     "0",
+     "-3/8",
+     "1/4"
+    ],
+    "own_cK_only": [
+     "0",
+     "0",
+     "0",
+     "-3/8",
+     "1/4"
+    ],
+    "cert_incl_Sigma": {
+     "pole": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ],
+     "local": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    },
+    "cert_Sigma_alone": {
+     "pole": [
+      "0",
+      "0",
+      "0",
+      "3/8",
+      "-1/4"
+     ],
+     "local": [
+      "0",
+      "0",
+      "0",
+      "2/3",
+      "-5/12"
+     ]
+    },
+    "own_Sigma_routeG": [
+     "0",
+     "0",
+     "0",
+     "3/8",
+     "-1/4"
+    ]
+   },
+   "quotient_judgement": "AUTHOR RIGHT: own k1/quotient_check.json (sigma_0 on the complement, using Im c ker and cohomology 0) gives the class of the c.K-only data = (0,0,0,-3/8,1/4) = -[Sigma_routeG]; Sigma_routeG = (+3/8,-1/4); sigma_0(c.K + Sigma_routeG) = 0. My p19 low finding (quotient entries 'mis-oriented Sigma') was a misreading and is withdrawn; the numerical coincidence with Sigma in (cb,c) orientation is what misled it."
+  },
+  "2_restoration_distinct": {
+   "pass": true,
+   "judgement": "genuinely distinct from projected_identity_verified: own p19 defect assembly shows drop D13 / flip K.c keep Delta = 0 (identity holds) while full closure fails (88 c.b), so identity does not imply restoration; restoration additionally tests the c.b/c.cbs sectors and the c.K-Sigma ghost relation. Caveat: it re-expresses the P15-certified ghost relation Sigma = 2iD[G] in sigma_0 language plus orientation, so it is not independent of P15; the p19 criterion is correctly relabelled a route-consistency control (holds)."
+  },
+  "3_detector_table": {
+   "pass": true,
+   "cert": {
+    "drop_graph_D11": [
+     0,
+     [],
+     false
+    ],
+    "drop_graph_D13 (c.K data = 0, Sigma held fixed)": [
+     88,
+     [
+      "c.b"
+     ],
+     true
+    ],
+    "flip_sign_Kc (c.K data -> -c.K, Sigma held fixed)": [
+     88,
+     [
+      "c.b"
+     ],
+     true
+    ],
+    "drop_graph_D03": [
+     280,
+     [
+      "h.c"
+     ],
+     true
+    ],
+    "drop_graph_D01": [
+     280,
+     [
+      "h.c"
+     ],
+     true
+    ],
+    "flip_phase_D03": [
+     280,
+     [
+      "h.c"
+     ],
+     true
+    ],
+    "symmetry_factor_D03_x2": [
+     280,
+     [
+      "h.c"
+     ],
+     true
+    ],
+    "Sigma_orientation_unconverted (p19 error)": [
+     88,
+     [
+      "c.b"
+     ],
+     true
+    ]
+   },
+   "own": {
+    "MUT drop D11 (h.h = D01+D03 only)": {},
+    "MUT drop D13 (c.K = 0, Sigma kept)": {
+     "c.b": 88
+    },
+    "MUT flip K.c row sign (c.K -> -c.K, Sigma kept)": {
+     "c.b": 88
+    }
+   },
+   "note": "own matches 88 c.b for drop D13/flip K.c/unconverted and blind drop D11; the 280 h.c entries for D01/D03 mutations are package values (not recomputed by me in p20; their p19 own mutations were detected by the projected defect)"
+  },
+  "4_D11_pin": {
+   "pass": true,
+   "own": {
+    "n_4D_structures": 6,
+    "c2": "-I/240",
+    "c0": "-I/24",
+    "ratio_c0_c2": "10",
+    "only_spin2_spin0s": true,
+    "transverse": true,
+    "projector_norms": [
+     "5",
+     "1"
+    ],
+    "density_route_ratio": "None",
+    "density_route_coeffs": null,
+    "curvature_forms_minkowski_own": {
+     "C2": {
+      "P2": "1/2",
+      "P0s": "0"
+     },
+     "R2": {
+      "P2": "0",
+      "P0s": "3"
+     },
+     "E": {
+      "P2": "0",
+      "P0s": "0"
+     }
+    },
+    "a2_minimal_scalar": "C^2/120 + R^2/72 (xi=0) ; (1/180)(Riem^2-Ric^2) = C^2/120 - E/360",
+    "lit_spin2": "1/240",
+    "lit_spin0": "1/24",
+    "lit_ratio": "10",
+    "common_factor_c2": "-I",
+    "common_factor_c0": "-I"
+   },
+   "cert": [
+    "-I/240",
+    "-I/24",
+    "10",
+    "PASS",
+    "OPEN"
+   ],
+   "a2_check": "a2 (minimal real scalar, xi=0) = (1/180)(Riem^2 - Ric^2) + (1/2)(1/6)^2 R^2 = C^2/120 - E/360 + R^2/72 (verified by coefficient matching); with C^2 -> 1/2 P2 and R^2 -> 3 P0s: 1/240 : 1/24 = 1:10 = own c2:c0",
+   "absolute_pin_assessment": "derivable from package data, at least in magnitude: (i) N_eps = i S_eps/(16 pi^2) (integrals.py), G = kappa^2 N_eps Ghat MB, so c2 N_eps = (-i/240)(i/16pi^2) = 1/(240*16pi^2), real, i.e. the observed common factor -i is exactly cancelled by N_eps; (ii) heat-kernel side: |W_div| = (1/(32 pi^2 eps)) int a2; second h-derivative of (1/120) C^2 with C^2 -> (kappa^2/2) p^4 h P2 h gives kappa^2/(240*16 pi^2 eps) -- same magnitude; (iii) the remaining overall sign (G vs Gamma^(2), Minkowski i in the Feynman rules, sign of W_div) must be fixed from the package's declared G6/amplitude convention -- the one piece not derived. In addition M2 (P18) already matched the D11 L-coefficient absolutely against the inherited XVI-O kernel (c_FT = i pi^2), and L-coefficient = -pole for D11, so an overall x2 is caught by M2 today. Recommendation: derive the pin as c_k * N_eps vs (1/2)(1/16pi^2) a2 coefficients with the declared sign convention, rather than leaving it OPEN."
+  },
+  "5a_retraction_and_wording": {
+   "pass": true,
+   "result": "retracted phrases occur only inside erratum / quotation / retraction-check-list / test contexts (PDF readback, certificates, README, notes); J1 wording replaced",
+   "P19_defect_tex_modified": "manuscript/notes/P19_defect.tex changed vs p19, marked inline '[corrected in p20]' / '[REDEFINED in p20]' and listed in release_p20 RETRACTION_SCOPE, but not in p20_conventions DISCLOSED_* dicts (code/tests only)"
+  },
+  "5b_scan": {
+   "pass": true,
+   "author_PLANTS3_detected": {
+    "p18_explicit_constructor_rebuild": true,
+    "p19_add_listcomp_over_args": true,
+    "p19_poly_alias_import": true,
+    "p19_poly_dunder_call": true,
+    "p19_as_coefficients_dict": true,
+    "p19_reduce_rebuild": true,
+    "p19_symbol_kw_name": true,
+    "func_starred_rebuild": true,
+    "mul_genexp_over_args": true
+   },
+   "my_p19_misses_now_detected": {
+    "p18_explicit_constructor_rebuild": true,
+    "p19_add_listcomp_over_args": true,
+    "p19_poly_alias_import": true,
+    "p19_poly_dunder_call": true,
+    "p19_as_coefficients_dict": true,
+    "p19_reduce_rebuild": true,
+    "p19_symbol_kw_name": true
+   },
+   "p19_PLANTS2_still_detected": true,
+   "new_probes": {
+    "assign_alias_Poly": false,
+    "map_over_args_rebuild": false,
+    "args_via_variable": false,
+    "ordered_terms_rebuild": false,
+    "builtin_sum_over_args": false,
+    "symbol_starred_literal": false,
+    "symbol_kwargs_dict": false,
+    "make_args_rebuild": false,
+    "type_map_rebuild": true
+   },
+   "new_misses": [
+    "assign_alias_Poly",
+    "map_over_args_rebuild",
+    "args_via_variable",
+    "ordered_terms_rebuild",
+    "builtin_sum_over_args",
+    "symbol_starred_literal",
+    "symbol_kwargs_dict",
+    "make_args_rebuild"
+   ],
+   "package_violations": []
+  },
+  "5c_gate_and_stale_status": {
+   "pass": true,
+   "cases": {
+    "control_unmodified": {
+     "rc": 0,
+     "P20_release": true,
+     "rejected_file": false,
+     "RELEASE_STATUS_present": true
+    },
+    "full_closure_broken": {
+     "rc": 1,
+     "P20_release": false,
+     "rejected_file": true,
+     "RELEASE_STATUS_present": false
+    },
+    "orientation_wrong": {
+     "rc": 1,
+     "P20_release": false,
+     "rejected_file": true,
+     "RELEASE_STATUS_present": false
+    },
+    "derived_factor_-1": {
+     "rc": 1,
+     "P20_release": false,
+     "rejected_file": true,
+     "RELEASE_STATUS_present": false
+    },
+    "p20_control_false": {
+     "rc": 1,
+     "P20_release": false,
+     "rejected_file": true,
+     "RELEASE_STATUS_present": false
+    },
+    "retracted_text_back": {
+     "rc": 1,
+     "P20_release": false,
+     "rejected_file": true,
+     "RELEASE_STATUS_present": false
+    },
+    "detector_blind_D13": {
+     "rc": 1,
+     "P20_release": false,
+     "rejected_file": true,
+     "RELEASE_STATUS_present": false
+    },
+    "D11_ratio_pin_FAIL": {
+     "rc": 1,
+     "P20_release": false,
+     "rejected_file": true,
+     "RELEASE_STATUS_present": false
+    },
+    "D11_absolute_claimed": {
+     "rc": 0,
+     "P20_release": true,
+     "rejected_file": false,
+     "RELEASE_STATUS_present": true
+    },
+    "P18_q_not_earned": {
+     "rc": 0,
+     "P20_release": true,
+     "rejected_file": false,
+     "RELEASE_STATUS_present": true
+    },
+    "bulk_claimed": {
+     "rc": 1,
+     "P20_release": false,
+     "rejected_file": true,
+     "RELEASE_STATUS_present": false
+    },
+    "P19_release_rejected": {
+     "rc": 1,
+     "P20_release": false,
+     "rejected_file": true,
+     "RELEASE_STATUS_present": false
+    },
+    "P20_D11_pin_deleted": {
+     "rc": 1,
+     "P20_release": false,
+     "rejected_file": true,
+     "RELEASE_STATUS_present": false
+    },
+    "archived_p19_report_tampered": {
+     "rc": 1,
+     "P20_release": false,
+     "rejected_file": true,
+     "RELEASE_STATUS_present": false
+    }
+   },
+   "notes": "standalone rejects remove RELEASE_STATUS.json (root and certificates/). Accepted: top-level absolute_pin_status='PASS' (gate checks nested absolute_pin.status; nested PASS is rejected); P18 q not_earned (p20 checks the P19_release layer record; chained release_p19 -> release_p20 rejects both, no stale status)"
+  },
+  "5d_footers_readback": {
+   "pass": true,
+   "footers": {
+    "XVI-P-science": {
+     "pages": 33,
+     "labels": {
+      "XVI-P p20": 33
+     },
+     "pages_without_exactly_one_p20_footer": [],
+     "n_bad": 0,
+     "page_numbers_sequential_arabic": true
+    },
+    "XVI-P-appendix": {
+     "pages": 659,
+     "labels": {
+      "XVI-P p20": 659
+     },
+     "pages_without_exactly_one_p20_footer": [],
+     "n_bad": 0,
+     "page_numbers_sequential_arabic": true
+    },
+    "XVI-P": {
+     "pages": 693,
+     "labels": {
+      "XVI-P p20": 693
+     },
+     "pages_without_exactly_one_p20_footer": [],
+     "n_bad": 0,
+     "page_numbers_sequential_arabic": true
+    }
+   },
+   "package_VALUE_BLOCKS": {
+    "XVI-P-appendix": {
+     "certificates/P15_D13.json": "30/30",
+     "certificates/P15_batchA.json": "25/25",
+     "certificates/P16_batchC.json": "156/156",
+     "certificates/P16_E2_evanescent.json": "9/9",
+     "certificates/P17_hh_slot.json": "5/5",
+     "certificates/P18_D11_M2.json": "2/2",
+     "certificates/P18_D11.json": "84/84",
+     "certificates/P18_hh_slot.json": "5/5",
+     "certificates/P19_defect.json": "30/30",
+     "certificates/P20_D11_pin.json": "9/9"
+    },
+    "XVI-P": {
+     "certificates/P15_D13.json": "30/30",
+     "certificates/P15_batchA.json": "25/25",
+     "certificates/P16_batchC.json": "156/156",
+     "certificates/P16_E2_evanescent.json": "9/9",
+     "certificates/P17_hh_slot.json": "5/5",
+     "certificates/P18_D11_M2.json": "2/2",
+     "certificates/P18_D11.json": "84/84",
+     "certificates/P18_hh_slot.json": "5/5",
+     "certificates/P19_defect.json": "30/30",
+     "certificates/P20_D11_pin.json": "9/9"
+    }
+   },
+   "own_ext_default": {
+    "XVI-P-appendix": {
+     "certificates/P18_D11_M2.json#own_ext": "13/13",
+     "certificates/P18_D11.json#own_ext": "4/4",
+     "certificates/P18_hh_slot.json#own_ext": "66/67",
+     "certificates/P19_defect.json#own_ext": "121/121",
+     "certificates/P20_D11_pin.json#own_ext": "40/40"
+    },
+    "XVI-P": {
+     "certificates/P18_D11_M2.json#own_ext": "13/13",
+     "certificates/P18_D11.json#own_ext": "4/4",
+     "certificates/P18_hh_slot.json#own_ext": "66/67",
+     "certificates/P19_defect.json#own_ext": "121/121",
+     "certificates/P20_D11_pin.json#own_ext": "40/40"
+    }
+   },
+   "own_ext_raw": {
+    "XVI-P-appendix": {
+     "certificates/P18_D11_M2.json#own_ext": "13/13",
+     "certificates/P18_D11.json#own_ext": "4/4",
+     "certificates/P18_hh_slot.json#own_ext": "67/67",
+     "certificates/P19_defect.json#own_ext": "121/121",
+     "certificates/P20_D11_pin.json#own_ext": "40/40"
+    },
+    "XVI-P": {
+     "certificates/P18_D11_M2.json#own_ext": "13/13",
+     "certificates/P18_D11.json#own_ext": "4/4",
+     "certificates/P18_hh_slot.json#own_ext": "67/67",
+     "certificates/P19_defect.json#own_ext": "121/121",
+     "certificates/P20_D11_pin.json#own_ext": "40/40"
+    }
+   },
+   "manifest_entries": 48
+  },
+  "5e_determinism": {
+   "pass": true,
+   "certificates": {
+    "P19_defect": {
+     "build(default seed)": {
+      "certio_content_sha_ignoring_run_specific": "8ce344b285f7a5c4c81776659b690f78f464e1b33d909f2c72b8300ff1dc754e",
+      "own_sha_ignoring_seconds": "345c1f22aa17cb43d8753fb9aa33f3ef86a3a3d252206457c6b7f7494ab6294b",
+      "file_sha256": "9a0e6ece16fc06b3e5bf6d536230a3646575807e04a66095398aa7e9987395d7"
+     },
+     "PYTHONHASHSEED=0": {
+      "certio_content_sha_ignoring_run_specific": "8ce344b285f7a5c4c81776659b690f78f464e1b33d909f2c72b8300ff1dc754e",
+      "own_sha_ignoring_seconds": "345c1f22aa17cb43d8753fb9aa33f3ef86a3a3d252206457c6b7f7494ab6294b",
+      "file_sha256": "e59c2f095f9a08b7c80f722971bd616b05d1a4f68c69123089bdce8f589a97ce"
+     },
+     "PYTHONHASHSEED=4242": {
+      "certio_content_sha_ignoring_run_specific": "8ce344b285f7a5c4c81776659b690f78f464e1b33d909f2c72b8300ff1dc754e",
+      "own_sha_ignoring_seconds": "345c1f22aa17cb43d8753fb9aa33f3ef86a3a3d252206457c6b7f7494ab6294b",
+      "file_sha256": "680efb0f4757c7460548a94364c400f77b1545c37bb07f69baa97c3878119118"
+     },
+     "content_identical_across_seeds_and_build": true
+    },
+    "P20_D11_pin": {
+     "build(default seed)": {
+      "certio_content_sha_ignoring_run_specific": "c228bc82bf720bce968112f8e2440c081e537f9cf8a1b90231011b28e04559f9",
+      "own_sha_ignoring_seconds": "0ea06d61b3a0610f1aa42c66208d47d09706c4c3f434b5aa4819c2625c67989a",
+      "file_sha256": "ae2513c903542f7bb1b7dc9f84128e47b5d6a0076b4cb91a9a109230e9e29e84"
+     },
+     "PYTHONHASHSEED=0": {
+      "certio_content_sha_ignoring_run_specific": "c228bc82bf720bce968112f8e2440c081e537f9cf8a1b90231011b28e04559f9",
+      "own_sha_ignoring_seconds": "0ea06d61b3a0610f1aa42c66208d47d09706c4c3f434b5aa4819c2625c67989a",
+      "file_sha256": "a6846e3939916424e475fd6391a8f023623ddf349aae9de61e2c3b89e95d204c"
+     },
+     "PYTHONHASHSEED=4242": {
+      "certio_content_sha_ignoring_run_specific": "c228bc82bf720bce968112f8e2440c081e537f9cf8a1b90231011b28e04559f9",
+      "own_sha_ignoring_seconds": "0ea06d61b3a0610f1aa42c66208d47d09706c4c3f434b5aa4819c2625c67989a",
+      "file_sha256": "2d373e0cf8d4b90f23e6e72ebb320a79a560198fef6c44f5cbeac7c2fe4d7019"
+     },
+     "content_identical_across_seeds_and_build": true
+    }
+   },
+   "other_files_changed_by_rerun": {
+    "PYTHONHASHSEED=0": [
+     "certificates/P19_defect.json",
+     "certificates/P20_D11_pin.json"
+    ],
+    "PYTHONHASHSEED=4242": [
+     "certificates/P19_defect.json",
+     "certificates/P20_D11_pin.json"
+    ]
+   }
+  },
+  "5f_contract_and_layers": {
+   "pass": true,
+   "frozen_list_sha256_ok": true,
+   "p13_frozen_files": 54,
+   "p13_frozen_bad": [],
+   "p5_entry_dir_complete": true,
+   "no_contract_change_vs_p19": true,
+   "dred_sha": "14c11a512c1609c9f9a7829dcb68e71a94c8ac3d38497e2dcac110a1b8d5e81c",
+   "dred_eq_p18_pin": true,
+   "p20_declares_no_contract_revision": true,
+   "p15_calc_layer_ok": true,
+   "p16_calc_layer_ok": true,
+   "p17_calc_layer_ok": true,
+   "p18_calc_layer": {
+    "code/p5_calc/d11.py": {
+     "pin_eq_my_p18": true,
+     "p20_eq_p18": true
+    },
+    "code/p5_calc/p18_conventions.py": {
+     "pin_eq_my_p18": true,
+     "p20_eq_p18": true
+    },
+    "code/p5_calc/release_p18.py": {
+     "pin_eq_my_p18": true,
+     "p20_eq_p18": true
+    }
+   },
+   "p19_layer": {
+    "p19_conventions_byte_identical": true,
+    "released_pins_eq_my_p19": {
+     "code/p5_calc/defect.py": true,
+     "code/p5_calc/release_p19.py": true
+    },
+    "changed_p19_layer_files": [
+     "code/p5_calc/defect.py",
+     "code/p5_calc/release_p19.py"
+    ],
+    "disclosed": [
+     "code/p5_calc/defect.py",
+     "code/p5_calc/release_p19.py"
+    ]
+   },
+   "n_files": 174,
+   "changed_vs_p19": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "code/p5_calc/defect.py",
+    "code/p5_calc/release_p19.py",
+    "manuscript/body/XVI-P-body.tex",
+    "manuscript/notes/P19_defect.tex",
+    "tests/test_p14.py",
+    "tests/test_p19.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "added_vs_p19": [
+    "archival/p19/README.md",
+    "archival/p19/p19_source_files.json",
+    "archival/p19/reference_values_p19.json",
+    "archival/p19/reproducibility/author_rebuild_report_p19.json",
+    "archival/p19/reproducibility/independent_rebuild_report_p19.json",
+    "code/p5_calc/d11_pin.py",
+    "code/p5_calc/p20_conventions.py",
+    "code/p5_calc/release_p20.py",
+    "manuscript/notes/P20_correction.tex",
+    "reproducibility/reference_values_p20.json",
+    "tests/test_p20.py"
+   ],
+   "removed_vs_p19": [
+    "reproducibility/reference_values_p19.json"
+   ],
+   "changed_calc_vs_p19": [
+    "code/p5_calc/defect.py",
+    "code/p5_calc/release_p19.py"
+   ],
+   "changed_notes_vs_p19": [
+    "manuscript/notes/P19_defect.tex"
+   ],
+   "changed_tests_vs_p19": [
+    "tests/test_p14.py",
+    "tests/test_p19.py"
+   ],
+   "test_changes_disclosed": true,
+   "archived_pins": {
+    "archival/p19/reference_values_p19.json": true,
+    "archival/p19/reproducibility/author_rebuild_report_p19.json": true,
+    "archival/p19/reproducibility/independent_rebuild_report_p19.json": true,
+    "archival/p19/p19_source_files.json": true
+   },
+   "p19_source_list_bad_vs_my_p19_unpack": [],
+   "archived_p19_independent_report_is_mine": true,
+   "archived_p18_independent_report_is_mine": true,
+   "archived_p19_reference_eq_my_p19_copy": true,
+   "archived_p17_indep_is_mine": true,
+   "archived_p16_indep_is_mine": true,
+   "archived_p15_indep_is_mine": true,
+   "archived_p14r_indep_is_mine": true,
+   "archived_p13_indep_is_mine": true,
+   "p19_tree_sha_pin": "fcf90354d746e244fa2839048118bd8d64b1859ffd3825c0bfa3e1138ee88f36",
+   "p19_zip_sha_pin_ok": true,
+   "pins": {
+    "XVI-M_ok": true,
+    "grav_density_ok": true,
+    "xvio_bad": [],
+    "inherited_data_ok": true
+   }
+  },
+  "5g_own_pytest": {
+   "pass": true,
+   "groups": {
+    "baseline": {
+     "passed": 218,
+     "failed": 0,
+     "skipped": 0
+    },
+    "certificate_mutation": {
+     "passed": 71,
+     "failed": 0,
+     "skipped": 0
+    },
+    "resumed_build": {
+     "passed": 4,
+     "failed": 0,
+     "skipped": 0
+    }
+   }
+  },
+  "6_comparison_with_author_reference": {
+   "pass": true,
+   "reference_sha256": "4877f5dedc84e6dc07fdc9a72077d3098308bb95c168cba36cafdda23d719e04",
+   "reference_identical_to_in_zip_copy": true,
+   "entrypoint_values_compared": 422,
+   "independent_values_compared": 275,
+   "independent_sympy_equal": 66,
+   "own_keys_not_in_reference": [],
+   "environment_differences": {},
+   "resolved_semantic_difference": {
+    "key": "/p19/change_log_vs_p18/added",
+    "explanation": "my comparator first used the p19-tree semantics (archived p19 reference). The p20 reference recomputes this key live as (p20 tree) vs (p18 source list), so it also contains the p20 additions. Recomputed independently from pristine p20 vs my p18 pristine: added/removed/modified all equal the reference. Reproduced; labelling finding only."
+   }
+  }
+ },
+ "mismatches": [],
+ "findings": [
+  {
+   "id": "p19_quotient_finding_withdrawn",
+   "severity": "info (reviewer correction)",
+   "detail": "the author's clarification is right: the p19 c.cb quotient entries were the class of the c.K-only data (= -[Sigma_routeG]), not mis-oriented Sigma. My p19 low finding is withdrawn."
+  },
+  {
+   "id": "D11_absolute_pin_left_OPEN_but_derivable",
+   "severity": "low",
+   "detail": "derivable from package data, at least in magnitude: (i) N_eps = i S_eps/(16 pi^2) (integrals.py), G = kappa^2 N_eps Ghat MB, so c2 N_eps = (-i/240)(i/16pi^2) = 1/(240*16pi^2), real, i.e. the observed common factor -i is exactly cancelled by N_eps; (ii) heat-kernel side: |W_div| = (1/(32 pi^2 eps)) int a2; second h-derivative of (1/120) C^2 with C^2 -> (kappa^2/2) p^4 h P2 h gives kappa^2/(240*16 pi^2 eps) -- same magnitude; (iii) the remaining overall sign (G vs Gamma^(2), Minkowski i in the Feynman rules, sign of W_div) must be fixed from the package's declared G6/amplitude convention -- the one piece not derived. In addition M2 (P18) already matched the D11 L-coefficient absolutely against the inherited XVI-O kernel (c_FT = i pi^2), and L-coefficient = -pole for D11, so an overall x2 is caught by M2 today. Recommendation: derive the pin as c_k * N_eps vs (1/2)(1/16pi^2) a2 coefficients with the declared sign convention, rather than leaving it OPEN."
+  },
+  {
+   "id": "scan_misses_p20",
+   "severity": "low (pattern check, disclosed; package clean)",
+   "detail": "not caught by test_p18.scan + test_p20.scan3: assign_alias_Poly, map_over_args_rebuild, args_via_variable, ordered_terms_rebuild, builtin_sum_over_args, symbol_starred_literal, symbol_kwargs_dict, make_args_rebuild. Enumerating patterns keeps leaking; suggest an allow-list (only reviewed sympy entry points on d-carrying expressions) or a runtime type check that every d-dependent result still carries OpaqueDimension."
+  },
+  {
+   "id": "gate_top_level_absolute_pin_status_unchecked",
+   "severity": "low",
+   "detail": "P20_D11_pin.json top-level 'absolute_pin_status' (the key typeset in the PDF VALUE_BLOCKS) can be flipped to PASS and release_p20 still accepts; the gate checks only nested absolute_pin.status. Suggest checking both (or deriving one from the other)."
+  },
+  {
+   "id": "p20_gate_trusts_P19_layer_record",
+   "severity": "info",
+   "detail": "release_p20 alone accepts with P18 quantum_inputs_evaluated=not_earned as long as P19_release.json says earned; the build runs release_p19 first, which rejects (verified chained)."
+  },
+  {
+   "id": "P19_note_edit_disclosure",
+   "severity": "info",
+   "detail": "manuscript/notes/P19_defect.tex changed vs p19, marked inline '[corrected in p20]' / '[REDEFINED in p20]' and listed in release_p20 RETRACTION_SCOPE, but not in p20_conventions DISCLOSED_* dicts (code/tests only)"
+  },
+  {
+   "id": "restoration_scope",
+   "severity": "info",
+   "detail": "restoration is genuinely distinct from identity, but its c.b content re-verifies the P15 ghost relation; worded correctly as 'that counterterm only'."
+  },
+  {
+   "id": "p19_change_log_key_recomputed_on_p20_tree",
+   "severity": "info/low",
+   "detail": "reference /p19/change_log_vs_p18 in p20 lists p20-tree-vs-p18 (includes d11_pin.py, release_p20.py, archival/p19, ...), not the p19 release change log as archived in archival/p19/reference_values_p19.json; value reproduces, but the key name is misleading. Suggest freezing it or renaming."
+  }
+ ],
+ "independent_comparisons": [
+  {
+   "key": "/exports/ell2/file_sha256",
+   "reference": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "independent": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell2/polynomial_sha256",
+   "reference": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "independent": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell2/terms",
+   "reference": 84,
+   "independent": 84,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/file_sha256",
+   "reference": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "independent": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/polynomial_sha256",
+   "reference": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "independent": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/terms",
+   "reference": 678,
+   "independent": 678,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/file_sha256",
+   "reference": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "independent": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/polynomial_sha256",
+   "reference": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "independent": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/terms",
+   "reference": 3360,
+   "independent": 3360,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/V4_grav.json",
+   "reference": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "independent": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4_conventions.json",
+   "reference": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "independent": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_vertex_tensors.json",
+   "reference": "3181424bf18a3def5339c4fe41662dd929b5e4e7ec7fc9aa913a903c5a666872",
+   "independent": "3181424bf18a3def5339c4fe41662dd929b5e4e7ec7fc9aa913a903c5a666872",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D01.json",
+   "reference": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+   "independent": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D02.json",
+   "reference": "2f7fd32985ed9161b4b5aad221a9ca6dc59e9f1cc6a069ad7f7503835ce83d1e",
+   "independent": "2f7fd32985ed9161b4b5aad221a9ca6dc59e9f1cc6a069ad7f7503835ce83d1e",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D03.json",
+   "reference": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+   "independent": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D11.json",
+   "reference": "f68904158d931faf71209cde9028d4f90e987c098ba84128fd2f6b661a4640ff",
+   "independent": "f68904158d931faf71209cde9028d4f90e987c098ba84128fd2f6b661a4640ff",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D12.json",
+   "reference": "c57d815c0f4aac641dacafa4577037fcbe0bdc4c207597c9b88f62f1153ec73a",
+   "independent": "c57d815c0f4aac641dacafa4577037fcbe0bdc4c207597c9b88f62f1153ec73a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D13.json",
+   "reference": "8fe1a4ba4ac1fae573ad896ef25d3ae5e0d8a525d546ad980b2ebae8c07cc0a5",
+   "independent": "8fe1a4ba4ac1fae573ad896ef25d3ae5e0d8a525d546ad980b2ebae8c07cc0a5",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14a.json",
+   "reference": "7ac1b6a3544ca2bb370ded6e1ee6cdcea49da94af01c22d96866aa2c30cdd61c",
+   "independent": "7ac1b6a3544ca2bb370ded6e1ee6cdcea49da94af01c22d96866aa2c30cdd61c",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14b.json",
+   "reference": "95f6d47436ba1efdcef371979f7941b782cedb625530912ec00e499bfca953f3",
+   "independent": "95f6d47436ba1efdcef371979f7941b782cedb625530912ec00e499bfca953f3",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14c.json",
+   "reference": "b50e3aabe46d548a0d9afaf182aa99143b2792927b194b84075bcdcc79c0ad79",
+   "independent": "b50e3aabe46d548a0d9afaf182aa99143b2792927b194b84075bcdcc79c0ad79",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/required_master_residuals",
+   "reference": [],
+   "independent": [],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/XVI-M.tex",
+   "reference": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "independent": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/XVI-N-r10/code/prep/grav_density.py",
+   "reference": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "independent": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/ledgers/quantum_factor_ledger.json",
+   "reference": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "independent": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/source/n_source_files",
+   "reference": 174,
+   "independent": 174,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mn g4_rs (p.p)^2",
+   "reference": "-27*I/80",
+   "independent": "-27*I/80",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mn g4_rs (p.p)^2",
+   "reference": "I*(405*L - 982)/1200",
+   "independent": "27*I*L/80 - 491*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mn gt_rs (p.p)^2",
+   "reference": "13*I/120",
+   "independent": "13*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mn gt_rs (p.p)^2",
+   "reference": "I*(523 - 195*L)/1800",
+   "independent": "-13*I*L/120 + 523*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mn p_r p_s (p.p)^1",
+   "reference": "19*I/60",
+   "independent": "19*I/60",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mn p_r p_s (p.p)^1",
+   "reference": "I*(724 - 285*L)/900",
+   "independent": "-19*I*L/60 + 181*I/225",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mr g4_ns (p.p)^2",
+   "reference": "-71*I/240",
+   "independent": "-71*I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mr g4_ns (p.p)^2",
+   "reference": "I*(1065*L - 1946)/3600",
+   "independent": "71*I*L/240 - 973*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mr gt_ns (p.p)^2",
+   "reference": "-3*I/80",
+   "independent": "-3*I/80",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mr gt_ns (p.p)^2",
+   "reference": "I*(45*L - 118)/1200",
+   "independent": "3*I*L/80 - 59*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mr p_n p_s (p.p)^1",
+   "reference": "11*I/40",
+   "independent": "11*I/40",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mr p_n p_s (p.p)^1",
+   "reference": "I*(97 - 55*L)/200",
+   "independent": "-11*I*L/40 + 97*I/200",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_rs gt_mn (p.p)^2",
+   "reference": "13*I/120",
+   "independent": "13*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_rs gt_mn (p.p)^2",
+   "reference": "I*(523 - 195*L)/1800",
+   "independent": "-13*I*L/120 + 523*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_rs p_m p_n (p.p)^1",
+   "reference": "19*I/60",
+   "independent": "19*I/60",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_rs p_m p_n (p.p)^1",
+   "reference": "I*(724 - 285*L)/900",
+   "independent": "-19*I*L/60 + 181*I/225",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/gt_mn gt_rs (p.p)^2",
+   "reference": "-I/240",
+   "independent": "-I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/gt_mn gt_rs (p.p)^2",
+   "reference": "I*(15*L - 46)/3600",
+   "independent": "I*L/240 - 23*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/gt_mn p_r p_s (p.p)^1",
+   "reference": "-3*I/20",
+   "independent": "-3*I/20",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/gt_mn p_r p_s (p.p)^1",
+   "reference": "I*(90*L - 241)/600",
+   "independent": "3*I*L/20 - 241*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/gt_mr gt_ns (p.p)^2",
+   "reference": "-I/240",
+   "independent": "-I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/gt_mr gt_ns (p.p)^2",
+   "reference": "I*(15*L - 46)/3600",
+   "independent": "I*L/240 - 23*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/gt_mr p_n p_s (p.p)^1",
+   "reference": "7*I/120",
+   "independent": "7*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/gt_mr p_n p_s (p.p)^1",
+   "reference": "I*(277 - 105*L)/1800",
+   "independent": "-7*I*L/120 + 277*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/gt_rs p_m p_n (p.p)^1",
+   "reference": "-3*I/20",
+   "independent": "-3*I/20",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/gt_rs p_m p_n (p.p)^1",
+   "reference": "I*(90*L - 241)/600",
+   "independent": "3*I*L/20 - 241*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/p_m p_n p_r p_s",
+   "reference": "-13*I/15",
+   "independent": "-13*I/15",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/p_m p_n p_r p_s",
+   "reference": "I*(780*L - 1597)/900",
+   "independent": "13*I*L/15 - 1597*I/900",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/evanescent_pole_nonzero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D01/status",
+   "reference": "regulated",
+   "independent": "regulated",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole_in_p14r_hh_basis",
+   "reference": [
+    "-27*I/160",
+    "-71*I/240",
+    "19*I/60",
+    "11*I/20",
+    "-13*I/30"
+   ],
+   "independent": [
+    "-27*I/160",
+    "-71*I/240",
+    "19*I/60",
+    "11*I/20",
+    "-13*I/30"
+   ],
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mn g4_rs (p.p)^2",
+   "reference": "7*I/48",
+   "independent": "7*I/48",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mn g4_rs (p.p)^2",
+   "reference": "I*(50 - 21*L)/144",
+   "independent": "-7*I*L/48 + 25*I/72",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mn gt_rs (p.p)^2",
+   "reference": "-I/24",
+   "independent": "-I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mn gt_rs (p.p)^2",
+   "reference": "I*(3*L - 8)/72",
+   "independent": "I*L/24 - I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mn p_r p_s (p.p)^1",
+   "reference": "-I/8",
+   "independent": "-I/8",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mn p_r p_s (p.p)^1",
+   "reference": "I*(3*L - 8)/24",
+   "independent": "I*L/8 - I/3",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mr g4_ns (p.p)^2",
+   "reference": "I/24",
+   "independent": "I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mr g4_ns (p.p)^2",
+   "reference": "I*(2 - 3*L)/72",
+   "independent": "-I*L/24 + I/36",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mr gt_ns (p.p)^2",
+   "reference": "I/24",
+   "independent": "I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mr gt_ns (p.p)^2",
+   "reference": "I*(8 - 3*L)/72",
+   "independent": "-I*L/24 + I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mr p_n p_s (p.p)^1",
+   "reference": "-I/48",
+   "independent": "-I/48",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mr p_n p_s (p.p)^1",
+   "reference": "I*(3*L + 4)/144",
+   "independent": "I*L/48 + I/36",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_rs gt_mn (p.p)^2",
+   "reference": "-I/24",
+   "independent": "-I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_rs gt_mn (p.p)^2",
+   "reference": "I*(3*L - 8)/72",
+   "independent": "I*L/24 - I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_rs p_m p_n (p.p)^1",
+   "reference": "-I/8",
+   "independent": "-I/8",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_rs p_m p_n (p.p)^1",
+   "reference": "I*(3*L - 8)/24",
+   "independent": "I*L/8 - I/3",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/gt_mn p_r p_s (p.p)^1",
+   "reference": "I/12",
+   "independent": "I/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/gt_mn p_r p_s (p.p)^1",
+   "reference": "I*(8 - 3*L)/36",
+   "independent": "-I*L/12 + 2*I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/gt_mr p_n p_s (p.p)^1",
+   "reference": "-I/16",
+   "independent": "-I/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/gt_mr p_n p_s (p.p)^1",
+   "reference": "I*(3*L - 8)/48",
+   "independent": "I*L/16 - I/6",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/gt_rs p_m p_n (p.p)^1",
+   "reference": "I/12",
+   "independent": "I/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/gt_rs p_m p_n (p.p)^1",
+   "reference": "I*(8 - 3*L)/36",
+   "independent": "-I*L/12 + 2*I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/p_m p_n p_r p_s",
+   "reference": "I/6",
+   "independent": "I/6",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/p_m p_n p_r p_s",
+   "reference": "I*(5 - 3*L)/18",
+   "independent": "-I*L/6 + 5*I/18",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/evanescent_pole_nonzero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D03/status",
+   "reference": "regulated",
+   "independent": "regulated",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole_in_p14r_hh_basis",
+   "reference": [
+    "7*I/96",
+    "I/24",
+    "-I/8",
+    "-I/24",
+    "I/12"
+   ],
+   "independent": [
+    "7*I/96",
+    "I/24",
+    "-I/8",
+    "-I/24",
+    "I/12"
+   ],
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/UV_pole/T1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/MSbar_finite/T1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/UV_pole/T2",
+   "reference": "3/16",
+   "independent": "3/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/MSbar_finite/T2",
+   "reference": "1/3 - 3*L/16",
+   "independent": "1/3 - 3*L/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/UV_pole/T3",
+   "reference": "-1/4",
+   "independent": "-1/4",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/MSbar_finite/T3",
+   "reference": "L/4 - 5/12",
+   "independent": "L/4 - 5/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/UV_pole/E1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/MSbar_finite/E1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/UV_pole/E2",
+   "reference": "1/16",
+   "independent": "1/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/MSbar_finite/E2",
+   "reference": "1/6 - L/16",
+   "independent": "1/6 - L/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D02/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D12/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D14a/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D14b/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D14c/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/D12_status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/contract_changed_files",
+   "reference": [
+    "code/p5_entry/dred.py"
+   ],
+   "independent": [
+    "code/p5_entry/dred.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/contract_files_added",
+   "reference": [],
+   "independent": [],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/change_log_vs_p17/added",
+   "reference": "<absent in reference>",
+   "independent": [
+    "archival/p17/README.md",
+    "archival/p17/p17_source_files.json",
+    "archival/p17/reference_values_p17.json",
+    "archival/p17/reproducibility/author_rebuild_report_p17.json",
+    "archival/p17/reproducibility/independent_rebuild_report_p17.json",
+    "code/p5_calc/d11.py",
+    "code/p5_calc/p18_conventions.py",
+    "code/p5_calc/release_p18.py",
+    "manuscript/notes/P18_D11.tex",
+    "reproducibility/reference_values_p18.json",
+    "tests/test_p18.py"
+   ],
+   "equal": false,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/change_log_vs_p17/modified",
+   "reference": "<absent in reference>",
+   "independent": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "code/p5_entry/dred.py",
+    "manuscript/body/XVI-P-body.tex",
+    "manuscript/preamble.tex",
+    "tests/test_p14.py",
+    "tests/test_p16.py",
+    "tests/test_p17.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "equal": false,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/change_log_vs_p17/removed",
+   "reference": "<absent in reference>",
+   "independent": [
+    "reproducibility/reference_values_p17.json"
+   ],
+   "equal": false,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/E2_status",
+   "reference": "decoupled_from_ch_slot_proven",
+   "independent": "decoupled_from_ch_slot_proven",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/E2_decoupling_proven",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/hh_evanescent_decoupling_proven",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/hh_evanescent_status",
+   "reference": "decoupled_from_ch_slot_proven_as_sum",
+   "independent": "decoupled_from_ch_slot_proven_as_sum",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/evanescent_hh_counterterm_added",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/D11_evaluated",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D11/status",
+   "reference": "evaluated",
+   "independent": "evaluated",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D11/M2",
+   "reference": "DISCHARGED (4D components)",
+   "independent": "DISCHARGED (4D components)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D11/ch_slot",
+   "reference": "decoupled by itself (p_m G_D11 = 0 exactly in d)",
+   "independent": "decoupled by itself (p_m G_D11 = 0 exactly in d)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D11/sector_status",
+   "reference": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)",
+   "independent": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/D11_matching_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/hh_full_row_decoupling_proven",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/quantum_inputs_evaluated",
+   "reference": "earned",
+   "independent": "earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/batchA_evaluated",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/D13_evaluated",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/batchC_evaluated",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P18_D11_M2",
+   "reference": "2c63a6e8fe0e3ca6faae720baa3e653634c70f44f9acce3fe33b1f7e2d566634",
+   "independent": "2c63a6e8fe0e3ca6faae720baa3e653634c70f44f9acce3fe33b1f7e2d566634",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P18_D11",
+   "reference": "8cfb4f3884621349328c3b6c5dcc76411a6ad6c9b1821490941740a652659613",
+   "independent": "8cfb4f3884621349328c3b6c5dcc76411a6ad6c9b1821490941740a652659613",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P18_hh_slot",
+   "reference": "fe85ab9ff6b048e9584c47488c287aa31de57fb9b3df44cae3a57e23cfcdab12",
+   "independent": "fe85ab9ff6b048e9584c47488c287aa31de57fb9b3df44cae3a57e23cfcdab12",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P19_defect",
+   "reference": "8ce344b285f7a5c4c81776659b690f78f464e1b33d909f2c72b8300ff1dc754e",
+   "independent": "8ce344b285f7a5c4c81776659b690f78f464e1b33d909f2c72b8300ff1dc754e",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P20_D11_pin",
+   "reference": "c228bc82bf720bce968112f8e2440c081e537f9cf8a1b90231011b28e04559f9",
+   "independent": "c228bc82bf720bce968112f8e2440c081e537f9cf8a1b90231011b28e04559f9",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/defect_zero_exact_in_d",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/dim",
+   "reference": 6,
+   "independent": 6,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/dim_D_cap_Im_sigma0",
+   "reference": 6,
+   "independent": 6,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/cohomology_dim",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/h.h/dim",
+   "reference": 5,
+   "independent": 5,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/h.h/sigma0_rank",
+   "reference": 3,
+   "independent": 3,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/h.h/P_ch_sigma0_rank",
+   "reference": 3,
+   "independent": 3,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.cb/dim",
+   "reference": 2,
+   "independent": 2,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.cb/sigma0_rank",
+   "reference": 2,
+   "independent": 2,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.cb/P_ch_sigma0_rank",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.K/dim",
+   "reference": 3,
+   "independent": 3,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.K/sigma0_rank",
+   "reference": 3,
+   "independent": 3,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.K/P_ch_sigma0_rank",
+   "reference": 1,
+   "independent": 1,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/phi.phi/dim",
+   "reference": 1,
+   "independent": 1,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/phi.phi/sigma0_rank",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/phi.phi/P_ch_sigma0_rank",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/quotient_coordinates/pole",
+   "reference": [
+    "0",
+    "0",
+    "0",
+    "-3/8",
+    "1/4"
+   ],
+   "independent": [
+    "0",
+    "0",
+    "0",
+    "-3/8",
+    "1/4"
+   ],
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p19/projected_defect_summary/quotient_coordinates/nonlocal_L",
+   "reference": [
+    "0",
+    "0",
+    "0",
+    "3/8",
+    "-1/4"
+   ],
+   "independent": [
+    "0",
+    "0",
+    "0",
+    "3/8",
+    "-1/4"
+   ],
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p19/counterterm_solve_outcome",
+   "reference": "ZERO",
+   "independent": "ZERO",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_computed",
+   "reference": "earned",
+   "independent": "earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_identity_verified",
+   "reference": "earned",
+   "independent": "earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_restoration_verified",
+   "reference": "earned",
+   "independent": "earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/bulk_symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/change_log_vs_p18/added",
+   "reference": [
+    "archival/p18/README.md",
+    "archival/p18/p18_source_files.json",
+    "archival/p18/reference_values_p18.json",
+    "archival/p18/reproducibility/author_rebuild_report_p18.json",
+    "archival/p18/reproducibility/independent_rebuild_report_p18.json",
+    "archival/p19/README.md",
+    "archival/p19/p19_source_files.json",
+    "archival/p19/reference_values_p19.json",
+    "archival/p19/reproducibility/author_rebuild_report_p19.json",
+    "archival/p19/reproducibility/independent_rebuild_report_p19.json",
+    "code/p5_calc/d11_pin.py",
+    "code/p5_calc/defect.py",
+    "code/p5_calc/p19_conventions.py",
+    "code/p5_calc/p20_conventions.py",
+    "code/p5_calc/release_p19.py",
+    "code/p5_calc/release_p20.py",
+    "manuscript/notes/P19_defect.tex",
+    "manuscript/notes/P20_correction.tex",
+    "reproducibility/reference_values_p20.json",
+    "tests/test_p19.py",
+    "tests/test_p20.py"
+   ],
+   "independent": [
+    "archival/p18/README.md",
+    "archival/p18/p18_source_files.json",
+    "archival/p18/reference_values_p18.json",
+    "archival/p18/reproducibility/author_rebuild_report_p18.json",
+    "archival/p18/reproducibility/independent_rebuild_report_p18.json",
+    "code/p5_calc/defect.py",
+    "code/p5_calc/p19_conventions.py",
+    "code/p5_calc/release_p19.py",
+    "manuscript/notes/P19_defect.tex",
+    "reproducibility/reference_values_p19.json",
+    "tests/test_p19.py"
+   ],
+   "equal": false,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/change_log_vs_p18/modified",
+   "reference": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "manuscript/body/XVI-P-body.tex",
+    "tests/test_p14.py",
+    "tests/test_p18.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "independent": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "manuscript/body/XVI-P-body.tex",
+    "tests/test_p14.py",
+    "tests/test_p18.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/change_log_vs_p18/removed",
+   "reference": [
+    "reproducibility/reference_values_p18.json"
+   ],
+   "independent": [
+    "reproducibility/reference_values_p18.json"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/independent_rebuild_passed_p18",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/spin_decomposition/c2_spin2",
+   "reference": "-I/240",
+   "independent": "-I/240",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/spin_decomposition/c0_spin0s",
+   "reference": "-I/24",
+   "independent": "-I/24",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/spin_decomposition/ratio_c0_over_c2",
+   "reference": "10",
+   "independent": "10",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/spin_decomposition/transverse",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/spin_decomposition/only_spin2_and_spin0s",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/spin_decomposition/projector_norms",
+   "reference": [
+    "5",
+    "1"
+   ],
+   "independent": [
+    "5",
+    "1"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/ratio_pin/status",
+   "reference": "PASS",
+   "independent": "PASS",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/absolute_pin/observed_common_factor_c2",
+   "reference": "-I",
+   "independent": "-I",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/absolute_pin/observed_common_factor_c0",
+   "reference": "-I",
+   "independent": "-I",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/check/C2_quadratic_form_half_P2",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/check/GaussBonnet_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/D11_pin/check/ratio_10",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/K1_correction/orientation_ratio_minus_one",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/K1_correction/derived_factor_plus_one",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/K1_correction/full_closure_complete_S_ct",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/K1_correction/without_ccb_not_closed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/K1_correction/detector_drop_D13",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/K1_correction/detector_flip_Kc",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/K1_correction/detector_drop_D11_recorded_blind",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/K1_correction/quotient_Sigma_alone_c_cb_plus_3_8_minus_1_4",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/K1_correction/quotient_incl_Sigma_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/drop_graph_D13 (c.K data = 0, Sigma held fixed)/entries",
+   "reference": 88,
+   "independent": 88,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/drop_graph_D13 (c.K data = 0, Sigma held fixed)/sectors",
+   "reference": [
+    "c.b"
+   ],
+   "independent": [
+    "c.b"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/drop_graph_D13 (c.K data = 0, Sigma held fixed)/detected",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/flip_sign_Kc (c.K data -> -c.K, Sigma held fixed)/entries",
+   "reference": 88,
+   "independent": 88,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/flip_sign_Kc (c.K data -> -c.K, Sigma held fixed)/sectors",
+   "reference": [
+    "c.b"
+   ],
+   "independent": [
+    "c.b"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/flip_sign_Kc (c.K data -> -c.K, Sigma held fixed)/detected",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/drop_graph_D11/entries",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/drop_graph_D11/sectors",
+   "reference": [],
+   "independent": [],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/drop_graph_D11/detected",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/Sigma_orientation_unconverted (p19 error)/entries",
+   "reference": 88,
+   "independent": 88,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/Sigma_orientation_unconverted (p19 error)/sectors",
+   "reference": [
+    "c.b"
+   ],
+   "independent": [
+    "c.b"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/full_closure_mutation_detector/cases/Sigma_orientation_unconverted (p19 error)/detected",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/change_log_vs_p19/added",
+   "reference": [
+    "archival/p19/README.md",
+    "archival/p19/p19_source_files.json",
+    "archival/p19/reference_values_p19.json",
+    "archival/p19/reproducibility/author_rebuild_report_p19.json",
+    "archival/p19/reproducibility/independent_rebuild_report_p19.json",
+    "code/p5_calc/d11_pin.py",
+    "code/p5_calc/p20_conventions.py",
+    "code/p5_calc/release_p20.py",
+    "manuscript/notes/P20_correction.tex",
+    "reproducibility/reference_values_p20.json",
+    "tests/test_p20.py"
+   ],
+   "independent": [
+    "archival/p19/README.md",
+    "archival/p19/p19_source_files.json",
+    "archival/p19/reference_values_p19.json",
+    "archival/p19/reproducibility/author_rebuild_report_p19.json",
+    "archival/p19/reproducibility/independent_rebuild_report_p19.json",
+    "code/p5_calc/d11_pin.py",
+    "code/p5_calc/p20_conventions.py",
+    "code/p5_calc/release_p20.py",
+    "manuscript/notes/P20_correction.tex",
+    "reproducibility/reference_values_p20.json",
+    "tests/test_p20.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/change_log_vs_p19/modified",
+   "reference": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "code/p5_calc/defect.py",
+    "code/p5_calc/release_p19.py",
+    "manuscript/body/XVI-P-body.tex",
+    "manuscript/notes/P19_defect.tex",
+    "tests/test_p14.py",
+    "tests/test_p19.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "independent": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "code/p5_calc/defect.py",
+    "code/p5_calc/release_p19.py",
+    "manuscript/body/XVI-P-body.tex",
+    "manuscript/notes/P19_defect.tex",
+    "tests/test_p14.py",
+    "tests/test_p19.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/change_log_vs_p19/removed",
+   "reference": [
+    "reproducibility/reference_values_p19.json"
+   ],
+   "independent": [
+    "reproducibility/reference_values_p19.json"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p20/independent_rebuild_passed_p19",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/passed",
+   "reference": 218,
+   "independent": 218,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/passed",
+   "reference": 71,
+   "independent": 71,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/passed",
+   "reference": 4,
+   "independent": 4,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/release_claim_accepted",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/publication",
+   "reference": "accepted",
+   "independent": "accepted",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/bulk_symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/O1_closure",
+   "reference": "NOT_CLOSED",
+   "independent": "NOT_CLOSED",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/insertion_status",
+   "reference": "Frozen_negative_obstruction_preserved",
+   "independent": "Frozen_negative_obstruction_preserved",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XV_B_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XIV_J_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/Route_B_discharged",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/u_R_c_delta_added",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XVI_P_registered",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/quantum_action_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/quantum_prescription_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/D11_matching_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/counterterm_domain_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/amplitude_rules_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_earned",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P3_P4_frozen_as_P5_inputs",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/D11_matching_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/D12_status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/classical_readiness_for_ch_identity",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/quartic_generator_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/ch_projection_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/ch_dependency_inventory_complete",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/gauge_fixing_map_constructed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/required_classical_BV_components_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.3",
+   "reference": "complete (declared ch target)",
+   "independent": "complete (declared ch target)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.4",
+   "reference": "earned (classical readiness)",
+   "independent": "earned (classical readiness)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_entry",
+   "reference": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+   "independent": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_calculation",
+   "reference": "evaluated; 4D sector renormalized (MS-bar, declared domain); evanescent regulated (poles retained, not subtracted), decoupled from the ch slots (p15-p18 inputs D01, D02, D03, D11, D12, D13, D14a-c)",
+   "independent": "evaluated; 4D sector renormalized (MS-bar, declared domain); evanescent regulated (poles retained, not subtracted), decoupled from the ch slots (p15-p18 inputs D01, D02, D03, D11, D12, D13, D14a-c)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_identity",
+   "reference": "projected defect computed (zero exactly in d, all parts, all seven assignments; each row vanishes separately); projected identity verified; projected restoration verified (p20 definition: full sigma_0 closure of the complete one-loop kappa^2 MS-bar counterterm incl. c.cb, h.c/c.b/c.cbs); K1 corrected in p20 (orientation erratum); D11 ratio pin verified, absolute pin OPEN; bulk symmetry NOT restored/claimed; O.1 NOT_CLOSED",
+   "independent": "projected defect computed (zero exactly in d, all parts, all seven assignments; each row vanishes separately); projected identity verified; projected restoration verified (p20 definition: full sigma_0 closure of the complete one-loop kappa^2 MS-bar counterterm incl. c.cb, h.c/c.b/c.cbs); K1 corrected in p20 (orientation erratum); D11 ratio pin verified, absolute pin OPEN; bulk symmetry NOT restored/claimed; O.1 NOT_CLOSED",
+   "equal": true,
+   "compared_as": "exact"
+  }
+ ],
+ "entrypoint_report": "src/XVI-P/build/rebuild_report.json"
+}

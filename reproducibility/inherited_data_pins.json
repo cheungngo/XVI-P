@@ -1,0 +1,12 @@
+{
+ "description": "Inherited DATA inputs of the XVI-P pipeline (not produced by it from scratch), each pinned by sha256. Verified by tools/rebuild_from_source.py before the build and shipped in XVI-P-source-only.zip.",
+ "external_inputs": "code/classical/inherited.py (XVI-M.tex; XVI-N-r10 grav_density.py) -- workspace or vendored copy",
+ "xvi_o_code_and_notes": "provenance/XVI-O_o70_source_tree.json (code/matter_loop/*.py, notes/*.tex; verbatim o70-sync)",
+ "files": {
+  "ledgers/quantum_factor_ledger.json": {
+   "sha256": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "origin": "XVI-O o70-sync (quantum factor ledger)",
+   "read_by": "code/matter_loop/convention_sheet.py (read-modify-write of the D_F fragment; idempotent: the rewritten bytes equal the pinned bytes)"
+  }
+ }
+}

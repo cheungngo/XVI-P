@@ -1,0 +1,113 @@
+{
+  "root": "/workspace/XVI-O",
+  "include": [
+    "code/matter_loop",
+    "notes",
+    "certificates/O5_D11_scalar_extension.json",
+    "certificates/O5_D11_global_representation.json",
+    "certificates/O5_D11_Ww_reference.json",
+    "certificates/O5_D11_contact_moments.json",
+    "RELEASE_STATUS.json",
+    "RELEASE_MANIFEST_EXTERNAL.txt"
+  ],
+  "n_files": 24,
+  "sha256": "828a5d3acbd25dd7f147dea0f4027a48b3437c45b563ef9b2e36ed6476b1294a",
+  "files": [
+    {
+      "path": "code/matter_loop/convention_sheet.py",
+      "sha256": "5974348c0f00216dd00efddccc4d31a49ea48faef9458e8b2c8f2efd5859d0c4"
+    },
+    {
+      "path": "code/matter_loop/d11_Ww_reference.py",
+      "sha256": "445b0fed527cedb2af36aab30ce08c87a88f7b2654f523dd427c993c8c590f71"
+    },
+    {
+      "path": "code/matter_loop/d11_contact_moments.py",
+      "sha256": "2b6d3f28853d091e87a07a2a6ede52e9cd0da0dfdb90812006952fb2e8d2f5c0"
+    },
+    {
+      "path": "code/matter_loop/d11_divergences.py",
+      "sha256": "a2cf807e6f76b2bec13acfce8a6949080261e32958fa278a6eeeb1fadc222b26"
+    },
+    {
+      "path": "code/matter_loop/d11_extension.py",
+      "sha256": "e92082154d3f68470001d9bfb4ad334eddd59d3b6021c2eb2b3c46f19f5159d5"
+    },
+    {
+      "path": "code/matter_loop/d11_global_representation.py",
+      "sha256": "fabe63f6b455d21fa697858a005af16578f94405f5673559f3613609484e99e6"
+    },
+    {
+      "path": "code/matter_loop/d11_normalized.py",
+      "sha256": "c02f97ae926269c1765c5410b4b897aa664a141978224a95af4572b4b2caeeb0"
+    },
+    {
+      "path": "code/matter_loop/d11_route1_transverse.py",
+      "sha256": "7d02ca8fa2c9fc2354a732ba9c1121e64968580bf8c393047da5d7a8e85fde86"
+    },
+    {
+      "path": "code/matter_loop/d11_scalar_extension.py",
+      "sha256": "21a8836b69c2c9599450e1369e2e5d7cfce1ca9f61a6ec5a2ac87b2d712e21d0"
+    },
+    {
+      "path": "code/matter_loop/d11_subsector_summary.py",
+      "sha256": "0e3a735a3f33d26fd5a1a0e56b3317c8ef7145f23ffe4916e7b92858e60087b1"
+    },
+    {
+      "path": "code/matter_loop/d11_tensor.py",
+      "sha256": "6e916fa960449f4f187415de8b4a9a2c0aa211717de1237b5951987fe85efe77"
+    },
+    {
+      "path": "code/matter_loop/d11_ward_d12.py",
+      "sha256": "0b4fdbf1f4f5296d056a34636b9005bc34a505f35786c43d29996796ccfff21a"
+    },
+    {
+      "path": "code/matter_loop/mixed_scalar_noether.py",
+      "sha256": "7f2f0b5089b248b1bbb422ed5b3cf180bafa73c4c27ab694f0a09ec9a9203d66"
+    },
+    {
+      "path": "notes/O_scope_and_dependencies.tex",
+      "sha256": "24aa7e9e6b23edbfa9705559bcbb0e4d037bfd328a8427995d2cd74f0253b548"
+    },
+    {
+      "path": "notes/S_inv_order2_scaffold.tex",
+      "sha256": "0a1fb17a3160fc26f411280dd30749a7322f377680f1b79e03647bbfe4ab1d41"
+    },
+    {
+      "path": "notes/counterterm_ledgers.tex",
+      "sha256": "54681d431f114c2d58e74dab3c0f8535ebe0fce8ed7611bad3447b809c59b094"
+    },
+    {
+      "path": "notes/d11_scalar_extension.tex",
+      "sha256": "d7ca98981e4e5f1c0ac0a89c35cf6a577965ac4766867f40d6a8dcdc5d852d61"
+    },
+    {
+      "path": "notes/diagram_inventory_note.tex",
+      "sha256": "5044c224d2825c88c93e830273f613d99fbdef4815d465d9a372fd79acd1ced6"
+    },
+    {
+      "path": "notes/insertion_status_freeze.tex",
+      "sha256": "88cdebb51e068efdc1057f66d6f578bb1e4b6ac9fdd13ca0500de5f36b7a4403"
+    },
+    {
+      "path": "notes/matter_loop_subsector.tex",
+      "sha256": "3f1c74e798a5fac9f600f17480dbb6f4dc0d7adacb15872c411df1aeeb7c3e85"
+    },
+    {
+      "path": "notes/quantum_convention_sheet.tex",
+      "sha256": "044b9410ef54d478b18225585835bf57fff8f7b290f7913620e7b8c5be93e1b9"
+    },
+    {
+      "path": "notes/renormalized_amplitudes.tex",
+      "sha256": "107bc032d8b9c4d8e06f49c0427d661b5341099cd8779c1650147b9c20c61324"
+    },
+    {
+      "path": "notes/retained_quantum_identity.tex",
+      "sha256": "e89109ad9a1c619153348cfd5e5b117507fe987a021c8857f466eb949ace3656"
+    },
+    {
+      "path": "notes/symmetry_defect_note.tex",
+      "sha256": "e123af1ca785edc294a84bf3e6425e2ba46d508eeba5c4de1ba3defe0702c67a"
+    }
+  ]
+}

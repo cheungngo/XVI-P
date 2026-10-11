@@ -1,0 +1,1056 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p13",
+ "kind": "independent rebuild report (separate clean environment); package evidence, not a mathematical certificate",
+ "date": "2026-10-08",
+ "reviewer": "independent executor (Grok Bot subagent), separate venv /workspace/indep_rebuild_p13/venv; no reads from /workspace/XVI-P except the reference file at the final comparison step",
+ "environment": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "pdfinfo": "pdfinfo version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "venv": "/workspace/indep_rebuild_p13/venv",
+  "pip_installed": "sympy==1.14.0 mpmath==1.3.0 pytest==9.1.1 (exact versions installed via pip)"
+ },
+ "environment_reference": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+ },
+ "environment_differences": {},
+ "zip_sha256": "2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266",
+ "source_tree_sha256": "2b1baf335468944aa800c05eaa8b0b4df67ee893491079fcc944eb8fb0e69a70",
+ "source_tree_sha256_without_reference": "289a5d03e3adda6a63703a36bb6379ae90209ea09a4d6c533d6dd4809d1ce345",
+ "pass": true,
+ "independent_rebuild_passed": true,
+ "checks": {
+  "1_zip_sha256_and_source_only": {
+   "pass": true,
+   "zip_sha256": "2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266",
+   "n_files": 92,
+   "generated_artifacts_or_caches_present": false,
+   "note": "zip contains 5 JSON files, all source/pin inputs (incl. reproducibility/reference_values.json, which the entrypoint reads by design); no certificates, exports, PDFs, build/, __pycache__"
+  },
+  "2_entrypoint_rebuild_from_source": {
+   "pass": true,
+   "steps": {
+    "source_only_tree": true,
+    "inherited_pins": true,
+    "full_build": true,
+    "release_accepted": true,
+    "tests": true,
+    "pdf_readback_vs_records": true,
+    "external_manifest": true,
+    "source_only_zip_rebuilt": true,
+    "file_access_trace": true,
+    "comparison_with_reference": true
+   },
+   "comparison_with_in_zip_reference": {
+    "compared": 112,
+    "equal": 112
+   },
+   "seconds": 440.1,
+   "source_tree_sha256": "2b1baf335468944aa800c05eaa8b0b4df67ee893491079fcc944eb8fb0e69a70",
+   "source_tree_sha256_without_reference": "289a5d03e3adda6a63703a36bb6379ae90209ea09a4d6c533d6dd4809d1ce345",
+   "rebuilt_source_only_zip_sha256": "2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266"
+  },
+  "3a_exports_sha_and_terms": {
+   "pass": true,
+   "values": {
+    "ell2": {
+     "file_sha256": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+     "polynomial_sha256_str": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+     "terms_Add_make_args": 84,
+     "terms_after_expand": 84,
+     "terms_Poly_monomials": 84,
+     "already_expanded": true,
+     "n_symbols": 40,
+     "total_degree_set": [
+      2
+     ],
+     "canonical_poly_sha256": "6bfc573f9447c18e21cadd06d6133dcfdd9e1450dbac5968857893b6e8da4d2d"
+    },
+    "ell3": {
+     "file_sha256": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+     "polynomial_sha256_str": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+     "terms_Add_make_args": 678,
+     "terms_after_expand": 678,
+     "terms_Poly_monomials": 678,
+     "already_expanded": true,
+     "n_symbols": 50,
+     "total_degree_set": [
+      3
+     ],
+     "canonical_poly_sha256": "ce51a35066e5e9dc7e715327de0db8341711b8a263f1fc862bd64a32342ae0af"
+    },
+    "ell4": {
+     "file_sha256": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+     "polynomial_sha256_str": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+     "terms_Add_make_args": 3360,
+     "terms_after_expand": 3360,
+     "terms_Poly_monomials": 3360,
+     "already_expanded": true,
+     "n_symbols": 50,
+     "total_degree_set": [
+      4
+     ],
+     "canonical_poly_sha256": "0f3da5b2224faa4c9fc4865b48635b3635971f9247d594501f1db374e2f24606"
+    },
+    "V4_grav.json": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+    "ell4_conventions.json": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769"
+   },
+   "note": "terms counted three ways (Add.make_args, after expand, Poly monomials over QQ) -> identical; exports already expanded; plus a canonical sorted-monomial hash (no reference to compare)"
+  },
+  "3b_noether_master_certificates": {
+   "pass": true,
+   "quartic_C7": {
+    "kappa0": {
+     "W_terms": 132,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "kappa1": {
+     "W_terms": 2148,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      159,
+      159,
+      159,
+      159
+     ]
+    },
+    "kappa2": {
+     "W_terms": 15428,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      2088,
+      2088,
+      2088,
+      2088
+     ]
+    }
+   },
+   "master_grav_af0": {
+    "kappa0": {
+     "W_terms": 132,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "kappa1": {
+     "W_terms": 2148,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      159,
+      159,
+      159,
+      159
+     ]
+    },
+    "kappa2": {
+     "W_terms": 15428,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      2088,
+      2088,
+      2088,
+      2088
+     ]
+    }
+   },
+   "quartic_vs_master_agree": {
+    "kappa0": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    },
+    "kappa1": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    },
+    "kappa2": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    }
+   },
+   "issues": []
+  },
+  "3c_pytest_independent_run": {
+   "pass": true,
+   "groups": {
+    "baseline": {
+     "passed": 24,
+     "failed": 0,
+     "skipped": 0
+    },
+    "certificate_mutation": {
+     "passed": 9,
+     "failed": 0,
+     "skipped": 0
+    },
+    "resumed_build": {
+     "passed": 4,
+     "failed": 0,
+     "skipped": 0
+    }
+   },
+   "summary": "37 passed in 188.96s (0:03:08)",
+   "files": [
+    "tests/test_p13.py",
+    "tests/test_inverse_metric_series.py"
+   ],
+   "run_in": "separate copy pytest_run/XVI-P, P13_SYNC_DIR local",
+   "note": "tests/test_matter_loop_gates.py (not in the build's test set) collects 0 tests"
+  },
+  "3d_pdf_readback": {
+   "pass": true,
+   "files": {
+    "XVI-P-appendix": {
+     "quartic_C7_blocks": 1,
+     "master_grav_af0_blocks": 1,
+     "quartic_C7_matches_json": true,
+     "master_grav_af0_matches_json": true,
+     "ell2_poly_sha_in_pdf": true,
+     "ell3_poly_sha_in_pdf": true,
+     "ell4_poly_sha_in_pdf": true
+    },
+    "XVI-P": {
+     "quartic_C7_blocks": 1,
+     "master_grav_af0_blocks": 1,
+     "quartic_C7_matches_json": true,
+     "master_grav_af0_matches_json": true,
+     "ell2_poly_sha_in_pdf": true,
+     "ell3_poly_sha_in_pdf": true,
+     "ell4_poly_sha_in_pdf": true
+    }
+   },
+   "issues": []
+  },
+  "3e_external_manifest": {
+   "pass": true,
+   "n_entries": 18,
+   "failures": [],
+   "n_synced_copies": 6,
+   "note": "sha256, byte size, pdfinfo page counts (12/146/158) and synced copies all verified"
+  },
+  "3f_XVI_M_pin": {
+   "pass": true,
+   "vendored_sha256": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "also_verified": "XVI-N-r10 grav_density.py pin 855ab9e2..., quantum_factor_ledger.json pin, 24/24 XVI-O o70 files"
+  },
+  "3g_independent_math_spotcheck": {
+   "pass": true,
+   "identity": "sqrt(-g) R - L_GG = - d_mu B^mu, B^mu = sqrt(-g)(g^{mu nu} G^l_{nu l} - g^{l nu} G^mu_{l nu}); Ricci R^r_{smn} = d_m G^r_{ns} - d_n G^r_{ms} + G^r_{ml}G^l_{ns} - G^r_{nl}G^l_{ms}, R_{sn}=R^r_{srn}; eta=diag(+,-,-,-)",
+   "own_code": "spotcheck/boundary_spotcheck.py, spotcheck/conformal_closed_forms.py (no package imports)",
+   "results": [
+    {
+     "metric": "g = f(x) eta (generic f, 4D, mostly minus)",
+     "corrected_identity_residual_zero": true,
+     "old_plus_sign_fails": true
+    },
+    {
+     "metric": "g = diag(a,-b,-c,-d), a..d generic functions of x0..x3",
+     "corrected_identity_residual_zero": true,
+     "old_plus_sign_fails": true
+    },
+    {
+     "metric": "explicit non-diagonal polynomial metric (all 4 coords)",
+     "corrected_identity_residual_zero": true,
+     "old_plus_sign_fails": true
+    }
+   ],
+   "conformal_closed_forms_f_positive": {
+    "sqrtg_R == -3 Box f + (3/(2f))(df)^2": true,
+    "L_GG == (3/(2f))(df)^2": true,
+    "B^mu == 3 d^mu f": true,
+    "sqrtg_R - L_GG + d_mu B^mu == 0 (corrected)": true,
+    "sqrtg_R - L_GG - d_mu B^mu == -6 Box f (old orientation residual)": true,
+    "pass": true
+   },
+   "note": "closed-form sub-checks in boundary_spotcheck.py reported false only because sympy keeps sqrt(f^4) unsimplified for undetermined f; redone with sqrt(-g)=f^2 (f>0) -> all true"
+  },
+  "4_comparison_with_author_reference": {
+   "pass": true,
+   "reference_file": "/workspace/XVI-P/reproducibility/reference_values.json",
+   "reference_sha256": "d8bf3d97457913dbd1fa03a2e801630005aeca601b93ebb53307fb30e1bc4095",
+   "reference_identical_to_in_zip_copy": true,
+   "entrypoint_values_compared": 112,
+   "independently_recomputed_values_compared": 77,
+   "environment_differences": {}
+  }
+ },
+ "mismatches": [],
+ "independent_comparisons": [
+  {
+   "key": "/exports/ell2/file_sha256",
+   "reference": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "independent": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell2/polynomial_sha256",
+   "reference": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "independent": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell2/terms",
+   "reference": 84,
+   "independent": 84,
+   "equal": true
+  },
+  {
+   "key": "/exports/ell3/file_sha256",
+   "reference": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "independent": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell3/polynomial_sha256",
+   "reference": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "independent": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell3/terms",
+   "reference": 678,
+   "independent": 678,
+   "equal": true
+  },
+  {
+   "key": "/exports/ell4/file_sha256",
+   "reference": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "independent": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell4/polynomial_sha256",
+   "reference": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "independent": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell4/terms",
+   "reference": 3360,
+   "independent": 3360,
+   "equal": true
+  },
+  {
+   "key": "/exports/V4_grav.json",
+   "reference": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "independent": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell4_conventions.json",
+   "reference": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "independent": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true
+  },
+  {
+   "key": "/inherited_pins/XVI-M.tex",
+   "reference": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "independent": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "equal": true
+  },
+  {
+   "key": "/inherited_pins/XVI-N-r10/code/prep/grav_density.py",
+   "reference": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "independent": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "equal": true
+  },
+  {
+   "key": "/inherited_pins/ledgers/quantum_factor_ledger.json",
+   "reference": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "independent": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "equal": true
+  },
+  {
+   "key": "/tests/baseline/passed",
+   "reference": 24,
+   "independent": 24,
+   "equal": true
+  },
+  {
+   "key": "/tests/baseline/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/tests/baseline/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/tests/certificate_mutation/passed",
+   "reference": 9,
+   "independent": 9,
+   "equal": true
+  },
+  {
+   "key": "/tests/certificate_mutation/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/tests/certificate_mutation/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/tests/resumed_build/passed",
+   "reference": 4,
+   "independent": 4,
+   "equal": true
+  },
+  {
+   "key": "/tests/resumed_build/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/tests/resumed_build/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/release/release_claim_accepted",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/publication",
+   "reference": "accepted",
+   "independent": "accepted",
+   "equal": true
+  },
+  {
+   "key": "/release/classical_readiness_for_ch_identity",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/flags/quartic_generator_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/flags/ch_projection_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/flags/ch_dependency_inventory_complete",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/flags/gauge_fixing_map_constructed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/flags/required_classical_BV_components_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/required_master_residuals",
+   "reference": [],
+   "independent": [],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  }
+ ],
+ "entrypoint_report": "src/XVI-P/build/rebuild_report.json",
+ "steps": {
+  "source_only_tree": {
+   "ok": true,
+   "non_source_files": [],
+   "count": 0
+  },
+  "inherited_pins": {
+   "ok": true,
+   "external": {
+    "XVI-M.tex": {
+     "sha256": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+     "ok": true,
+     "location": "vendored",
+     "vendored_copy_matches_pin": true
+    },
+    "XVI-N-r10/code/prep/grav_density.py": {
+     "sha256": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+     "ok": true,
+     "location": "vendored",
+     "vendored_copy_matches_pin": true
+    }
+   },
+   "inherited_data_files": 1,
+   "inherited_data_failures": [],
+   "xvi_o_o70_files_verified": 24,
+   "xvi_o_o70_failures": [],
+   "XVI_M_pin": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea"
+  },
+  "full_build": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 438.9,
+   "log": "build/rebuild_build.log"
+  },
+  "release_accepted": {
+   "ok": true,
+   "milestones": {
+    "P.3": "complete (declared ch target)",
+    "P.4": "earned (classical readiness)",
+    "P.5_entry": "next (not started; p13 does no P.5 work)",
+    "P.5_calculation": "open",
+    "P.5_identity": "open"
+   }
+  },
+  "tests": {
+   "ok": true,
+   "groups": {
+    "baseline": {
+     "passed": 24,
+     "failed": 0,
+     "skipped": 0
+    },
+    "certificate_mutation": {
+     "passed": 9,
+     "failed": 0,
+     "skipped": 0
+    },
+    "resumed_build": {
+     "passed": 4,
+     "failed": 0,
+     "skipped": 0
+    }
+   },
+   "summary": "37 passed in 190.12s (0:03:10)"
+  },
+  "pdf_readback_vs_records": {
+   "ok": true,
+   "records": 6,
+   "appendix": true,
+   "combined": true
+  },
+  "external_manifest": {
+   "ok": true,
+   "entries": 18,
+   "failures": [],
+   "synced_inside_copy": [
+    "XVI-P-appendix.pdf",
+    "XVI-P-full.zip",
+    "XVI-P-review-focus.zip",
+    "XVI-P-science.pdf",
+    "XVI-P-source-only.zip",
+    "XVI-P.pdf"
+   ]
+  },
+  "source_only_zip_rebuilt": {
+   "ok": true,
+   "differences": []
+  },
+  "file_access_trace": {
+   "ok": true,
+   "present": true,
+   "reads": 2200,
+   "writes": 1374,
+   "external_reads_pinned": [],
+   "unpinned_external_reads": [],
+   "in_tree_source_files_read": 92,
+   "in_tree_data_inputs_read": [
+    "ledgers/quantum_factor_ledger.json",
+    "provenance/XVI-M_sha256.txt",
+    "provenance/XVI-O_o70_source_tree.json",
+    "provenance/predecessor_pins.json",
+    "reproducibility/inherited_data_pins.json",
+    "reproducibility/reference_values.json"
+   ],
+   "unpinned_in_tree_data_inputs": [],
+   "reads_of_unknown_files": [
+    "XVI-N-r10",
+    "body",
+    "classical",
+    "inherited",
+    "matter_loop",
+    "outputs",
+    "p02_p09",
+    "p10",
+    "p11",
+    "p12",
+    "p13",
+    "p4_classical",
+    "prep",
+    "read_trace",
+    "stale"
+   ]
+  },
+  "comparison_with_reference": {
+   "ok": true,
+   "compared": 112,
+   "equal": 112,
+   "differences": []
+  }
+ }
+}

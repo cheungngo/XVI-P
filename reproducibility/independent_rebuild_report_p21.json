@@ -1,0 +1,510 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p21",
+ "kind": "independent rebuild report; package evidence, not a mathematical certificate",
+ "date": "2026-10-10",
+ "reviewer": "independent executor (Grok Bot subagent)",
+ "same_box_caveat": "same box as the author build (shared kernel, TeX Live, poppler, platform); fresh directory /workspace/indep_rebuild_p21 and fresh venv (sympy 1.14.0, mpmath 1.3.0, pytest 9.1.1); not a second machine",
+ "environment": {
+  "python": "3.13.5",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "pip_freeze": [
+   "iniconfig==2.3.1",
+   "mpmath==1.3.0",
+   "packaging==26.3",
+   "pluggy==1.6.0",
+   "Pygments==2.21.0",
+   "pytest==9.1.1",
+   "sympy==1.14.0"
+  ]
+ },
+ "zip_sha256": "a71d6b5203bc3914833db9fd13b9d186bef93d1ae3007b2e4c99fdfce11e0678",
+ "source_tree_sha256": "b835353ffe16a8ff159e2916fe3efdf2b9d89a4d512e80e9e6da587cecd0fe5e",
+ "pass": true,
+ "independent_rebuild_passed": true,
+ "mismatches": [],
+ "checks": {
+  "0_zip_entrypoint": {
+   "pass": true,
+   "source_tree_sha256": "b835353ffe16a8ff159e2916fe3efdf2b9d89a4d512e80e9e6da587cecd0fe5e",
+   "n_source_files": 183,
+   "steps": {
+    "source_only_tree": true,
+    "inherited_pins": true,
+    "full_build": true,
+    "release_accepted": true,
+    "tests": true,
+    "pdf_readback_vs_records": true,
+    "external_manifest": true,
+    "source_only_zip_rebuilt": true,
+    "file_access_trace": true,
+    "comparison_with_reference": true
+   },
+   "comparison_with_reference": "584/584",
+   "tests": "348 passed in 240.74s (0:04:00)",
+   "seconds": 1765.5,
+   "P21_release": {
+    "publication": "accepted",
+    "D11_absolute_pin_verified": "earned",
+    "D11_ratio_pin_verified": "earned",
+    "independent_rebuild_passed": "pending",
+    "independent_rebuild_passed_p20": true
+   },
+   "change_log_vs_p20_counts": {
+    "added": 10,
+    "removed": 1,
+    "modified": 11
+   }
+  },
+  "1_absolute_D11_pin": {
+   "pass": true,
+   "own_direct_route": "pin/direct_bubble.py: Gamma_M = (i/2) Tr ln K (e^{i Gamma} = int e^{iS}), K = -d(sqrt(-g) g^{mn} d), eta=(+,-,-,-), g=eta+kappa h, xi=0; Gamma^(2) = -(i/2) B (symmetry factor 1/2, vertices from iS), bubble UV pole via Feynman parameters, int (k^2)^a/(k^2-D)^2 |pole = i(a+1)D^a/(16pi^2 eps) (a=0 equals the package's +1/eps bubble with N_eps = i/16pi^2); fitted on two momenta; tadpole scaleless",
+   "own_result_Gamma2_pole": "kappa^2/(16 pi^2 eps) [p^4 P2/240 + p^4 P0s/24] (both momenta)",
+   "own_detail": {
+    "(3, 1, 2, 0)": {
+     "Gamma2_pole_times_16pi2eps_over_kappa2": {
+      "A": "1/240",
+      "B": "1/24"
+     }
+    },
+    "(5, 1, -2, 3)": {
+     "Gamma2_pole_times_16pi2eps_over_kappa2": {
+      "A": "1/240",
+      "B": "1/24"
+     }
+    }
+   },
+   "package_Gamma2_pole": {
+    "spin2": "1/(3840*pi**2)",
+    "spin0s": "1/(384*pi**2)"
+   },
+   "agreement": "sign and magnitude equal (c2 N_eps = (-i/240)(i/16pi^2) = +1/(3840 pi^2); c0 likewise 1/(384 pi^2)); my route uses no heat kernel, so it cross-checks the author's heat-kernel route (L_E,div = -a2/(32pi^2 eps), L_M = -L_E) independently; the author's steps (iS_M=-S_E, Tr ln|div = -(1/16pi^2 eps) int a2, forms C2->1/2 P2, R2->3 P0s, E->0) I also re-derived by hand/p20 own_pin",
+   "external_convention_judgement": "no convention was chosen to fit: the inputs are the package's declared ones (signature, S_phi sign, g = eta + kappa h, N_eps, G6) plus standard definitions (e^{iGamma} = int e^{iS}; Gamma^(2) = second variation, Gamma = 1/2 h Gamma^(2) h). Caveat (info): step 1 'G = Gamma^(2)' is a hard-coded (-i)(i) = 1 with string-presence checks of the declarations, and Gamma = 1/2 h Gamma^(2) h normalisation is a standard definition assumed rather than read from the package; my direct diagram route confirms both are consistent with the package value."
+  },
+  "2_gate": {
+   "pass": true,
+   "cases": {
+    "control_unmodified": {
+     "release_p20": [
+      0,
+      "accepted",
+      ""
+     ],
+     "release_p21": [
+      0,
+      "accepted",
+      ""
+     ]
+    },
+    "abs_top_FAIL_nested_PASS": {
+     "release_p20": [
+      1,
+      "rejected",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "abs_nested_FAIL_top_PASS": {
+     "release_p20": [
+      1,
+      "rejected",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "ratio_top_inconsistent": {
+     "release_p20": [
+      1,
+      "rejected",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "abs_flag_false": {
+     "release_p20": [
+      1,
+      "rejected",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "external_convention_declared": {
+     "release_p20": [
+      1,
+      "rejected",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "abs_ratio_2": {
+     "release_p20": [
+      1,
+      "rejected",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "P18_q_not_earned": {
+     "release_p20": [
+      1,
+      "rejected",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "P20_release_abs_not_earned": {
+     "release_p20": [
+      0,
+      "accepted",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "undisclosed_test_edit_test_p18": {
+     "release_p20": [
+      0,
+      "accepted",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "undisclosed_p15_code_edit_batchA": {
+     "release_p20": [
+      0,
+      "accepted",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "undisclosed_classical_edit_certio": {
+     "release_p20": [
+      0,
+      "accepted",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "undisclosed_tools_edit_build": {
+     "release_p20": [
+      0,
+      "accepted",
+      ""
+     ],
+     "release_p21": [
+      0,
+      "accepted",
+      ""
+     ]
+    },
+    "undisclosed_tools_edit_source_manifest": {
+     "release_p20": [
+      0,
+      "accepted",
+      ""
+     ],
+     "release_p21": [
+      0,
+      "accepted",
+      ""
+     ]
+    },
+    "undisclosed_earlier_note_edit_P18_D11_tex": {
+     "release_p20": [
+      0,
+      "accepted",
+      ""
+     ],
+     "release_p21": [
+      0,
+      "accepted",
+      ""
+     ]
+    },
+    "undisclosed_P19_note_further_edit": {
+     "release_p20": [
+      0,
+      "accepted",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    },
+    "added_undisclosed_code_file": {
+     "release_p20": [
+      0,
+      "accepted",
+      ""
+     ],
+     "release_p21": [
+      0,
+      "accepted",
+      ""
+     ]
+    },
+    "archived_p20_report_tampered": {
+     "release_p20": [
+      0,
+      "accepted",
+      ""
+     ],
+     "release_p21": [
+      1,
+      "rejected",
+      ""
+     ]
+    }
+   },
+   "p21_accepts": [
+    "undisclosed_tools_edit_build",
+    "undisclosed_tools_edit_source_manifest",
+    "undisclosed_earlier_note_edit_P18_D11_tex",
+    "added_undisclosed_code_file"
+   ]
+  },
+  "3_scan": {
+   "pass": true,
+   "p20_reviewer_misses_now_detected": {
+    "assign_alias_Poly": true,
+    "map_over_args_rebuild": true,
+    "args_via_variable": true,
+    "ordered_terms_rebuild": true,
+    "builtin_sum_over_args": true,
+    "symbol_starred_literal": true,
+    "symbol_kwargs_dict": true,
+    "make_args_rebuild": true
+   },
+   "new_probes": {
+    "getattr_args_string": true,
+    "xreplace_d": false,
+    "replace_d": true,
+    "list_unpack_alias_then_subs": false,
+    "free_symbols_pop_subs": false,
+    "string_roundtrip": true,
+    "sympify_plain_d": true,
+    "Symbol_new_classmethod": false,
+    "lambda_wrapper_alias": false,
+    "getattr_alias": true,
+    "coeff_extract": false,
+    "as_poly_eval": true,
+    "dunder_getattribute": false,
+    "Function_call_d": false
+   },
+   "new_misses": [
+    "xreplace_d",
+    "list_unpack_alias_then_subs",
+    "free_symbols_pop_subs",
+    "Symbol_new_classmethod",
+    "lambda_wrapper_alias",
+    "coeff_extract",
+    "dunder_getattribute",
+    "Function_call_d"
+   ],
+   "package_unreviewed_violations": {}
+  },
+  "4_d_guard_hole": {
+   "pass": true,
+   "confirmed": "NOT_INTERCEPTED d-free: 1/15",
+   "runtime_probe": {
+    "subs_d": {
+     "linear_and_pow": "RAISED PrematureD4Substitution",
+     "power_base_only": "NOT_INTERCEPTED d-free: 1/15",
+     "d_alone": "RAISED PrematureD4Substitution",
+     "mixed_pow": "RAISED PrematureD4Substitution"
+    },
+    "xreplace_d": {
+     "linear_and_pow": "RAISED PrematureD4Substitution",
+     "power_base_only": "RAISED PrematureD4Substitution",
+     "d_alone": "NOT_INTERCEPTED d-free: 4",
+     "mixed_pow": "RAISED PrematureD4Substitution"
+    },
+    "list_unpack_alias_then_subs": {
+     "linear_and_pow": "RAISED PrematureD4Substitution",
+     "power_base_only": "NOT_INTERCEPTED d-free: 1/15",
+     "d_alone": "RAISED PrematureD4Substitution",
+     "mixed_pow": "RAISED PrematureD4Substitution"
+    },
+    "free_symbols_pop_subs": {
+     "linear_and_pow": "RAISED PrematureD4Substitution",
+     "power_base_only": "NOT_INTERCEPTED d-free: 1/15",
+     "d_alone": "RAISED PrematureD4Substitution",
+     "mixed_pow": "RAISED PrematureD4Substitution"
+    },
+    "Symbol_new_classmethod_then_subs": {
+     "linear_and_pow": "no-eval (d kept): d*x + 1/(d - 1)",
+     "power_base_only": "no-eval (d kept): 1/(d**2 - 1)",
+     "d_alone": "no-eval (d kept): d",
+     "mixed_pow": "no-eval (d kept): d**2*x + d"
+    },
+    "lambda_wrapper_Poly": {
+     "linear_and_pow": "RAISED PolynomialError",
+     "power_base_only": "NOT_INTERCEPTED d-free: 1",
+     "d_alone": "NOT_INTERCEPTED d-free: 60",
+     "mixed_pow": "NOT_INTERCEPTED d-free: 240*x + 60"
+    },
+    "coeff_extract": {
+     "linear_and_pow": "NOT_INTERCEPTED d-free: 4*x",
+     "power_base_only": "NOT_INTERCEPTED d-free: 0",
+     "d_alone": "NOT_INTERCEPTED d-free: 4",
+     "mixed_pow": "NOT_INTERCEPTED d-free: 16*x + 4"
+    },
+    "dunder_getattribute": {
+     "linear_and_pow": "no-eval (d kept): d*x + 1/(d - 1)",
+     "power_base_only": "no-eval (d kept): d**2 - 2",
+     "d_alone": "NOT_INTERCEPTED d-free: 0",
+     "mixed_pow": "no-eval (d kept): d**2*x + 4"
+    }
+   }
+  },
+  "5a_disclosure_renames": {
+   "pass": true,
+   "P19_defect_tex_in_DISCLOSED_MANUSCRIPT_REVISIONS": true,
+   "p19_sha_04b974b5_p20_sha_1c71a71a_verified_vs_my_p19_p20_unpacks": true,
+   "key_renamed": "/values/p19/p19_gate_change_log_vs_p18_recomputed_on_current_tree present, old /p19/change_log_vs_p18 absent; as-released pointer archival/p19/reference_values_p19.json",
+   "changed_vs_p20": "exactly d11_pin.py, release_p20.py (disclosed), tests 14/19/20 (disclosed), README, REBUILD_INSTRUCTIONS, body.tex, tools/{build,rebuild_from_source,source_manifest}.py (version/paths only); code/p5_entry and p15-p19 layers and p20_conventions byte-identical; archived p20 records = my p20 report/zip/source list"
+  },
+  "5b_footers_readback": {
+   "pass": true,
+   "footers": {
+    "XVI-P-science": [
+     34,
+     {
+      "XVI-P p21": 34
+     }
+    ],
+    "XVI-P-appendix": [
+     705,
+     {
+      "XVI-P p21": 705
+     }
+    ],
+    "XVI-P": [
+     739,
+     {
+      "XVI-P p21": 739
+     }
+    ]
+   },
+   "package_VALUE_BLOCKS": [
+    710,
+    710
+   ],
+   "own_ext_default": [
+    580,
+    582
+   ],
+   "own_ext_raw": [
+    582,
+    582
+   ],
+   "default_misses": [
+    "XVI-P-appendix: certificates/P18_hh_slot.json#own_ext 1 missing",
+    "XVI-P: certificates/P18_hh_slot.json#own_ext 1 missing"
+   ]
+  },
+  "5c_determinism": {
+   "pass": true,
+   "P20_D11_pin_content_identical_build_seed0_seed4242": true
+  },
+  "5d_ported_checks": {
+   "pass": true,
+   "exports_identical_to_p20": true,
+   "manifest_entries": 50,
+   "compare_p20_own_K1_pin_vs_p21_certs": true
+  },
+  "5e_own_pytest": {
+   "pass": true,
+   "result": "348 passed, exit 0 (P14_SYNC_DIR local)"
+  },
+  "6_reference": {
+   "pass": true,
+   "reference_sha256": "96ae946bb9d9c59e7128e3497669e3e9987b046e921f87e7f9a7e425d6aeeb46",
+   "leaves": 595,
+   "entrypoint_compared": "584/584 equal",
+   "own_values_vs_reference": "absolute-pin Gamma2 values, ratios 1, forms, mutations (x2 -> -I/120, sign flip -> I/240) equal my recomputation"
+  }
+ },
+ "findings": [
+  {
+   "id": "p21_gate_disclosure_prefix_exemptions",
+   "severity": "low",
+   "detail": "release_p21 accepts undisclosed edits to tools/build.py and tools/source_manifest.py (whole tools/ prefix exempt, though source_manifest defines the change-log base/reference), to an earlier-layer note (manuscript/notes/P18_D11.tex; manuscript/ exempt except the listed P19 note), and an ADDED undisclosed code file (code/p5_calc/zz_extra.py; added files are not disclosure-checked, only code/p5_entry additions). 'every package change disclosed' holds only for code/tests/listed notes. Tree sha + reference comparison still pin a released zip, so impact is on the gate claim, not on reproducibility. Suggest: disclose-or-reject for tools/*.py and manuscript/notes/*, and check added files."
+  },
+  {
+   "id": "scan_misses_p21",
+   "severity": "low",
+   "detail": "allow-list scan catches all 8 p20 forms; still missed: xreplace_d, list_unpack_alias_then_subs, free_symbols_pop_subs, Symbol_new_classmethod, lambda_wrapper_alias, coeff_extract, dunder_getattribute, Function_call_d. Runtime: xreplace({d:4}) on a bare d, Poly via a lambda wrapper, and .coeff(d,k) reconstruction evaluate d unguarded (toy/p21_runtime_probe.json). Suggest adding xreplace/replace/coeff/as_poly to VALUE_CALLS, treating any name bound from an expression containing d (tuple/list unpack, comprehension) as a d alias, flagging Lambda/lambda wrapping sympy constructors, and dunder getattr. Package itself clean (0 unreviewed sites)."
+  },
+  {
+   "id": "d_guard_power_base_hole",
+   "severity": "low",
+   "detail": "confirmed: dred.OpaqueDimension does not intercept (1/(d**2-1)).subs(d,4) = 1/15 (also via alias D,=[d] and free_symbols lookup, which the static rule misses). Not on any package value path (scan clean; released premature-d4 demos use raising components). Risk is future code: the static rule is the only barrier and it is beatable (above). Suggest a contract-revision fix in a later release (override _eval_subs / Pow handling, or xreplace-based guard) rather than static-only mitigation; correctly disclosed as a limitation."
+  },
+  {
+   "id": "stale_OPEN_text_in_p20_section",
+   "severity": "info/low",
+   "detail": "the p21 science volume section 2 (P20_correction.tex, unchanged) still reads 'Absolute pin: OPEN ... not derived ... caught only by this open pin' without an inline '[superseded in p21]' marker; section 1 (p21) supersedes it and sec. 35 heading says derived in p21. Same practice as p20 used for the P19 note would be an inline marker."
+  },
+  {
+   "id": "p20_gate_standalone_scope",
+   "severity": "info",
+   "detail": "release_p20 standalone now re-checks top-level/nested status, absolute pin, P18 q and inventory (all rejected, no stale status), but accepts p15-layer code, test and certio edits (p21 gate rejects them); fine as a layer gate."
+  },
+  {
+   "id": "absolute_pin_step1_hardcoded",
+   "severity": "info",
+   "detail": "G = Gamma^(2) is (-i)(i) hard-coded behind docstring string checks; Gamma = 1/2 h Gamma^(2) h is an assumed standard definition. Confirmed by my independent direct diagram computation, so no error; no externally chosen convention found."
+  },
+  {
+   "id": "reviewer_rule_note",
+   "severity": "info",
+   "detail": "I hashed /workspace/XVI-P/reproducibility/author_rebuild_report_p20.json once (to compare with the archived copy, 686e2c9c...); no other read in /workspace/XVI-P besides reference_values_p21.json at the end."
+  }
+ ]
+}

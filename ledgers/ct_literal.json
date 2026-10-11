@@ -1,0 +1,16 @@
+{
+  "revision": "o58-fix",
+  "ledger": "ct_literal",
+  "equivalence_defined_before_use": true,
+  "definition": "Two local densities are literally equal as written differential polynomials (no integration by parts, no EOM).",
+  "status": "Constructed_as_framework",
+  "notes": "Used for exact matching of contact representatives. No nonzero sector CT solution recorded yet.",
+  "entries": [
+    {
+      "id": "CT_slot_empty",
+      "status": "no_solution_yet",
+      "term": null
+    }
+  ],
+  "complete_sector_solution": false
+}

@@ -1,0 +1,17 @@
+{
+  "id": "D02_pairing_template",
+  "vertex": "V4_grav",
+  "vertex_status": "Constructed",
+  "ell4_sha256": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+  "ell4_term_count": 3360,
+  "template": {
+    "operation": "self_contract_two_of_four_h_legs",
+    "propagator_placeholder": "Delta_h",
+    "external_legs": 2,
+    "kind": "tadpole",
+    "note": "Vertex density Constructed. Coincident \u0394(h) contraction is a graph-generator step; gauge-fixed propagator and P3.3 connecting map remain Unresolved for identity-side use."
+  },
+  "D02_availability": "unblocked_vertex_Constructed",
+  "quantum_evaluation": "not_performed",
+  "pass": true
+}

@@ -1,0 +1,849 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p22",
+ "kind": "independent rebuild report; package evidence, not a mathematical certificate",
+ "date": "2026-10-10",
+ "reviewer": "independent executor (Grok Bot subagent); no reads in /workspace/XVI-P except reference_values_p22.json at the end",
+ "same_box_caveat": "same box as the author build (shared kernel, TeX Live, poppler, platform); fresh directory /workspace/indep_rebuild_p22 and fresh venv (sympy 1.14.0, mpmath 1.3.0, pytest 9.1.1); not a second machine",
+ "environment": {
+  "python": "3.13.5",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "pip_freeze": [
+   "iniconfig==2.3.1",
+   "mpmath==1.3.0",
+   "packaging==26.3",
+   "pluggy==1.6.0",
+   "Pygments==2.21.0",
+   "pytest==9.1.1",
+   "sympy==1.14.0"
+  ]
+ },
+ "zip_sha256": "ade2fa5c2dac6614c41ae38dc97d7c485975015a134650734d466ea6ffdef76f",
+ "source_tree_sha256": "1bc6edff6ca0788bb0fee4e8bf259bf8a0c80791f6dd08be77f79e56b492a50c",
+ "pass": true,
+ "independent_rebuild_passed": true,
+ "mismatches": [],
+ "checks": {
+  "0_zip_entrypoint": {
+   "pass": true,
+   "source_tree_sha256": "1bc6edff6ca0788bb0fee4e8bf259bf8a0c80791f6dd08be77f79e56b492a50c",
+   "n_files": 194,
+   "steps": {
+    "source_only_tree": true,
+    "inherited_pins": true,
+    "full_build": true,
+    "release_accepted": true,
+    "tests": true,
+    "pdf_readback_vs_records": true,
+    "external_manifest": true,
+    "source_only_zip_rebuilt": true,
+    "file_access_trace": true,
+    "comparison_with_reference": true
+   },
+   "comparison_with_reference": "662/662",
+   "tests": "499 passed in 231.73s (0:03:51)",
+   "seconds": 1656.8,
+   "P22_release": {
+    "publication": "accepted",
+    "independent_rebuild_passed": "pending",
+    "independent_rebuild_passed_p21": true,
+    "P5_calculation_status": "renormalized (one loop, kappa^2, two-point functions hh / K'.c / cb.c; MS-bar in DRED with the p22 evanescent counterterms; external legs in QdS)"
+   },
+   "change_log_vs_p21": {
+    "added": 12,
+    "removed": 1,
+    "modified": 19
+   }
+  },
+  "1_EV_M2_own": {
+   "pass": true,
+   "source": "my own p18 exact-d D01/D03/D11 structures (orbit members, Z2xZ2), my own DRED tensor algebra; no package imports",
+   "locality_d_independent_poles": {
+    "D01": true,
+    "D03": true,
+    "D11": true
+   },
+   "four_d_decoupling": {
+    "D01": [
+     15,
+     {}
+    ],
+    "D03": [
+     12,
+     {}
+    ],
+    "D11": [
+     15,
+     {}
+    ]
+   },
+   "continuations": {
+    "D01": {
+     "ghat_continuation_holds": false,
+     "n_ghat_mismatch": 15,
+     "g4_kept_holds": false,
+     "n_g4kept_mismatch": 15,
+     "example_ghat_mismatch": {
+      "(('g', '4', 'm', 'r'), ('g', 't', 'n', 's'))": "-I*P2**2*(3*d - 4)/(8*(d - 1))",
+      "(('g', '4', 'n', 's'), ('g', 't', 'm', 'r'))": "-I*P2**2*(3*d - 4)/(8*(d - 1))"
+     }
+    },
+    "D03": {
+     "ghat_continuation_holds": false,
+     "n_ghat_mismatch": 15,
+     "g4_kept_holds": false,
+     "n_g4kept_mismatch": 12,
+     "example_ghat_mismatch": {
+      "(('g', '4', 'm', 'r'), ('g', 't', 'n', 's'))": "I*P2**2*(d - 2)/(8*(d - 1))",
+      "(('g', '4', 'n', 's'), ('g', 't', 'm', 'r'))": "I*P2**2*(d - 2)/(8*(d - 1))"
+     }
+    },
+    "D11": {
+     "ghat_continuation_holds": false,
+     "n_ghat_mismatch": 5,
+     "g4_kept_holds": false,
+     "n_g4kept_mismatch": 15,
+     "example_ghat_mismatch": {
+      "(('g', '4', 'm', 'n'), ('g', 't', 'r', 's'))": "-I*P2**2*(d - 2)/(32*(d - 1))",
+      "(('g', 't', 'm', 'n'), ('g', 't', 'r', 's'))": "I*P2**2*(d - 3)/(32*(d - 1))"
+     }
+    }
+   },
+   "note": "4D decoupling is structural (every evanescent member carries gt on free indices; gt.ghat = 0, gt.p = 0), so 'identically zero at every d' is true but nearly tautological (info)"
+  },
+  "2_EV_CT_own": {
+   "pass": true,
+   "own_hh_ct_coefficients": {
+    "(('g', '4', 'm', 'n'), ('g', 't', 'r', 's'))": "-7*I*P2**2/120",
+    "(('g', '4', 'm', 'r'), ('g', 't', 'n', 's'))": "-I*P2**2/160",
+    "(('g', '4', 'r', 's'), ('g', 't', 'm', 'n'))": "-7*I*P2**2/120",
+    "(('g', 't', 'm', 'n'), ('g', 't', 'r', 's'))": "I*P2**2/160",
+    "(('g', 't', 'm', 'n'), ('v', 'p', 'r'), ('v', 'p', 's'))": "7*I*P2/120",
+    "(('g', 't', 'm', 'r'), ('g', 't', 'n', 's'))": "I*P2**2/160",
+    "(('g', 't', 'm', 'r'), ('v', 'p', 'n'), ('v', 'p', 's'))": "I*P2/160",
+    "(('g', 't', 'r', 's'), ('v', 'p', 'm'), ('v', 'p', 'n'))": "7*I*P2/120"
+   },
+   "package": {
+    "g4_mn gt_rs (p.p)^2": "-7*I/120",
+    "g4_mr gt_ns (p.p)^2": "-I/160",
+    "g4_rs gt_mn (p.p)^2": "-7*I/120",
+    "gt_mn gt_rs (p.p)^2": "I/160",
+    "gt_mn p_r p_s (p.p)^1": "7*I/120",
+    "gt_mr gt_ns (p.p)^2": "I/160",
+    "gt_mr p_n p_s (p.p)^1": "I/160",
+    "gt_rs p_m p_n (p.p)^1": "7*I/120"
+   },
+   "match": true,
+   "E2_ct": "-1/16 (own E2 pole 1/16 from my p15 own_pv_d13)",
+   "SE_partner": "+1/8 (= -SE pole; Sigma from P15_D13 certificate, not own)",
+   "hc": {
+    "D01": {
+     "(('g', 't', 'r', 's'), ('v', 'p', 'n'))": "-I*P2**2/24",
+     "(('g', 't', 'n', 'r'), ('v', 'p', 's'))": "I*P2**2/48",
+     "(('g', 't', 'n', 's'), ('v', 'p', 'r'))": "I*P2**2/48"
+    },
+    "D03": {
+     "(('g', 't', 'r', 's'), ('v', 'p', 'n'))": "I*P2**2/24",
+     "(('g', 't', 'n', 'r'), ('v', 'p', 's'))": "-I*P2**2/48",
+     "(('g', 't', 'n', 's'), ('v', 'p', 'r'))": "-I*P2**2/48"
+    },
+    "D11": {},
+    "D01+D03": {},
+    "sum": {}
+   },
+   "cb": {
+    "4D_equations": {
+     "(('g', '4', 'm', 'v'),)": "-3*P2**2*(2*rho - 1)/16",
+     "(('v', 'p', 'm'), ('v', 'p', 'v'))": "P2*(2*rho - 1)/8"
+    },
+    "n_4D_equations": 2,
+    "rho_from_4D": "1/2",
+    "Sigma_poles_from_certificate": {
+     "S1": "-3/8",
+     "S2": "1/4",
+     "SE": "-1/8"
+    },
+    "own_E2_pole": "1/16",
+    "own_T_poles": {
+     "T1": "0",
+     "T2": "3/16",
+     "T3": "-1/4"
+    },
+    "ev_image_with_rho": {},
+    "ev_noSE": {
+     "(('g', 't', 'm', 'v'),)": "P2**2/16"
+    },
+    "ev_flipE2": {
+     "(('g', 't', 'm', 'v'),)": "-P2**2/8"
+    },
+    "ghost_eq_exact_in_d_ev": {},
+    "rho_if_fitted_on_ev_pair_alone": [
+     "1/2"
+    ]
+   },
+   "rho_judgement": "rho is FIXED on the 4D pair by 2 independent, consistent equations (g4_mv p^4 and p_m p_v p^2 sectors) -> 1/2, then applied to the evanescent pair without refit: the ev image is 0 (pole and exact in d). The ev pair is a single equation and alone would also give 1/2, so the test is 'rho_ev = rho_4D' (genuine, one degree of consistency); not fitted on the ev pair (code solves on img4 only).",
+   "own_mutations": "drop D01 / drop D03 / D03 x2: p.T != 0 (own); drop SE: P2^2/16 gt; flip E2: -P2^2/8 gt; D11 x2 not detected by h.c (D11 transverse alone; disclosed as insensitive)",
+   "not_recomputed": "projected slot values (hh/K.c slots zero) and trace-operator mutation: package values only"
+  },
+  "3_Q4S_remnant": {
+   "pass": true,
+   "own": {
+    "(('g', 'h', 'R', 'S'),)": "7*I*P2**2/60",
+    "(('v', 'p', 'R'), ('v', 'p', 'S'))": "-7*I*P2/60"
+   },
+   "package": "7*I*p.p*(a^.b^*p.p - a^.p*b^.p)/60",
+   "judgement": "reproduced: 7i p^2 (a^.b^ p^2 - a^.p b^.p)/60, local and transverse (removable by a finite local h.h counterterm). 'Scheme choice' is fair: it exists only if external states carry eps-scalar (g4) components; the result is stated for QdS externals. Caveat (info): it is only the single-trace (one index pair) mode; the claim is a convention statement, not a proof that no physical observable depends on it beyond this order (two-loop O(eps)x pole effects are explicitly out of scope)."
+  },
+  "4_runtime_guard": {
+   "pass": true,
+   "dred_outside_block_byte_identical_to_my_p18": true,
+   "lines": "p18 736 lines; p22 976; block lines 171-410 additive; prefix/suffix identical",
+   "older_cert_error_texts_identical_to_p21_build": {
+    "P16_batchC.json": {
+     "n_err_texts": 1,
+     "identical": true
+    },
+    "P18_D11.json": {
+     "n_err_texts": 2,
+     "identical": true
+    },
+    "P16_release.json": {
+     "n_err_texts": 5,
+     "identical": true
+    },
+    "P17_release.json": {
+     "n_err_texts": 4,
+     "identical": true
+    },
+    "P18_release.json": {
+     "n_err_texts": 3,
+     "identical": true
+    }
+   },
+   "certs_identical_vs_p21_build": 41,
+   "bypass_probe": {
+    "sp.rem(numer, d-4, d)": {
+     "rational": "BYPASS d-free value: 4*x + 1/3",
+     "power_base": "BYPASS d-free value: 1/15",
+     "bare": "BYPASS d-free value: 4",
+     "poly": "BYPASS d-free value: 16*x + 4"
+    },
+    "Matrix.subs rename d->y then y->4": {
+     "rational": "RAISED PrematureD4Substitution: d -> y via subs outside substitute_d (R5)",
+     "power_base": "BYPASS d-free value: 1/15",
+     "bare": "RAISED PrematureD4Substitution: d -> y via subs outside substitute_d (R5)",
+     "poly": "RAISED PrematureD4Substitution: d -> y via subs outside substitute_d (R5)"
+    },
+    "Poly.shift + as_coeff_add": {
+     "rational": "BYPASS d-free value: 4*x + 1/3",
+     "power_base": "BYPASS d-free value: 1/15",
+     "bare": "BYPASS d-free value: 4",
+     "poly": "BYPASS d-free value: 16*x + 4"
+    },
+    "sp.compose(f, 4, d)": {
+     "rational": "BYPASS d-free value: 4*x + 1/3",
+     "power_base": "BYPASS d-free value: 1/15",
+     "bare": "BYPASS d-free value: 4",
+     "poly": "BYPASS d-free value: 16*x + 4"
+    },
+    "pickle roundtrip then subs": {
+     "rational": "kept d: d*x + 1/(d - 1)",
+     "power_base": "kept d: 1/(d**2 - 1)",
+     "bare": "kept d: d",
+     "poly": "kept d: d**2*x + d"
+    },
+    "deepcopy then subs plain d": {
+     "rational": "kept d: d*x + 1/(d - 1)",
+     "power_base": "kept d: 1/(d**2 - 1)",
+     "bare": "kept d: d",
+     "poly": "kept d: d**2*x + d"
+    },
+    "lambdify(d, e)(4)": {
+     "rational": "RAISED PrematureD4Substitution: lambdify / code printing of d outside substitute_d (R5: a numerical function of ",
+     "power_base": "RAISED PrematureD4Substitution: lambdify / code printing of d outside substitute_d (R5: a numerical function of ",
+     "bare": "RAISED PrematureD4Substitution: lambdify / code printing of d outside substitute_d (R5: a numerical function of ",
+     "poly": "RAISED PrematureD4Substitution: lambdify / code printing of d outside substitute_d (R5: a numerical function of "
+    },
+    "Matrix.applyfunc(lambda t: t.subs(d,4))": {
+     "rational": "RAISED PrematureD4Substitution: d -> 4 via subs outside substitute_d (R5)",
+     "power_base": "RAISED PrematureD4Substitution: subs of d (caller outside sympy) outside substitute_d (R5, p22 runtime guard: d ",
+     "bare": "RAISED PrematureD4Substitution: d -> 4 via subs outside substitute_d (R5)",
+     "poly": "RAISED PrematureD4Substitution: d -> 4 via subs outside substitute_d (R5)"
+    },
+    "sp.Subs(e,d,4).doit()": {
+     "rational": "RAISED PrematureD4Substitution: d -> _4 outside substitute_d (R5: d is opaque before the Laurent expansion)",
+     "power_base": "RAISED PrematureD4Substitution: d -> _4 outside substitute_d (R5: d is opaque before the Laurent expansion)",
+     "bare": "RAISED PrematureD4Substitution: d -> 4 via subs outside substitute_d (R5)",
+     "poly": "RAISED PrematureD4Substitution: d -> _4 outside substitute_d (R5: d is opaque before the Laurent expansion)"
+    },
+    "sp.solve(Eq(z, e), z) after rename via Matrix": {
+     "rational": "RAISED PrematureD4Substitution: d -> y via subs outside substitute_d (R5)",
+     "power_base": "BYPASS d-free value: 1/15",
+     "bare": "RAISED PrematureD4Substitution: d -> y via subs outside substitute_d (R5)",
+     "poly": "RAISED PrematureD4Substitution: d -> y via subs outside substitute_d (R5)"
+    },
+    "sp.gcd/resultant: resultant(numer, d-4, d)": {
+     "rational": "BYPASS d-free value: -4*x - 1/3",
+     "power_base": "BYPASS d-free value: 1/15",
+     "bare": "BYPASS d-free value: -4",
+     "poly": "BYPASS d-free value: 16*x + 4"
+    },
+    "sp.Poly(e*..., d).eval via sp.polys.polytools.Poly.eval unbound": {
+     "rational": "RAISED PrematureD4Substitution: Poly.eval with d as a generator (caller outside sympy) outside substitute_d (R5,",
+     "power_base": "RAISED PrematureD4Substitution: Poly.eval with d as a generator (caller outside sympy) outside substitute_d (R5,",
+     "bare": "RAISED PrematureD4Substitution: Poly.eval with d as a generator (caller outside sympy) outside substitute_d (R5,",
+     "poly": "RAISED PrematureD4Substitution: Poly.eval with d as a generator (caller outside sympy) outside substitute_d (R5,"
+    },
+    "Function('f') + Lambda via sympy.utilities lambdify of Matrix": {
+     "rational": "RAISED PrematureD4Substitution: lambdify / code printing of d outside substitute_d (R5: a numerical function of ",
+     "power_base": "RAISED PrematureD4Substitution: lambdify / code printing of d outside substitute_d (R5: a numerical function of ",
+     "bare": "RAISED PrematureD4Substitution: lambdify / code printing of d outside substitute_d (R5: a numerical function of ",
+     "poly": "RAISED PrematureD4Substitution: lambdify / code printing of d outside substitute_d (R5: a numerical function of "
+    },
+    "sp.series around via apart+limit_seq": {
+     "rational": "RAISED PrematureD4Substitution: d -> y via subs outside substitute_d (R5)",
+     "power_base": "BYPASS d-free value: 1/15",
+     "bare": "RAISED PrematureD4Substitution: d -> y via subs outside substitute_d (R5)",
+     "poly": "RAISED PrematureD4Substitution: d -> y via subs outside substitute_d (R5)"
+    },
+    "e.as_coeff_add() on shifted (no Poly)": {
+     "rational": "BYPASS d-free value: (0, (1/(d - 1), d**2*x/(d - 1), -d*x/(d - 1)))",
+     "power_base": "BYPASS d-free value: (0, (1/(d**2 - 1),))",
+     "bare": "BYPASS d-free value: (0, (d,))",
+     "poly": "BYPASS d-free value: (0, (d**2*x, d))"
+    }
+   },
+   "runtime_bypasses_all_4_exprs": [
+    "sp.rem(numer, d-4, d)",
+    "Poly.shift + as_coeff_add",
+    "sp.compose(f, 4, d)",
+    "sp.gcd/resultant: resultant(numer, d-4, d)"
+   ],
+   "static_scan_on_bypasses": {
+    "rem": false,
+    "resultant": false,
+    "compose": false,
+    "shift_as_coeff_add": true
+   }
+  },
+  "5_gate": {
+   "pass": true,
+   "p22_accepts": [
+    "ev_rho_changed",
+    "ev_E2_coeff_wrong",
+    "p22_conventions_edit",
+    "README_edit"
+   ],
+   "cases": {
+    "control_unmodified": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "acc",
+      false
+     ]
+    },
+    "ev_cb_not_closed": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "ev_rho_changed": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "acc",
+      false
+     ]
+    },
+    "ev_M2_not_proven": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "ev_E2_coeff_wrong": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "acc",
+      false
+     ]
+    },
+    "ev_mutation_undetected": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "ev_control_false": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "ev_scope_overclaim": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "P18_q_not_earned": {
+     "release_p19": [
+      "rej",
+      false
+     ],
+     "release_p20": [
+      "rej",
+      false
+     ],
+     "release_p21": [
+      "rej",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "tools_build_edit": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "tools_source_manifest_edit": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "earlier_note_P18_D11_edit": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "P22_note_edit": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "added_code_file": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "added_tools_file": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "test_p15_edit": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "rej",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "batchA_edit": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "rej",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "p22_conventions_edit": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "acc",
+      false
+     ]
+    },
+    "README_edit": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "acc",
+      false
+     ]
+    },
+    "dred_edit_inside_block": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "dred_edit_outside_block": {
+     "release_p19": [
+      "rej",
+      false
+     ],
+     "release_p20": [
+      "rej",
+      false
+     ],
+     "release_p21": [
+      "rej",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "evanescent_py_edit": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    },
+    "archived_p21_report_tampered": {
+     "release_p19": [
+      "acc",
+      false
+     ],
+     "release_p20": [
+      "acc",
+      false
+     ],
+     "release_p21": [
+      "acc",
+      false
+     ],
+     "release_p22": [
+      "rej",
+      false
+     ]
+    }
+   },
+   "no_stale_status_on_reject": true
+  },
+  "6_scope_footers_readback_det": {
+   "pass": true,
+   "scope": "renormalized (one loop, kappa^2, two-point functions hh / K'.c / cb.c; MS-bar in DRED with the p22 evanescent counterterms; external legs in QdS)",
+   "footers": {
+    "XVI-P-science": [
+     35,
+     {
+      "XVI-P p22": 35
+     }
+    ],
+    "XVI-P-appendix": [
+     765,
+     {
+      "XVI-P p22": 765
+     }
+    ],
+    "XVI-P": [
+     799,
+     {
+      "XVI-P p22": 799
+     }
+    ]
+   },
+   "package_VALUE_BLOCKS": [
+    710,
+    710
+   ],
+   "own_ext_default": [
+    580,
+    582
+   ],
+   "own_ext_raw": [
+    582,
+    582
+   ],
+   "determinism": "P20_D11_pin and P22_evanescent content identical build/seed0/seed4242",
+   "P20_note_marker": "[superseded in p21: ...] present; only change vs p21 (verified vs my p21 unpack, sha 138c8588)",
+   "archived_p21_independent_report_is_mine": true
+  },
+  "7_ported_checks_pytest": {
+   "pass": true,
+   "own_pytest": "499 passed, exit 0",
+   "exports_identical_to_p21": true,
+   "certs/amplitude/manifest(53)/compare_p20": true
+  },
+  "8_reference": {
+   "pass": true,
+   "sha256": "0d55633950c993e905627774d3962285f3bbdc7372208c9975170300601eef72",
+   "leaves": 673,
+   "own_values_equal_reference": "E2 -1/16, SE 1/8, Q4S remnant, hh CT sum (via certificate = reference) equal my recomputation"
+  }
+ },
+ "findings": [
+  {
+   "id": "runtime_guard_bypass_poly_algebra",
+   "severity": "low",
+   "detail": "public sympy polynomial algebra evaluates d at 4 without any guard firing and without the static allow-list noticing: sp.rem(num, d-4, d)/sp.rem(den, d-4, d), sp.resultant(., d-4, d), sp.compose(., 4, d) \u2014 all 4 probe expressions incl. the power-base case (toy/p22_bypass.json, p22_static.json). Poly.shift+as_coeff_add also bypasses the runtime guard (static scan catches it). Matrix.subs rename d->y bypasses on the power-base expression. Package itself contains no such call. These are high-level functions, not the disclosed Poly.rep/str residue; suggest guarding rem/div/prem/resultant/compose/shift (or Poly construction with d as generator from outside sympy) and adding them to VALUE_CALLS."
+  },
+  {
+   "id": "p22_gate_does_not_check_EV_values",
+   "severity": "low",
+   "detail": "release_p22 accepts a P22_evanescent.json with calibration rho edited to 1 or coefficient_Kc_E2 edited to +1/16 (only flags/controls are checked). Mitigated: these values are in reference_values_p22 (entrypoint comparison would catch) and rerunning evanescent.py regenerates them; suggest checking the value keys typeset in the PDF against the live recomputation."
+  },
+  {
+   "id": "pins_live_in_unpinned_conventions",
+   "severity": "info",
+   "detail": "p22_conventions.py (which holds P22_PINNED_SHA256) and README are disclosed but not sha-pinned; an edit to p22_conventions alone is accepted. Pins are therefore only as strong as the tree/zip sha (the real anchor). By design, stated in the file."
+  },
+  {
+   "id": "earlier_layer_gates_accept_p22_cert_edits",
+   "severity": "info",
+   "detail": "release_p19/p20/p21 standalone accept all P22_evanescent and tools/notes edits (layer gates); release_p22 rejects them. Outside-block dred edits are rejected by every gate."
+  },
+  {
+   "id": "ev_decoupling_structural",
+   "severity": "info",
+   "detail": "4D decoupling at every d is structural (gt on free indices), so 'stronger form' is true but carries little information beyond the definition of evanescent structures."
+  },
+  {
+   "id": "rho_single_equation_test",
+   "severity": "info",
+   "detail": "rho = 1/2 genuinely fixed on the 4D pair (2 consistent equations) and not refitted; the evanescent pair supplies one equation, so the test is one consistency relation. Sigma (S1, S2, SE) was taken from the P15_D13 certificate, not recomputed by me."
+  },
+  {
+   "id": "renormalized_scope",
+   "severity": "info",
+   "detail": "scope is honest where stated in full (one loop, kappa^2, two-point hh/K'.c/cb.c, MS-bar DRED with ev CTs, QdS externals; not higher points, two loops, bulk symmetry, O.1); the title line 'P.5 calculation renormalized at one loop kappa2' omits 'two-point functions / QdS externals', and the D11 ev CT normalisation is pinned by D11 pins, not closure (disclosed)."
+  },
+  {
+   "id": "not_recomputed",
+   "severity": "info",
+   "detail": "projected slot values (hh / K.c slots of the ev counterterms) and the trace-operator mutation were not independently recomputed."
+  }
+ ]
+}

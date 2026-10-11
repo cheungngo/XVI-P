@@ -1,0 +1,87 @@
+{
+  "revision": "p12",
+  "generated_from": "S_Psi vertex inventory (ch_source_audit.enumerate_graphs)",
+  "graphs": {
+    "D03_hh_ghost_loop": {
+      "external": "h^2",
+      "kappa": 2,
+      "signature": [
+        ["c.cb.h", "ccb", 1],
+        ["c.cb.h", "ccb", 1]
+      ],
+      "status": "listed_unevaluated"
+    },
+    "D11_hh_scalar_loop": {
+      "external": "h^2",
+      "kappa": 2,
+      "signature": [
+        ["h.phi^2", "phiphi", 1],
+        ["h.phi^2", "phiphi", 1]
+      ],
+      "status": "Constructed_kernel_under_prescription (inherited O5; not re-evaluated)"
+    },
+    "D12_hh_scalar_tadpole": {
+      "external": "h^2",
+      "kappa": 2,
+      "signature": [
+        ["h^2.phi^2", "phiphi", 2]
+      ],
+      "status": "Missing (D12_quantum_evaluated=false)"
+    },
+    "D01_hh_bubble_cubic": {
+      "external": "h^2",
+      "kappa": 2,
+      "signature": [
+        ["h^3", "hh", 1],
+        ["h^3", "hh", 1]
+      ],
+      "status": "listed_unevaluated"
+    },
+    "D02_hh_tadpole_quartic": {
+      "external": "h^2",
+      "kappa": 2,
+      "signature": [
+        ["h^4", "hh", 2]
+      ],
+      "status": "vertex_available_quantum_unevaluated"
+    },
+    "D13_Kc_ghost_graviton_loop": {
+      "external": "K.c",
+      "kappa": 2,
+      "signature": [
+        ["K.c.h", "ch", 1],
+        ["c.cb.h", "cbh", 1]
+      ],
+      "status": "listed_unevaluated (generated from S_Psi; h* c row; coefficient not evaluated)"
+    },
+    "D14b_h_onepoint_ghost_tadpole": {
+      "external": "h",
+      "kappa": 1,
+      "signature": [
+        ["c.cb.h", "ccb", 1]
+      ],
+      "status": "listed_unevaluated; order-kappa one-point slot, DISTINCT from D12"
+    },
+    "D14c_h_onepoint_scalar_tadpole": {
+      "external": "h",
+      "kappa": 1,
+      "signature": [
+        ["h.phi^2", "phiphi", 1]
+      ],
+      "status": "listed_unevaluated; order-kappa one-point slot, DISTINCT from D12"
+    },
+    "D14a_h_onepoint_grav_tadpole": {
+      "external": "h",
+      "kappa": 1,
+      "signature": [
+        ["h^3", "hh", 1]
+      ],
+      "status": "listed_unevaluated; order-kappa one-point slot, DISTINCT from D12"
+    }
+  },
+  "names_TBD": [],
+  "D02_quantum_evaluated": false,
+  "D12_quantum_evaluated": false,
+  "D12_status": "Missing",
+  "no_loop_evaluated": true
+}

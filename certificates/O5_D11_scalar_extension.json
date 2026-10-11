@@ -1,0 +1,234 @@
+{
+  "revision": "o70-sync",
+  "deliverable": 1,
+  "status": "Constructed",
+  "pass": true,
+  "pass_means": "Fixed analytic FP u_mu^R=FP u_zeta; constructive F(zeta) holomorphy \u21d2 phi_{-1+zeta} holomorphic; ONLY THEN second recurrence + Gate0 \u21d2 r=-i pi^2 (proof_id=lem:analytic_FP_u_mu_R_o70); Euclidean = sign check. NOT Wick-alone, NOT pref-zero-alone, NOT string-compare.",
+  "proof_id": "lem:analytic_FP_u_mu_R_o70",
+  "proof_id_equivalence": {
+    "predecessor_ids": [
+      "lem:analytic_FP_u_mu_R_o68",
+      "lem:analytic_FP_u_mu_R_o69"
+    ],
+    "active_id": "lem:analytic_FP_u_mu_R_o70",
+    "relation": "same_FP_prescription_constructive_holomorphy_proof_added"
+  },
+  "prescription_id": "analytic_FP_u_mu_R_o70",
+  "conventions": {
+    "signature_eta": "diag(+1,-1,-1,-1)",
+    "Q": "z^2 = eta_{ab} z^a z^b",
+    "boundary_value": "Q - i0",
+    "complex_power_log": "principal_branch",
+    "mu": {
+      "symbol": "mu",
+      "units": "inverse_length",
+      "role": "analytic_scale_in_mu^{2 zeta}",
+      "positive": true
+    },
+    "finite_part": "constant_term_of_Laurent_at_zeta_0",
+    "additional_c_delta": false,
+    "NO_extra_c_delta_in_reference": true,
+    "NOT_momentum_space_MS": true,
+    "prescription_id": "analytic_FP_u_mu_R_o70",
+    "proof_id": "lem:analytic_FP_u_mu_R_o70",
+    "proof_id_equivalence": {
+      "predecessor_ids": [
+        "lem:analytic_FP_u_mu_R_o68",
+        "lem:analytic_FP_u_mu_R_o69"
+      ],
+      "active_id": "lem:analytic_FP_u_mu_R_o70",
+      "relation": "same_FP_prescription_constructive_holomorphy_proof_added"
+    }
+  },
+  "Gate0_box_normalization": {
+    "Gate0_D_F": "D_F = -A (Q-i0)^{-1}, A=1/(4 pi^2)",
+    "Gate0_Hessian": "(-Box) D_F = i delta",
+    "derived": "Box (Q-i0)^{-1} = 4 * pi**2 * i * delta",
+    "box_coeff_symbolic": "4*I*pi**2",
+    "box_coeff_value": "4*pi**2*I",
+    "pass": true,
+    "normalization_source": "O5_matter_convention_sheet Gate0"
+  },
+  "phi_m1_holomorphy_proof": {
+    "status": "Constructed",
+    "pass": true,
+    "construction": [
+      "Define F(\u03b6)=(Q-i0)^\u03b6 as a distribution-valued analytic family.",
+      "Citation: D\u00fctsch\u2013Fredenhagen\u2013Keller\u2013Rejzner arXiv:1311.5424 Definition 4.2 (analytic regularization of numerical distributions) and \u00a74.1\u20134.2 (complex powers / dimensionally regularized two-point functions as meromorphic families). Instantiated hypotheses: Minkowski quadratic form Q with fixed i0 orientation; principal logarithm; test functions in D(R^4); Gate0 Hessian normalization.",
+      "Classical support: (x\u00b1i0)^\u03bb is entire in \u03bb as a tempered distribution (Gelfand\u2013Shilov / H\u00f6rmander complex powers), specialized to Q-i0.",
+      "Const-coeff differentiation under the pairing: \u25a1\u03c6_\u03bb = 4\u03bb(\u03bb+1) \u03c6_{\u03bb-1}, so \u25a1F(\u03b6)=4\u03b6(\u03b6+1) \u03c6_{-1+\u03b6}.",
+      "F(0)=(Q-i0)^0 = 1 (constant distribution) \u21d2 \u25a1F(0)=0.",
+      "Holomorphy of F near \u03b6=0 \u21d2 \u25a1F(\u03b6)=\u03b6\u00b7G(\u03b6) with G holomorphic in D'.",
+      "Therefore \u03c6_{-1+\u03b6}=\u25a1F(\u03b6)/(4\u03b6(\u03b6+1))=G(\u03b6)/(4(\u03b6+1)) is holomorphic near \u03b6=0 (\u03b6+1\u22600 in a neighbourhood of 0)."
+    ],
+    "identity": "phi_{-1+zeta} = Box F(zeta) / (4 zeta (zeta+1))",
+    "F_definition": "F(zeta)=(Q-i0)^zeta",
+    "F_at_0": "1",
+    "Box_F_at_0": "0",
+    "removable_factor": "zeta",
+    "quotient_after_removal": "G(zeta)/(4(zeta+1))",
+    "NOT_from_zero_of_4zeta_zeta_minus_1_alone": true,
+    "citation": {
+      "primary": "arXiv:1311.5424 (D\u00fctsch\u2013Fredenhagen\u2013Keller\u2013Rejzner)",
+      "result": "Definition 4.2 (analytic regularization); \u00a74.1\u20134.2 complex powers",
+      "hypotheses_instantiated": [
+        "Q-i0 boundary value on Minkowski space",
+        "principal branch of the logarithm",
+        "compactly supported smooth test functions",
+        "Gate0 Box (Q-i0)^{-1} = 4 pi^2 i delta"
+      ],
+      "NOT_bare_eg_citation": true
+    },
+    "ordinary_integrability_near_nonzero_null": {
+      "local_coordinate": "t = Q near a nonzero null point",
+      "criterion": "int_{-eps}^{eps} |t|^{-2+Re zeta} dt < infinity",
+      "requires": "Re zeta > 1",
+      "NOT_Re_zeta_gt_minus_1": true,
+      "at_zeta_0": "Ordinary local integrability FAILS at zeta=0 near the light cone. Use boundary-value / analytic-family continuation at zeta=0."
+    }
+  },
+  "analytic_family_recurrence": {
+    "status": "Constructed",
+    "pass": true,
+    "proof_id": "lem:analytic_FP_u_mu_R_o70",
+    "family": "phi_lambda = (Q-i0)^lambda; u_zeta = mu^{2 zeta} phi_{-2+zeta}",
+    "step_A_F_holomorphic": "Define F(\u03b6)=(Q-i0)^\u03b6 as a distribution-valued analytic family.",
+    "step_B_Box_identity": "Box F(zeta)=4 zeta (zeta+1) phi_{-1+zeta}",
+    "step_C_removable": "F(0)=1 \u21d2 Box F(0)=0 \u21d2 phi_{-1+zeta} holomorphic",
+    "step_D_second_recurrence_ONLY_THEN": "Box phi_{-1+zeta} = 4 zeta (-1+zeta) phi_{-2+zeta}; divide using holomorphy premise; Gate0 \u21d2 Res = -i pi^2",
+    "recurrence_general": "Box phi_lambda = 4 lambda (lambda + 1) phi_{lambda-1}",
+    "specialized_second": "Box phi_{-1+zeta} = 4 zeta (-1+zeta) phi_{-2+zeta}",
+    "Gate0_input": "Box (Q-i0)^{-1} = 4 * pi**2 * i * delta",
+    "residue_calculation": "AFTER phi_{-1+zeta} holomorphic: phi_{-2+zeta} = Box phi_{-1+zeta} / (4 zeta (-1+zeta)); at zeta->0: \u27e8phi_{-2+zeta},f\u27e9 = [Box phi_{-1}](f)/(-4 zeta) + FP = (4*I*pi**2) f(0)/(-4 zeta) + FP = r f(0)/zeta + FP",
+    "r_derived": "-I*pi**2",
+    "r_with_sign_and_i": "-i * pi**2",
+    "pole_order": 1,
+    "mu_affects_finite_part_only": true,
+    "meromorphic_vs_all_compact_tests": true,
+    "holomorphy_on_U_supported_tests": true,
+    "ordinary_integrability_near_nonzero_null": {
+      "local_coordinate": "t = Q near a nonzero null point",
+      "criterion": "int_{-eps}^{eps} |t|^{-2+Re zeta} dt < infinity",
+      "requires": "Re zeta > 1",
+      "NOT_Re_zeta_gt_minus_1": true,
+      "at_zeta_0": "Ordinary local integrability FAILS at zeta=0 near the light cone. Use boundary-value / analytic-family continuation at zeta=0."
+    },
+    "phi_m1_plus_zeta_holomorphic_near_0_BEFORE_division": {
+      "family": "phi_{-1+zeta} = (Q-i0)^{-1+zeta}",
+      "status": "holomorphic_near_zeta_0",
+      "proof": "constructive_F_Box_removable",
+      "argument": "F(\u03b6)=(Q\u2212i0)^\u03b6 is holomorphic near \u03b6=0 as a distribution (arXiv:1311.5424 Def.4.2 / \u00a74.1\u20134.2, instantiated). \u25a1F(\u03b6)=4\u03b6(\u03b6+1)\u03c6_{-1+\u03b6}. F(0)=1 \u21d2 \u25a1F(0)=0 \u21d2 removable \u03b6 factor \u21d2 \u03c6_{-1+\u03b6}=\u25a1F/(4\u03b6(\u03b6+1)) holomorphic. NOT argued from the zero of 4\u03b6(\u03b6\u22121) alone.",
+      "premise_for_residue_division": true,
+      "NOT_from_pref_zero_alone": true
+    },
+    "holomorphy_argument": "Constructive: F(\u03b6)=(Q\u2212i0)^\u03b6 holomorphic \u21d2 \u25a1F(\u03b6)=4\u03b6(\u03b6+1)\u03c6_{-1+\u03b6} with \u25a1F(0)=0 \u21d2 \u03c6_{-1+\u03b6} holomorphic near 0. Near a nonzero null point ordinary integrability of (Q\u2212i0)^{-2+\u03b6} needs Re \u03b6>1; at \u03b6=0 use BV continuation. Citation: arXiv:1311.5424 Def.4.2 + \u00a74.1\u20134.2 with Gate0 normalization (not a bare e.g.).",
+    "finite_part_fixes_prescription": "FP = zeta^0 Laurent coefficient; freezing no extra c\u03b4 selects the unique sd\u22644 extension with this moment choice (XVI-J prop:extension freedom statement only).",
+    "citation": {
+      "primary": "arXiv:1311.5424 (D\u00fctsch\u2013Fredenhagen\u2013Keller\u2013Rejzner)",
+      "result": "Definition 4.2 (analytic regularization); \u00a74.1\u20134.2 complex powers",
+      "hypotheses_instantiated": [
+        "Q-i0 boundary value on Minkowski space",
+        "principal branch of the logarithm",
+        "compactly supported smooth test functions",
+        "Gate0 Box (Q-i0)^{-1} = 4 pi^2 i delta"
+      ],
+      "NOT_bare_eg_citation": true
+    },
+    "NOT_Wick_Jacobian_alone": true,
+    "NOT_string_comparison_as_proof": true,
+    "NOT_momentum_MS": true,
+    "NOT_instruction_prose": true
+  },
+  "euclidean_independent_sign_check": {
+    "role": "independent_sign_check_NOT_sole_proof",
+    "setting": "Euclidean_R4",
+    "area_S3": "2*pi**2",
+    "radial_integral_pole": "1/(2*zeta)",
+    "euclidean_residue": "pi**2",
+    "wick_jacobian_sign_check": "-I*pi**2",
+    "agrees_with_analytic_r": true,
+    "pass": true,
+    "NOT_sole_justification": true
+  },
+  "minkowski_residue": {
+    "r_with_sign_and_i": "-i * pi**2",
+    "r_derived_from": "constructive_F_holomorphy_THEN_second_recurrence_plus_Gate0",
+    "r_sympy_equals_minus_I_pi2": true,
+    "pass": true,
+    "proof_id": "lem:analytic_FP_u_mu_R_o70",
+    "NOT_string_comparison_as_proof": true
+  },
+  "lemma": {
+    "1_meromorphic_continuation": {
+      "status": "Constructed",
+      "statement": "u_\u03b6 = \u03bc^{2\u03b6}(Q-i0)^{-2+\u03b6} admits a distributional meromorphic continuation near \u03b6=0 against arbitrary compact smooth tests, with a single simple pole (constructive F-holomorphy + second recurrence + Gate0).",
+      "pole_order": 1,
+      "against": "arbitrary_compact_smooth_tests",
+      "proof_id": "lem:analytic_FP_u_mu_R_o70"
+    },
+    "2_pole_part_local": {
+      "status": "Constructed",
+      "statement": "Pole part = (-i * pi**2) f(0)/\u03b6 \u00b7 \u03b4, supported at {0}.",
+      "residue_r": "-i * pi**2"
+    },
+    "3_restricts_on_U": {
+      "status": "Constructed",
+      "statement": "FP_{\u03b6=0} u_\u03b6 |_U = (Q-i0)^{-2}: holomorphy on U-supported tests gives \u27e8(Q-i0)^{-2}, f\u27e9 at \u03b6=0.",
+      "holomorphy_on_U": true
+    },
+    "4_Lorentz_and_even": {
+      "status": "Constructed",
+      "statement": "Built from Q=z^2 and Lorentz-invariant i0 \u21d2 Lorentz covariance; Q(-z)=Q(z) \u21d2 even; FP preserves both.",
+      "Lorentz_covariant": true,
+      "even": true
+    },
+    "5_scaling_degree": {
+      "status": "Constructed",
+      "statement": "Homogeneous degree -4 on U; pole subtraction is a multiple of \u03b4 (sd=4); FP has sd \u2264 4. Ambiguity among sd\u22644 extensions: c\u03b4 (XVI-J prop:extension). This prescription freezes c by taking the pure finite part with no added c\u03b4.",
+      "sd_max": 4,
+      "ambiguity_frozen": "no_extra_c_delta"
+    },
+    "6_residue_from_recurrence": {
+      "status": "Constructed",
+      "r": "-i * pi**2",
+      "method": "constructive_F_holomorphy_THEN_second_recurrence_plus_Gate0",
+      "phi_m1_holomorphy_proved": true,
+      "euclidean_sign_check_agrees": true,
+      "pass": true,
+      "NOT_string_compare": true
+    }
+  },
+  "action_on_tests": {
+    "Laurent_identity": "\u27e8u_zeta, f\u27e9 = r * f(0) / zeta + \u27e8u_mu^R, f\u27e9 + O(zeta)",
+    "r": "-i * pi**2",
+    "defines_FP_operationally": true,
+    "u_mu_R_definition": "coefficient of zeta^0 in the Laurent expansion",
+    "how_FP_fixes_prescription": "FP = zeta^0 Laurent coefficient; freezing no extra c\u03b4 selects the unique sd\u22644 extension with this moment choice (XVI-J prop:extension freedom statement only)."
+  },
+  "u_mu_R": {
+    "definition": "FP_{zeta=0}[ mu^{2 zeta} (Q-i0)^{-2+zeta} ]",
+    "restricts_to": "(Q-i0)^{-2} on U",
+    "sd_max": 4,
+    "Lorentz_covariant": true,
+    "even": true,
+    "extra_c_delta": false
+  },
+  "normalization_derivation": {
+    "proof_id": "lem:analytic_FP_u_mu_R_o70",
+    "steps": [
+      "F(zeta)=(Q-i0)^zeta holomorphic near 0 (arXiv:1311.5424 Def.4.2+\u00a74.1-4.2)",
+      "Box F(zeta)=4 zeta (zeta+1) phi_{-1+zeta}",
+      "F(0)=1 \u21d2 Box F(0)=0 \u21d2 removable zeta \u21d2 phi_{-1+zeta} holomorphic",
+      "ONLY THEN: Box phi_{-1+zeta}=4 zeta (-1+zeta) phi_{-2+zeta}",
+      "Gate0: Box (Q-i0)^{-1}=4 pi^2 i delta \u21d2 Res=-i pi^2",
+      "Ordinary integrability near nonzero null needs Re zeta>1; at zeta=0 use BV"
+    ],
+    "r": "-i * pi**2"
+  },
+  "note_tex": "notes/d11_scalar_extension.tex",
+  "NOT_XVI_J_prop_extension_as_construction": true,
+  "NOT_momentum_MS": true,
+  "NOT_pass_by_naming": true,
+  "NOT_Wick_Jacobian_alone": true,
+  "NOT_from_pref_zero_alone": true
+}

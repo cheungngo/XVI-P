@@ -1,0 +1,35 @@
+{
+  "revision": "o70-sync",
+  "subsector_verdict": "Constructed_subsector_under_prescription",
+  "earned": true,
+  "D11_kernel_counterterm": "earned",
+  "three_results": {
+    "1_normalized_off_diagonal_D11_tensor": "Constructed",
+    "2_both_off_diagonal_divergences": "Constructed",
+    "3_extension_and_contact_Ward": "Constructed"
+  },
+  "all_three_Constructed": true,
+  "withdrawn_reason": null,
+  "earned_reason": "All three calculation results Constructed; Route 1 L=Pi_tr-Pi_w verified by substitution (kernel two-point Ward). UV subtraction kept separate from finite repair. NOT bulk BV restore; O.1 NOT_CLOSED; insertion frozen.",
+  "gates": {
+    "Gate0_convention": "Constructed",
+    "Gate1_Noether": "Constructed",
+    "Gate2_prefactor": "Constructed",
+    "Gate2_tensor": "Constructed",
+    "Gate3_extension": "Partial",
+    "Gate3_result_3a": "Constructed",
+    "Gate4_Ward": "Constructed",
+    "Route1": "Constructed"
+  },
+  "alpha": "A**2/60",
+  "beta": "A**2/18",
+  "a": "A**2/60",
+  "b": "A**2/18",
+  "Pi_tr_status": "Constructed",
+  "L_status": "Constructed",
+  "Ward_verified_by_substitution": true,
+  "symmetry_restored_subsector": true,
+  "symmetry_restored_bulk": false,
+  "O1": "NOT_CLOSED",
+  "intermediate_wording": "D11 Wick/determinant normalization established. Actual tensor product, scaling witness, and off-diagonal Ward verification tracked separately. o70-sync: alpha=A^2/60, beta=A^2/18; u_mu^R FP with r=-i pi^2; W_w jet-pullback; contact moments L. Kernel counterterm Constructed under prescription. Bulk O.1 NOT_CLOSED."
+}

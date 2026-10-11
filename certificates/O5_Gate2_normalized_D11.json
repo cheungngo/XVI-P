@@ -1,0 +1,191 @@
+{
+  "revision": "o70-sync",
+  "gate": "O.5_matter_loop_Gate2_normalized_D11",
+  "status_prefactor": "Constructed",
+  "status_tensor_construction": "Constructed",
+  "status": "Constructed_prefactor",
+  "pass": true,
+  "pass_means": "PREFACTOR TRACK only: Route A/B agree on Pi=i*kappa^2/4 after comb_B=1/2 from Tr(D_F H1 D_F H1). TENSOR TRACK separate in O5_D11_tensor.json (status=Constructed).",
+  "intermediate_wording": "D11 Wick/determinant normalization established. Actual tensor product, scaling witness, and off-diagonal Ward verification tracked separately. Tensor extension and contact restoration remain incomplete.",
+  "D_F": "i/(k^2+i0)",
+  "o61_Delta_F_conversion": "Delta_F=-D_F",
+  "Gamma1_matter": "-i log Z",
+  "route_A_wick": {
+    "status": "derived_independent",
+    "route": "A_Wick",
+    "logZ_bubble_prefactor": "-kappa**2/8",
+    "logZ_formula": "log Z|_bubble = (-kappa^2/8) int h T h",
+    "Gamma1_definition": "Gamma_1,matter = -i log Z  [Gate 0]",
+    "Gamma1_bubble_quad_prefactor": "I*kappa**2/8",
+    "Gamma1_bubble_formula": "Gamma_1,bubble^(2) = (i kappa^2/8) int h T h",
+    "Pi_prefactor": "I*kappa**2/4",
+    "Pi_formula": "Pi_bubble = (i kappa^2/4) VV(CC+CC)",
+    "derivation_steps": [
+      "two vertices each kappa/2",
+      "1/2! for two identical insertions",
+      "(i/hbar)^2 from e^{iS/hbar}; two Wick D_F supply hbar^2 => i^2=-1",
+      "i inside D_F stays inside C; NOT counted again in the rational/i prefactor",
+      "Wick pairings absorbed into T=VV(CC+CC)",
+      "log Z|_bubble = -kappa^2/8 int h T h",
+      "Gamma_1 = -i log Z => (i kappa^2/8) int h T h",
+      "Gamma_1^{(2)}=1/2 int h Pi h => Pi = (i kappa^2/4) T"
+    ],
+    "C_definition": "C_{alpha gamma}(z) = - partial_alpha partial_gamma D_F(z)",
+    "D_F": "i/(k^2+i0)  [Gate 0]",
+    "o61_conversion": "o61 Delta_F = -D_F",
+    "NOT_Em01": true,
+    "forced_assignment": false,
+    "Pi_prefactor_sympy_str": "I*kappa**2/4"
+  },
+  "comb_B_derivation": {
+    "status": "Constructed",
+    "pass": true,
+    "comb_B": "1/2",
+    "kernel_form": "Tr(D_F H1 D_F H1) = int a1^{ab}(x) a1^{cd}(y) (d_a^x d_c^y D_F)(d_b^x d_d^y D_F) = int a1 a1 C_ac C_bd",
+    "definition": "Tr(D_F H1 D_F H1)|_{a1=V h} = comb_B * int h T h, T=VV(CC+CC), C=-dd D_F",
+    "symmetry_step": "a1^{ab}=a1^{ba}; dummy (a,b)->(b,a) sends I_direct to I_exch, hence I_direct = I_exch = (1/2) int a1 a1 (CC+CC)",
+    "H1_definition": "H1 = -partial_mu (a1^{mu nu} partial_nu); a1 from densitized B",
+    "NOT_from_reviewer_target": true,
+    "NOT_from_matching_Route_A": true,
+    "numeric_symmetry_trials": [
+      {
+        "trial": 0,
+        "I_direct": "8344",
+        "I_exch": "8344",
+        "I_direct_eq_I_exch": true,
+        "half_sum_identity": true
+      },
+      {
+        "trial": 1,
+        "I_direct": "6526",
+        "I_exch": "6526",
+        "I_direct_eq_I_exch": true,
+        "half_sum_identity": true
+      },
+      {
+        "trial": 2,
+        "I_direct": "1884",
+        "I_exch": "1884",
+        "I_direct_eq_I_exch": true,
+        "half_sum_identity": true
+      },
+      {
+        "trial": 3,
+        "I_direct": "203",
+        "I_exch": "203",
+        "I_direct_eq_I_exch": true,
+        "half_sum_identity": true
+      },
+      {
+        "trial": 4,
+        "I_direct": "-1061",
+        "I_exch": "-1061",
+        "I_direct_eq_I_exch": true,
+        "half_sum_identity": true
+      }
+    ],
+    "n_trials": 5,
+    "all_trials_pass": true,
+    "derived_value": "1/2"
+  },
+  "route_B_det": {
+    "status": "derived_independent",
+    "route": "B_det",
+    "Gamma1_definition": "Gamma_1,matter = -i log Z  [Gate 0]",
+    "Gamma1_formula_trlog": "log Z = -1/2 Tr log H; equivalently Gamma_1 = (i/2) Tr log H after Gamma_1=-i log Z (field-independent const dropped)",
+    "G_F_vs_D_F": "G_F = H0^{-1}_{Feynman} = -i D_F; SEPARATE from XIV-A retarded G^R",
+    "two_H1_term_in_logZ": "(+1/4) kappa^2 Tr(G H1 G H1)",
+    "after_G_to_DF": "(-kappa^2/4) Tr(D_F H1 D_F H1)",
+    "two_H1_sign": 1,
+    "combinatorial_identification": {
+      "symbol": "comb_B",
+      "value": "1/2",
+      "status": "Constructed",
+      "source": "derive_comb_B_from_trace (a1 symmetry + dummy relabel)",
+      "NOT_from_reviewer_target": true,
+      "NOT_from_matching_Route_A": true
+    },
+    "logZ_bubble_prefactor": "-kappa**2/8",
+    "Gamma1_bubble_quad_prefactor": "I*kappa**2/8",
+    "Pi_prefactor": "I*kappa**2/4",
+    "Pi_formula": "Pi_B = (i kappa^2/4) VV(CC+CC)",
+    "H_expansion": {
+      "H0": "-Box = -partial_mu (eta^{mu nu} partial_nu)",
+      "H1": "-partial_mu (a1^{mu nu} partial_nu)",
+      "H2": "-partial_mu (a2^{mu nu} partial_nu)",
+      "matches_B_series": true,
+      "B": "densitized inverse B^{mu nu}=sqrt(-q) q^{mu nu} = eta + kappa a1 + kappa^2 a2"
+    },
+    "ledger_pieces": {
+      "logZ_trlog_coeff": "-1/2",
+      "log_X2_coeff": "-1/2",
+      "logZ_tr_prefactor": "1/4",
+      "G_eq_minus_i_DF": "-I",
+      "two_G_factor": "-1",
+      "logZ_DF_prefactor": "-1/4",
+      "comb_B": "1/2"
+    },
+    "forced_assignment": false,
+    "NOT_Em01": true,
+    "Pi_prefactor_sympy_str": "I*kappa**2/4"
+  },
+  "route_agreement": {
+    "status": "Constructed",
+    "pass": true,
+    "prefactor_A": "I*kappa**2/4",
+    "prefactor_B": "I*kappa**2/4",
+    "difference": "0",
+    "difference_free_symbols": [],
+    "forced_assignment_deleted": true,
+    "acceptance": "routes agree exactly on Pi prefactor with no forced assignments and no unresolved combinatorial symbols",
+    "reviewer_target_Pi": "i*kappa**2/4",
+    "route_A_matches_reviewer_target": true,
+    "route_B_matches_reviewer_target": true,
+    "note": "Agreement follows after comb_B=1/2 is derived from the trace identification (a1 symmetry), not from coercion."
+  },
+  "vertex_tensor": {
+    "V": "V^{alpha beta}_{mu nu} = (1/2) eta_{mu nu} eta^{alpha beta} - (1/2)(delta^alpha_mu delta^beta_nu + delta^alpha_nu delta^beta_mu)",
+    "from": "a1 = (1/2) tau eta - h",
+    "status": "Constructed"
+  },
+  "tensor_kernel_scaling": {
+    "status": "Constructed",
+    "scaling_degree_sd": 8,
+    "evidence_present": true,
+    "Pi_prefactor": "i*kappa^2/4",
+    "Pi_prefactor_status": "Constructed_after_route_agreement",
+    "kernel_structure": "Pi=(i kappa^2/4) T; see O5_D11_tensor.json",
+    "contracted_tensor_witness": {
+      "description": "T_0000 at z=(0,r,0,0)",
+      "value": "24*A**2/r**8",
+      "target": "24*A**2/r**8",
+      "match": true,
+      "replaces_model_20_r_minus_8": true
+    },
+    "symmetries": {
+      "pair_swap": "Pi^{mnrs}=Pi^{rsmn}",
+      "within_first": "Pi^{mnrs}=Pi^{nmrs}",
+      "within_second": "Pi^{mnrs}=Pi^{mn sr}  (r <-> s interchange)"
+    },
+    "deferred_to": "O5_D11_tensor.json",
+    "NOT_default_sd_8": true,
+    "NOT_XVI_M_ell3": true,
+    "NOT_selected_graph": true
+  },
+  "prefactor": "I*kappa**2/4",
+  "tensor_construction_cert": "O5_D11_tensor.json",
+  "reviewer_target": "i*kappa**2/4",
+  "withdrawn_from_o62": [
+    "forced prefactor_B = -kappa^2/8",
+    "agree_routes overwrite of both prefs to -kappa^2/8",
+    "Gate2 status Constructed under coerced agreement",
+    "Pi = -kappa^2/8 VV(CC+CC) as settled normalization"
+  ],
+  "withdrawn_from_o63_gap": [
+    "comb_B left symbolic / Unresolved",
+    "Pi_B = (i kappa^2/2)*comb_B with open gap"
+  ],
+  "withdrawn_model_20_r_minus_8": true,
+  "NOT_completed_bulk_quantum_sector": true,
+  "NOT_Em01": true
+}

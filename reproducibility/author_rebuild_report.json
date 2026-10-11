@@ -1,0 +1,399 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p13",
+ "entrypoint": "tools/rebuild_from_source.py",
+ "inherited_mode": "vendored",
+ "kind": "package evidence (XVI-O conv:package); not a certificate",
+ "environment": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+ },
+ "environment_reference": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+ },
+ "environment_matches_reference": {
+  "python": true,
+  "sympy": true,
+  "mpmath": true,
+  "pytest": true,
+  "pdftex": true,
+  "pdftotext": true
+ },
+ "source_tree_sha256": "2b1baf335468944aa800c05eaa8b0b4df67ee893491079fcc944eb8fb0e69a70",
+ "source_tree_sha256_without_reference": "289a5d03e3adda6a63703a36bb6379ae90209ea09a4d6c533d6dd4809d1ce345",
+ "n_source_files": 92,
+ "source_zip_sha256": "2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266",
+ "rebuilt_values": {
+  "source": {
+   "tree_sha256_without_reference": "289a5d03e3adda6a63703a36bb6379ae90209ea09a4d6c533d6dd4809d1ce345",
+   "n_source_files": 92
+  },
+  "inherited_pins": {
+   "XVI-M.tex": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "XVI-N-r10/code/prep/grav_density.py": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "ledgers/quantum_factor_ledger.json": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "XVI-O_o70_source_tree": "828a5d3acbd25dd7f147dea0f4027a48b3437c45b563ef9b2e36ed6476b1294a"
+  },
+  "exports": {
+   "ell2": {
+    "file_sha256": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+    "polynomial_sha256": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+    "terms": 84
+   },
+   "ell3": {
+    "file_sha256": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+    "polynomial_sha256": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+    "terms": 678
+   },
+   "ell4": {
+    "file_sha256": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+    "polynomial_sha256": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+    "terms": 3360
+   },
+   "V4_grav.json": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "ell4_conventions.json": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769"
+  },
+  "certificate_content_sha256_ignoring_timings": {
+   "P13_boundary_identity": "fc0d07742b7bb4895f34b978738d1056a1b2859ba70ad909b8a35f116c7acf27",
+   "P13_quartic_verified": "9ea00e3fac0551c01076311a0fe5f169a2c8952a1ca3521ced0df6d073e3eca4",
+   "P13_brst_derivation": "e9a9a3027b8c36b27d42101af6d4e5c032094a28e10183710d95c0c3955dfdc5",
+   "P13_source_action": "d98816405eb974e19e989f7b9a779fd9993205f6f33fc5cf0d004f69008e4ca8",
+   "P13_gauge_fixing_map": "0484aa54f81bc7c61701a7801dc86ef76363e5f909255c40ca9d20bfa0603454",
+   "P13_ch_source_audit": "b8a5a2b2ee13b7cd9264fec7de6f7246bb0e129b9d4d96a5d218545670c7212c",
+   "P13_master_kappa2": "e82b4975ccc20b6423ab0b2ce098ff91681e1e33daa74016913ee2560cb07418",
+   "P13_release": "cd54229737dafe2f5c29cbceaf49d389d552e61e715f6c8d34ab5f0c9cdfd54a",
+   "P13_closure_release": "2a37eb9915f6d85a88a464f2ae40361841cd44eac0b6d098ce7628278f9e89f4",
+   "P13_dossier": "68d3bdf52cd965380b6eaa5e3266900186fd17afbb1d6f454d613376a3c191b4",
+   "RELEASE_STATUS": "cd54229737dafe2f5c29cbceaf49d389d552e61e715f6c8d34ab5f0c9cdfd54a",
+   "ledgers/P13_ch_dependency_rows": "5132a9816dbc78ce35d198acd18d977ad166fdc6f915ea577778fece45ba9fa0",
+   "ledgers/P13_graph_inventory": "986d6ace08170b6aabafcb265c4a7564ca3e602aebb44499ee894d6554c75a43",
+   "ledgers/P13_milestones": "cecdd34814e672043b378d794947960d9e5580afda784666abe09ef01f95d8c7"
+  },
+  "residual_records": {
+   "quartic_C7": {
+    "kappa0": {
+     "W_terms": 132,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "kappa1": {
+     "W_terms": 2148,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      159,
+      159,
+      159,
+      159
+     ]
+    },
+    "kappa2": {
+     "W_terms": 15428,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      2088,
+      2088,
+      2088,
+      2088
+     ]
+    }
+   },
+   "master_grav_af0": {
+    "kappa0": {
+     "W_terms": 132,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "kappa1": {
+     "W_terms": 2148,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      159,
+      159,
+      159,
+      159
+     ]
+    },
+    "kappa2": {
+     "W_terms": 15428,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      2088,
+      2088,
+      2088,
+      2088
+     ]
+    }
+   },
+   "master_table": {
+    "kappa0": {
+     "af0_grav_Noether": true,
+     "af0_scalar_Noether": true,
+     "af0_ghost_gf_transformed": true,
+     "af1_invariant": true,
+     "af1_transformed": true,
+     "af2_invariant": true,
+     "af2_transformed": true
+    },
+    "kappa1": {
+     "af0_grav_Noether": true,
+     "af0_scalar_Noether": true,
+     "af0_ghost_gf_transformed": true,
+     "af1_invariant": true,
+     "af1_transformed": true,
+     "af2_invariant": true,
+     "af2_transformed": true
+    },
+    "kappa2": {
+     "af0_grav_Noether": true,
+     "af0_scalar_Noether": true,
+     "af0_ghost_gf_transformed": true,
+     "af1_invariant": true,
+     "af1_transformed": true,
+     "af2_invariant": true,
+     "af2_transformed": true
+    }
+   },
+   "required_master_residuals": []
+  },
+  "release": {
+   "release_claim_accepted": true,
+   "publication": "accepted",
+   "classical_readiness_for_ch_identity": true,
+   "flags": {
+    "quartic_generator_verified": true,
+    "ch_projection_defined": true,
+    "ch_dependency_inventory_complete": true,
+    "gauge_fixing_map_constructed": true,
+    "required_classical_BV_components_verified": true
+   },
+   "milestones": {
+    "P.3": "complete (declared ch target)",
+    "P.4": "earned (classical readiness)",
+    "P.5_entry": "next (not started; p13 does no P.5 work)",
+    "P.5_calculation": "open",
+    "P.5_identity": "open"
+   },
+   "hard_stops": {
+    "quantum_inputs_evaluated": "not_earned",
+    "projected_identity_verified": "not_earned",
+    "D02_quantum_evaluated": false,
+    "D12_quantum_evaluated": false,
+    "D12_status": "Missing",
+    "symmetry_restored": false,
+    "O1_closure": "NOT_CLOSED",
+    "insertion_status": "Frozen_negative_obstruction_preserved",
+    "XV_B_opened": false,
+    "Route_B_discharged": false,
+    "P5_opened": false,
+    "loop_evaluations_performed": false,
+    "u_R_c_delta_added": false
+   }
+  },
+  "tests": {
+   "baseline": {
+    "passed": 24,
+    "failed": 0,
+    "skipped": 0
+   },
+   "certificate_mutation": {
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0
+   },
+   "resumed_build": {
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0
+   }
+  }
+ },
+ "steps": {
+  "source_only_tree": {
+   "ok": true,
+   "non_source_files": [],
+   "count": 0
+  },
+  "inherited_pins": {
+   "ok": true,
+   "external": {
+    "XVI-M.tex": {
+     "sha256": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+     "ok": true,
+     "location": "vendored",
+     "vendored_copy_matches_pin": true
+    },
+    "XVI-N-r10/code/prep/grav_density.py": {
+     "sha256": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+     "ok": true,
+     "location": "vendored",
+     "vendored_copy_matches_pin": true
+    }
+   },
+   "inherited_data_files": 1,
+   "inherited_data_failures": [],
+   "xvi_o_o70_files_verified": 24,
+   "xvi_o_o70_failures": [],
+   "XVI_M_pin": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea"
+  },
+  "full_build": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 448.6,
+   "log": "build/rebuild_build.log"
+  },
+  "release_accepted": {
+   "ok": true,
+   "milestones": {
+    "P.3": "complete (declared ch target)",
+    "P.4": "earned (classical readiness)",
+    "P.5_entry": "next (not started; p13 does no P.5 work)",
+    "P.5_calculation": "open",
+    "P.5_identity": "open"
+   }
+  },
+  "tests": {
+   "ok": true,
+   "groups": {
+    "baseline": {
+     "passed": 24,
+     "failed": 0,
+     "skipped": 0
+    },
+    "certificate_mutation": {
+     "passed": 9,
+     "failed": 0,
+     "skipped": 0
+    },
+    "resumed_build": {
+     "passed": 4,
+     "failed": 0,
+     "skipped": 0
+    }
+   },
+   "summary": "37 passed in 187.37s (0:03:07)"
+  },
+  "pdf_readback_vs_records": {
+   "ok": true,
+   "records": 6,
+   "appendix": true,
+   "combined": true
+  },
+  "external_manifest": {
+   "ok": true,
+   "entries": 18,
+   "failures": [],
+   "synced_inside_copy": [
+    "XVI-P-appendix.pdf",
+    "XVI-P-full.zip",
+    "XVI-P-review-focus.zip",
+    "XVI-P-science.pdf",
+    "XVI-P-source-only.zip",
+    "XVI-P.pdf"
+   ]
+  },
+  "source_only_zip_rebuilt": {
+   "ok": true,
+   "differences": []
+  },
+  "file_access_trace": {
+   "ok": true,
+   "present": true,
+   "reads": 2249,
+   "writes": 1374,
+   "external_reads_pinned": [],
+   "unpinned_external_reads": [],
+   "in_tree_source_files_read": 92,
+   "in_tree_data_inputs_read": [
+    "ledgers/quantum_factor_ledger.json",
+    "provenance/XVI-M_sha256.txt",
+    "provenance/XVI-O_o70_source_tree.json",
+    "provenance/predecessor_pins.json",
+    "reproducibility/inherited_data_pins.json",
+    "reproducibility/reference_values.json"
+   ],
+   "unpinned_in_tree_data_inputs": [],
+   "reads_of_unknown_files": [
+    "XVI-N-r10",
+    "body",
+    "classical",
+    "inherited",
+    "matter_loop",
+    "outputs",
+    "p02_p09",
+    "p10",
+    "p11",
+    "p12",
+    "p13",
+    "p4_classical",
+    "prep",
+    "read_trace",
+    "stale"
+   ]
+  },
+  "comparison_with_reference": {
+   "ok": true,
+   "compared": 112,
+   "equal": 112,
+   "differences": []
+  }
+ },
+ "pass": true,
+ "seconds": 449.9
+}

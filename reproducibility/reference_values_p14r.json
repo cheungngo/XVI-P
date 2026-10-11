@@ -1,0 +1,280 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p14r",
+ "kind": "author reference values for the p14 rebuild contract",
+ "generated_from": "the author's full build of this source tree (tools/build.py)",
+ "environment": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+ },
+ "values": {
+  "source": {
+   "tree_sha256_without_reference": "4a6cc53c0b2cf35681d4fd499f1033f1028974e5ca766c43d11a809bc683599f",
+   "n_source_files": 111
+  },
+  "inherited_pins": {
+   "XVI-M.tex": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "XVI-N-r10/code/prep/grav_density.py": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "ledgers/quantum_factor_ledger.json": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "XVI-O_o70_source_tree": "828a5d3acbd25dd7f147dea0f4027a48b3437c45b563ef9b2e36ed6476b1294a"
+  },
+  "exports": {
+   "ell2": {
+    "file_sha256": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+    "polynomial_sha256": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+    "terms": 84
+   },
+   "ell3": {
+    "file_sha256": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+    "polynomial_sha256": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+    "terms": 678
+   },
+   "ell4": {
+    "file_sha256": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+    "polynomial_sha256": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+    "terms": 3360
+   },
+   "V4_grav.json": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "ell4_conventions.json": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "P14_vertex_tensors.json": "3181424bf18a3def5339c4fe41662dd929b5e4e7ec7fc9aa913a903c5a666872",
+   "P14_integrands": {
+    "D01.json": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+    "D02.json": "2f7fd32985ed9161b4b5aad221a9ca6dc59e9f1cc6a069ad7f7503835ce83d1e",
+    "D03.json": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+    "D11.json": "f68904158d931faf71209cde9028d4f90e987c098ba84128fd2f6b661a4640ff",
+    "D12.json": "c57d815c0f4aac641dacafa4577037fcbe0bdc4c207597c9b88f62f1153ec73a",
+    "D13.json": "8fe1a4ba4ac1fae573ad896ef25d3ae5e0d8a525d546ad980b2ebae8c07cc0a5",
+    "D14a.json": "7ac1b6a3544ca2bb370ded6e1ee6cdcea49da94af01c22d96866aa2c30cdd61c",
+    "D14b.json": "95f6d47436ba1efdcef371979f7941b782cedb625530912ec00e499bfca953f3",
+    "D14c.json": "b50e3aabe46d548a0d9afaf182aa99143b2792927b194b84075bcdcc79c0ad79"
+   }
+  },
+  "certificate_content_sha256_ignoring_timings": {
+   "P13_boundary_identity": "fc0d07742b7bb4895f34b978738d1056a1b2859ba70ad909b8a35f116c7acf27",
+   "P13_quartic_verified": "9ea00e3fac0551c01076311a0fe5f169a2c8952a1ca3521ced0df6d073e3eca4",
+   "P13_brst_derivation": "e9a9a3027b8c36b27d42101af6d4e5c032094a28e10183710d95c0c3955dfdc5",
+   "P13_source_action": "d98816405eb974e19e989f7b9a779fd9993205f6f33fc5cf0d004f69008e4ca8",
+   "P13_gauge_fixing_map": "0484aa54f81bc7c61701a7801dc86ef76363e5f909255c40ca9d20bfa0603454",
+   "P13_ch_source_audit": "b8a5a2b2ee13b7cd9264fec7de6f7246bb0e129b9d4d96a5d218545670c7212c",
+   "P13_master_kappa2": "e82b4975ccc20b6423ab0b2ce098ff91681e1e33daa74016913ee2560cb07418",
+   "P14_release": "23b5b7bd32da5e33b794827ae40dc2de0a73a547c9ec26d7a69b08b87e727b63",
+   "P14_closure_release": "d0b58cf5a63e42f9c2d673e7e033274c4f5e8a22758fa97be44f2b16c1112d51",
+   "P14_dossier": "9ff187f3c6a37dccc690619e5b3efafbe222209409f8a74be5880ca2cd0090e3",
+   "P14_quantum_object": "d1edb02102eaa396e7dedc82b8dbca6ffb28c67b280b62c93639c611b7a4fde2",
+   "P14_prescription_D11_matching": "93889d4304b5a01f4ecfe00e5858a6ff99aa97ba1bb41262e3b8a306186cad45",
+   "P14_counterterm_domain": "e6431c0ab8c301beba0c80546e49e10970438b3e3893735acfff7cd125001215",
+   "P14_amplitude_rules": "fbd79f7a506ef6d3ac2f1f5c99890126b234cb2f7c2f281d76f369c7ac33621b",
+   "P14_dred_rules": "b71c868a92a0e7232155338aab65d1ea36a52558c7ffcd3bf7694027a1aa5432",
+   "RELEASE_STATUS": "23b5b7bd32da5e33b794827ae40dc2de0a73a547c9ec26d7a69b08b87e727b63",
+   "ledgers/P13_ch_dependency_rows": "5132a9816dbc78ce35d198acd18d977ad166fdc6f915ea577778fece45ba9fa0",
+   "ledgers/P13_graph_inventory": "986d6ace08170b6aabafcb265c4a7564ca3e602aebb44499ee894d6554c75a43",
+   "ledgers/P14_milestones": "693d6e91ee5ae54ff46702c1860975e37279bade46609f96ae540f174399c23e"
+  },
+  "residual_records": {
+   "quartic_C7": {
+    "kappa0": {
+     "W_terms": 132,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "kappa1": {
+     "W_terms": 2148,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      159,
+      159,
+      159,
+      159
+     ]
+    },
+    "kappa2": {
+     "W_terms": 15428,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      2088,
+      2088,
+      2088,
+      2088
+     ]
+    }
+   },
+   "master_grav_af0": {
+    "kappa0": {
+     "W_terms": 132,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "kappa1": {
+     "W_terms": 2148,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      159,
+      159,
+      159,
+      159
+     ]
+    },
+    "kappa2": {
+     "W_terms": 15428,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      2088,
+      2088,
+      2088,
+      2088
+     ]
+    }
+   },
+   "master_table": {
+    "kappa0": {
+     "af0_grav_Noether": true,
+     "af0_scalar_Noether": true,
+     "af0_ghost_gf_transformed": true,
+     "af1_invariant": true,
+     "af1_transformed": true,
+     "af2_invariant": true,
+     "af2_transformed": true
+    },
+    "kappa1": {
+     "af0_grav_Noether": true,
+     "af0_scalar_Noether": true,
+     "af0_ghost_gf_transformed": true,
+     "af1_invariant": true,
+     "af1_transformed": true,
+     "af2_invariant": true,
+     "af2_transformed": true
+    },
+    "kappa2": {
+     "af0_grav_Noether": true,
+     "af0_scalar_Noether": true,
+     "af0_ghost_gf_transformed": true,
+     "af1_invariant": true,
+     "af1_transformed": true,
+     "af2_invariant": true,
+     "af2_transformed": true
+    }
+   },
+   "required_master_residuals": []
+  },
+  "release": {
+   "release_claim_accepted": true,
+   "publication": "accepted",
+   "classical_readiness_for_ch_identity": true,
+   "flags": {
+    "quartic_generator_verified": true,
+    "ch_projection_defined": true,
+    "ch_dependency_inventory_complete": true,
+    "gauge_fixing_map_constructed": true,
+    "required_classical_BV_components_verified": true
+   },
+   "milestones": {
+    "P.3": "complete (declared ch target)",
+    "P.4": "earned (classical readiness)",
+    "P.5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+    "P.5_calculation": "open (not started; Batch A/B/C integrals are p15+)",
+    "P.5_identity": "open"
+   },
+   "hard_stops": {
+    "quantum_inputs_evaluated": "not_earned",
+    "projected_defect_computed": "not_earned",
+    "projected_identity_verified": "not_earned",
+    "projected_restoration_verified": "not_earned",
+    "bulk_symmetry_restored": false,
+    "symmetry_restored": false,
+    "D02_quantum_evaluated": false,
+    "D12_quantum_evaluated": false,
+    "D12_status": "Missing",
+    "D11_matching_verified": false,
+    "O1_closure": "NOT_CLOSED",
+    "insertion_status": "Frozen_negative_obstruction_preserved",
+    "XV_B_opened": false,
+    "XIV_J_opened": false,
+    "Route_B_discharged": false,
+    "P5_entry_opened": true,
+    "P5_calculation_opened": false,
+    "P5_identity_opened": false,
+    "loop_evaluations_performed": false,
+    "u_R_c_delta_added": false
+   },
+   "P5_entry_flags": {
+    "quantum_action_defined": true,
+    "quantum_prescription_defined": true,
+    "D11_matching_defined": true,
+    "counterterm_domain_defined": true,
+    "amplitude_rules_verified": true
+   },
+   "P5_entry_earned": true,
+   "P3_P4_frozen_as_P5_inputs": true,
+   "D11_matching_verified": false,
+   "D12_status": "Missing"
+  },
+  "tests": {
+   "baseline": {
+    "passed": 39,
+    "failed": 0,
+    "skipped": 0
+   },
+   "certificate_mutation": {
+    "passed": 17,
+    "failed": 0,
+    "skipped": 0
+   },
+   "resumed_build": {
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0
+   }
+  }
+ }
+}

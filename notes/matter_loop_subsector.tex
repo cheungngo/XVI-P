@@ -1,0 +1,84 @@
+% o70-sync: complete D11 proof prerequisites; Conditional until earned
+\noindent\textbf{o70-sync.} Four mathematical prerequisites Constructed:
+fixed $u_\mu^R$ (analytic-family residue $r=-i\pi^2$, proof
+\texttt{lem:analytic\_FP\_u\_mu\_R\_o70});
+global $T=\mathcal K u$ with $\alpha,\beta$ \emph{derived} ($A^2/60$, $A^2/18$),
+all 256 components symbolic;
+$W_w$ jet-pullback as the \emph{only} active reference
+(\texttt{W\_w\_jet\_pullback\_via\_Pi\_tr\_o68});
+contact moments for $L$ with
+\texttt{kernel\_two\_point\_Ward} (not functional ST4b).
+Kernel counterterm earned under prescription after prerequisites pass.
+UV subtraction vs finite repair kept separate.
+Corpus $\mathcal{P}$ (trace reversal) not reused for $P_{\mathrm{tr}}$.
+Bulk \texttt{symmetry\_restored=false}; O.1 NOT\_CLOSED.
+$\Pi_{\mathrm{tr}}^R|_U=(i\kappa^2/4)T$ (prefactor retained).
+$s_0C_L$ not evaluated (minimal release).
+
+\section{Massless scalar matter-loop subsector (o70-sync)}
+\label{sec:O-matter-loop}
+
+\scopebox{Subsector verdict: Constructed under prescription (kernel).}{%
+Four prerequisites Constructed; Gate~3 spanning still Partial (candidate\_list).
+Bulk O.1 NOT\_CLOSED; insertion freeze unchanged; Em01 not a premise.
+$D11\_kernel\_counterterm=\mathrm{earned}$ only after math prerequisites pass
+(development mark: Conditional).
+}
+
+\subsection{Gate~1: mixed scalar Noether (retained)}
+Coupling-stripped $S_{\phi,i}=\tfrac12\int a_i^{\mu\nu}\partial_\mu\phi\partial_\nu\phi$
+($a_0=\eta$). With BRST ghost normalization $a=\tfrac12$ (distinct from D11
+coefficients $\alpha,\beta$) and $sq=\kappa a\,\mathcal L_c q$, the densitized
+identities
+\[
+s_0a_1=a\,\mathcal D_c\eta,\qquad
+s_0a_2+s_1a_1=a\,\mathcal D_c a_1
+\]
+are verified by jet-polynomial substitution (executable). The boxed density identity
+\[
+\boxed{s_0\mathcal L_2+s_1\mathcal L_1=a\,\partial_\rho(c^\rho\mathcal L_1)}
+\]
+follows and integrates under compact support. This is the mixed metric--scalar
+Noether cancellation (Gate~1), not an independent scalar BV master equation.
+Separate: (i) invariant baseline $S_{\mathrm{inv}}$;
+(ii) prepared-action defect $(S_D,S_D)$;
+(iii) insertion-class obstruction (XVI-N thm:massless-obstruction).
+
+\subsection{Gate~2: normalized D11 --- prefactor Constructed; tensor Constructed}
+Route~A (Wick) independently yields
+\[
+\log Z\big|_{\mathrm{bubble}}=-\frac{\kappa^2}{8}\int h\,T\,h,\qquad
+\Gamma_{1,\mathrm{matter}}=-i\log Z,\qquad
+\Pi_{\mathrm{bubble}}=\frac{i\kappa^2}{4}\,VV(CC+CC).
+\]
+Route~B expands $\log Z=-\tfrac12\operatorname{Tr}\log H$ to
+$(-\kappa^2/4)\operatorname{Tr}(D_FH_1D_FH_1)$. Symmetry of $a_1$ gives
+$\mathrm{comb}_B=\tfrac12$ (Constructed --- not unresolved) and
+$\Pi_B=i\kappa^2/4\,T$. Tensor witness $T_{0000}=24A^2/r^8$ at $z=(0,r,0,0)$.
+
+\subsection{Gate~3 / Deliverables 1--3}
+Scalar $u_\mu^R=\mathrm{FP}_{\zeta=0}[\mu^{2\zeta}(Q-i0)^{-2+\zeta}]$ with
+$r=-i\pi^2$ from analytic-family recurrence + Gate~0
+($\Box(Q-i0)^{-1}=4\pi^2 i\delta$), not Wick-Jacobian alone.
+Global $T=\mathcal K u$ on $U$
+($\mathcal K=\alpha\mathcal D^{(2)}+\beta\mathcal D^{(0)}$; $\alpha,\beta$ derived;
+all 256 components; lemma \texttt{lem:BV\_rules\_on\_U}).
+Active $W_w$ reference only:
+$\langle\Pi_w^R,f\rangle=\langle\Pi_{\mathrm{tr}}^R,W_wf\rangle$
+(prescription \texttt{W\_w\_jet\_pullback\_via\_Pi\_tr\_o68}).
+Old cutoff ARCHIVED; equivalence NOT claimed.
+False pointwise $|T|\le C|z|_E^{-8}$ hypothesis removed (annular seminorms).
+Spanning set still \texttt{candidate\_list} $\Rightarrow$ Gate~3 Partial overall.
+
+\subsection{Gate~4 / Deliverable 4: contact moments}
+\[
+M_\gamma=\langle\Pi_{\mathrm{tr}},w z^\gamma/\gamma!\rangle,\qquad
+L=\sum_{|\gamma|\le4}(-1)^{|\gamma|}M_\gamma\,\partial^\gamma\delta.
+\]
+Odd moments vanish by evenness. $\Pi_w+L=\Pi_{\mathrm{tr}}$;
+$\partial(\Pi_w+L)=0$ both pairs
+(\texttt{kernel\_two\_point\_Ward}; not functional ST4b).
+$L$ order $\le4$; kernel-divergence contact bound on $\partial L$ is five.
+Formal transpose (not $L^2$ adjoint). $L$ not claimed Lorentz covariant.
+$C_L=\tfrac12\int h\,L\,h$ (gh$=0$, even); $s_0C_L$ not evaluated.
+Kernel CT $\ne$ bulk BV restore.

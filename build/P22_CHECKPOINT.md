@@ -1,0 +1,23 @@
+# P22 checkpoint (append-only; PIDs; never restart running builds)
+- 2026-10-10T01:04:19Z start p22 from p21 (independent p21 PASS 8a582b33). No builds running. Stray PID 242954 (XVI-N, not ours) untouched.
+- 2026-10-10T01:04:19Z archived p21 -> archival/p21
+- 2026-10-10T01:09:09Z evanescent.py: EV-M2 PROVEN (local poles + exact QdS decoupling; both continuations refuted); EV-CT earned (h.c, c.b closed; slots zero; rho=1/2); Q4S-trace O(eps)xpole remnant nonzero, disclosed
+- 2026-10-10T01:10:46Z guard draft in dred.py; full pytest probe PID 1785408 log /tmp/p22/pytest0.log (scratch, not a release build)
+- 2026-10-10T01:15:49Z scratch pytest (copy /tmp/p22/scratch) log /tmp/p22/pytest1.log
+- 2026-10-10T01:28:21Z scratch suite #2: 23 failed/467 passed (layer bookkeeping); fixing
+- 2026-10-10T01:30:27Z fixes: older-layer tests (scan_view, layer_file_ok, p22 filters), test_p14 p22 names, 2 reviewer plants added (30), archival/p21/README.md, disclosure list extended
+- 2026-10-10T01:31:16Z docs: P22 note, body input, README p22, REBUILD_INSTRUCTIONS p22
+- 2026-10-10T01:31:30Z PRESYNC #1 launched PID=1800536 (P14_SYNC_DIR=/tmp/p22_presync) log=/tmp/p22/presync1.log -- DO NOT restart; wait for BUILD_RC
+- 2026-10-10T01:57:00Z PRESYNC #1 PID=1800536 ended BUILD_RC=1 (tests: collection error)
+- 2026-10-10T02:03:20Z fixes after PRESYNC #1: test_p18 syntax; guard ordering (_deferred: original p14-p18 hook raises first, messages preserved -> P14/P15/P16 cert content unchanged); 2 plants in test_p22; test_p19/p21 filters; FREEZE pins: P22_PINNED_SHA256 = 24 disclosed files (tools_change mutation now rejected)
+- 2026-10-10T02:03:20Z PRESYNC #2 launched PID=1812890 log=/tmp/p22/presync2.log -- DO NOT restart
+- 2026-10-10T02:33:11Z PRESYNC #2 PID=1812890 BUILD_RC=1 (497 pass, 2 fail: scan4 allow-list; Symbol_new plant on power_base in pytest)
+- 2026-10-10T02:37:48Z fix: _has_d matches any OpaqueDimension instance; scan4 count 7; dred pin updated; main-tree suite 498 passed
+- 2026-10-10T02:37:48Z PRESYNC #3 launched PID=1824018 log=/tmp/p22/presync3.log -- DO NOT restart
+- 2026-10-10T03:06:44Z PRESYNC #3 PID=1824018 BUILD_RC=1 (499 tests passed; post-test failure)
+- 2026-10-10T03:06:54Z fix: README/REBUILD_INSTRUCTIONS removed from sha pins (manifest-hash-in-PDF rule); 22 pins
+- 2026-10-10T03:06:57Z PRESYNC #4 launched PID=1833833 log=/tmp/p22/presync4.log -- DO NOT restart
+- 2026-10-10T03:36:51Z PRESYNC #4 PID=1833833 BUILD_RC=0 (499 passed; PDFs 35/768/802). Source FROZEN.
+- 2026-10-10T03:36:59Z reference_values_p22.json written; src zip ade2fa5c (194 files), tree 1bc6edff. AUTHOR REBUILD launched PID=1843594 dir=/tmp/p22_author log=/tmp/p22/author.log -- DO NOT restart
+- 2026-10-10T04:06:00Z AUTHOR REBUILD PID=1843594 PASS (tree 1bc6edff, zip ade2fa5c); report installed ef505542. FINAL BUILD launched PID=1852518 (sync /workspace) log=/tmp/p22/final.log -- DO NOT restart
+- 2026-10-10T04:35:32Z FINAL BUILD PID=1852518 BUILD_RC=0 (499 tests); synced /workspace; source zip ade2fa5c = author; tree 1bc6edff; protected shas intact (p21 zip a71d6b52, p20 zip ca32ce01, indep p21 8a582b33); manifest written LAST (04:35:18). p22 RELEASED; independent p22 pending.

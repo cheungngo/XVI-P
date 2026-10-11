@@ -1,0 +1,13 @@
+# P21 checkpoint (append-only; PIDs; never restart running builds)
+- 2026-10-09T21:53:38Z start p21 from p20 (independent p20 PASS, report e8f358f9). No builds running.
+- 2026-10-09T21:53:38Z archived p20 -> archival/p20 (zip ca32ce01; p20_source_files.json 8031db7f, 174 files)
+- stray PID 242954: /workspace/tmp/venv/bin/python - (stdin script), cwd /workspace/XVI-N-combined/code/insertion, running since Oct 6, parent = supervisor; belongs to XVI-N (frozen landmark) -> NOT killed, reported
+- 2026-10-09T22:02:41Z PRESYNC #1 launched PID=1724535 (P14_SYNC_DIR=/tmp/p21_presync) log=/tmp/p21/presync1.log -- DO NOT restart; wait for BUILD_RC
+- 2026-10-09T22:42:03Z PRESYNC #1 PID=1724535 ended BUILD_RC=1 (tests failed)
+- 2026-10-09T22:42:11Z fix: placeholder reproducibility/reference_values_p21.json (test_p14 source-only contract; overwritten by --write-reference). PRESYNC #2 launched PID=1733610 log=/tmp/p21/presync2.log -- DO NOT restart; wait for BUILD_RC
+- 2026-10-09T22:43:46Z ABSOLUTE PIN: PASS (earned) -- sign+magnitude derived from 1/2 Tr ln under declared conventions; Gamma2 pole = kappa^2/(16pi^2 eps)[p^4P2/240 + p^4P0s/24] = package kappa^2 N_eps Ghat/eps exactly (ratio 1 both spins); no external convention choice; x2/sign flip detected
+- 2026-10-09T23:15:24Z PRESYNC #2 PID=1733610 BUILD_RC=0 (348 tests passed; gates p20/p21 rc=0). Source FROZEN. AUTHOR REBUILD launched PID=1744089 log=/tmp/p21_author.log -- DO NOT restart
+- 2026-10-09T23:28:34Z author: reference_values_p21.json written; src zip a71d6b52 (183 files), tree b835353f; clean-copy rebuild PID 1744089 running
+- 2026-10-09T23:33:50Z author: reference_values_p21.json written; src zip a71d6b52 (183 files), tree b835353f; clean-copy rebuild PID 1744089 running (not restarted)
+- 2026-10-09T23:47:41Z AUTHOR REBUILD PID=1744089 PASS (584/584 equal; tree b835353f, zip a71d6b52); report installed a5f886ad. FINAL BUILD launched PID=1754350 (sync /workspace) log=/tmp/p21/final.log -- DO NOT restart
+- 2026-10-10T00:18:27Z FINAL BUILD PID=1754350 BUILD_RC=0 (348 tests); synced /workspace; source zip a71d6b52 = author; tree b835353f; protected shas intact (p20 zip ca32ce01, p19 zip da924275, indep p20 e8f358f9); manifest written LAST (00:18:06). p21 RELEASED; independent p21 pending.

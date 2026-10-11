@@ -1,0 +1,115 @@
+{
+  "revision": "o1-milestone",
+  "landmark": "XVI-O",
+  "note": "Read-only pins. Do not modify predecessor texts. En01/Em01 are NOT premises.",
+  "XVI-M": {
+    "path": "/workspace/XVI-M.tex",
+    "also_pinned_via_XVI-N_provenance": "/workspace/XVI-N-r10/provenance/XVI-M.tex",
+    "sha256": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+    "supplies": [
+      "Selected-graph renormalization / Target I contact matching (M.4)",
+      "Gate S-bv propagator identity on R^4\\{0}",
+      "Selected-image counterterm comparison data",
+      "Explicit split Target I vs Target II (M.8 stub)"
+    ],
+    "does_not_supply": [
+      "M.8 finite fully specified BV slice (Unresolved)",
+      "M-D / M-E (not claimed)",
+      "Interacting-sector symmetry / bulk quantum identity",
+      "Action-graph identification with selected graph via ell_3"
+    ]
+  },
+  "XVI-N_r12": {
+    "path": "/workspace/XVI-N-r10/",
+    "RELEASE_STATUS": "/workspace/XVI-N-r10/RELEASE_STATUS.json",
+    "science_pdf": "/workspace/XVI-N-science.pdf",
+    "science_pdf_sha256": "e6bcf776705940936f6b6ffc24370ac4fd3bddb143fc647500a8e5f9d3f66789",
+    "body_tex": "/workspace/XVI-N-r10/manuscript/body/XVI-N-body.tex",
+    "body_sha256": "0846f9fec6f023ddd66b45ad6f26abec4a2716a9394cdb2c010fb07a146b8bbf",
+    "revision": "r12",
+    "supplies": [
+      "Classical three-object interface through O(kappa): S_inv, s, S_D",
+      "S_inv baseline; prepared S_D with broken square",
+      "Gate N-Ins insertion class I_t=F_t+A_0+kappa A_1",
+      "Conditional massless obstruction (Route A); small-mass interval",
+      "Non-claim 12: no UV/loops/graph closure; graph<->action unsettled",
+      "Corrected root H with w=E^A(D_div alpha); superseded E^A(D_div P alpha) withdrawn"
+    ],
+    "does_not_supply": [
+      "Quartic gravitational vertex / S_inv through O(kappa^2)",
+      "Quantum loops, bulk quantum identity, counterterm solution",
+      "Universal N-Ins.4 completion",
+      "Route B discharge; arbitrary prescribed m>0"
+    ]
+  },
+  "XVI-L": {
+    "path": "/workspace/XVI-L.tex",
+    "sha256": "db5f027ef08e08ebfadb8a64edae72447cfb55297f67aca816b0e825e4764866",
+    "supplies": [
+      "Frozen extension dependency; L-A/L-C conditional on (R1)-(R3)",
+      "Scale-prescription family (not physical beta functions)"
+    ],
+    "does_not_supply": [
+      "L-D counterterm matching to gravitational functionals (not claimed)",
+      "Specified cutoff varpi for broad M-C"
+    ]
+  },
+  "XVI-I": {
+    "path": "/workspace/XVI-I.tex",
+    "sha256": "5c99e57543cbe65134e28810b7de605e8ded2b267e633f069aec834cc534bd80",
+    "supplies": [
+      "Seed F_t=<t_D,h\u2297h\u2297\u03c6> with no extra factorial",
+      "Reduced two-edge sector / extension family (unnormalized)",
+      "Free-variation s_0 F_t=2<t_D,(R c)\u2297h\u2297\u03c6>; no vanishing"
+    ],
+    "does_not_supply": [
+      "Normalized quantum coefficient",
+      "Interacting BRST/BV observability",
+      "Retarded interacting construction"
+    ]
+  },
+  "XVI-K": {
+    "path": "/workspace/XVI-K.tex",
+    "sha256": "6264bc8ec68534b8486c418596139fd20610d7f49c2f09b5113171e0be0789a8",
+    "supplies": [
+      "Full-Hessian vertex structure for ell_3; inheritance path for Gate N-Ins kernel"
+    ],
+    "does_not_supply": [
+      "Quantum sector; completion of F_t"
+    ]
+  },
+  "XII-C": {
+    "path": "/workspace/ms/XII-C.tex",
+    "sha256": "83c6d0383b0aa6817ad1d2d8db570423b0a33ec7953c4adc0aa0d572f2ab7cb5",
+    "supplies": [
+      "Actual cubic source; changed Noether identity; ell_3 Euler J_3; weighted Euler with D_sigma"
+    ],
+    "does_not_supply": [
+      "Quantum products; graph=action identification"
+    ]
+  },
+  "XII-D": {
+    "path": "/workspace/ms/XII-D.tex",
+    "sha256": "a38876adaa4ac385e2bb434e1b08edcca709976f414734be158c42f6b58695e5",
+    "supplies": [
+      "Compact microcausal completed kernel t_D; local response"
+    ],
+    "does_not_supply": [
+      "Quantum retarded product; relational coefficient as quantum object"
+    ]
+  },
+  "XIV-A": {
+    "path": "/workspace/enter-companion/raw/tex/XIV-A.tex",
+    "sha256": "f19dddadaddee3bed6d7cadadbe0f37bb0880851fb1aa251710d5df845550e96",
+    "supplies": [
+      "Classical master-equation breaking functional on frozen sheet; bracket orientation"
+    ],
+    "does_not_supply": [
+      "Quantum master equation; sector amplitudes"
+    ]
+  },
+  "explicit_non_premises": [
+    "En01",
+    "Em01 emergence sheets"
+  ]
+}

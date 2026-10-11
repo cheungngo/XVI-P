@@ -1,0 +1,2571 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p19",
+ "kind": "independent rebuild report (separate clean environment); package evidence, not a mathematical certificate",
+ "date": "2026-10-09",
+ "reviewer": "independent executor (Grok Bot subagent), fresh dir /workspace/indep_rebuild_p19 and fresh venv; no reads from /workspace/XVI-P except reference_values_p19.json at the final comparison step",
+ "same_box_caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+ "environment": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "venv": "/workspace/indep_rebuild_p19/venv"
+ },
+ "environment_reference": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+ },
+ "environment_differences": {},
+ "zip_sha256": "da9242752d2e3753d8b2ce7fbb21e7cdb28487cc7966c2ca52d1ef1376658875",
+ "source_tree_sha256": "fcf90354d746e244fa2839048118bd8d64b1859ffd3825c0bfa3e1138ee88f36",
+ "source_tree_sha256_without_reference": "4d4824ba5f1eba555cd4d3f60567d1df79844ebaabdad9352d07aafb494ad44b",
+ "pass": true,
+ "independent_rebuild_passed": true,
+ "checks": {
+  "0_zip_and_entrypoint": {
+   "pass": true,
+   "zip_sha256": "da9242752d2e3753d8b2ce7fbb21e7cdb28487cc7966c2ca52d1ef1376658875",
+   "source_tree_sha256": "fcf90354d746e244fa2839048118bd8d64b1859ffd3825c0bfa3e1138ee88f36",
+   "n_source_files": 164,
+   "steps": {
+    "source_only_tree": true,
+    "inherited_pins": true,
+    "full_build": true,
+    "release_accepted": true,
+    "tests": true,
+    "pdf_readback_vs_records": true,
+    "external_manifest": true,
+    "source_only_zip_rebuilt": true,
+    "file_access_trace": true,
+    "comparison_with_reference": true
+   },
+   "comparison_with_in_zip_reference": {
+    "ok": true,
+    "compared": 320,
+    "equal": 320,
+    "differences": []
+   },
+   "rebuilt_zip_equals_input": true,
+   "seconds": 1625.3
+  },
+  "1_projected_defect_own_assembly": {
+   "pass": true,
+   "own": "defect/own_defect.json (own p15-p18 graph results via ch ledger rows + P.3 projection)",
+   "result": "Delta = 0 exactly in d: pole, L, local; 4D and evanescent; all 7 assignments; all 4 row-sign combinations",
+   "why_zero_per_row": {
+    "hh": "D01, D03 individually nonzero (pole/L/local on Q4S, QdS(hat), c hat/h tilde), cancel in slot; D11 zero alone; D02=D12 scaleless",
+    "K.c": "slot map nonzero only for T1, E1; own A_T1 = B_E1 = 0",
+    "1pt": "D14a-c scaleless"
+   },
+   "rows": {
+    "hh": {
+     "zero_all_7": true,
+     "evanescent_zero": true,
+     "4D_zero": true,
+     "D02_D12_scaleless": true
+    },
+    "K.c": {
+     "zero_all_7": true,
+     "evanescent_zero": true,
+     "own_A_T1": "0",
+     "own_A_E1": "0",
+     "slot_map_nonzero_structures": [
+      "T1",
+      "E1"
+     ],
+     "slot_map_zero_structures": [
+      "T2",
+      "T3",
+      "E2"
+     ],
+     "T1_E1_reach_assignments": {
+      "T1": [
+       "Q4S",
+       "QdS(hat)",
+       "c hat, h tilde"
+      ],
+      "E1": [
+       "Q4S",
+       "QdS(hat)",
+       "c hat, h tilde"
+      ]
+     }
+    },
+    "one-point": {
+     "D14abc_scaleless_zero": true
+    }
+   }
+  },
+  "2_sigma0_counterterm_domain": {
+   "pass": true,
+   "Q(i)": {
+    "sigma0_rank_on_D": 5,
+    "dim_D_cap_ker_sigma0": 6,
+    "P_ch_sigma0_rank": 3,
+    "dim_D": 11,
+    "image_rank_sigma0_on_Xi": 22,
+    "dim_D_cap_Im_sigma0": 6,
+    "Im_in_ker": true,
+    "cohomology_dim": 0,
+    "quotient_dim": 5,
+    "sector_sigma0_rank": {
+     "h.h": 3,
+     "c.cb": 2,
+     "c.K": 3,
+     "phi.phi": 0
+    },
+    "sector_P_ch_rank": {
+     "h.h": 3,
+     "c.cb": 0,
+     "c.K": 1,
+     "phi.phi": 0
+    }
+   },
+   "Q_reim_split": {
+    "sigma0_rank_on_D": 6,
+    "dim_D_cap_ker_sigma0": 5,
+    "P_ch_sigma0_rank": 4,
+    "dim_D": 11,
+    "image_rank_sigma0_on_Xi": 22,
+    "dim_D_cap_Im_sigma0": 3,
+    "Im_in_ker": true,
+    "cohomology_dim": 2,
+    "quotient_dim": 8,
+    "sector_sigma0_rank": {
+     "h.h": 3,
+     "c.cb": 2,
+     "c.K": 3,
+     "phi.phi": 0
+    },
+    "sector_P_ch_rank": {
+     "h.h": 3,
+     "c.cb": 0,
+     "c.K": 1,
+     "phi.phi": 0
+    }
+   },
+   "phase_dependence": "Q-split counts depend on the basis phase convention: h.h x i gives sigma0|D 5/6/3 (= Q(i)); c.K#0 x i gives 6/5/3, D cap Im 3, quotient 8 (sigma/own_sigma0_physphase.json)",
+   "J1_judgement": "right in substance: p14r counts are re/im-split artefacts; Q(i) counts are the invariant complex dimensions. 'Q(i) is the physical field' is loose wording (a compatible real structure, not Q(i), is physical)"
+  },
+  "3_counterterm_solve": {
+   "pass": true,
+   "rank": 3,
+   "outcome": "ZERO",
+   "rank_ok": true,
+   "x_zero": true,
+   "own_full_sigma0_images": {
+    "S_ct_full (h.h + c.K + c.cb, correct orientation)": {},
+    "S_ct as in defect.py (h.h + c.K, no c.cb)": {
+     "c.b": 88
+    },
+    "S_ct_full, c.cb unconverted (defect.py orientation, lambda=+1)": {
+     "c.b": 88
+    },
+    "MUT drop D11 (h.h = D01+D03 only)": {},
+    "MUT drop D13 (c.K = 0, Sigma kept)": {
+     "c.b": 88
+    },
+    "MUT flip K.c row sign (c.K -> -c.K, Sigma kept)": {
+     "c.b": 88
+    }
+   },
+   "judgement": "P_ch sigma0(S_ct)=0 and x=0 follow from Delta_pole=0 and Delta=0 given locality/route agreement: projected_restoration_verified is a cross-route consistency check, not physically independent of projected_identity_verified. 'S_ct has nonzero full sigma0 image only in c.b' holds only because the package S_ct omits the c.cb (ghost self-energy) counterterm; the true full S_ct has ZERO sigma0 image (own)"
+  },
+  "4_K1_ghost_self_energy_factor": {
+   "pass": true,
+   "own_lambda_tree": [
+    "1"
+   ],
+   "own_lambda_cubic": [
+    "1"
+   ],
+   "route_G_vs_cb_c_density_ratio": {
+    "admissible_pairs": [
+     [
+      [
+       "h",
+       "h"
+      ],
+      4
+     ],
+     [
+      [
+       "c",
+       "cb"
+      ],
+      4
+     ],
+     [
+      [
+       "c",
+       "K"
+      ],
+      3
+     ],
+     [
+      [
+       "phi",
+       "phi"
+      ],
+      4
+     ]
+    ],
+    "routeG_pair_order": [
+     "c",
+     "cb"
+    ],
+    "comparison": [
+     {
+      "k": 0,
+      "V_routeG / V_cb.c_basis": [
+       "-1"
+      ],
+      "density_routeG": "(1)*[('c', 0, ()), ('cb', 0, (0, 0, 0, 0))] + (-2)*[('c', 0, ()), ('cb', 0, (0, 0, 1, 1))] + (-2)*[('c', 0, ()), ('cb', 0, (0, 0, 2, 2))] + (-2)*[('c', 0, ()), ",
+      "density_cbc": "(-1)*[('c', 0, (0, 0, 0, 0)), ('cb', 0, ())] + (2)*[('c', 0, (0, 0, 1, 1)), ('cb', 0, ())] + (2)*[('c', 0, (0, 0, 2, 2)), ('cb', 0, ())] + (2)*[('c', 0, (0, 0, "
+     },
+     {
+      "k": 1,
+      "V_routeG / V_cb.c_basis": [
+       "-1"
+      ],
+      "density_routeG": "(1)*[('c', 0, ()), ('cb', 0, (0, 0, 0, 0))] + (-1)*[('c', 0, ()), ('cb', 0, (0, 0, 1, 1))] + (-1)*[('c', 0, ()), ('cb', 0, (0, 0, 2, 2))] + (-1)*[('c', 0, ()), ",
+      "density_cbc": "(-1)*[('c', 0, (0, 0, 0, 0)), ('cb', 0, ())] + (1)*[('c', 0, (0, 0, 1, 1)), ('cb', 0, ())] + (1)*[('c', 0, (0, 0, 2, 2)), ('cb', 0, ())] + (1)*[('c', 0, (0, 0, "
+     }
+    ]
+   },
+   "closure": {
+    "gh1_sectors": [
+     "h.c",
+     "c.b",
+     "c.cbs"
+    ],
+    "cb.c orientation, lam=+1 (derived)": {
+     "sigma0_image_entries": 0,
+     "sectors": []
+    },
+    "cb.c orientation, lam=-1": {
+     "sigma0_image_entries": 88,
+     "sectors": [
+      "c.b"
+     ]
+    },
+    "route-G c.cb orientation unconverted, lam=+1": {
+     "sigma0_image_entries": 88,
+     "sectors": [
+      "c.b"
+     ]
+    },
+    "route-G c.cb orientation unconverted, lam=-1": {
+     "sigma0_image_entries": 0,
+     "sectors": []
+    }
+   },
+   "resolution": "derived factor is +1 (tree S0, cubic S1, loop P15). Full MS-bar counterterm incl. ghost self-energy is sigma0-closed in all gh+1 sectors (h.c, c.b, c.cbs) with +1 once orientation is converted. Package '-1 needed / closure fails' is a Grassmann-ordering bookkeeping error in defect.py, not an S0 sign or vertex normalisation issue, and not an obstruction"
+  },
+  "5_mutation_blind_spots": {
+   "pass": true,
+   "own_detected": {
+    "drop_D03": true,
+    "drop_D01": true,
+    "flip_D03": true,
+    "double_D03": true,
+    "naive_4D_D03": true,
+    "BLIND?drop_D11": false,
+    "BLIND?drop_D13": false,
+    "BLIND?flip_Kc_sign": false,
+    "A_T1_nonzero_control (T1 -> 1/(16(d-1)))": true
+   },
+   "cert_insensitive": {
+    "drop_graph_D11": false,
+    "drop_graph_D13": false,
+    "flip_row_sign_Kc": false
+   },
+   "sharper_test": "full sigma0 closure incl. c.b sector (ghost equation, Sigma fixed): detects drop D13 and flip K.c (88 c.b entries each); drop D11 stays blind to any BRST identity (gauge invariant alone) -> pin D11 normalisation via M2 / trace-anomaly coefficients (C^2: 1/120, spin2:spin0 ratio 1:10)"
+  },
+  "6a_I1_gate_fail_closed": {
+   "pass": true,
+   "cases": {
+    "control_unmodified": {
+     "rc": 0,
+     "P19_release_present": true,
+     "rejected_file": false
+    },
+    "P18_release.quantum_inputs_evaluated=not_earned": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "P18_release.publication=REJECTED": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "P19_defect.projected_defect_computed=not_earned": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "P18_D11.D11_evaluated=false": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "restoration_earned_without_identity": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "defect_zero_exact_in_d=false (identity content)": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "a_mutation_not_changing_outcome": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "bulk_symmetry_restored=true": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "a_control_false": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "K1_derived_equals_P15=false": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "counterterm_outcome=OBSTRUCTION": {
+     "rc": 0,
+     "P19_release_present": true,
+     "rejected_file": false
+    },
+    "ledger_D11_removed": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "P19_defect.json deleted": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    },
+    "P18_D11.json deleted": {
+     "rc": 1,
+     "P19_release_present": false,
+     "rejected_file": true
+    }
+   },
+   "note": "OBSTRUCTION outcome -> publication accepted with projected_restoration_verified=not_earned (by design; rebuild criterion requires all three flags earned). A standalone release_p19 rejection leaves a stale RELEASE_STATUS.json (build-level reject_artifacts + revision check cover it)"
+  },
+  "6b_I2_scan": {
+   "pass": true,
+   "author_plants_detected": "35/35",
+   "package_scan_violations": [],
+   "unreviewed_sites": [],
+   "scan_misses": [
+    "p18_explicit_constructor_rebuild",
+    "p19_add_listcomp_over_args",
+    "p19_poly_alias_import",
+    "p19_poly_dunder_call",
+    "p19_as_coefficients_dict",
+    "p19_reduce_rebuild",
+    "p19_symbol_kw_name"
+   ],
+   "guarded_paths_raise": true
+  },
+  "6c_footers_readback": {
+   "pass": true,
+   "footers": {
+    "XVI-P-science": {
+     "pages": 32,
+     "labels": {
+      "XVI-P p19": 32
+     },
+     "pages_without_exactly_one_p19_footer": [],
+     "n_bad": 0,
+     "page_numbers_sequential_arabic": true
+    },
+    "XVI-P-appendix": {
+     "pages": 612,
+     "labels": {
+      "XVI-P p19": 612
+     },
+     "pages_without_exactly_one_p19_footer": [],
+     "n_bad": 0,
+     "page_numbers_sequential_arabic": true
+    },
+    "XVI-P": {
+     "pages": 643,
+     "labels": {
+      "XVI-P p19": 643
+     },
+     "pages_without_exactly_one_p19_footer": [],
+     "n_bad": 0,
+     "page_numbers_sequential_arabic": true
+    }
+   },
+   "package_VALUE_BLOCKS": {
+    "XVI-P-appendix": {
+     "certificates/P15_D13.json": "30/30",
+     "certificates/P15_batchA.json": "25/25",
+     "certificates/P16_batchC.json": "156/156",
+     "certificates/P16_E2_evanescent.json": "9/9",
+     "certificates/P17_hh_slot.json": "5/5",
+     "certificates/P18_D11_M2.json": "2/2",
+     "certificates/P18_D11.json": "84/84",
+     "certificates/P18_hh_slot.json": "5/5",
+     "certificates/P19_defect.json": "30/30"
+    },
+    "XVI-P": {
+     "certificates/P15_D13.json": "30/30",
+     "certificates/P15_batchA.json": "25/25",
+     "certificates/P16_batchC.json": "156/156",
+     "certificates/P16_E2_evanescent.json": "9/9",
+     "certificates/P17_hh_slot.json": "5/5",
+     "certificates/P18_D11_M2.json": "2/2",
+     "certificates/P18_D11.json": "84/84",
+     "certificates/P18_hh_slot.json": "5/5",
+     "certificates/P19_defect.json": "30/30"
+    }
+   },
+   "own_ext_default": {
+    "XVI-P-appendix": {
+     "certificates/P18_D11_M2.json#own_ext": "13/13",
+     "certificates/P18_D11.json#own_ext": "4/4",
+     "certificates/P18_hh_slot.json#own_ext": "66/67",
+     "certificates/P19_defect.json#own_ext": "77/77"
+    },
+    "XVI-P": {
+     "certificates/P18_D11_M2.json#own_ext": "13/13",
+     "certificates/P18_D11.json#own_ext": "4/4",
+     "certificates/P18_hh_slot.json#own_ext": "66/67",
+     "certificates/P19_defect.json#own_ext": "77/77"
+    }
+   },
+   "own_ext_raw": {
+    "XVI-P-appendix": {
+     "certificates/P18_D11_M2.json#own_ext": "13/13",
+     "certificates/P18_D11.json#own_ext": "4/4",
+     "certificates/P18_hh_slot.json#own_ext": "67/67",
+     "certificates/P19_defect.json#own_ext": "77/77"
+    },
+    "XVI-P": {
+     "certificates/P18_D11_M2.json#own_ext": "13/13",
+     "certificates/P18_D11.json#own_ext": "4/4",
+     "certificates/P18_hh_slot.json#own_ext": "67/67",
+     "certificates/P19_defect.json#own_ext": "77/77"
+    }
+   },
+   "note": "one default-mode own_ext miss (P18_hh_slot) = pdftotext dehyphenation artefact as in p18; -raw finds all",
+   "manifest_entries": 45
+  },
+  "6d_determinism": {
+   "pass": true,
+   "certificates": {
+    "P19_defect": {
+     "build(default seed)": {
+      "certio_content_sha_ignoring_run_specific": "c402d34778e09bb730db9f528862cd028933c0ad320987fe48341107086b5668",
+      "own_sha_ignoring_seconds": "0cece0b8556772ede5ce8a6046a50e6b16d1d3e64aa7f64912c4568a72c4cc3a",
+      "file_sha256": "85adf3bc65c2db384e0cd5ab9ef730665daa5a9784ec18a0b0e9d9d3055370d4"
+     },
+     "PYTHONHASHSEED=0": {
+      "certio_content_sha_ignoring_run_specific": "c402d34778e09bb730db9f528862cd028933c0ad320987fe48341107086b5668",
+      "own_sha_ignoring_seconds": "0cece0b8556772ede5ce8a6046a50e6b16d1d3e64aa7f64912c4568a72c4cc3a",
+      "file_sha256": "838484a4fbde13938e76fb924f54118f21a048222be045cdb03a764d471d6e95"
+     },
+     "PYTHONHASHSEED=4242": {
+      "certio_content_sha_ignoring_run_specific": "c402d34778e09bb730db9f528862cd028933c0ad320987fe48341107086b5668",
+      "own_sha_ignoring_seconds": "0cece0b8556772ede5ce8a6046a50e6b16d1d3e64aa7f64912c4568a72c4cc3a",
+      "file_sha256": "48b15884c251637fba847cc46155f96e41287161a726d6c0bc92d46564b57d14"
+     },
+     "content_identical_across_seeds_and_build": true
+    }
+   },
+   "other_files_changed_by_rerun": {
+    "PYTHONHASHSEED=0": [
+     "certificates/P19_defect.json"
+    ],
+    "PYTHONHASHSEED=4242": [
+     "certificates/P19_defect.json"
+    ]
+   }
+  },
+  "6e_contract_and_layers": {
+   "pass": true,
+   "frozen_list_sha256_ok": true,
+   "p13_frozen_files": 54,
+   "p13_frozen_bad": [],
+   "p5_entry_dir_complete": true,
+   "no_contract_change_vs_p18": true,
+   "dred_sha": "14c11a512c1609c9f9a7829dcb68e71a94c8ac3d38497e2dcac110a1b8d5e81c",
+   "dred_eq_p18_pin": true,
+   "p19_declares_no_contract_revision": true,
+   "p15_calc_layer_ok": true,
+   "p16_calc_layer_ok": true,
+   "p17_calc_layer_ok": true,
+   "p18_calc_layer": {
+    "code/p5_calc/d11.py": {
+     "pin_eq_my_p18": true,
+     "p19_eq_p18": true
+    },
+    "code/p5_calc/p18_conventions.py": {
+     "pin_eq_my_p18": true,
+     "p19_eq_p18": true
+    },
+    "code/p5_calc/release_p18.py": {
+     "pin_eq_my_p18": true,
+     "p19_eq_p18": true
+    }
+   },
+   "n_files": 164,
+   "changed_vs_p18": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "manuscript/body/XVI-P-body.tex",
+    "tests/test_p14.py",
+    "tests/test_p18.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "added_vs_p18": [
+    "archival/p18/README.md",
+    "archival/p18/p18_source_files.json",
+    "archival/p18/reference_values_p18.json",
+    "archival/p18/reproducibility/author_rebuild_report_p18.json",
+    "archival/p18/reproducibility/independent_rebuild_report_p18.json",
+    "code/p5_calc/defect.py",
+    "code/p5_calc/p19_conventions.py",
+    "code/p5_calc/release_p19.py",
+    "manuscript/notes/P19_defect.tex",
+    "reproducibility/reference_values_p19.json",
+    "tests/test_p19.py"
+   ],
+   "removed_vs_p18": [
+    "reproducibility/reference_values_p18.json"
+   ],
+   "changed_calc_vs_p18": [],
+   "changed_tests_vs_p18": [
+    "tests/test_p14.py",
+    "tests/test_p18.py"
+   ],
+   "test_changes_disclosed": true,
+   "archived_pins": {
+    "archival/p18/reference_values_p18.json": true,
+    "archival/p18/reproducibility/author_rebuild_report_p18.json": true,
+    "archival/p18/reproducibility/independent_rebuild_report_p18.json": true,
+    "archival/p18/p18_source_files.json": true
+   },
+   "p18_source_list_bad_vs_my_p18_unpack": [],
+   "archived_p18_independent_report_is_mine": true,
+   "archived_p18_reference_eq_my_p18_copy": true,
+   "archived_p17_indep_is_mine": true,
+   "archived_p16_indep_is_mine": true,
+   "archived_p15_indep_is_mine": true,
+   "archived_p14r_indep_is_mine": true,
+   "archived_p13_indep_is_mine": true,
+   "p18_tree_sha_pin": "bfab3b4b318fc37f2fcca209d097d27a24955e3b3d8469f5a8ab2e904ace7094",
+   "p18_zip_sha_pin_ok": true,
+   "pins": {
+    "XVI-M_ok": true,
+    "grav_density_ok": true,
+    "xvio_bad": [],
+    "inherited_data_ok": true
+   }
+  },
+  "6f_own_pytest": {
+   "pass": true,
+   "groups": {
+    "baseline": {
+     "passed": 187,
+     "failed": 0,
+     "skipped": 0
+    },
+    "certificate_mutation": {
+     "passed": 57,
+     "failed": 0,
+     "skipped": 0
+    },
+    "resumed_build": {
+     "passed": 4,
+     "failed": 0,
+     "skipped": 0
+    }
+   },
+   "run_in": "pytest_run/XVI-P copy, P14_SYNC_DIR local, P13/P14_MUTATIONS=''"
+  },
+  "7_comparison_with_author_reference": {
+   "pass": true,
+   "reference_sha256": "08f10fa86305ccb03a57dbae65ec22b6991724931af7f954a8c4ca4aea9c44af",
+   "reference_identical_to_in_zip_copy": true,
+   "entrypoint_values_compared": 320,
+   "independent_values_compared": 234,
+   "independent_sympy_equal": 66,
+   "own_keys_not_in_reference": [
+    "/p18/change_log_vs_p17/added",
+    "/p18/change_log_vs_p17/modified",
+    "/p18/change_log_vs_p17/removed"
+   ],
+   "environment_differences": {}
+  }
+ },
+ "mismatches": [],
+ "findings": [
+  {
+   "id": "K1_ghost_closure_sign_is_orientation_bookkeeping",
+   "severity": "medium (incorrect scientific statement in README, P19 note, P19_defect/P19_release claim_status; does not enter flags or the ch identity)",
+   "detail": "route-G domain densities come from admissible_pairs in ORDER (h,c,cb,...), so the pair is (c,cb); P15 Sigma coordinates (d13.ccb_basis, defect.ghost_equation_relation) use sector_basis('cb','c'). pw_vertex takes ordered left derivatives, so V[c.cb#k] = -V[(cb,c)#k] (own ratio -1, k=0,1). Inserting the (cb,c) Sigma coordinates into (c,cb) labels without the -1 produces the apparent 'needs -1'. Converted, the derived +1 closes the full MS-bar counterterm in h.c, c.b, c.cbs. Fix: convert orientation (or build ccb_basis with ('c','cb')); add the tree control sigma0(S0_Kc + S0_cbc) = 0 (own: 0 entries)."
+  },
+  {
+   "id": "quotient_coordinates_c.cb_orientation",
+   "severity": "low",
+   "detail": "quotient_coordinates c.cb entries (-3/8, 1/4) are (cb,c)-oriented under (c,cb) labels; in route-G orientation they are (+3/8, -1/4) (same root cause as K1)."
+  },
+  {
+   "id": "restoration_flag_not_independent",
+   "severity": "low/medium (overclaim)",
+   "detail": "projected_restoration_verified follows from the identity + locality; claim_status calls it independent because S_ct has a nonzero c.b image, which is only true because the package S_ct omits the c.cb counterterm."
+  },
+  {
+   "id": "mutation_criterion_relabelled",
+   "severity": "low",
+   "detail": "projected_identity_verified requires 'every mutation changing the outcome'; the 3 blind variations (drop D11, drop D13, flip K.c) are moved to insensitive_variations (disclosed). Full c.b closure would detect two of them."
+  },
+  {
+   "id": "J1_wording",
+   "severity": "info",
+   "detail": "J1 correct in substance; 'Q(i) is the physical field' should read 'counts over Q(i) equal real dimensions under a compatible real structure'."
+  },
+  {
+   "id": "I2_scan_misses",
+   "severity": "low (pattern check, disclosed; package clean)",
+   "detail": "not caught: p18_explicit_constructor_rebuild, p19_add_listcomp_over_args, p19_poly_alias_import, p19_poly_dunder_call, p19_as_coefficients_dict, p19_reduce_rebuild, p19_symbol_kw_name"
+  },
+  {
+   "id": "gate_stale_RELEASE_STATUS",
+   "severity": "low",
+   "detail": "standalone release_p19 rejection deletes P19_release.json and writes P19_release_rejected.json but leaves RELEASE_STATUS.json as is; covered at build level."
+  }
+ ],
+ "independent_comparisons": [
+  {
+   "key": "/exports/ell2/file_sha256",
+   "reference": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "independent": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell2/polynomial_sha256",
+   "reference": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "independent": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell2/terms",
+   "reference": 84,
+   "independent": 84,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/file_sha256",
+   "reference": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "independent": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/polynomial_sha256",
+   "reference": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "independent": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/terms",
+   "reference": 678,
+   "independent": 678,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/file_sha256",
+   "reference": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "independent": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/polynomial_sha256",
+   "reference": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "independent": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/terms",
+   "reference": 3360,
+   "independent": 3360,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/V4_grav.json",
+   "reference": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "independent": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4_conventions.json",
+   "reference": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "independent": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_vertex_tensors.json",
+   "reference": "3181424bf18a3def5339c4fe41662dd929b5e4e7ec7fc9aa913a903c5a666872",
+   "independent": "3181424bf18a3def5339c4fe41662dd929b5e4e7ec7fc9aa913a903c5a666872",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D01.json",
+   "reference": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+   "independent": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D02.json",
+   "reference": "2f7fd32985ed9161b4b5aad221a9ca6dc59e9f1cc6a069ad7f7503835ce83d1e",
+   "independent": "2f7fd32985ed9161b4b5aad221a9ca6dc59e9f1cc6a069ad7f7503835ce83d1e",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D03.json",
+   "reference": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+   "independent": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D11.json",
+   "reference": "f68904158d931faf71209cde9028d4f90e987c098ba84128fd2f6b661a4640ff",
+   "independent": "f68904158d931faf71209cde9028d4f90e987c098ba84128fd2f6b661a4640ff",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D12.json",
+   "reference": "c57d815c0f4aac641dacafa4577037fcbe0bdc4c207597c9b88f62f1153ec73a",
+   "independent": "c57d815c0f4aac641dacafa4577037fcbe0bdc4c207597c9b88f62f1153ec73a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D13.json",
+   "reference": "8fe1a4ba4ac1fae573ad896ef25d3ae5e0d8a525d546ad980b2ebae8c07cc0a5",
+   "independent": "8fe1a4ba4ac1fae573ad896ef25d3ae5e0d8a525d546ad980b2ebae8c07cc0a5",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14a.json",
+   "reference": "7ac1b6a3544ca2bb370ded6e1ee6cdcea49da94af01c22d96866aa2c30cdd61c",
+   "independent": "7ac1b6a3544ca2bb370ded6e1ee6cdcea49da94af01c22d96866aa2c30cdd61c",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14b.json",
+   "reference": "95f6d47436ba1efdcef371979f7941b782cedb625530912ec00e499bfca953f3",
+   "independent": "95f6d47436ba1efdcef371979f7941b782cedb625530912ec00e499bfca953f3",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14c.json",
+   "reference": "b50e3aabe46d548a0d9afaf182aa99143b2792927b194b84075bcdcc79c0ad79",
+   "independent": "b50e3aabe46d548a0d9afaf182aa99143b2792927b194b84075bcdcc79c0ad79",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/required_master_residuals",
+   "reference": [],
+   "independent": [],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/XVI-M.tex",
+   "reference": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "independent": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/XVI-N-r10/code/prep/grav_density.py",
+   "reference": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "independent": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/ledgers/quantum_factor_ledger.json",
+   "reference": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "independent": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/source/n_source_files",
+   "reference": 164,
+   "independent": 164,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mn g4_rs (p.p)^2",
+   "reference": "-27*I/80",
+   "independent": "-27*I/80",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mn g4_rs (p.p)^2",
+   "reference": "I*(405*L - 982)/1200",
+   "independent": "27*I*L/80 - 491*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mn gt_rs (p.p)^2",
+   "reference": "13*I/120",
+   "independent": "13*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mn gt_rs (p.p)^2",
+   "reference": "I*(523 - 195*L)/1800",
+   "independent": "-13*I*L/120 + 523*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mn p_r p_s (p.p)^1",
+   "reference": "19*I/60",
+   "independent": "19*I/60",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mn p_r p_s (p.p)^1",
+   "reference": "I*(724 - 285*L)/900",
+   "independent": "-19*I*L/60 + 181*I/225",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mr g4_ns (p.p)^2",
+   "reference": "-71*I/240",
+   "independent": "-71*I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mr g4_ns (p.p)^2",
+   "reference": "I*(1065*L - 1946)/3600",
+   "independent": "71*I*L/240 - 973*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mr gt_ns (p.p)^2",
+   "reference": "-3*I/80",
+   "independent": "-3*I/80",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mr gt_ns (p.p)^2",
+   "reference": "I*(45*L - 118)/1200",
+   "independent": "3*I*L/80 - 59*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_mr p_n p_s (p.p)^1",
+   "reference": "11*I/40",
+   "independent": "11*I/40",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_mr p_n p_s (p.p)^1",
+   "reference": "I*(97 - 55*L)/200",
+   "independent": "-11*I*L/40 + 97*I/200",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_rs gt_mn (p.p)^2",
+   "reference": "13*I/120",
+   "independent": "13*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_rs gt_mn (p.p)^2",
+   "reference": "I*(523 - 195*L)/1800",
+   "independent": "-13*I*L/120 + 523*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/g4_rs p_m p_n (p.p)^1",
+   "reference": "19*I/60",
+   "independent": "19*I/60",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/g4_rs p_m p_n (p.p)^1",
+   "reference": "I*(724 - 285*L)/900",
+   "independent": "-19*I*L/60 + 181*I/225",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/gt_mn gt_rs (p.p)^2",
+   "reference": "-I/240",
+   "independent": "-I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/gt_mn gt_rs (p.p)^2",
+   "reference": "I*(15*L - 46)/3600",
+   "independent": "I*L/240 - 23*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/gt_mn p_r p_s (p.p)^1",
+   "reference": "-3*I/20",
+   "independent": "-3*I/20",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/gt_mn p_r p_s (p.p)^1",
+   "reference": "I*(90*L - 241)/600",
+   "independent": "3*I*L/20 - 241*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/gt_mr gt_ns (p.p)^2",
+   "reference": "-I/240",
+   "independent": "-I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/gt_mr gt_ns (p.p)^2",
+   "reference": "I*(15*L - 46)/3600",
+   "independent": "I*L/240 - 23*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/gt_mr p_n p_s (p.p)^1",
+   "reference": "7*I/120",
+   "independent": "7*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/gt_mr p_n p_s (p.p)^1",
+   "reference": "I*(277 - 105*L)/1800",
+   "independent": "-7*I*L/120 + 277*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/gt_rs p_m p_n (p.p)^1",
+   "reference": "-3*I/20",
+   "independent": "-3*I/20",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/gt_rs p_m p_n (p.p)^1",
+   "reference": "I*(90*L - 241)/600",
+   "independent": "3*I*L/20 - 241*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole/p_m p_n p_r p_s",
+   "reference": "-13*I/15",
+   "independent": "-13*I/15",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/MSbar_finite/p_m p_n p_r p_s",
+   "reference": "I*(780*L - 1597)/900",
+   "independent": "13*I*L/15 - 1597*I/900",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D01/evanescent_pole_nonzero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D01/status",
+   "reference": "regulated",
+   "independent": "regulated",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D01/UV_pole_in_p14r_hh_basis",
+   "reference": [
+    "-27*I/160",
+    "-71*I/240",
+    "19*I/60",
+    "11*I/20",
+    "-13*I/30"
+   ],
+   "independent": [
+    "-27*I/160",
+    "-71*I/240",
+    "19*I/60",
+    "11*I/20",
+    "-13*I/30"
+   ],
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mn g4_rs (p.p)^2",
+   "reference": "7*I/48",
+   "independent": "7*I/48",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mn g4_rs (p.p)^2",
+   "reference": "I*(50 - 21*L)/144",
+   "independent": "-7*I*L/48 + 25*I/72",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mn gt_rs (p.p)^2",
+   "reference": "-I/24",
+   "independent": "-I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mn gt_rs (p.p)^2",
+   "reference": "I*(3*L - 8)/72",
+   "independent": "I*L/24 - I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mn p_r p_s (p.p)^1",
+   "reference": "-I/8",
+   "independent": "-I/8",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mn p_r p_s (p.p)^1",
+   "reference": "I*(3*L - 8)/24",
+   "independent": "I*L/8 - I/3",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mr g4_ns (p.p)^2",
+   "reference": "I/24",
+   "independent": "I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mr g4_ns (p.p)^2",
+   "reference": "I*(2 - 3*L)/72",
+   "independent": "-I*L/24 + I/36",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mr gt_ns (p.p)^2",
+   "reference": "I/24",
+   "independent": "I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mr gt_ns (p.p)^2",
+   "reference": "I*(8 - 3*L)/72",
+   "independent": "-I*L/24 + I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_mr p_n p_s (p.p)^1",
+   "reference": "-I/48",
+   "independent": "-I/48",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_mr p_n p_s (p.p)^1",
+   "reference": "I*(3*L + 4)/144",
+   "independent": "I*L/48 + I/36",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_rs gt_mn (p.p)^2",
+   "reference": "-I/24",
+   "independent": "-I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_rs gt_mn (p.p)^2",
+   "reference": "I*(3*L - 8)/72",
+   "independent": "I*L/24 - I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/g4_rs p_m p_n (p.p)^1",
+   "reference": "-I/8",
+   "independent": "-I/8",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/g4_rs p_m p_n (p.p)^1",
+   "reference": "I*(3*L - 8)/24",
+   "independent": "I*L/8 - I/3",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/gt_mn p_r p_s (p.p)^1",
+   "reference": "I/12",
+   "independent": "I/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/gt_mn p_r p_s (p.p)^1",
+   "reference": "I*(8 - 3*L)/36",
+   "independent": "-I*L/12 + 2*I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/gt_mr p_n p_s (p.p)^1",
+   "reference": "-I/16",
+   "independent": "-I/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/gt_mr p_n p_s (p.p)^1",
+   "reference": "I*(3*L - 8)/48",
+   "independent": "I*L/16 - I/6",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/gt_rs p_m p_n (p.p)^1",
+   "reference": "I/12",
+   "independent": "I/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/gt_rs p_m p_n (p.p)^1",
+   "reference": "I*(8 - 3*L)/36",
+   "independent": "-I*L/12 + 2*I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole/p_m p_n p_r p_s",
+   "reference": "I/6",
+   "independent": "I/6",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/MSbar_finite/p_m p_n p_r p_s",
+   "reference": "I*(5 - 3*L)/18",
+   "independent": "-I*L/6 + 5*I/18",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D03/evanescent_pole_nonzero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D03/status",
+   "reference": "regulated",
+   "independent": "regulated",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D03/UV_pole_in_p14r_hh_basis",
+   "reference": [
+    "7*I/96",
+    "I/24",
+    "-I/8",
+    "-I/24",
+    "I/12"
+   ],
+   "independent": [
+    "7*I/96",
+    "I/24",
+    "-I/8",
+    "-I/24",
+    "I/12"
+   ],
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/UV_pole/T1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/MSbar_finite/T1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/UV_pole/T2",
+   "reference": "3/16",
+   "independent": "3/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/MSbar_finite/T2",
+   "reference": "1/3 - 3*L/16",
+   "independent": "1/3 - 3*L/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/UV_pole/T3",
+   "reference": "-1/4",
+   "independent": "-1/4",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/MSbar_finite/T3",
+   "reference": "L/4 - 5/12",
+   "independent": "L/4 - 5/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/UV_pole/E1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/MSbar_finite/E1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/UV_pole/E2",
+   "reference": "1/16",
+   "independent": "1/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D13/MSbar_finite/E2",
+   "reference": "1/6 - L/16",
+   "independent": "1/6 - L/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p18/graphs/D02/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D12/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D14a/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D14b/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D14c/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/D12_status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/contract_changed_files",
+   "reference": [
+    "code/p5_entry/dred.py"
+   ],
+   "independent": [
+    "code/p5_entry/dred.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/contract_files_added",
+   "reference": [],
+   "independent": [],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/change_log_vs_p17/added",
+   "reference": "<absent in reference>",
+   "independent": [
+    "archival/p17/README.md",
+    "archival/p17/p17_source_files.json",
+    "archival/p17/reference_values_p17.json",
+    "archival/p17/reproducibility/author_rebuild_report_p17.json",
+    "archival/p17/reproducibility/independent_rebuild_report_p17.json",
+    "code/p5_calc/d11.py",
+    "code/p5_calc/p18_conventions.py",
+    "code/p5_calc/release_p18.py",
+    "manuscript/notes/P18_D11.tex",
+    "reproducibility/reference_values_p18.json",
+    "tests/test_p18.py"
+   ],
+   "equal": false,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/change_log_vs_p17/modified",
+   "reference": "<absent in reference>",
+   "independent": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "code/p5_entry/dred.py",
+    "manuscript/body/XVI-P-body.tex",
+    "manuscript/preamble.tex",
+    "tests/test_p14.py",
+    "tests/test_p16.py",
+    "tests/test_p17.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "equal": false,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/change_log_vs_p17/removed",
+   "reference": "<absent in reference>",
+   "independent": [
+    "reproducibility/reference_values_p17.json"
+   ],
+   "equal": false,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/E2_status",
+   "reference": "decoupled_from_ch_slot_proven",
+   "independent": "decoupled_from_ch_slot_proven",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/E2_decoupling_proven",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/hh_evanescent_decoupling_proven",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/hh_evanescent_status",
+   "reference": "decoupled_from_ch_slot_proven_as_sum",
+   "independent": "decoupled_from_ch_slot_proven_as_sum",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/evanescent_hh_counterterm_added",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/D11_evaluated",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D11/status",
+   "reference": "evaluated",
+   "independent": "evaluated",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D11/M2",
+   "reference": "DISCHARGED (4D components)",
+   "independent": "DISCHARGED (4D components)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D11/ch_slot",
+   "reference": "decoupled by itself (p_m G_D11 = 0 exactly in d)",
+   "independent": "decoupled by itself (p_m G_D11 = 0 exactly in d)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/graphs/D11/sector_status",
+   "reference": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)",
+   "independent": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/D11_matching_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/hh_full_row_decoupling_proven",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/quantum_inputs_evaluated",
+   "reference": "earned",
+   "independent": "earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/batchA_evaluated",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/D13_evaluated",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p18/batchC_evaluated",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P18_D11_M2",
+   "reference": "2c63a6e8fe0e3ca6faae720baa3e653634c70f44f9acce3fe33b1f7e2d566634",
+   "independent": "2c63a6e8fe0e3ca6faae720baa3e653634c70f44f9acce3fe33b1f7e2d566634",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P18_D11",
+   "reference": "8cfb4f3884621349328c3b6c5dcc76411a6ad6c9b1821490941740a652659613",
+   "independent": "8cfb4f3884621349328c3b6c5dcc76411a6ad6c9b1821490941740a652659613",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P18_hh_slot",
+   "reference": "fe85ab9ff6b048e9584c47488c287aa31de57fb9b3df44cae3a57e23cfcdab12",
+   "independent": "fe85ab9ff6b048e9584c47488c287aa31de57fb9b3df44cae3a57e23cfcdab12",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P19_defect",
+   "reference": "c402d34778e09bb730db9f528862cd028933c0ad320987fe48341107086b5668",
+   "independent": "c402d34778e09bb730db9f528862cd028933c0ad320987fe48341107086b5668",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/defect_zero_exact_in_d",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/dim",
+   "reference": 6,
+   "independent": 6,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/dim_D_cap_Im_sigma0",
+   "reference": 6,
+   "independent": 6,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/cohomology_dim",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/h.h/dim",
+   "reference": 5,
+   "independent": 5,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/h.h/sigma0_rank",
+   "reference": 3,
+   "independent": 3,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/h.h/P_ch_sigma0_rank",
+   "reference": 3,
+   "independent": 3,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.cb/dim",
+   "reference": 2,
+   "independent": 2,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.cb/sigma0_rank",
+   "reference": 2,
+   "independent": 2,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.cb/P_ch_sigma0_rank",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.K/dim",
+   "reference": 3,
+   "independent": 3,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.K/sigma0_rank",
+   "reference": 3,
+   "independent": 3,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/c.K/P_ch_sigma0_rank",
+   "reference": 1,
+   "independent": 1,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/phi.phi/dim",
+   "reference": 1,
+   "independent": 1,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/phi.phi/sigma0_rank",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/D_cap_ker_sigma0/sector_ranks/phi.phi/P_ch_sigma0_rank",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_summary/quotient_coordinates/pole",
+   "reference": [
+    "0",
+    "0",
+    "0",
+    "-3/8",
+    "1/4"
+   ],
+   "independent": [
+    "0",
+    "0",
+    "0",
+    "-3/8",
+    "1/4"
+   ],
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p19/projected_defect_summary/quotient_coordinates/nonlocal_L",
+   "reference": [
+    "0",
+    "0",
+    "0",
+    "3/8",
+    "-1/4"
+   ],
+   "independent": [
+    "0",
+    "0",
+    "0",
+    "3/8",
+    "-1/4"
+   ],
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p19/counterterm_solve_outcome",
+   "reference": "ZERO",
+   "independent": "ZERO",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_defect_computed",
+   "reference": "earned",
+   "independent": "earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_identity_verified",
+   "reference": "earned",
+   "independent": "earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/projected_restoration_verified",
+   "reference": "earned",
+   "independent": "earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/bulk_symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/change_log_vs_p18/added",
+   "reference": [
+    "archival/p18/README.md",
+    "archival/p18/p18_source_files.json",
+    "archival/p18/reference_values_p18.json",
+    "archival/p18/reproducibility/author_rebuild_report_p18.json",
+    "archival/p18/reproducibility/independent_rebuild_report_p18.json",
+    "code/p5_calc/defect.py",
+    "code/p5_calc/p19_conventions.py",
+    "code/p5_calc/release_p19.py",
+    "manuscript/notes/P19_defect.tex",
+    "reproducibility/reference_values_p19.json",
+    "tests/test_p19.py"
+   ],
+   "independent": [
+    "archival/p18/README.md",
+    "archival/p18/p18_source_files.json",
+    "archival/p18/reference_values_p18.json",
+    "archival/p18/reproducibility/author_rebuild_report_p18.json",
+    "archival/p18/reproducibility/independent_rebuild_report_p18.json",
+    "code/p5_calc/defect.py",
+    "code/p5_calc/p19_conventions.py",
+    "code/p5_calc/release_p19.py",
+    "manuscript/notes/P19_defect.tex",
+    "reproducibility/reference_values_p19.json",
+    "tests/test_p19.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/change_log_vs_p18/modified",
+   "reference": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "manuscript/body/XVI-P-body.tex",
+    "tests/test_p14.py",
+    "tests/test_p18.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "independent": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "manuscript/body/XVI-P-body.tex",
+    "tests/test_p14.py",
+    "tests/test_p18.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/change_log_vs_p18/removed",
+   "reference": [
+    "reproducibility/reference_values_p18.json"
+   ],
+   "independent": [
+    "reproducibility/reference_values_p18.json"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p19/independent_rebuild_passed_p18",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/passed",
+   "reference": 187,
+   "independent": 187,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/passed",
+   "reference": 57,
+   "independent": 57,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/passed",
+   "reference": 4,
+   "independent": 4,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/release_claim_accepted",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/publication",
+   "reference": "accepted",
+   "independent": "accepted",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/bulk_symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/O1_closure",
+   "reference": "NOT_CLOSED",
+   "independent": "NOT_CLOSED",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/insertion_status",
+   "reference": "Frozen_negative_obstruction_preserved",
+   "independent": "Frozen_negative_obstruction_preserved",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XV_B_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XIV_J_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/Route_B_discharged",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/u_R_c_delta_added",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XVI_P_registered",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/quantum_action_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/quantum_prescription_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/D11_matching_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/counterterm_domain_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/amplitude_rules_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_earned",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P3_P4_frozen_as_P5_inputs",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/D11_matching_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/D12_status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/classical_readiness_for_ch_identity",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/quartic_generator_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/ch_projection_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/ch_dependency_inventory_complete",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/gauge_fixing_map_constructed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/required_classical_BV_components_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.3",
+   "reference": "complete (declared ch target)",
+   "independent": "complete (declared ch target)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.4",
+   "reference": "earned (classical readiness)",
+   "independent": "earned (classical readiness)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_entry",
+   "reference": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+   "independent": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_calculation",
+   "reference": "evaluated; 4D sector renormalized (MS-bar, declared domain); evanescent regulated (poles retained, not subtracted), decoupled from the ch slots (p15-p18 inputs D01, D02, D03, D11, D12, D13, D14a-c)",
+   "independent": "evaluated; 4D sector renormalized (MS-bar, declared domain); evanescent regulated (poles retained, not subtracted), decoupled from the ch slots (p15-p18 inputs D01, D02, D03, D11, D12, D13, D14a-c)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_identity",
+   "reference": "projected defect computed (zero exactly in d: pole, nonlocal and local parts, all seven external assignments); projected identity verified; projected restoration verified for the renormalised Gamma_R = Gamma1 + S_ct (ch projection, one loop, kappa^2 only; zero because each row vanishes separately, no counterterm cancellation); full c.b closure NOT established (K1); bulk symmetry NOT restored/claimed; O.1 NOT_CLOSED",
+   "independent": "projected defect computed (zero exactly in d: pole, nonlocal and local parts, all seven external assignments); projected identity verified; projected restoration verified for the renormalised Gamma_R = Gamma1 + S_ct (ch projection, one loop, kappa^2 only; zero because each row vanishes separately, no counterterm cancellation); full c.b closure NOT established (K1); bulk symmetry NOT restored/claimed; O.1 NOT_CLOSED",
+   "equal": true,
+   "compared_as": "exact"
+  }
+ ],
+ "entrypoint_report": "src/XVI-P/build/rebuild_report.json"
+}

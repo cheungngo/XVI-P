@@ -1,0 +1,110 @@
+{
+  "revision": "o61-calc",
+  "gate": "no claim relies on superseded certificate or unstated convention",
+  "superseded_certificates": [
+    {
+      "id": "E^A(D_div P alpha)_values",
+      "status": "withdrawn",
+      "replacement": "w=E^A(D_div alpha); H=alpha+2 P D_div^* E^A(D_div alpha)",
+      "source": "XVI-N r12",
+      "downstream_allowed": false
+    }
+  ],
+  "claims": [
+    {
+      "id": "O.0_pins",
+      "depends_on": [
+        "XVI-M",
+        "XVI-N_r12",
+        "XVI-L",
+        "XVI-I",
+        "XVI-K",
+        "XII-C",
+        "XII-D",
+        "XIV-A"
+      ],
+      "status": "Constructed",
+      "uses_superseded": false
+    },
+    {
+      "id": "O.1_quantum_target",
+      "depends_on": [
+        "XVI-M.M.8_Unresolved",
+        "XVI-N.S_inv_through_O(kappa)",
+        "non-claim_12"
+      ],
+      "status": "Provisional",
+      "uses_superseded": false,
+      "note": "Closure under retained quantum identity not knowable; O.4 provisional"
+    },
+    {
+      "id": "O.2_S_inv^{[2]}_scaffold",
+      "depends_on": [
+        "XVI-N.S_inv^{[1]}",
+        "XI-A/XII-C EH orders",
+        "gauge fermion Psi"
+      ],
+      "status": "Provisional_foundation_repaired",
+      "uses_superseded": false,
+      "note": "Inverse controls + ell_4 probes; V_af_phi kappa^1 a=1/2; m=0 freeze; master Unresolved; no s2"
+    },
+    {
+      "id": "O.3_quantum_conventions",
+      "depends_on": [
+        "XVI-M.S-bv",
+        "XVI-N.N-Norm",
+        "non-identification_ell3"
+      ],
+      "status": "Constructed",
+      "uses_superseded": false
+    },
+    {
+      "id": "O.4_diagram_inventory",
+      "depends_on": [
+        "O.1_provisional_target",
+        "O.3_conventions"
+      ],
+      "status": "manually_specified_partially_checked_inventory",
+      "uses_superseded": false,
+      "note": "o60-hard: mixed D04; fixed D06; V_af_phi kappa^1; m=0; leg-balance/catalogue/order/1PI checks; NOT complete; sym factors Unverified"
+    },
+    {
+      "id": "O.5_amplitudes",
+      "depends_on": [
+        "O.4"
+      ],
+      "status": "schematic_models_and_candidate_lists_NOT_Constructed",
+      "uses_superseded": false,
+      "note": "o60-hard push after inventory; ST4a/ST4b split; independence_proven=false"
+    },
+    {
+      "id": "O.6_quantum_identity",
+      "depends_on": [
+        "O.1",
+        "O.5"
+      ],
+      "status": "statement_only_verification_not_Constructed",
+      "uses_superseded": false
+    },
+    {
+      "id": "O.7_counterterms",
+      "depends_on": [
+        "O.6",
+        "XVI-M.selected_image_not_sector"
+      ],
+      "status": "bookkeeping_ansatz_solution_Unresolved",
+      "uses_superseded": false,
+      "note": "Bookkeeping slots; matched=[]; ST4a/ST4b Unresolved; not N independent CTs"
+    },
+    {
+      "id": "TrackII_insertion_freeze",
+      "depends_on": [
+        "XVI-N.Thm_massless",
+        "XVI-I.F_t",
+        "N-Ins.4_Unresolved"
+      ],
+      "status": "Frozen_negative",
+      "uses_superseded": false
+    }
+  ]
+}

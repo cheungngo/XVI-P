@@ -1,0 +1,1527 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p14r",
+ "kind": "independent rebuild report (separate clean environment); package evidence, not a mathematical certificate",
+ "date": "2026-10-08",
+ "reviewer": "independent executor (Grok Bot subagent), fresh dir /workspace/indep_rebuild_p14r and fresh venv; no reads from /workspace/XVI-P except reference_values_p14r.json at the final comparison step",
+ "same_box_caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+ "environment": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "pdfinfo": "pdfinfo version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "venv": "/workspace/indep_rebuild_p14r/venv",
+  "pip_installed": "sympy==1.14.0 mpmath==1.3.0 pytest==9.1.1 (exact versions via pip)"
+ },
+ "environment_reference": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+ },
+ "environment_differences": {},
+ "zip_sha256": "19e8bf599daf102d8e23382544e6c6991ea307b2c3f31a0a97ad66d0b8a3dba3",
+ "source_tree_sha256": "a64c0ae365980fa6b077f991df4316347527613075e87f17fecfe422db6e3894",
+ "source_tree_sha256_without_reference": "4a6cc53c0b2cf35681d4fd499f1033f1028974e5ca766c43d11a809bc683599f",
+ "pass": true,
+ "independent_rebuild_passed": true,
+ "checks": {
+  "1_zip_sha256_and_source_only": {
+   "pass": true,
+   "zip_sha256": "19e8bf599daf102d8e23382544e6c6991ea307b2c3f31a0a97ad66d0b8a3dba3",
+   "n_files": 111,
+   "generated_artifacts_or_caches_present": false,
+   "note": "9 JSON files in the zip, all pins/reference/archived p13 records; no certificates, exports, PDFs, build/, __pycache__"
+  },
+  "2_entrypoint_rebuild_from_source": {
+   "pass": true,
+   "steps": {
+    "source_only_tree": true,
+    "inherited_pins": true,
+    "full_build": true,
+    "release_accepted": true,
+    "tests": true,
+    "pdf_readback_vs_records": true,
+    "external_manifest": true,
+    "source_only_zip_rebuilt": true,
+    "file_access_trace": true,
+    "comparison_with_reference": true
+   },
+   "comparison_with_in_zip_reference": {
+    "compared": 143,
+    "equal": 143
+   },
+   "seconds": 1002.2,
+   "source_tree_sha256": "a64c0ae365980fa6b077f991df4316347527613075e87f17fecfe422db6e3894",
+   "rebuilt_source_only_zip_sha256": "19e8bf599daf102d8e23382544e6c6991ea307b2c3f31a0a97ad66d0b8a3dba3"
+  },
+  "2a_p13_frozen_classical_items": {
+   "pass": true,
+   "exports": {
+    "ell2": {
+     "file_sha256": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+     "polynomial_sha256_str": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+     "terms_Add_make_args": 84
+    },
+    "ell3": {
+     "file_sha256": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+     "polynomial_sha256_str": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+     "terms_Add_make_args": 678
+    },
+    "ell4": {
+     "file_sha256": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+     "polynomial_sha256_str": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+     "terms_Add_make_args": 3360
+    }
+   },
+   "export_values_identical_to_my_p13_independent_values": true,
+   "quartic_C7": {
+    "kappa0": {
+     "W_terms": 132,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "kappa1": {
+     "W_terms": 2148,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      159,
+      159,
+      159,
+      159
+     ]
+    },
+    "kappa2": {
+     "W_terms": 15428,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      2088,
+      2088,
+      2088,
+      2088
+     ]
+    }
+   },
+   "master_grav_af0": {
+    "kappa0": {
+     "W_terms": 132,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "kappa1": {
+     "W_terms": 2148,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      159,
+      159,
+      159,
+      159
+     ]
+    },
+    "kappa2": {
+     "W_terms": 15428,
+     "Q_terms": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": [
+      2088,
+      2088,
+      2088,
+      2088
+     ]
+    }
+   },
+   "quartic_vs_master_agree": {
+    "kappa0": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    },
+    "kappa1": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    },
+    "kappa2": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    }
+   },
+   "issues": []
+  },
+  "2b_dred_rules_and_mutations": {
+   "pass": true,
+   "dred_rules_verified": true,
+   "mutations": {
+    "premature_d4": true,
+    "trace_ghat_eq_4": true,
+    "contract_after_laurent": true
+   },
+   "premature_d4_finite_if_not_caught": "b/4",
+   "trace_ghat_eq_4_rules_check_pass": false,
+   "trace_ghat_eq_4_T1_T2": [
+    "b/4",
+    "0"
+   ],
+   "contract_after_laurent_reason": "UncontractedObjects: ['Gt_00', 'Gt_11', 'Gt_22', 'Gt_33']",
+   "toys": {
+    "T1_four_d_part": {
+     "finite": "a/8 + b/4",
+     "pole": "a/(4*epsilon)",
+     "equals_reference": true
+    },
+    "T2_evanescent_trace": {
+     "finite": "-a/2",
+     "pole": "0",
+     "equals_reference": true,
+     "pre_laurent": "J_T[1,0] - 4*J_T[1,0]/d",
+     "is_d_minus_4_times_pole": true
+    }
+   },
+   "known_reductions": {
+    "rank2_tadpole_eq_ghat_over_d": true,
+    "rank4_tadpole_eq_sym_ghatghat_over_d_dplus2": true,
+    "rank2_two_point_B00": true,
+    "rank2_two_point_B11": true,
+    "pass": true
+   },
+   "evanescent_parts_present_in_exports": true,
+   "loop_evaluations_performed": false
+  },
+  "2b_own_dred_toy_check": {
+   "pass": true,
+   "own_script": "toy/own_dred_toy.py (no package imports)",
+   "package_feed": "toy/package_confirms_toy.py (imports dred.py read-only)",
+   "toyA_A0_tadpole": {
+    "correct_finite": "a1*m**4",
+    "correct_pole": "m**4/epsilon",
+    "premature_trghat4_finite": "m**4*(a1 + 1/2)",
+    "premature_pole": "m**4/epsilon",
+    "finite_shift": "m**4/2",
+    "shift_equals_m^4/2": true,
+    "pre_laurent_difference": "-m**4*(d - 4)*(a1*epsilon + a2*epsilon**2 + 1)/(d*epsilon)",
+    "difference_is_(4-d)/d_x_pole": true,
+    "poles_equal": true
+   },
+   "toyB_B0_bubble": {
+    "correct_pre_laurent": "0",
+    "correct_finite": "0",
+    "correct_pole": "0",
+    "premature_trghat4_finite": "-p2/6",
+    "premature_pole": "0",
+    "finite_shift": "-p2/6",
+    "shift_equals_-p2/6": true,
+    "difference_is_(4-d)_B00": true
+   },
+   "toyB_PV": {
+    "B00": "p2*(-b1*epsilon - b2*epsilon**2 - 1)/(4*epsilon*(d - 1))",
+    "B11": "d*(b1*epsilon + b2*epsilon**2 + 1)/(4*epsilon*(d - 1))",
+    "B00_eq_-p2_B0/(4(d-1))": true,
+    "B11_eq_d_B0/(4(d-1))": true
+   },
+   "toyC_package_T1_T2_shapes": {
+    "T2_finite": "-a/2",
+    "T2_pole": "0",
+    "T2_finite_eq_-a/2": true,
+    "T2_pole_zero": true,
+    "T1_finite": "a/8 + b/4",
+    "T1_finite_eq_b/4+a/8": true,
+    "T1_pole_eq_a/(4eps)": true,
+    "T1_finite_if_d4_first": "b/4"
+   },
+   "package_rules_reproduce_own_correct_finite_parts": {
+    "toyA": true,
+    "toyB": true
+   },
+   "package_trace_ghat_4_mutation_flagged_by_rules_check": true,
+   "mutation_note": "Rules(trace_hat=4) applies tr ghat = 4 CONSISTENTLY to the Gram reduction and to the ghat contraction, so a fully ghat-contracted scalar (ghat_{mu nu} l^mu l^nu = l^2) is unchanged (J_XA[1,0], J_XB[1,0]); my toy's (d-4)/eps shift arises only from MIXING (reduce with d, contract with 4).  The package catches this mutation via Rules.check() (and its own T1 toy), not via a finite-part change on these toys.  mutation_shift_matches_own=false is therefore expected, not a defect.",
+   "premature_d4_guard_probe": {
+    "correct": {
+     "guard_raised": true,
+     "reason": "reduction introduced d, but d is absent before the Laurent expansion",
+     "finite_with_guard_disabled": "a1*m**4"
+    },
+    "premature_d4": {
+     "guard_raised": false,
+     "finite": "m**4*(a1 - 1/2)"
+    },
+    "note": "eta^{rs} ghat_rs J/d = J: d cancels EXACTLY in the correct result, yet the guard raises (false positive: the guard tests 'd absent before Laurent', not 'd substituted'); with premature d->4 in the reduction, eta_trace_Gt reintroduces d via tr gtilde = 4-d, giving d J/4"
+   }
+  },
+  "2c_W6_hessian_route_and_D13_regeneration": {
+   "pass": true,
+   "W6": {
+    "D01": {
+     "components": 100,
+     "nonzero_components": 100,
+     "n_mismatches": 0,
+     "agree": true,
+     "export_sha_equals_current_export": true,
+     "ok": true
+    },
+    "D02": {
+     "components": 94,
+     "nonzero_components": 94,
+     "n_mismatches": 0,
+     "agree": true,
+     "export_sha_equals_current_export": true,
+     "ok": true
+    },
+    "D03": {
+     "components": 100,
+     "nonzero_components": 100,
+     "n_mismatches": 0,
+     "agree": true,
+     "export_sha_equals_current_export": true,
+     "ok": true
+    },
+    "D12": {
+     "components": 94,
+     "nonzero_components": 94,
+     "n_mismatches": 0,
+     "agree": true,
+     "export_sha_equals_current_export": true,
+     "ok": true
+    }
+   },
+   "W6_checks": {
+    "D01_hessian_route_equals_integrand": true,
+    "D02_hessian_route_equals_integrand": true,
+    "D03_hessian_route_equals_integrand": true,
+    "D12_hessian_route_equals_integrand": true,
+    "graviton_Hbb_constant": true,
+    "graviton_schur_is_q2_times_constant": true,
+    "graviton_full_14x14_inverse_verified": true,
+    "ghost_M0_is_q2_times_constant": true,
+    "structural: X1_has_no_field_only_monomial (no b.h.h, h^3 in X)": true,
+    "structural: X2_is_zero (no cbar.c.h.h, no ghost tadpole at kappa^2)": true
+   },
+   "W5_D13": {
+    "D13_regenerated_equals_export": true,
+    "covers": [
+     "D14a",
+     "D14b",
+     "D14c",
+     "D11",
+     "D13"
+    ],
+    "pass": true,
+    "all_checks": {
+     "D14c": true,
+     "D14b": true,
+     "D14a": true,
+     "D11": true,
+     "D13": true,
+     "D01_bose_N_ab_equals_N_ba": true
+    }
+   },
+   "W1_D13": true,
+   "W2_D13": true,
+   "integrand_embedded_sha_ok": {
+    "D01": true,
+    "D02": true,
+    "D03": true,
+    "D11": true,
+    "D12": true,
+    "D13": true,
+    "D14a": true,
+    "D14b": true,
+    "D14c": true
+   },
+   "amplitude_mutations_rejected": {
+    "wrong_tadpole_factor": true,
+    "wrong_ghost_loop_sign": true,
+    "offdiag_multiplicity": true,
+    "reversed_source_ghost_order": true,
+    "omit_ghost_transport_term": true
+   },
+   "controls_pass": {
+    "W1_wick_berezin_shadow": true,
+    "W2_multiplicity": true,
+    "W3_closed_form_vertices": true,
+    "W5_regeneration": true,
+    "W6_hessian_route": true,
+    "W4_ward_bose": true
+   }
+  },
+  "2d_pytest_independent_run": {
+   "pass": true,
+   "groups": {
+    "baseline": {
+     "passed": 39,
+     "failed": 0,
+     "skipped": 0
+    },
+    "certificate_mutation": {
+     "passed": 17,
+     "failed": 0,
+     "skipped": 0
+    },
+    "resumed_build": {
+     "passed": 4,
+     "failed": 0,
+     "skipped": 0
+    }
+   },
+   "summary": "60 passed in 229.43s (0:03:49)",
+   "run_in": "separate copy pytest_run/XVI-P, all of tests/ (60 collected; test_matter_loop_gates.py collects 0), sync redirected locally"
+  },
+  "2e_pdf_readback_and_manifest": {
+   "pass": true,
+   "residual_records_readback": {
+    "files": {
+     "XVI-P-appendix": {
+      "quartic_C7_blocks": 1,
+      "master_grav_af0_blocks": 1,
+      "quartic_C7_matches_json": true,
+      "master_grav_af0_matches_json": true,
+      "ell2_poly_sha_in_pdf": true,
+      "ell3_poly_sha_in_pdf": true,
+      "ell4_poly_sha_in_pdf": true
+     },
+     "XVI-P": {
+      "quartic_C7_blocks": 1,
+      "master_grav_af0_blocks": 1,
+      "quartic_C7_matches_json": true,
+      "master_grav_af0_matches_json": true,
+      "ell2_poly_sha_in_pdf": true,
+      "ell3_poly_sha_in_pdf": true,
+      "ell4_poly_sha_in_pdf": true
+     }
+    },
+    "issues": [],
+    "pass": true
+   },
+   "W6_and_DRED_readback": {
+    "issues": [],
+    "XVI-P-appendix": {
+     "W6_all_agree": true,
+     "D01": true,
+     "D02": true,
+     "D03": true,
+     "D12": true,
+     "dred_mutations_all_rejected": true,
+     "dred_rejected_count": 3
+    },
+    "XVI-P": {
+     "W6_all_agree": true,
+     "D01": true,
+     "D02": true,
+     "D03": true,
+     "D12": true,
+     "dred_mutations_all_rejected": true,
+     "dred_rejected_count": 3
+    },
+    "pass": true
+   },
+   "manifest": {
+    "n_entries": 24,
+    "failures": [],
+    "n_synced": 6,
+    "pdf_pages": [
+     20,
+     246,
+     267
+    ]
+   }
+  },
+  "2f_pins": {
+   "pass": true,
+   "frozen_list_matches_P13_FROZEN_LIST_SHA256": true,
+   "archived_p13_reference_sha": "d8bf3d97457913dbd1fa03a2e801630005aeca601b93ebb53307fb30e1bc4095",
+   "archived_p13_reference_eq_d8bf": true,
+   "archived_p13_reference_eq_my_p13_copy": true,
+   "archived_independent_report_sha": "7ce496cc446f2ef1948de6aaf034b09e9dcab0b9878cd6ae6015cda63a6515e4",
+   "archived_independent_report_eq_my_p13_report": true,
+   "archived_author_report_p13_sha_eq_pin": true,
+   "XVI-M_vendored": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "XVI-M_eq_pin": true,
+   "grav_density_eq_pin": true,
+   "xvio_files": 24,
+   "xvio_bad": [],
+   "xvio_tree_json_identical_to_p13": true,
+   "inherited_data_ok": {
+    "ledgers/quantum_factor_ledger.json": true
+   },
+   "frozen_p13_files": 54,
+   "frozen_vs_list_bad": [],
+   "frozen_vs_my_own_p13_unpack_bad": []
+  },
+  "3_comparison_with_author_reference": {
+   "pass": true,
+   "reference_file": "/workspace/XVI-P/reproducibility/reference_values_p14r.json",
+   "reference_sha256": "9e81749235d3cb115aacc748de0ae4f89c6eae81b3e99f45585d1ad36b328f48",
+   "reference_identical_to_in_zip_copy": true,
+   "entrypoint_values_compared": 143,
+   "independently_recomputed_values_compared": 122,
+   "environment_differences": {}
+  }
+ },
+ "mismatches": [],
+ "findings": [
+  {
+   "id": "F1_premature_d4_guard_heuristic",
+   "severity": "not a reproducibility mismatch; forward-looking for P.5 calculation",
+   "detail": "dred.Pipeline.laurent's PrematureD4Substitution guard tests 'reduction introduced d AND d absent before Laurent AND poles'. Probe with my toy A in eta-projected form (eta^{rs} int l_r l_s/(l^2-m^2) = eta^{rs} ghat_rs J/d = J): (i) FALSE POSITIVE: the correct, d-free result J is rejected (guard_raised=True; finite with guard disabled a1*m**4, which is correct); (ii) FALSE NEGATIVE: with the package's own premature_d4 mutation, eta_trace_Gt reintroduces d via tr gtilde = 4-d, the result is dJ/4, the guard does NOT raise (guard_raised=False) and the finite part is m**4*(a1 - 1/2) instead of a1*m**4 (a -m^4/2 shift). The published premature_d4 rejection (T1) is real, but the R5 docstring claim that premature d=4 'is detected' does not hold in general. Currently Pipeline.laurent is only called on the toys (no loop evaluated), so no released number is affected."
+  },
+  {
+   "id": "F2_trace_ghat_4_mutation_scope",
+   "severity": "informational",
+   "detail": "Rules(trace_hat=4) applies tr ghat = 4 consistently in the Gram reduction and the ghat contraction, so fully ghat-contracted scalars (my toys A and B) are unchanged; it is caught by Rules.check() and by the T1 toy's finite part, as published. The (d-4)/eps finite shift in my toys (+m^4/2 for A0, -p^2/6 for massless B0) arises from mixing (reduce with d, contract with 4); the package's R4/R5 rules (tr ghat = d throughout, contract before Laurent) give the correct values."
+  }
+ ],
+ "independent_comparisons": [
+  {
+   "key": "/exports/ell2/file_sha256",
+   "reference": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "independent": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell2/polynomial_sha256",
+   "reference": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "independent": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell2/terms",
+   "reference": 84,
+   "independent": 84,
+   "equal": true
+  },
+  {
+   "key": "/exports/ell3/file_sha256",
+   "reference": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "independent": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell3/polynomial_sha256",
+   "reference": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "independent": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell3/terms",
+   "reference": 678,
+   "independent": 678,
+   "equal": true
+  },
+  {
+   "key": "/exports/ell4/file_sha256",
+   "reference": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "independent": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell4/polynomial_sha256",
+   "reference": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "independent": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell4/terms",
+   "reference": 3360,
+   "independent": 3360,
+   "equal": true
+  },
+  {
+   "key": "/exports/V4_grav.json",
+   "reference": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "independent": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "equal": true
+  },
+  {
+   "key": "/exports/ell4_conventions.json",
+   "reference": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "independent": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "equal": true
+  },
+  {
+   "key": "/exports/P14_vertex_tensors.json",
+   "reference": "3181424bf18a3def5339c4fe41662dd929b5e4e7ec7fc9aa913a903c5a666872",
+   "independent": "3181424bf18a3def5339c4fe41662dd929b5e4e7ec7fc9aa913a903c5a666872",
+   "equal": true
+  },
+  {
+   "key": "/exports/P14_integrands/D01.json",
+   "reference": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+   "independent": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+   "equal": true
+  },
+  {
+   "key": "/exports/P14_integrands/D02.json",
+   "reference": "2f7fd32985ed9161b4b5aad221a9ca6dc59e9f1cc6a069ad7f7503835ce83d1e",
+   "independent": "2f7fd32985ed9161b4b5aad221a9ca6dc59e9f1cc6a069ad7f7503835ce83d1e",
+   "equal": true
+  },
+  {
+   "key": "/exports/P14_integrands/D03.json",
+   "reference": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+   "independent": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+   "equal": true
+  },
+  {
+   "key": "/exports/P14_integrands/D11.json",
+   "reference": "f68904158d931faf71209cde9028d4f90e987c098ba84128fd2f6b661a4640ff",
+   "independent": "f68904158d931faf71209cde9028d4f90e987c098ba84128fd2f6b661a4640ff",
+   "equal": true
+  },
+  {
+   "key": "/exports/P14_integrands/D12.json",
+   "reference": "c57d815c0f4aac641dacafa4577037fcbe0bdc4c207597c9b88f62f1153ec73a",
+   "independent": "c57d815c0f4aac641dacafa4577037fcbe0bdc4c207597c9b88f62f1153ec73a",
+   "equal": true
+  },
+  {
+   "key": "/exports/P14_integrands/D13.json",
+   "reference": "8fe1a4ba4ac1fae573ad896ef25d3ae5e0d8a525d546ad980b2ebae8c07cc0a5",
+   "independent": "8fe1a4ba4ac1fae573ad896ef25d3ae5e0d8a525d546ad980b2ebae8c07cc0a5",
+   "equal": true
+  },
+  {
+   "key": "/exports/P14_integrands/D14a.json",
+   "reference": "7ac1b6a3544ca2bb370ded6e1ee6cdcea49da94af01c22d96866aa2c30cdd61c",
+   "independent": "7ac1b6a3544ca2bb370ded6e1ee6cdcea49da94af01c22d96866aa2c30cdd61c",
+   "equal": true
+  },
+  {
+   "key": "/exports/P14_integrands/D14b.json",
+   "reference": "95f6d47436ba1efdcef371979f7941b782cedb625530912ec00e499bfca953f3",
+   "independent": "95f6d47436ba1efdcef371979f7941b782cedb625530912ec00e499bfca953f3",
+   "equal": true
+  },
+  {
+   "key": "/exports/P14_integrands/D14c.json",
+   "reference": "b50e3aabe46d548a0d9afaf182aa99143b2792927b194b84075bcdcc79c0ad79",
+   "independent": "b50e3aabe46d548a0d9afaf182aa99143b2792927b194b84075bcdcc79c0ad79",
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/residual_records/required_master_residuals",
+   "reference": [],
+   "independent": [],
+   "equal": true
+  },
+  {
+   "key": "/inherited_pins/XVI-M.tex",
+   "reference": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "independent": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "equal": true
+  },
+  {
+   "key": "/inherited_pins/XVI-N-r10/code/prep/grav_density.py",
+   "reference": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "independent": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "equal": true
+  },
+  {
+   "key": "/inherited_pins/ledgers/quantum_factor_ledger.json",
+   "reference": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "independent": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "equal": true
+  },
+  {
+   "key": "/source/n_source_files",
+   "reference": 111,
+   "independent": 111,
+   "equal": true
+  },
+  {
+   "key": "/tests/baseline/passed",
+   "reference": 39,
+   "independent": 39,
+   "equal": true
+  },
+  {
+   "key": "/tests/baseline/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/tests/baseline/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/tests/certificate_mutation/passed",
+   "reference": 17,
+   "independent": 17,
+   "equal": true
+  },
+  {
+   "key": "/tests/certificate_mutation/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/tests/certificate_mutation/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/tests/resumed_build/passed",
+   "reference": 4,
+   "independent": 4,
+   "equal": true
+  },
+  {
+   "key": "/tests/resumed_build/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/tests/resumed_build/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true
+  },
+  {
+   "key": "/release/release_claim_accepted",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/publication",
+   "reference": "accepted",
+   "independent": "accepted",
+   "equal": true
+  },
+  {
+   "key": "/release/classical_readiness_for_ch_identity",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/flags/quartic_generator_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/flags/ch_projection_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/flags/ch_dependency_inventory_complete",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/flags/gauge_fixing_map_constructed",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/flags/required_classical_BV_components_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/milestones/P.3",
+   "reference": "complete (declared ch target)",
+   "independent": "complete (declared ch target)",
+   "equal": true
+  },
+  {
+   "key": "/release/milestones/P.4",
+   "reference": "earned (classical readiness)",
+   "independent": "earned (classical readiness)",
+   "equal": true
+  },
+  {
+   "key": "/release/milestones/P.5_entry",
+   "reference": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+   "independent": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+   "equal": true
+  },
+  {
+   "key": "/release/milestones/P.5_calculation",
+   "reference": "open (not started; Batch A/B/C integrals are p15+)",
+   "independent": "open (not started; Batch A/B/C integrals are p15+)",
+   "equal": true
+  },
+  {
+   "key": "/release/milestones/P.5_identity",
+   "reference": "open",
+   "independent": "open",
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/quantum_inputs_evaluated",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/projected_defect_computed",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/projected_identity_verified",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/projected_restoration_verified",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/bulk_symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/D02_quantum_evaluated",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/D12_quantum_evaluated",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/D12_status",
+   "reference": "Missing",
+   "independent": "Missing",
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/D11_matching_verified",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/O1_closure",
+   "reference": "NOT_CLOSED",
+   "independent": "NOT_CLOSED",
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/insertion_status",
+   "reference": "Frozen_negative_obstruction_preserved",
+   "independent": "Frozen_negative_obstruction_preserved",
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/XV_B_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/XIV_J_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/Route_B_discharged",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/P5_entry_opened",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/P5_calculation_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/P5_identity_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/loop_evaluations_performed",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/hard_stops/u_R_c_delta_added",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/P5_entry_flags/quantum_action_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/P5_entry_flags/quantum_prescription_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/P5_entry_flags/D11_matching_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/P5_entry_flags/counterterm_domain_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/P5_entry_flags/amplitude_rules_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/P5_entry_earned",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/P3_P4_frozen_as_P5_inputs",
+   "reference": true,
+   "independent": true,
+   "equal": true
+  },
+  {
+   "key": "/release/D11_matching_verified",
+   "reference": false,
+   "independent": false,
+   "equal": true
+  },
+  {
+   "key": "/release/D12_status",
+   "reference": "Missing",
+   "independent": "Missing",
+   "equal": true
+  }
+ ],
+ "entrypoint_report": "src/XVI-P/build/rebuild_report.json",
+ "steps": {
+  "source_only_tree": {
+   "ok": true,
+   "non_source_files": [],
+   "count": 0
+  },
+  "inherited_pins": {
+   "ok": true,
+   "external": {
+    "XVI-M.tex": {
+     "sha256": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+     "ok": true,
+     "location": "vendored",
+     "vendored_copy_matches_pin": true
+    },
+    "XVI-N-r10/code/prep/grav_density.py": {
+     "sha256": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+     "ok": true,
+     "location": "vendored",
+     "vendored_copy_matches_pin": true
+    }
+   },
+   "inherited_data_files": 1,
+   "inherited_data_failures": [],
+   "xvi_o_o70_files_verified": 24,
+   "xvi_o_o70_failures": [],
+   "XVI_M_pin": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea"
+  },
+  "full_build": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 1000.3,
+   "log": "build/rebuild_build.log"
+  },
+  "release_accepted": {
+   "ok": true,
+   "milestones": {
+    "P.3": "complete (declared ch target)",
+    "P.4": "earned (classical readiness)",
+    "P.5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+    "P.5_calculation": "open (not started; Batch A/B/C integrals are p15+)",
+    "P.5_identity": "open"
+   },
+   "P5_entry_flags": {
+    "quantum_action_defined": true,
+    "quantum_prescription_defined": true,
+    "D11_matching_defined": true,
+    "counterterm_domain_defined": true,
+    "amplitude_rules_verified": true
+   }
+  },
+  "tests": {
+   "ok": true,
+   "groups": {
+    "baseline": {
+     "passed": 39,
+     "failed": 0,
+     "skipped": 0
+    },
+    "certificate_mutation": {
+     "passed": 17,
+     "failed": 0,
+     "skipped": 0
+    },
+    "resumed_build": {
+     "passed": 4,
+     "failed": 0,
+     "skipped": 0
+    }
+   },
+   "summary": "60 passed in 231.27s (0:03:51)"
+  },
+  "pdf_readback_vs_records": {
+   "ok": true,
+   "records": 6,
+   "appendix": true,
+   "combined": true
+  },
+  "external_manifest": {
+   "ok": true,
+   "entries": 24,
+   "failures": [],
+   "synced_inside_copy": [
+    "XVI-P-appendix.pdf",
+    "XVI-P-full.zip",
+    "XVI-P-p14r-source-only.zip",
+    "XVI-P-review-focus.zip",
+    "XVI-P-science.pdf",
+    "XVI-P.pdf"
+   ]
+  },
+  "source_only_zip_rebuilt": {
+   "ok": true,
+   "differences": []
+  },
+  "file_access_trace": {
+   "ok": true,
+   "present": true,
+   "reads": 4120,
+   "writes": 3591,
+   "external_reads_pinned": [],
+   "unpinned_external_reads": [],
+   "in_tree_source_files_read": 111,
+   "in_tree_data_inputs_read": [
+    "archival/p13/frozen_p13_inputs.json",
+    "archival/p13/reference_values_p13.json",
+    "archival/p13/reproducibility/author_rebuild_report_p13.json",
+    "archival/p13/reproducibility/independent_rebuild_report_p13.json",
+    "ledgers/quantum_factor_ledger.json",
+    "provenance/XVI-M_sha256.txt",
+    "provenance/XVI-O_o70_source_tree.json",
+    "provenance/predecessor_pins.json",
+    "reproducibility/inherited_data_pins.json",
+    "reproducibility/reference_values_p14r.json"
+   ],
+   "unpinned_in_tree_data_inputs": [],
+   "reads_of_unknown_files": [
+    "P14_integrands",
+    "XVI-N-r10",
+    "body",
+    "classical",
+    "inherited",
+    "matter_loop",
+    "outputs",
+    "p02_p09",
+    "p10",
+    "p11",
+    "p12",
+    "p13",
+    "p14",
+    "p4_classical",
+    "p5_entry",
+    "prep",
+    "read_trace",
+    "stale"
+   ]
+  },
+  "comparison_with_reference": {
+   "ok": true,
+   "compared": 143,
+   "equal": 143,
+   "differences": []
+  }
+ }
+}

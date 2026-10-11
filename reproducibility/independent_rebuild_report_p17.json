@@ -1,0 +1,2850 @@
+{
+ "landmark": "XVI-P",
+ "revision": "p17",
+ "kind": "independent rebuild report (separate clean environment); package evidence, not a mathematical certificate",
+ "date": "2026-10-08",
+ "reviewer": "independent executor (Grok Bot subagent), fresh dir /workspace/indep_rebuild_p17 and fresh venv; no reads from /workspace/XVI-P except reference_values_p17.json at the final comparison step",
+ "same_box_caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared kernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-only zip; it was NOT run on a second machine.",
+ "environment": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "pdfinfo": "pdfinfo version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "venv": "/workspace/indep_rebuild_p17/venv",
+  "pip_installed": "sympy==1.14.0 mpmath==1.3.0 pytest==9.1.1 (exact versions via pip)"
+ },
+ "environment_reference": {
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.1.1",
+  "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "pdftotext": "pdftotext version 25.03.0",
+  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+ },
+ "environment_differences": {},
+ "zip_sha256": "7f4f61df9ce9c6483d76fa7b7b024591d6abfbae80ddc3dc0bee387245d25416",
+ "source_tree_sha256": "2a5a6317f7322db910c26fb257e589b28aa017df740879194e0ac2eb505ddd92",
+ "source_tree_sha256_without_reference": "8a6658a81b80d605d78e4664030d3cda2a250d62bc2e72f4aab17a28c3280ea5",
+ "pass": true,
+ "independent_rebuild_passed": true,
+ "checks": {
+  "1_zip_sha256_and_source_only": {
+   "pass": true,
+   "zip_sha256": "7f4f61df9ce9c6483d76fa7b7b024591d6abfbae80ddc3dc0bee387245d25416",
+   "n_files": 144,
+   "generated_artifacts_or_caches_present": false
+  },
+  "2_entrypoint_rebuild_from_source": {
+   "pass": true,
+   "steps": {
+    "source_only_tree": true,
+    "inherited_pins": true,
+    "full_build": true,
+    "release_accepted": true,
+    "tests": true,
+    "pdf_readback_vs_records": true,
+    "external_manifest": true,
+    "source_only_zip_rebuilt": true,
+    "file_access_trace": true,
+    "comparison_with_reference": true
+   },
+   "comparison_with_in_zip_reference": {
+    "compared": 282,
+    "equal": 282
+   },
+   "seconds": 1466.8,
+   "source_tree_sha256": "2a5a6317f7322db910c26fb257e589b28aa017df740879194e0ac2eb505ddd92",
+   "rebuilt_source_only_zip_sha256": "7f4f61df9ce9c6483d76fa7b7b024591d6abfbae80ddc3dc0bee387245d25416",
+   "rebuilt_zip_equals_input": true
+  },
+  "1_hh_slot_decoupling_own": {
+   "pass": true,
+   "method": "own slot map from my p16 covariant D01/D03 results (hh/own_D01.json, own_D03.json: own 51-term fit of the exported integrands, own PV/Feynman bubbles, d symbolic): row (S0,Gamma1^[2]) s2 K:K.c, s h_mn = i(p_m c_n + p_n c_m) (verified to annihilate my own S0 operator E from sqrt(-g)R, i.e. it is the linearised gauge symmetry), X = (s h)_(mn) G^(mn)(rs) h_(rs) = 2i c^n p^m G_(mn)(rs) h^(rs); p in QdS so p.gt = 0; own abstract DRED contractor; external assignments Q4S, QdS(hat), c tilde/h hat, c tilde/h mixed, c hat/h mixed, c hat/h tilde, all tilde",
+   "s_h_is_gauge_symmetry_of_own_S0_operator": true,
+   "slot_zero_exact_in_d": {
+    "D01": false,
+    "D03": false,
+    "D01+D03": true,
+    "D01_evanescent": false,
+    "D03_evanescent": false,
+    "D01+D03_evanescent": true,
+    "D01+D03_4D": true
+   },
+   "assignments_nonzero": {
+    "D01": {
+     "Q4S": true,
+     "QdS(hat)": true,
+     "c tilde, h hat": false,
+     "c tilde, h mixed": false,
+     "c hat, h mixed": false,
+     "c hat, h tilde": true,
+     "all tilde": false
+    },
+    "D03": {
+     "Q4S": true,
+     "QdS(hat)": true,
+     "c tilde, h hat": false,
+     "c tilde, h mixed": false,
+     "c hat, h mixed": false,
+     "c hat, h tilde": true,
+     "all tilde": false
+    },
+    "D01+D03": {
+     "Q4S": false,
+     "QdS(hat)": false,
+     "c tilde, h hat": false,
+     "c tilde, h mixed": false,
+     "c hat, h mixed": false,
+     "c hat, h tilde": false,
+     "all tilde": false
+    },
+    "D01_evanescent": {
+     "Q4S": true,
+     "QdS(hat)": false,
+     "c tilde, h hat": false,
+     "c tilde, h mixed": true,
+     "c hat, h mixed": false,
+     "c hat, h tilde": true,
+     "all tilde": false
+    },
+    "D03_evanescent": {
+     "Q4S": true,
+     "QdS(hat)": false,
+     "c tilde, h hat": false,
+     "c tilde, h mixed": true,
+     "c hat, h mixed": false,
+     "c hat, h tilde": true,
+     "all tilde": false
+    },
+    "D01+D03_evanescent": {
+     "Q4S": false,
+     "QdS(hat)": false,
+     "c tilde, h hat": false,
+     "c tilde, h mixed": false,
+     "c hat, h mixed": false,
+     "c hat, h tilde": false,
+     "all tilde": false
+    },
+    "D01+D03_4D": {
+     "Q4S": false,
+     "QdS(hat)": false,
+     "c tilde, h hat": false,
+     "c tilde, h mixed": false,
+     "c hat, h mixed": false,
+     "c hat, h tilde": false,
+     "all tilde": false
+    }
+   },
+   "mutations_nonzero": {
+    "M1_relative_sign_D03": true,
+    "M2_D03_times_2": true,
+    "M3_D03_evanescent_dropped": true,
+    "M4_trace_operator": true
+   },
+   "D02_D12_scaleless_zero": {
+    "D02": true,
+    "D12": true
+   },
+   "p14r_hh_basis_rank": 5,
+   "pole_coords_p14r_hh_basis": {
+    "D01": {
+     "z": [
+      "-27*I/160",
+      "-71*I/240",
+      "19*I/60",
+      "11*I/20",
+      "-13*I/30"
+     ],
+     "structures_outside_basis": []
+    },
+    "D03": {
+     "z": [
+      "7*I/96",
+      "I/24",
+      "-I/8",
+      "-I/24",
+      "I/12"
+     ],
+     "structures_outside_basis": []
+    },
+    "D01+D03": {
+     "z": [
+      "-23*I/240",
+      "-61*I/240",
+      "23*I/120",
+      "61*I/120",
+      "-7*I/20"
+     ],
+     "structures_outside_basis": []
+    }
+   },
+   "longitudinal_conditions_rank": 3,
+   "transverse_kernel_dim": 2,
+   "claimed_k1_k2_in_kernel": true,
+   "pole_transverse": {
+    "D01": false,
+    "D03": false,
+    "D01+D03": true
+   },
+   "sum_as_i_times_k1_k2": {
+    "a": "61/120",
+    "b": "-7/20"
+   },
+   "kernel_spanned_by_Pi_structures": true,
+   "Pi_coords": [
+    [
+     "1/2",
+     "0",
+     "-1",
+     "0",
+     "1/2"
+    ],
+    [
+     "0",
+     "1",
+     "0",
+     "-2",
+     "1"
+    ]
+   ],
+   "vs_certificate_P17_hh_slot": {
+    "p_dot_G_vs_own_slot": {
+     "D01": {
+      "n_cert": 6,
+      "n_own": 6,
+      "equal_up_to_normalisation_2i": true,
+      "bad": []
+     },
+     "D03": {
+      "n_cert": 6,
+      "n_own": 6,
+      "equal_up_to_normalisation_2i": true,
+      "bad": []
+     },
+     "evanescent_D01": {
+      "n_cert": 3,
+      "n_own": 3,
+      "equal_up_to_normalisation_2i": true,
+      "bad": []
+     },
+     "evanescent_D03": {
+      "n_cert": 3,
+      "n_own": 3,
+      "equal_up_to_normalisation_2i": true,
+      "bad": []
+     }
+    },
+    "evanescent_pole_sum": {
+     "own": {
+      "g4_mn gt_rs": "I/15",
+      "g4_mr gt_ns": "I/240",
+      "g4_rs gt_mn": "I/15",
+      "gt_rs p_m p_n": "-I/15",
+      "gt_mr p_n p_s": "-I/240",
+      "gt_mn p_r p_s": "-I/15",
+      "gt_mn gt_rs": "-I/240",
+      "gt_mr gt_ns": "-I/240"
+     },
+     "n_cert": 8,
+     "equal": true,
+     "mismatch": []
+    },
+    "coords": {
+     "D01": {
+      "equal": true,
+      "transverse_cert": false,
+      "transverse_own": false
+     },
+     "D03": {
+      "equal": true,
+      "transverse_cert": false,
+      "transverse_own": false
+     },
+     "D01+D03": {
+      "equal": true,
+      "transverse_cert": true,
+      "transverse_own": true
+     }
+    },
+    "kernel": {
+     "cert_rank": 3,
+     "own_rank": 3,
+     "cert_dim": 2,
+     "own_dim": 2,
+     "cert_basis": [
+      [
+       "1/2",
+       "-1/2",
+       "-1",
+       "1",
+       "0"
+      ],
+      [
+       "1",
+       "0",
+       "-2",
+       "0",
+       "1"
+      ]
+     ],
+     "own_Pi_basis": [
+      [
+       "1/2",
+       "0",
+       "-1",
+       "0",
+       "1/2"
+      ],
+      [
+       "0",
+       "1",
+       "0",
+       "-2",
+       "1"
+      ]
+     ],
+     "same_span": true
+    },
+    "assignments": {
+     "D01": {
+      "agree_on_cert_assignments": true,
+      "own_extra_assignments": {
+       "c hat, h tilde": true
+      }
+     },
+     "D03": {
+      "agree_on_cert_assignments": true,
+      "own_extra_assignments": {
+       "c hat, h tilde": true
+      }
+     },
+     "D01+D03": {
+      "agree_on_cert_assignments": true,
+      "own_extra_assignments": {
+       "c hat, h tilde": false
+      }
+     }
+    },
+    "mutations_cert": {
+     "M1_wrong_relative_sign_D03": true,
+     "M2_D03_times_2_symmetry_factor": true,
+     "M3_D03_evanescent_dropped_naive_4D": true,
+     "M4_trace_operator_in_place_of_s_h": true
+    },
+    "cert_verdict": "DECOUPLED (proof): as the sum D01 + D03 (+ D02 = D12 = 0); not graph by graph",
+    "cert_status": "decoupled_from_ch_slot_proven_as_sum",
+    "cert_decoupling_proven": true,
+    "issues": []
+   },
+   "E2_own_recheck_from_p16": true
+  },
+  "2_guard_reprobe_and_static_scan": {
+   "pass": true,
+   "guarded_paths_raise": {
+    "subs": true,
+    "subs_dict": true,
+    "xreplace": true,
+    "replace(d,4)": true,
+    "expr.match(d)": true,
+    "evalf_subs": true,
+    "N_subs": true,
+    "limit": true,
+    "series_in_d": true,
+    "Lambda_call": true,
+    "Subs_doit": true,
+    "lambdify_default": true,
+    "lambdify_math": true,
+    "lambdify_mpmath": true,
+    "lambdify_sympy": true,
+    "pycode": true,
+    "pickle_roundtrip_subs": true,
+    "parse_d(str(e)).subs": true,
+    "parse_d extra_locals rebinding d": true,
+    "assert_opaque_d(sympify(str(e)))": true,
+    "assert_opaque_d(parse_expr(str(e)))": true,
+    "assert_opaque_d(S(str(e)))": true
+   },
+   "parse_d_restores_opaque": true,
+   "unhookable_runtime_value_paths (expected; must be excluded statically)": [
+    "sympify(str(e)).subs(plain d)",
+    "parse_expr(str(e)).subs(plain d)",
+    "sympify(str, locals={'d': Symbol('d')}).subs",
+    "eval(srepr) with Symbol",
+    "replace_lambda_query",
+    "replace_named_query",
+    "Poly.eval",
+    "Poly(..)(4) call",
+    "as_poly(d)(4)",
+    "Horner on all_coeffs",
+    "e.func rebuild",
+    "type(x)(*args) rebuild"
+   ],
+   "package_scan_violations": [],
+   "package_parse_sites": 24,
+   "unreviewed_parse_sites": [],
+   "stale_reviewed_entries": [],
+   "planted_detection": {
+    "replace_named_function": {
+     "violation": true,
+     "parse_site": false
+    },
+    "sympify_str": {
+     "violation": false,
+     "parse_site": true
+    },
+    "S_str": {
+     "violation": false,
+     "parse_site": true
+    },
+    "parse_expr": {
+     "violation": true,
+     "parse_site": false
+    },
+    "eval_srepr": {
+     "violation": true,
+     "parse_site": false
+    },
+    "exec": {
+     "violation": true,
+     "parse_site": false
+    },
+    "func_rebuild": {
+     "violation": true,
+     "parse_site": false
+    },
+    "Poly_eval": {
+     "violation": true,
+     "parse_site": false
+    },
+    "lambdify": {
+     "violation": true,
+     "parse_site": false
+    },
+    "Poly_call": {
+     "violation": false,
+     "parse_site": false
+    },
+    "as_poly_call": {
+     "violation": false,
+     "parse_site": false
+    },
+    "Horner_all_coeffs": {
+     "violation": false,
+     "parse_site": false
+    },
+    "type_rebuild": {
+     "violation": false,
+     "parse_site": false
+    },
+    "class_rebuild": {
+     "violation": false,
+     "parse_site": false
+    },
+    "getattr_func": {
+     "violation": false,
+     "parse_site": false
+    },
+    "alias_sympify": {
+     "violation": false,
+     "parse_site": false
+    },
+    "sympify_locals_plain_d": {
+     "violation": false,
+     "parse_site": false
+    },
+    "getattr_replace": {
+     "violation": false,
+     "parse_site": false
+    },
+    "plain_Symbol_d": {
+     "violation": false,
+     "parse_site": false
+    }
+   },
+   "scan_misses": [
+    "Poly_call",
+    "as_poly_call",
+    "Horner_all_coeffs",
+    "type_rebuild",
+    "class_rebuild",
+    "getattr_func",
+    "alias_sympify",
+    "sympify_locals_plain_d",
+    "getattr_replace",
+    "plain_Symbol_d"
+   ],
+   "own_grep_hits": {
+    "Poly(...)(": [],
+    "as_poly(...)(": [],
+    "all_coeffs": [],
+    "type(..)(*": [],
+    "__class__(": [],
+    "getattr(": [
+     "p5_entry/dred.py:97: if not getattr(_AUTH, \"active\", False):",
+     "p5_entry/dred.py:104: if old == self and new != self and not getattr(_AUTH, \"active\", False):",
+     "p5_entry/dred.py:113: if not getattr(_AUTH, \"active\", False):",
+     "p5_entry/dred.py:119: if not getattr(_AUTH, \"active\", False):"
+    ],
+    "Symbol('d')": [
+     "p5_calc/p17_conventions.py:76: \"why\": (\"G2: sympify of a stored string yields a plain Symbol('d') that is not the opaque d (subs/has against \"",
+     "p5_calc/p17_conventions.py:138: \"deliberate G2 hazard probe (the plain Symbol('d') must be caught by assert_opaque_d)\",",
+     "p5_calc/release_p17.py:74: dred.parse_d(\"d + 1\", {\"d\": sp.Symbol(\"d\")})",
+     "p5_entry/dred.py:50: independent_rebuild_report_p16.json).  G2: sympify of a stored string yields a PLAIN Symbol('d') that is not the",
+     "p5_entry/dred.py:129: \"\"\"a plain Symbol('d') (e.g. from sympify of a stored string) where the opaque d is required (p17, G2).\"\"\"",
+     "p5_entry/dred.py:136: raise PlainDimensionSymbol(f\"plain Symbol('d') in {where or 'expression'}: re-parse with dred.parse_d\")"
+    ],
+    "sympify as/alias import": [],
+    "locals={'d'": [
+     "p5_calc/batchC.py:382: locals={\"d\": d})) == 0 for t, lab in want.items())",
+     "p5_calc/e2_evanescent.py:163: A = {k: sp.sympify(d13[\"result\"][k][\"A_exact_d_times_MB\"], locals={\"d\": d}) for k in STRUCT}"
+    ]
+   },
+   "authorised_substitute_d": "28",
+   "provenance_recorded": true,
+   "p16_guard_probe_rerun_under_p17": true,
+   "p15_regression_probe_under_p17": true,
+   "own_dred_toy_under_p17": true
+  },
+  "3_footers_and_value_block_readback": {
+   "pass": true,
+   "footers": {
+    "XVI-P-science": {
+     "pages": 27,
+     "labels": {
+      "XVI-P p17": 27
+     },
+     "pages_without_exactly_one_p17_footer": [],
+     "n_bad": 0,
+     "page_numbers_sequential_arabic": true
+    },
+    "XVI-P-appendix": {
+     "pages": 505,
+     "labels": {
+      "XVI-P p17": 505
+     },
+     "pages_without_exactly_one_p17_footer": [],
+     "n_bad": 0,
+     "page_numbers_sequential_arabic": true
+    },
+    "XVI-P": {
+     "pages": 532,
+     "labels": {
+      "XVI-P p17": 532
+     },
+     "pages_without_exactly_one_p17_footer": [],
+     "n_bad": 0,
+     "page_numbers_sequential_arabic": true
+    }
+   },
+   "package_VALUE_BLOCKS_found_in_order": {
+    "XVI-P-appendix": {
+     "certificates/P15_D13.json": "30/30",
+     "certificates/P15_batchA.json": "25/25",
+     "certificates/P16_batchC.json": "156/156",
+     "certificates/P16_E2_evanescent.json": "9/9",
+     "certificates/P17_hh_slot.json": "5/5"
+    },
+    "XVI-P": {
+     "certificates/P15_D13.json": "30/30",
+     "certificates/P15_batchA.json": "25/25",
+     "certificates/P16_batchC.json": "156/156",
+     "certificates/P16_E2_evanescent.json": "9/9",
+     "certificates/P17_hh_slot.json": "5/5"
+    }
+   },
+   "own_extension_hh_slot_numbers": {
+    "XVI-P-appendix": "39/39 (after folding U+2019 to ASCII apostrophe; 21 without folding)",
+    "XVI-P": "39/39 (after folding U+2019 to ASCII apostrophe; 21 without folding)"
+   },
+   "residual_records_readback": true,
+   "W6_and_DRED_readback": true,
+   "entrypoint_readback": {
+    "ok": true,
+    "records": 6,
+    "appendix": true,
+    "combined": true,
+    "value_blocks": {
+     "XVI-P-appendix": {
+      "certificates/P17_hh_slot.json": true,
+      "certificates/P16_E2_evanescent.json": true,
+      "certificates/P16_batchC.json": true,
+      "certificates/P15_batchA.json": true,
+      "certificates/P15_D13.json": true
+     },
+     "XVI-P": {
+      "certificates/P17_hh_slot.json": true,
+      "certificates/P16_E2_evanescent.json": true,
+      "certificates/P16_batchC.json": true,
+      "certificates/P15_batchA.json": true,
+      "certificates/P15_D13.json": true
+     }
+    },
+    "footer": {
+     "XVI-P-appendix": {
+      "pages": 505,
+      "footers": 505,
+      "labels": [
+       "XVI-P p17"
+      ],
+      "expected_label": "XVI-P p17",
+      "pass": true
+     },
+     "XVI-P": {
+      "pages": 532,
+      "footers": 532,
+      "labels": [
+       "XVI-P p17"
+      ],
+      "expected_label": "XVI-P p17",
+      "pass": true
+     }
+    }
+   },
+   "manifest": {
+    "n_entries": 37,
+    "failures": [],
+    "n_synced": 6
+   }
+  },
+  "4_determinism_hh_slot_PYTHONHASHSEED": {
+   "pass": true,
+   "certificates": {
+    "P17_hh_slot": {
+     "build(default seed)": {
+      "certio_content_sha_ignoring_run_specific": "e848b57061da2eb5dd1801a5d32f1e184639a813295272f24066a8cc2849c1e5",
+      "own_sha_ignoring_seconds": "f0e0028876aa383b0dc72d09c9a2742fc1b9ce6f70403e70dfe2b26b57e50a98",
+      "file_sha256": "3d4486a92e1f4cf59a84196829dab8d523561becd311e87e27d0d3b43789b160"
+     },
+     "PYTHONHASHSEED=0": {
+      "certio_content_sha_ignoring_run_specific": "e848b57061da2eb5dd1801a5d32f1e184639a813295272f24066a8cc2849c1e5",
+      "own_sha_ignoring_seconds": "f0e0028876aa383b0dc72d09c9a2742fc1b9ce6f70403e70dfe2b26b57e50a98",
+      "file_sha256": "3d4486a92e1f4cf59a84196829dab8d523561becd311e87e27d0d3b43789b160"
+     },
+     "PYTHONHASHSEED=4242": {
+      "certio_content_sha_ignoring_run_specific": "e848b57061da2eb5dd1801a5d32f1e184639a813295272f24066a8cc2849c1e5",
+      "own_sha_ignoring_seconds": "f0e0028876aa383b0dc72d09c9a2742fc1b9ce6f70403e70dfe2b26b57e50a98",
+      "file_sha256": "979e6b42f90ccd7cb4c09adc0dd5583d6c2c7729b518a4ee906e23736634388a"
+     },
+     "content_identical_across_seeds_and_build": true
+    }
+   },
+   "other_files_changed_by_rerun": {
+    "PYTHONHASHSEED=0": [],
+    "PYTHONHASHSEED=4242": [
+     "certificates/P17_hh_slot.json"
+    ]
+   }
+  },
+  "5_contract_and_prior_layers": {
+   "pass": true,
+   "frozen_list_sha256_ok": true,
+   "p13_frozen_files": 54,
+   "p13_frozen_bad_vs_list_or_my_p13_unpack": [],
+   "p14r_contract_files": {
+    "code/p5_entry/amplitude_rules.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": true,
+     "p17_identical_to_p16": true
+    },
+    "code/p5_entry/counterterm_domain.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": true,
+     "p17_identical_to_p16": true
+    },
+    "code/p5_entry/dossier_p14.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": true,
+     "p17_identical_to_p16": true
+    },
+    "code/p5_entry/dred.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": false,
+     "p17_identical_to_p16": false
+    },
+    "code/p5_entry/feynman.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": true,
+     "p17_identical_to_p16": true
+    },
+    "code/p5_entry/freeze_p13.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": true,
+     "p17_identical_to_p16": true
+    },
+    "code/p5_entry/hessian_route.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": true,
+     "p17_identical_to_p16": true
+    },
+    "code/p5_entry/p14_conventions.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": true,
+     "p17_identical_to_p16": true
+    },
+    "code/p5_entry/prescription_d11.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": true,
+     "p17_identical_to_p16": true
+    },
+    "code/p5_entry/quantum_object.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": true,
+     "p17_identical_to_p16": true
+    },
+    "code/p5_entry/release_p14.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": true,
+     "p17_identical_to_p16": true
+    },
+    "code/p5_entry/shadow.py": {
+     "pin_equals_my_p14r_unpack": true,
+     "p17_identical_to_p14r": true,
+     "p17_identical_to_p16": true
+    }
+   },
+   "p5_entry_dir_complete": true,
+   "only_dred_differs_vs_p14r": true,
+   "only_dred_differs_vs_p16": true,
+   "p16_dred_pin_equals_my_p16_unpack": true,
+   "p15_dred_pin_equals_my_p15_unpack": true,
+   "p15_calc_layer": {
+    "code/p5_calc/batchA.py": {
+     "pin_eq_my_p15": true,
+     "p17_eq_p15": true
+    },
+    "code/p5_calc/d13.py": {
+     "pin_eq_my_p15": true,
+     "p17_eq_p15": true
+    },
+    "code/p5_calc/integrals.py": {
+     "pin_eq_my_p15": true,
+     "p17_eq_p15": true
+    },
+    "code/p5_calc/p15_conventions.py": {
+     "pin_eq_my_p15": true,
+     "p17_eq_p15": true
+    },
+    "code/p5_calc/release_p15.py": {
+     "pin_eq_my_p15": true,
+     "p17_eq_p15": true
+    }
+   },
+   "p16_calc_layer": {
+    "code/p5_calc/covariant.py": {
+     "pin_eq_my_p16": true,
+     "p17_eq_p16": true
+    },
+    "code/p5_calc/batchC.py": {
+     "pin_eq_my_p16": true,
+     "p17_eq_p16": true
+    },
+    "code/p5_calc/e2_evanescent.py": {
+     "pin_eq_my_p16": true,
+     "p17_eq_p16": true
+    },
+    "code/p5_calc/p16_conventions.py": {
+     "pin_eq_my_p16": true,
+     "p17_eq_p16": true
+    },
+    "code/p5_calc/release_p16.py": {
+     "pin_eq_my_p16": true,
+     "p17_eq_p16": true
+    }
+   },
+   "n_files": 144,
+   "changed_vs_p16": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "code/p5_entry/dred.py",
+    "manuscript/body/XVI-P-body.tex",
+    "tests/test_p14.py",
+    "tests/test_p16.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "added_vs_p16": [
+    "archival/p16/README.md",
+    "archival/p16/p16_source_files.json",
+    "archival/p16/reference_values_p16.json",
+    "archival/p16/reproducibility/author_rebuild_report_p16.json",
+    "archival/p16/reproducibility/independent_rebuild_report_p16.json",
+    "code/p5_calc/hh_slot.py",
+    "code/p5_calc/p17_conventions.py",
+    "code/p5_calc/release_p17.py",
+    "manuscript/notes/P17_hh_slot.tex",
+    "reproducibility/reference_values_p17.json",
+    "tests/test_p17.py"
+   ],
+   "removed_vs_p16": [
+    "reproducibility/reference_values_p16.json"
+   ],
+   "changed_in_groups": {
+    "code/classical": [],
+    "code/matter_loop": [],
+    "code/p4_classical": [],
+    "code/p5_entry": [
+     "code/p5_entry/dred.py"
+    ],
+    "code/p5_calc": [],
+    "manuscript/notes": [],
+    "notes": [],
+    "provenance": [],
+    "ledgers": [],
+    "archival": []
+   },
+   "p16_source_list_sha_pin_ok": true,
+   "p16_source_list_n": 134,
+   "p16_source_list_bad_vs_my_p16_unpack": [],
+   "archived_p16_independent_report_is_mine": true,
+   "archived_p16_reference_eq_my_p16_copy": true,
+   "archived_p16_author_report_pin_ok": true,
+   "archived_p15_independent_report_is_mine": true,
+   "archived_p14r_independent_report_is_mine": true,
+   "archived_p13_independent_report_is_mine": true,
+   "older_archival_unchanged_vs_p16": true,
+   "classical_exports": {
+    "ell2": {
+     "file_sha256": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+     "polynomial_sha256_str": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+     "terms_Add_make_args": 84
+    },
+    "ell3": {
+     "file_sha256": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+     "polynomial_sha256_str": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+     "terms_Add_make_args": 678
+    },
+    "ell4": {
+     "file_sha256": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+     "polynomial_sha256_str": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+     "terms_Add_make_args": 3360
+    }
+   },
+   "quartic_vs_master_agree": {
+    "kappa0": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    },
+    "kappa1": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    },
+    "kappa2": {
+     "W_terms": true,
+     "Q_terms": true,
+     "Q_identically_zero": true,
+     "s0_piece_alone_Q_terms": true
+    }
+   },
+   "W6_all_agree": true,
+   "amplitude_mutations_rejected": {
+    "wrong_tadpole_factor": true,
+    "wrong_ghost_loop_sign": true,
+    "offdiag_multiplicity": true,
+    "reversed_source_ghost_order": true,
+    "omit_ghost_transport_term": true
+   },
+   "dred_mutations": {
+    "premature_d4": true,
+    "trace_ghat_eq_4": true,
+    "contract_after_laurent": true
+   }
+  },
+  "e_pytest_independent_run": {
+   "pass": true,
+   "groups": {
+    "baseline": {
+     "passed": 100,
+     "failed": 0,
+     "skipped": 0
+    },
+    "certificate_mutation": {
+     "passed": 31,
+     "failed": 0,
+     "skipped": 0
+    },
+    "resumed_build": {
+     "passed": 4,
+     "failed": 0,
+     "skipped": 0
+    }
+   },
+   "summary": "135 passed in 236.02s (0:03:56)",
+   "run_in": "separate copy pytest_run/XVI-P, all of tests/, P14_SYNC_DIR redirected to pytest_run/sync",
+   "sync_dir_files": []
+  },
+  "e_pins": {
+   "pass": true,
+   "XVI-M_ok": true,
+   "grav_density_ok": true,
+   "xvio_bad": [],
+   "xvio_n": 24,
+   "inherited_data_ok": true
+  },
+  "6_batchA_scaleless_regression": {
+   "pass": true,
+   "own_omega_analysis": {
+    "D02": {
+     "denominators": [
+      "l^2+i0"
+     ],
+     "nu": 1,
+     "single_massless_propagator_power_no_external_momentum": true,
+     "prefactor": "-kappa**2/2",
+     "monomials": 220,
+     "rank_histogram": {
+      "0": 84,
+      "2": 136
+     },
+     "odd_rank_monomials (vanish)": 0,
+     "omega_set_even_rank": [
+      2,
+      4
+     ],
+     "omega_subset_of_{2,4}": true,
+     "log_term_possible (omega=0)": false
+    },
+    "D12": {
+     "denominators": [
+      "l^2+i0"
+     ],
+     "nu": 1,
+     "single_massless_propagator_power_no_external_momentum": true,
+     "prefactor": "-kappa**2/2",
+     "monomials": 160,
+     "rank_histogram": {
+      "2": 160
+     },
+     "odd_rank_monomials (vanish)": 0,
+     "omega_set_even_rank": [
+      4
+     ],
+     "omega_subset_of_{2,4}": true,
+     "log_term_possible (omega=0)": false
+    },
+    "D14a": {
+     "denominators": [
+      "l^2+i0"
+     ],
+     "nu": 1,
+     "single_massless_propagator_power_no_external_momentum": true,
+     "prefactor": "-kappa/2",
+     "monomials": 22,
+     "rank_histogram": {
+      "2": 22
+     },
+     "odd_rank_monomials (vanish)": 0,
+     "omega_set_even_rank": [
+      4
+     ],
+     "omega_subset_of_{2,4}": true,
+     "log_term_possible (omega=0)": false
+    },
+    "D14b": {
+     "denominators": [
+      "l^2+i0"
+     ],
+     "nu": 1,
+     "single_massless_propagator_power_no_external_momentum": true,
+     "prefactor": "kappa",
+     "monomials": 16,
+     "rank_histogram": {
+      "2": 16
+     },
+     "odd_rank_monomials (vanish)": 0,
+     "omega_set_even_rank": [
+      4
+     ],
+     "omega_subset_of_{2,4}": true,
+     "log_term_possible (omega=0)": false
+    },
+    "D14c": {
+     "denominators": [
+      "l^2+i0"
+     ],
+     "nu": 1,
+     "single_massless_propagator_power_no_external_momentum": true,
+     "prefactor": "-kappa/2",
+     "monomials": 22,
+     "rank_histogram": {
+      "2": 22
+     },
+     "odd_rank_monomials (vanish)": 0,
+     "omega_set_even_rank": [
+      4
+     ],
+     "omega_subset_of_{2,4}": true,
+     "log_term_possible (omega=0)": false
+    },
+    "pass": true
+   }
+  },
+  "7_comparison_with_author_reference": {
+   "pass": true,
+   "reference_file": "/workspace/XVI-P/reproducibility/reference_values_p17.json",
+   "reference_sha256": "d4345c282aee89676ee7d0b077fd8fc94ebd8735cd78499550b2666a0b9103b1",
+   "reference_identical_to_in_zip_copy": true,
+   "entrypoint_values_compared": 282,
+   "independently_recomputed_values_compared": 202,
+   "independent_sympy_equal_comparisons": 64,
+   "environment_differences": {}
+  }
+ },
+ "mismatches": [],
+ "findings": [
+  {
+   "id": "H1_static_scan_pattern_gaps",
+   "severity": "low (disclosed as 'a pattern check, not a proof'; no released value affected)",
+   "detail": "The extended AST scan (tests/test_p17.py::scan) now flags named-function and lambda replace, eval/exec, parse_expr, lambdify, any .eval(, .func( rebuilds, and lists every sympify/S call without a 'd' local as a parse site (24 sites, all on PARSE_SITES_REVIEWED, none stale). Planted value paths it does NOT catch: Poly(e, d)(4) and e.as_poly(d)(4) (Poly.__call__, the same hazard class as the disclosed 'Poly(..).eval'), Horner evaluation of Poly(..).all_coeffs(), type(x)(*args) / x.__class__(*args) rebuilds (same class as e.func(*args)), getattr indirection, an aliased import (from sympy import sympify as sy), sympify(text, locals={'d': Symbol('d')}) (the 'guarded' test is syntactic: any dict literal with key 'd' passes), and plain Symbol('d') creation. All leak a value at runtime. My own grep of code/p5_calc + code/p5_entry finds none of these patterns (Symbol('d') only in docstrings and in the deliberate release_p17.f3_hardening probe; both locals={'d': ...} sites bind dred.d)."
+  },
+  {
+   "id": "H2_assignment_table_omits_c_hat_h_tilde",
+   "severity": "informational",
+   "detail": "P17_hh_slot.json slot_values lists Q4S, QdS(hat), c tilde/h hat, c tilde/h mixed, c hat/h mixed, all tilde, but not c hat/h tilde. There, by the certificate's own Q4S formula, X_D01 = p.p^2 a~.b~ c^.p/16 = -X_D03, i.e. each graph reaches the slot purely through the evanescent gt_rs p_n structure (my own run: nonzero for D01, D03, zero for the sum). The verdict is unaffected because p_m(G_D01+G_D03) = 0 identically (all assignments), and H4 already holds via Q4S."
+  },
+  {
+   "id": "H3_stale_comments",
+   "severity": "cosmetic",
+   "detail": "dred.py OpaqueDimension.matches comment still says 'tests/test_p16.py scans the package code' (the p17 scan is in tests/test_p17.py; the module docstring is correct). p17_conventions.PARSE_SITES_REVIEWED header says each site 'receives a sympy object (never a stored string)', but 7 of 24 entries parse stored strings (6 export prefactor strings, 1 classical srepr); the per-entry notes are accurate and I verified all 9 exported prefactor strings and the ell2/3/4 srepr exports contain no d."
+  },
+  {
+   "id": "H4_curly_apostrophes_in_typeset_listings",
+   "severity": "cosmetic (pre-existing; 492 in p16)",
+   "detail": "pdftotext of the appendix contains no ASCII apostrophe; all 630 are U+2019. The P17_hh_slot p_dot_G keys (\"(('g', '4', 'n', 'r'), ...)\") and code listings therefore are not byte-copyable from the PDF. The package VALUE_BLOCKS contain no such key and read back exactly; my extended hh-slot snippets (39) read back in order only after folding U+2019 to an ASCII apostrophe."
+  },
+  {
+   "id": "H5_parse_d_srepr",
+   "severity": "informational",
+   "detail": "dred.parse_d(srepr(e)) raises PlainDimensionSymbol (srepr round-trips are not supported by the loader); it fails closed, so this is safe, but it is not documented."
+  },
+  {
+   "id": "H6_scope",
+   "severity": "scope note",
+   "detail": "The hh-slot check starts from my p16 own D01/D03 results (own fit of the exported covariant integrands, not my own Feynman-rule derivation of the integrands). D11 (same row) is unevaluated (M2 undischarged), so the row's slot remains open as the certificate states. The summed evanescent poles of the hh Green function (8 structures, equal to my own) are nonzero but transverse; the hh Green function itself would need evanescent h.h counterterms outside this projection (not claimed). The overall phase (G6) is now documented (PHASE_CONVENTION_G6); D01/D03 relative phase is constrained by the decoupling (M1 breaks it); D13 vs hh relative phase is untested, as disclosed."
+  },
+  {
+   "id": "G1_G2_G3_G4_resolution",
+   "severity": "resolution",
+   "detail": "G1: scan extended to named-function replace, string round-trips (as reviewed parse sites), eval(srepr), e.func rebuilds; disclosure now says 'pattern check, not a proof' (residual gaps: H1). G2: parse_d restores the opaque d (subs then raises), extra_locals rebinding d is refused, assert_opaque_d catches plain d from sympify/parse_expr/S. G3: docstring now states Wild-pattern match and C/Fortran printers are not refused (verified). G4: change_log_vs_p16 lists reference_values_p17.json as added (equal to my diff)."
+  }
+ ],
+ "independent_comparisons": [
+  {
+   "key": "/exports/ell2/file_sha256",
+   "reference": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "independent": "8ef4395c51434fe073109065e31773460c3708937a16ea29a036abf6c72c5030",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell2/polynomial_sha256",
+   "reference": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "independent": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell2/terms",
+   "reference": 84,
+   "independent": 84,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/file_sha256",
+   "reference": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "independent": "183798063fa89839e9a80ae4a81e6c2f9c491a7ad386540d1a4e33382b0686de",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/polynomial_sha256",
+   "reference": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "independent": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell3/terms",
+   "reference": 678,
+   "independent": 678,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/file_sha256",
+   "reference": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "independent": "d71d9a839b5e6388abe32ccb6bb334b87cca8e104f98a99ec198b923dde099fc",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/polynomial_sha256",
+   "reference": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "independent": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4/terms",
+   "reference": 3360,
+   "independent": 3360,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/V4_grav.json",
+   "reference": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "independent": "b09495977e38fc9df581f096d046228cbe09092ab812c5cb663a610664f4b15a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/ell4_conventions.json",
+   "reference": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "independent": "72dbff0f5dc12e0b17b4a417cb5c1d3a59d896187fe626b5dc235029bd8e9769",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_vertex_tensors.json",
+   "reference": "3181424bf18a3def5339c4fe41662dd929b5e4e7ec7fc9aa913a903c5a666872",
+   "independent": "3181424bf18a3def5339c4fe41662dd929b5e4e7ec7fc9aa913a903c5a666872",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D01.json",
+   "reference": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+   "independent": "6433761b3a0cf72e0a800f3fe98d74f574631af242e49ebcc95807b395d41389",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D02.json",
+   "reference": "2f7fd32985ed9161b4b5aad221a9ca6dc59e9f1cc6a069ad7f7503835ce83d1e",
+   "independent": "2f7fd32985ed9161b4b5aad221a9ca6dc59e9f1cc6a069ad7f7503835ce83d1e",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D03.json",
+   "reference": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+   "independent": "aea2c53ef24d9a912b1c25dd49e7dfb7f163ab8bbca8a3d3393e52345de4682a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D11.json",
+   "reference": "f68904158d931faf71209cde9028d4f90e987c098ba84128fd2f6b661a4640ff",
+   "independent": "f68904158d931faf71209cde9028d4f90e987c098ba84128fd2f6b661a4640ff",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D12.json",
+   "reference": "c57d815c0f4aac641dacafa4577037fcbe0bdc4c207597c9b88f62f1153ec73a",
+   "independent": "c57d815c0f4aac641dacafa4577037fcbe0bdc4c207597c9b88f62f1153ec73a",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D13.json",
+   "reference": "8fe1a4ba4ac1fae573ad896ef25d3ae5e0d8a525d546ad980b2ebae8c07cc0a5",
+   "independent": "8fe1a4ba4ac1fae573ad896ef25d3ae5e0d8a525d546ad980b2ebae8c07cc0a5",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14a.json",
+   "reference": "7ac1b6a3544ca2bb370ded6e1ee6cdcea49da94af01c22d96866aa2c30cdd61c",
+   "independent": "7ac1b6a3544ca2bb370ded6e1ee6cdcea49da94af01c22d96866aa2c30cdd61c",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14b.json",
+   "reference": "95f6d47436ba1efdcef371979f7941b782cedb625530912ec00e499bfca953f3",
+   "independent": "95f6d47436ba1efdcef371979f7941b782cedb625530912ec00e499bfca953f3",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/exports/P14_integrands/D14c.json",
+   "reference": "b50e3aabe46d548a0d9afaf182aa99143b2792927b194b84075bcdcc79c0ad79",
+   "independent": "b50e3aabe46d548a0d9afaf182aa99143b2792927b194b84075bcdcc79c0ad79",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/W_terms",
+   "reference": 132,
+   "independent": 132,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa0/s0_piece_alone_Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/W_terms",
+   "reference": 2148,
+   "independent": 2148,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa1/s0_piece_alone_Q_terms",
+   "reference": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "independent": [
+    159,
+    159,
+    159,
+    159
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/quartic_C7/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/W_terms",
+   "reference": 15428,
+   "independent": 15428,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_terms",
+   "reference": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "independent": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/Q_identically_zero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_grav_af0/kappa2/s0_piece_alone_Q_terms",
+   "reference": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "independent": [
+    2088,
+    2088,
+    2088,
+    2088
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa0/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa1/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_grav_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_scalar_Noether",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af0_ghost_gf_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af1_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_invariant",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/master_table/kappa2/af2_transformed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/residual_records/required_master_residuals",
+   "reference": [],
+   "independent": [],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/XVI-M.tex",
+   "reference": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "independent": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/XVI-N-r10/code/prep/grav_density.py",
+   "reference": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "independent": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/inherited_pins/ledgers/quantum_factor_ledger.json",
+   "reference": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "independent": "0d0fb5281b19c29c7d7e87a659831f1737bb4d7d737f5cb2b77c58a7a65cd1dc",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/source/n_source_files",
+   "reference": 144,
+   "independent": 144,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/g4_mn g4_rs (p.p)^2",
+   "reference": "-27*I/80",
+   "independent": "-27*I/80",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/g4_mn g4_rs (p.p)^2",
+   "reference": "I*(405*L - 982)/1200",
+   "independent": "27*I*L/80 - 491*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/g4_mn gt_rs (p.p)^2",
+   "reference": "13*I/120",
+   "independent": "13*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/g4_mn gt_rs (p.p)^2",
+   "reference": "I*(523 - 195*L)/1800",
+   "independent": "-13*I*L/120 + 523*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/g4_mn p_r p_s (p.p)^1",
+   "reference": "19*I/60",
+   "independent": "19*I/60",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/g4_mn p_r p_s (p.p)^1",
+   "reference": "I*(724 - 285*L)/900",
+   "independent": "-19*I*L/60 + 181*I/225",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/g4_mr g4_ns (p.p)^2",
+   "reference": "-71*I/240",
+   "independent": "-71*I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/g4_mr g4_ns (p.p)^2",
+   "reference": "I*(1065*L - 1946)/3600",
+   "independent": "71*I*L/240 - 973*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/g4_mr gt_ns (p.p)^2",
+   "reference": "-3*I/80",
+   "independent": "-3*I/80",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/g4_mr gt_ns (p.p)^2",
+   "reference": "I*(45*L - 118)/1200",
+   "independent": "3*I*L/80 - 59*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/g4_mr p_n p_s (p.p)^1",
+   "reference": "11*I/40",
+   "independent": "11*I/40",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/g4_mr p_n p_s (p.p)^1",
+   "reference": "I*(97 - 55*L)/200",
+   "independent": "-11*I*L/40 + 97*I/200",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/g4_rs gt_mn (p.p)^2",
+   "reference": "13*I/120",
+   "independent": "13*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/g4_rs gt_mn (p.p)^2",
+   "reference": "I*(523 - 195*L)/1800",
+   "independent": "-13*I*L/120 + 523*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/g4_rs p_m p_n (p.p)^1",
+   "reference": "19*I/60",
+   "independent": "19*I/60",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/g4_rs p_m p_n (p.p)^1",
+   "reference": "I*(724 - 285*L)/900",
+   "independent": "-19*I*L/60 + 181*I/225",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/gt_mn gt_rs (p.p)^2",
+   "reference": "-I/240",
+   "independent": "-I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/gt_mn gt_rs (p.p)^2",
+   "reference": "I*(15*L - 46)/3600",
+   "independent": "I*L/240 - 23*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/gt_mn p_r p_s (p.p)^1",
+   "reference": "-3*I/20",
+   "independent": "-3*I/20",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/gt_mn p_r p_s (p.p)^1",
+   "reference": "I*(90*L - 241)/600",
+   "independent": "3*I*L/20 - 241*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/gt_mr gt_ns (p.p)^2",
+   "reference": "-I/240",
+   "independent": "-I/240",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/gt_mr gt_ns (p.p)^2",
+   "reference": "I*(15*L - 46)/3600",
+   "independent": "I*L/240 - 23*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/gt_mr p_n p_s (p.p)^1",
+   "reference": "7*I/120",
+   "independent": "7*I/120",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/gt_mr p_n p_s (p.p)^1",
+   "reference": "I*(277 - 105*L)/1800",
+   "independent": "-7*I*L/120 + 277*I/1800",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/gt_rs p_m p_n (p.p)^1",
+   "reference": "-3*I/20",
+   "independent": "-3*I/20",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/gt_rs p_m p_n (p.p)^1",
+   "reference": "I*(90*L - 241)/600",
+   "independent": "3*I*L/20 - 241*I/600",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole/p_m p_n p_r p_s",
+   "reference": "-13*I/15",
+   "independent": "-13*I/15",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/MSbar_finite/p_m p_n p_r p_s",
+   "reference": "I*(780*L - 1597)/900",
+   "independent": "13*I*L/15 - 1597*I/900",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D01/evanescent_pole_nonzero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/graphs/D01/status",
+   "reference": "regulated",
+   "independent": "regulated",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/g4_mn g4_rs (p.p)^2",
+   "reference": "7*I/48",
+   "independent": "7*I/48",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/g4_mn g4_rs (p.p)^2",
+   "reference": "I*(50 - 21*L)/144",
+   "independent": "-7*I*L/48 + 25*I/72",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/g4_mn gt_rs (p.p)^2",
+   "reference": "-I/24",
+   "independent": "-I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/g4_mn gt_rs (p.p)^2",
+   "reference": "I*(3*L - 8)/72",
+   "independent": "I*L/24 - I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/g4_mn p_r p_s (p.p)^1",
+   "reference": "-I/8",
+   "independent": "-I/8",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/g4_mn p_r p_s (p.p)^1",
+   "reference": "I*(3*L - 8)/24",
+   "independent": "I*L/8 - I/3",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/g4_mr g4_ns (p.p)^2",
+   "reference": "I/24",
+   "independent": "I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/g4_mr g4_ns (p.p)^2",
+   "reference": "I*(2 - 3*L)/72",
+   "independent": "-I*L/24 + I/36",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/g4_mr gt_ns (p.p)^2",
+   "reference": "I/24",
+   "independent": "I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/g4_mr gt_ns (p.p)^2",
+   "reference": "I*(8 - 3*L)/72",
+   "independent": "-I*L/24 + I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/g4_mr p_n p_s (p.p)^1",
+   "reference": "-I/48",
+   "independent": "-I/48",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/g4_mr p_n p_s (p.p)^1",
+   "reference": "I*(3*L + 4)/144",
+   "independent": "I*L/48 + I/36",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/g4_rs gt_mn (p.p)^2",
+   "reference": "-I/24",
+   "independent": "-I/24",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/g4_rs gt_mn (p.p)^2",
+   "reference": "I*(3*L - 8)/72",
+   "independent": "I*L/24 - I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/g4_rs p_m p_n (p.p)^1",
+   "reference": "-I/8",
+   "independent": "-I/8",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/g4_rs p_m p_n (p.p)^1",
+   "reference": "I*(3*L - 8)/24",
+   "independent": "I*L/8 - I/3",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/gt_mn p_r p_s (p.p)^1",
+   "reference": "I/12",
+   "independent": "I/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/gt_mn p_r p_s (p.p)^1",
+   "reference": "I*(8 - 3*L)/36",
+   "independent": "-I*L/12 + 2*I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/gt_mr p_n p_s (p.p)^1",
+   "reference": "-I/16",
+   "independent": "-I/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/gt_mr p_n p_s (p.p)^1",
+   "reference": "I*(3*L - 8)/48",
+   "independent": "I*L/16 - I/6",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/gt_rs p_m p_n (p.p)^1",
+   "reference": "I/12",
+   "independent": "I/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/gt_rs p_m p_n (p.p)^1",
+   "reference": "I*(8 - 3*L)/36",
+   "independent": "-I*L/12 + 2*I/9",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole/p_m p_n p_r p_s",
+   "reference": "I/6",
+   "independent": "I/6",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/MSbar_finite/p_m p_n p_r p_s",
+   "reference": "I*(5 - 3*L)/18",
+   "independent": "-I*L/6 + 5*I/18",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/evanescent_pole_nonzero",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/graphs/D03/status",
+   "reference": "regulated",
+   "independent": "regulated",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/graphs/D13/UV_pole/T1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D13/MSbar_finite/T1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D13/UV_pole/T2",
+   "reference": "3/16",
+   "independent": "3/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D13/MSbar_finite/T2",
+   "reference": "1/3 - 3*L/16",
+   "independent": "1/3 - 3*L/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D13/UV_pole/T3",
+   "reference": "-1/4",
+   "independent": "-1/4",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D13/MSbar_finite/T3",
+   "reference": "L/4 - 5/12",
+   "independent": "L/4 - 5/12",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D13/UV_pole/E1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D13/MSbar_finite/E1",
+   "reference": "0",
+   "independent": "0",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D13/UV_pole/E2",
+   "reference": "1/16",
+   "independent": "1/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D13/MSbar_finite/E2",
+   "reference": "1/6 - L/16",
+   "independent": "1/6 - L/16",
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D02/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/graphs/D12/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/graphs/D14a/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/graphs/D14b/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/graphs/D14c/status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/D12_status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/contract_changed_files",
+   "reference": [
+    "code/p5_entry/dred.py"
+   ],
+   "independent": [
+    "code/p5_entry/dred.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/contract_files_added",
+   "reference": [],
+   "independent": [],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/change_log_vs_p16/added",
+   "reference": [
+    "archival/p16/README.md",
+    "archival/p16/p16_source_files.json",
+    "archival/p16/reference_values_p16.json",
+    "archival/p16/reproducibility/author_rebuild_report_p16.json",
+    "archival/p16/reproducibility/independent_rebuild_report_p16.json",
+    "code/p5_calc/hh_slot.py",
+    "code/p5_calc/p17_conventions.py",
+    "code/p5_calc/release_p17.py",
+    "manuscript/notes/P17_hh_slot.tex",
+    "reproducibility/reference_values_p17.json",
+    "tests/test_p17.py"
+   ],
+   "independent": [
+    "archival/p16/README.md",
+    "archival/p16/p16_source_files.json",
+    "archival/p16/reference_values_p16.json",
+    "archival/p16/reproducibility/author_rebuild_report_p16.json",
+    "archival/p16/reproducibility/independent_rebuild_report_p16.json",
+    "code/p5_calc/hh_slot.py",
+    "code/p5_calc/p17_conventions.py",
+    "code/p5_calc/release_p17.py",
+    "manuscript/notes/P17_hh_slot.tex",
+    "reproducibility/reference_values_p17.json",
+    "tests/test_p17.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/change_log_vs_p16/modified",
+   "reference": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "code/p5_entry/dred.py",
+    "manuscript/body/XVI-P-body.tex",
+    "tests/test_p14.py",
+    "tests/test_p16.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "independent": [
+    "README.md",
+    "REBUILD_INSTRUCTIONS.md",
+    "code/p5_entry/dred.py",
+    "manuscript/body/XVI-P-body.tex",
+    "tests/test_p14.py",
+    "tests/test_p16.py",
+    "tools/build.py",
+    "tools/rebuild_from_source.py",
+    "tools/source_manifest.py"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/change_log_vs_p16/removed",
+   "reference": [
+    "reproducibility/reference_values_p16.json"
+   ],
+   "independent": [
+    "reproducibility/reference_values_p16.json"
+   ],
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/E2_status",
+   "reference": "decoupled_from_ch_slot_proven",
+   "independent": "decoupled_from_ch_slot_proven",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/E2_decoupling_proven",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/graphs/D01/UV_pole_in_p14r_hh_basis",
+   "reference": [
+    "-27*I/160",
+    "-71*I/240",
+    "19*I/60",
+    "11*I/20",
+    "-13*I/30"
+   ],
+   "independent": [
+    "-27*I/160",
+    "-71*I/240",
+    "19*I/60",
+    "11*I/20",
+    "-13*I/30"
+   ],
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/graphs/D03/UV_pole_in_p14r_hh_basis",
+   "reference": [
+    "7*I/96",
+    "I/24",
+    "-I/8",
+    "-I/24",
+    "I/12"
+   ],
+   "independent": [
+    "7*I/96",
+    "I/24",
+    "-I/8",
+    "-I/24",
+    "I/12"
+   ],
+   "equal": true,
+   "compared_as": "sympy-equal"
+  },
+  {
+   "key": "/p17/hh_evanescent_decoupling_proven",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/hh_evanescent_status",
+   "reference": "decoupled_from_ch_slot_proven_as_sum",
+   "independent": "decoupled_from_ch_slot_proven_as_sum",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/p17/evanescent_hh_counterterm_added",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/certificate_content_sha256_ignoring_timings/P17_hh_slot",
+   "reference": "e848b57061da2eb5dd1801a5d32f1e184639a813295272f24066a8cc2849c1e5",
+   "independent": "e848b57061da2eb5dd1801a5d32f1e184639a813295272f24066a8cc2849c1e5",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/passed",
+   "reference": 100,
+   "independent": 100,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/baseline/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/passed",
+   "reference": 31,
+   "independent": 31,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/certificate_mutation/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/passed",
+   "reference": 4,
+   "independent": 4,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/failed",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/tests/resumed_build/skipped",
+   "reference": 0,
+   "independent": 0,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/release_claim_accepted",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/publication",
+   "reference": "accepted",
+   "independent": "accepted",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/quantum_inputs_evaluated",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/projected_defect_computed",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/projected_identity_verified",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/projected_restoration_verified",
+   "reference": "not_earned",
+   "independent": "not_earned",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/bulk_symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/symmetry_restored",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/D11_matching_verified",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/O1_closure",
+   "reference": "NOT_CLOSED",
+   "independent": "NOT_CLOSED",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/insertion_status",
+   "reference": "Frozen_negative_obstruction_preserved",
+   "independent": "Frozen_negative_obstruction_preserved",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XV_B_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XIV_J_opened",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/Route_B_discharged",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/u_R_c_delta_added",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/XVI_P_registered",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/hard_stops/D11_evaluated",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/quantum_action_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/quantum_prescription_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/D11_matching_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/counterterm_domain_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_flags/amplitude_rules_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P5_entry_earned",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/P3_P4_frozen_as_P5_inputs",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/D11_matching_verified",
+   "reference": false,
+   "independent": false,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/D12_status",
+   "reference": "vanishing_under_declared_prescription",
+   "independent": "vanishing_under_declared_prescription",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/classical_readiness_for_ch_identity",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/quartic_generator_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/ch_projection_defined",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/ch_dependency_inventory_complete",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/gauge_fixing_map_constructed",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/flags/required_classical_BV_components_verified",
+   "reference": true,
+   "independent": true,
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.3",
+   "reference": "complete (declared ch target)",
+   "independent": "complete (declared ch target)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.4",
+   "reference": "earned (classical readiness)",
+   "independent": "earned (classical readiness)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_entry",
+   "reference": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+   "independent": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_calculation",
+   "reference": "in progress (p15: Batch A D02/D12/D14a-c and Batch B D13; p16: E2 decoupled from the ch slot (proof), Batch C D01/D03 evaluated; p17: D01/D03 evanescent poles decoupled from the ch slot as the sum D01 + D03 (proof); D11 matching M2 NOT evaluated)",
+   "independent": "in progress (p15: Batch A D02/D12/D14a-c and Batch B D13; p16: E2 decoupled from the ch slot (proof), Batch C D01/D03 evaluated; p17: D01/D03 evanescent poles decoupled from the ch slot as the sum D01 + D03 (proof); D11 matching M2 NOT evaluated)",
+   "equal": true,
+   "compared_as": "exact"
+  },
+  {
+   "key": "/release/milestones/P.5_identity",
+   "reference": "open",
+   "independent": "open",
+   "equal": true,
+   "compared_as": "exact"
+  }
+ ],
+ "entrypoint_report": "src/XVI-P/build/rebuild_report.json",
+ "steps": {
+  "source_only_tree": {
+   "ok": true,
+   "non_source_files": [],
+   "count": 0
+  },
+  "inherited_pins": {
+   "ok": true,
+   "external": {
+    "XVI-M.tex": {
+     "sha256": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+     "ok": true,
+     "location": "vendored",
+     "vendored_copy_matches_pin": true
+    },
+    "XVI-N-r10/code/prep/grav_density.py": {
+     "sha256": "855ab9e2124acf66f4440b2f1745470acf137caf77dc7bd538d13b7c878ea8e0",
+     "ok": true,
+     "location": "vendored",
+     "vendored_copy_matches_pin": true
+    }
+   },
+   "inherited_data_files": 1,
+   "inherited_data_failures": [],
+   "xvi_o_o70_files_verified": 24,
+   "xvi_o_o70_failures": [],
+   "XVI_M_pin": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea"
+  },
+  "full_build": {
+   "ok": true,
+   "rc": 0,
+   "seconds": 1463.8,
+   "log": "build/rebuild_build.log"
+  },
+  "release_accepted": {
+   "ok": true,
+   "milestones": {
+    "P.3": "complete (declared ch target)",
+    "P.4": "earned (classical readiness)",
+    "P.5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+    "P.5_calculation": "in progress (p15: Batch A D02/D12/D14a-c and Batch B D13; p16: E2 decoupled from the ch slot (proof), Batch C D01/D03 evaluated; p17: D01/D03 evanescent poles decoupled from the ch slot as the sum D01 + D03 (proof); D11 matching M2 NOT evaluated)",
+    "P.5_identity": "open"
+   },
+   "P5_entry_flags": {
+    "quantum_action_defined": true,
+    "quantum_prescription_defined": true,
+    "D11_matching_defined": true,
+    "counterterm_domain_defined": true,
+    "amplitude_rules_verified": true
+   }
+  },
+  "tests": {
+   "ok": true,
+   "groups": {
+    "baseline": {
+     "passed": 100,
+     "failed": 0,
+     "skipped": 0
+    },
+    "certificate_mutation": {
+     "passed": 31,
+     "failed": 0,
+     "skipped": 0
+    },
+    "resumed_build": {
+     "passed": 4,
+     "failed": 0,
+     "skipped": 0
+    }
+   },
+   "summary": "135 passed in 232.23s (0:03:52)"
+  },
+  "pdf_readback_vs_records": {
+   "ok": true,
+   "records": 6,
+   "appendix": true,
+   "combined": true,
+   "value_blocks": {
+    "XVI-P-appendix": {
+     "certificates/P17_hh_slot.json": true,
+     "certificates/P16_E2_evanescent.json": true,
+     "certificates/P16_batchC.json": true,
+     "certificates/P15_batchA.json": true,
+     "certificates/P15_D13.json": true
+    },
+    "XVI-P": {
+     "certificates/P17_hh_slot.json": true,
+     "certificates/P16_E2_evanescent.json": true,
+     "certificates/P16_batchC.json": true,
+     "certificates/P15_batchA.json": true,
+     "certificates/P15_D13.json": true
+    }
+   },
+   "footer": {
+    "XVI-P-appendix": {
+     "pages": 505,
+     "footers": 505,
+     "labels": [
+      "XVI-P p17"
+     ],
+     "expected_label": "XVI-P p17",
+     "pass": true
+    },
+    "XVI-P": {
+     "pages": 532,
+     "footers": 532,
+     "labels": [
+      "XVI-P p17"
+     ],
+     "expected_label": "XVI-P p17",
+     "pass": true
+    }
+   }
+  },
+  "external_manifest": {
+   "ok": true,
+   "entries": 37,
+   "failures": [],
+   "synced_inside_copy": [
+    "XVI-P-appendix.pdf",
+    "XVI-P-full.zip",
+    "XVI-P-p17-source-only.zip",
+    "XVI-P-review-focus.zip",
+    "XVI-P-science.pdf",
+    "XVI-P.pdf"
+   ]
+  },
+  "source_only_zip_rebuilt": {
+   "ok": true,
+   "differences": []
+  },
+  "file_access_trace": {
+   "ok": true,
+   "present": true,
+   "reads": 7021,
+   "writes": 7318,
+   "external_reads_pinned": [],
+   "unpinned_external_reads": [],
+   "in_tree_source_files_read": 144,
+   "in_tree_data_inputs_read": [
+    "archival/p13/frozen_p13_inputs.json",
+    "archival/p13/reference_values_p13.json",
+    "archival/p13/reproducibility/author_rebuild_report_p13.json",
+    "archival/p13/reproducibility/independent_rebuild_report_p13.json",
+    "archival/p14r/reference_values_p14r.json",
+    "archival/p14r/reproducibility/author_rebuild_report_p14r.json",
+    "archival/p14r/reproducibility/independent_rebuild_report_p14r.json",
+    "archival/p15/p15_source_files.json",
+    "archival/p15/reference_values_p15.json",
+    "archival/p15/reproducibility/author_rebuild_report_p15.json",
+    "archival/p15/reproducibility/independent_rebuild_report_p15.json",
+    "archival/p16/p16_source_files.json",
+    "archival/p16/reference_values_p16.json",
+    "archival/p16/reproducibility/author_rebuild_report_p16.json",
+    "archival/p16/reproducibility/independent_rebuild_report_p16.json",
+    "ledgers/quantum_factor_ledger.json",
+    "provenance/XVI-M_sha256.txt",
+    "provenance/XVI-O_o70_source_tree.json",
+    "provenance/predecessor_pins.json",
+    "reproducibility/inherited_data_pins.json",
+    "reproducibility/reference_values_p17.json"
+   ],
+   "unpinned_in_tree_data_inputs": [],
+   "reads_of_unknown_files": [
+    "P14_integrands",
+    "XVI-N-r10",
+    "body",
+    "classical",
+    "inherited",
+    "matter_loop",
+    "outputs",
+    "p02_p09",
+    "p10",
+    "p11",
+    "p12",
+    "p13",
+    "p14",
+    "p14r",
+    "p15",
+    "p16",
+    "p4_classical",
+    "p5_calc",
+    "p5_entry",
+    "prep",
+    "read_trace",
+    "stale",
+    "test_f3_static_scan_detects_a_0",
+    "test_g1_static_scan_detects_pl0"
+   ]
+  },
+  "comparison_with_reference": {
+   "ok": true,
+   "compared": 282,
+   "equal": 282,
+   "differences": []
+  }
+ }
+}
