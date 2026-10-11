@@ -1,0 +1,289 @@
+{
+  "revision": "o70-sync",
+  "gate": "O.5_matter_loop_Gate4_Ward_D12_onepoint",
+  "status": "Constructed",
+  "pass": true,
+  "pass_means": "o70-sync: L from contact moments; alpha=A^2/60, beta=A^2/18; Ward verified by substitution (partial(Pi_w+L)=partial Pi_tr=0). UV (EG) vs finite repair (L) kept separate. D12/one-point prescription zeros. Kernel CT != bulk BV restore.",
+  "prior_gates_validation": {
+    "gates": {
+      "Gate0": {
+        "status": "Constructed",
+        "acceptable": true,
+        "revision": "o70-sync"
+      },
+      "Gate1": {
+        "status": "Constructed",
+        "acceptable": true,
+        "revision": "o70-sync"
+      },
+      "Gate2_prefactor": {
+        "status": "Constructed",
+        "acceptable": true,
+        "revision": "o70-sync",
+        "split_note": "prefactor agreement only; tensor tracked in O5_D11_tensor"
+      },
+      "result1_tensor": {
+        "status": "Constructed",
+        "acceptable": true
+      },
+      "result2_divergences": {
+        "status": "Constructed",
+        "acceptable": true
+      },
+      "Gate3_extension": {
+        "status": "Partial",
+        "result_3a": "Constructed",
+        "acceptable": true,
+        "revision": "o70-sync",
+        "cutoff_corrected": true
+      }
+    },
+    "convention_ids_present": true,
+    "results_1_2_3a_ready": true
+  },
+  "contact_defect": {
+    "status": "Constructed",
+    "definition": "A_{nu rho sigma} = partial^mu Pi^R_{mu nu rho sigma}",
+    "Pi": "Pi = (i kappa^2/4) T",
+    "support": "{0}",
+    "reason_support": "partial^mu T = 0 on U (result 2); T^R extends T (result 3a); hence partial^mu T^R is supported at 0",
+    "order_bound": 5,
+    "order_bound_meaning": "kernel_divergence_contact_bound",
+    "L_order_bound_separate": 4,
+    "orders_kept_separate": true,
+    "NO_unsupported_improvement_5_to_4": true,
+    "off_diagonal_input": "Constructed",
+    "extension_input": "Constructed",
+    "ghost_number_defect": null,
+    "ghost_number_note": "ghost_number_defect=1 attaches to the ghost-containing functional defect A_1 / ST4b, NOT to this numerical kernel divergence contact",
+    "NOT_Lorentz_implies_Ward": true
+  },
+  "contact_ansatz": {
+    "status": "ansatz_candidate_list",
+    "ghost_number": 0,
+    "parity_even": true,
+    "max_order": 4,
+    "basis": [
+      {
+        "id": "L0_hh",
+        "order": 0,
+        "density": "h_{mu nu} h^{mu nu}",
+        "parity": "even"
+      },
+      {
+        "id": "L0_tr",
+        "order": 0,
+        "density": "tau^2",
+        "parity": "even"
+      },
+      {
+        "id": "L2_Box",
+        "order": 2,
+        "density": "h_{mu nu} Box h^{mu nu}",
+        "parity": "even"
+      },
+      {
+        "id": "L2_trBox",
+        "order": 2,
+        "density": "tau Box tau",
+        "parity": "even"
+      },
+      {
+        "id": "L2_divdiv",
+        "order": 2,
+        "density": "(partial_mu h^{mu nu})(partial^rho h_rho nu)",
+        "parity": "even"
+      },
+      {
+        "id": "L2_divtr",
+        "order": 2,
+        "density": "(partial_mu h^{mu nu}) partial_nu tau",
+        "parity": "even"
+      },
+      {
+        "id": "L4_Box2",
+        "order": 4,
+        "density": "h Box^2 h",
+        "parity": "even"
+      },
+      {
+        "id": "L4_trBox2",
+        "order": 4,
+        "density": "tau Box^2 tau",
+        "parity": "even"
+      },
+      {
+        "id": "L4_mixed",
+        "order": 4,
+        "density": "mixed four-derivative structures",
+        "parity": "even"
+      }
+    ],
+    "n": 9,
+    "NOT_proved_spanning": true,
+    "XIII_B_admitted_CT": "even and gh=0 (XIII-B)"
+  },
+  "active_Ww_prescription_id": "W_w_jet_pullback_via_Pi_tr_o68",
+  "Gate4_cites_same_Ww_id_as_moments": true,
+  "prescription_match_derived": {
+    "Ww_cert_id": "W_w_jet_pullback_via_Pi_tr_o68",
+    "contact_moments_id": "W_w_jet_pullback_via_Pi_tr_o68",
+    "expected": "W_w_jet_pullback_via_Pi_tr_o68",
+    "match": true,
+    "NOT_hardcoded": true
+  },
+  "Route1_primary": {
+    "cert": "O5_Route1_transverse.json",
+    "status": "Constructed",
+    "alpha": "A**2/60",
+    "beta": "A**2/18",
+    "NOT_defaulted_alpha_beta": true,
+    "a": "A**2/60",
+    "b": "A**2/18",
+    "Pi_tr": "Constructed",
+    "L": "Constructed",
+    "Ward_by_substitution": {
+      "status": "Constructed",
+      "alias_of": "kernel_two_point_Ward",
+      "first_pair": "partial^mu (Pi_w^R + L) = 0",
+      "second_pair": "partial^rho (Pi_w^R + L) = 0"
+    },
+    "UV_vs_finite_repair": {
+      "UV": "W_w jet-pullback Pi_w^R (prescription W_w_jet_pullback_via_Pi_tr_o68)",
+      "finite_repair": "L from contact moments",
+      "kept_separate": true
+    },
+    "pass": true
+  },
+  "transverse_solution": {
+    "status": "Constructed",
+    "pass": true,
+    "method": "Route1_difference_L_equals_Pi_tr_minus_Pi_w",
+    "legacy_Amb_model_check": {
+      "status": "Partial",
+      "ARCHIVED_random_matrix": true,
+      "note": "ARCHIVED: random-matrix Amb model is NOT the earning witness; o68 primary is contact moments",
+      "model_linear_algebra_ok": true
+    },
+    "both_pairs": {
+      "first": "partial^mu (Pi_w^R + L) = partial^mu Pi_tr^R = 0",
+      "second": "partial^rho (Pi_w^R + L) = partial^rho Pi_tr^R = 0",
+      "verified_by_substitution": true
+    },
+    "substitution_verified": {
+      "status": "Constructed",
+      "alias_of": "kernel_two_point_Ward",
+      "first_pair": "partial^mu (Pi_w^R + L) = 0",
+      "second_pair": "partial^rho (Pi_w^R + L) = 0"
+    },
+    "success_by_construction_REMOVED": true,
+    "explicit_difference_witness": "L = Pi_tr^R - Pi_w^R (exact distributional)",
+    "numerical_c_alpha": "optional"
+  },
+  "result_3": {
+    "extension_3a": "Constructed",
+    "contacts_3b": "Constructed",
+    "combined": "Constructed",
+    "method": "Route1_L_equals_Pi_tr_minus_Pi_w"
+  },
+  "three_results": {
+    "1_normalized_off_diagonal_D11_tensor": "Constructed",
+    "2_both_off_diagonal_divergences": "Constructed",
+    "3_extension_and_contact_Ward": "Constructed"
+  },
+  "D12": {
+    "status": "Constructed_prescription",
+    "pass": true,
+    "diagram": "D12_hh_scalar_tadpole",
+    "coincident_prescription": "dimensional_regularization_m0",
+    "value": 0,
+    "executed_integral": false,
+    "prescription_level_accepted": true,
+    "NOT_default_zero_without_evidence": true,
+    "justification": "Scaleless tadpole in dim-reg at m=0 is assigned 0 (prescription). XIII-C spectator remark: not a calculation of the coincident contraction.",
+    "retained_in_functional_identity": true
+  },
+  "one_point": {
+    "status": "Constructed_prescription",
+    "pass": true,
+    "object": "Gamma_1^{(1)}[h] scalar-loop one-point",
+    "prescription": "dimensional_regularization_m0",
+    "value": 0,
+    "executed_integral": false,
+    "prescription_level_accepted": true,
+    "NOT_default_zero_without_evidence": true,
+    "retained_in_Ward": true
+  },
+  "Ward_and_CT": {
+    "status": "Constructed",
+    "kernel_two_point_Ward": {
+      "status": "Constructed",
+      "renamed_from": "ST4b_anomaly_cancellation",
+      "NOT_functional_ST4b": true,
+      "ghost_number_defect": null,
+      "ghost_number_note": "Numerical kernel Ward has no ghost; gh(defect)=1 belongs to functional A_1 / ST4b only",
+      "ghost_number_CT": 0,
+      "success_by_construction_REMOVED": true,
+      "substitution_verified": {
+        "status": "Constructed",
+        "alias_of": "kernel_two_point_Ward",
+        "first_pair": "partial^mu (Pi_w^R + L) = 0",
+        "second_pair": "partial^rho (Pi_w^R + L) = 0"
+      },
+      "scope": "kernel_two_point_only",
+      "s0_C_L_evaluated": false,
+      "functional_ST4b_claimed": false
+    },
+    "functional_defect_A1_ST4b": {
+      "status": "not_evaluated",
+      "ghost_number_defect": 1,
+      "ghost_number_CT": 0,
+      "NOT_this_kernel_Ward": true,
+      "note": "gh=1 attaches here only; s0_C_L not evaluated"
+    },
+    "ST4b_anomaly_cancellation": {
+      "status": "RENAMED_to_kernel_two_point_Ward",
+      "DEPRECATED": true,
+      "see": "kernel_two_point_Ward"
+    },
+    "full_Ward": {
+      "off_diagonal": "Constructed (result 2)",
+      "contacts": "Constructed",
+      "D12": 0,
+      "one_point": 0,
+      "status": "Constructed"
+    },
+    "C_L": {
+      "normalization": "C_L[h] = (1/2) int h^{mu nu}(x) L_{mu nu rho sigma}(x-y) h^{rho sigma}(y)",
+      "ghost_number": 0,
+      "parity_even": true,
+      "XIII_B_admitted": "even and gh=0",
+      "NOT_antifield_seed": true,
+      "s0_C_L": {
+        "status": "not_evaluated",
+        "minimal_release": true,
+        "note": "Linearized variation s0 C_L is NOT evaluated in the minimal o70-sync release. Kernel divergences verified; functional identity not claimed."
+      },
+      "functional_ST4b": {
+        "status": "not_claimed",
+        "note": "Renamed kernel flag is kernel_two_point_Ward; functional ST4b not claimed."
+      },
+      "NOT_bulk_BV_restore": true,
+      "NOT_XVI_N_broken_square_repair": true,
+      "NOT_Em01": true,
+      "kernel_CT_only": true
+    },
+    "Lorentz_is_NOT_diffeomorphism_Ward": true,
+    "symmetry_restored_subsector": true,
+    "symmetry_restored_bulk": false,
+    "NOT_bulk_BV_restore": true
+  },
+  "symmetry_restored_subsector": true,
+  "symmetry_restored_bulk": false,
+  "D11_kernel_counterterm": "earned",
+  "linearized_BRST_functional_identity": "separate_not_evaluated",
+  "bulk_BV_restoration": "not_established",
+  "O1_NOT_CLOSED": true,
+  "insertion_Track_II_frozen": true,
+  "NOT_Em01": true
+}

@@ -1,0 +1,7 @@
+{
+ "rc": 0,
+ "tail": [
+  "check_certs: PASS",
+  "ALL test_matter_loop_gates: PASS"
+ ]
+}

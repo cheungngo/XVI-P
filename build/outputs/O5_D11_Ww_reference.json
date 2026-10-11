@@ -1,0 +1,99 @@
+{
+  "revision": "o70-sync",
+  "deliverable": 3,
+  "status": "Constructed",
+  "pass": true,
+  "pass_means": "ONLY active reference W_w_jet_pullback_via_Pi_tr_o68: \u27e8Pi_w^R,f\u27e9=\u27e8Pi_tr^R,W_w f\u27e9 with explicit even non-Lorentz w (R=1); restriction+normalization lemmas; continuity; off-diagonal (i\u03ba\u00b2/4)T; sd\u22648 via annular seminorms; even; vanishing moments |\u03b3|\u22644. Old cutoff ARCHIVED; equivalence NOT claimed.",
+  "prescription_id": "W_w_jet_pullback_via_Pi_tr_o68",
+  "ONLY_active_reference": true,
+  "reference": {
+    "prescription_id": "W_w_jet_pullback_via_Pi_tr_o68",
+    "ONLY_active_reference_for_this_witness": true,
+    "definition": "\u27e8Pi_w^R, f\u27e9 := \u27e8Pi_tr^R, W_w f\u27e9",
+    "requires_Pi_tr_first": true,
+    "Pi_tr_status": "Constructed",
+    "status": "Constructed",
+    "pass": true,
+    "restriction": "If f vanishes on a neighborhood of 0 (hence supp f \u2282 U and jet through order 4 at 0 vanishes), then J_4 f = 0 and W_w f = f.",
+    "normalization": "For p_gamma = z^gamma/gamma! with |gamma|<=4 and w\u22611 near 0: J_4(w p_gamma) = p_gamma globally (jet of w p_gamma at 0 equals jet of p_gamma because w(0)=1 and all derivatives of w that hit the product vanish at 0 when w\u22611 on a neighborhood of 0). Hence W_w(w p_gamma) = w p_gamma - w J_4(w p_gamma) = w p_gamma - w p_gamma = 0 globally as a test function (including the transition region and outside supp w).",
+    "NOT_old_cutoff_limit": true,
+    "archived_cutoff": {
+      "prescription_id": "EG_cutoff_limit_o66_ARCHIVED",
+      "formula": "lim_eps \u27e8T, (1-chi(z/eps)) W_w f\u27e9",
+      "status": "ARCHIVED",
+      "equivalence_with_W_w_pullback": "NOT_claimed"
+    },
+    "distinction": "Active reference pulls back the already-extended transverse Pi_tr^R through W_w; it is not the dyadic cutoff-limit of the punctured T. XIII-C / XVI-J prove restriction+normalization after Pi_tr exists; equivalence with cutoff is not claimed.",
+    "w": {
+      "formula": "rho(s)=0 (s<=0), exp(-1/s) (s>0); eta(s)=rho(s)/(rho(s)+rho(1-s)); u=1-|z|_E^2/R^2 with R=1 (chart length); w(z)=eta(2u). Explicit: w\u22611 on |z|_E^2<=1/2; w\u22610 on |z|_E>=1; C^\u221e monotone on the transition annulus 1/2<|z|_E^2<1.",
+      "R": 1,
+      "R_units": "chart_length",
+      "equals_one_near_0": true,
+      "equals_one_on": "|z|_E^2 <= 1/2",
+      "vanishes_outside": "|z|_E >= 1",
+      "transition_annulus": "1/2 < |z|_E^2 < 1",
+      "interpolation": "eta(2u) with eta the standard smooth step via rho",
+      "even": true,
+      "even_proof": "w(-z)=w(z) because |z|_E depends on squared coordinates",
+      "Lorentz_invariant": false,
+      "why_not_Lorentz": "No nonzero compactly supported Lorentz-invariant smooth function equals 1 near 0 (unbounded Lorentz orbits).",
+      "NOT_hypothesis_pointwise_bound": true,
+      "bump_choice": "explicit_smooth_bump_fixed_R_with_rho_eta",
+      "parameterized_alternative": "Equivalently the theorem may be stated for arbitrary admissible even w\u22611 near 0, writing L = L_{mu,w}; this release freezes the explicit formula above."
+    },
+    "W_w": {
+      "formula": "W_w f = f - w * J_4 f",
+      "restriction_lemma": "If f vanishes on a neighborhood of 0 (hence supp f \u2282 U and jet through order 4 at 0 vanishes), then J_4 f = 0 and W_w f = f.",
+      "normalization_lemma": "For p_gamma = z^gamma/gamma! with |gamma|<=4 and w\u22611 near 0: J_4(w p_gamma) = p_gamma globally (jet of w p_gamma at 0 equals jet of p_gamma because w(0)=1 and all derivatives of w that hit the product vanish at 0 when w\u22611 on a neighborhood of 0). Hence W_w(w p_gamma) = w p_gamma - w J_4(w p_gamma) = w p_gamma - w p_gamma = 0 globally as a test function (including the transition region and outside supp w).",
+      "normalization_identity": "J_4(w p_gamma)=p_gamma  \u21d2  W_w(w p_gamma)=0 globally"
+    },
+    "J_4": {
+      "formula": "J_4 f(z) = sum_{|gamma|<=4} z^gamma/gamma! * partial^gamma f(0)",
+      "N": 4,
+      "n_multiindices": 70,
+      "expected_70": true
+    }
+  },
+  "properties": {
+    "continuity": {
+      "status": "Constructed",
+      "argument": "W_w: D\u2192D continuous; Pi_tr^R \u2208 D' \u21d2 composition continuous. Proofs use annular seminorms (XIII-C), not a pointwise bound."
+    },
+    "agrees_off_diagonal": {
+      "status": "Constructed",
+      "statement": "If f vanishes near 0 then J_4 f = 0, W_w f = f, and \u27e8Pi_w,f\u27e9=\u27e8Pi_tr,f\u27e9=\u27e8(i \u03ba^2/4) T, f\u27e9.",
+      "kernel_on_U": "(i kappa^2/4) T",
+      "NOT_eq_T_without_prefactor": true
+    },
+    "scaling_degree": {
+      "status": "Constructed",
+      "sd_max": 8,
+      "argument": "Pi_tr^R has sd\u22648; W_w subtracts a jet against compact w without raising sd (XIII-C annular seminorms).",
+      "NOT_false_pointwise_bound": true,
+      "false_bound_removed": "|T(z)| <= C |z|_E^{-8}"
+    },
+    "index_symmetries": {
+      "status": "Constructed",
+      "inherited_from_Pi_tr": true
+    },
+    "evenness": {
+      "status": "Constructed",
+      "Pi_tr_even": true,
+      "w_even": true,
+      "Pi_w_even": true,
+      "argument": "Pi_tr^R even (even u_mu^R, even-order K); w even \u21d2 W_w intertwines parity; Pi_w even. Odd moments vanish only after this evenness is proved \u2014 not by a metadata flag."
+    },
+    "vanishing_moments": {
+      "status": "Constructed",
+      "identity": "\u27e8Pi_w^R, w z^gamma/gamma!\u27e9 = 0 for |gamma|<=4",
+      "proof": "J_4(w p_gamma)=p_gamma globally \u21d2 W_w(w p_gamma)=0 globally (normalization lemma, including transition region); hence \u27e8Pi_tr, W_w(w p_gamma)\u27e9=0."
+    },
+    "status": "Constructed",
+    "pass": true
+  },
+  "archived_false_pointwise_hypothesis": "|T(z)|<=C|z|_E^{-8}",
+  "archived_cutoff_prescription_id": "EG_cutoff_limit_o66_ARCHIVED",
+  "NOT_Lorentz_invariant_w": true,
+  "equivalence_old_EG": "NOT_claimed",
+  "Gate4_must_cite_same_id": "W_w_jet_pullback_via_Pi_tr_o68"
+}

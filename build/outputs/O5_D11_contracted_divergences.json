@@ -1,0 +1,187 @@
+{
+  "revision": "o70-sync",
+  "result": "2_both_off_diagonal_divergences",
+  "status": "Constructed",
+  "pass": true,
+  "pass_means": "On U: partial^mu C_mu c=0 and mixed partials of C; four product-rule terms in partial^mu S cancel; V(CC+CC)=-S => partial^mu T=0 and partial^rho T=0 on U. Not pushed through z=0. Mutations detect nonzero remainders.",
+  "V_CC_from_tensor": "Constructed",
+  "div_C_on_smooth": {
+    "status": "Constructed",
+    "pass": true,
+    "identity": "partial^mu C_mu c = 0 on Q != 0",
+    "per_c": [
+      {
+        "c": 0,
+        "div": "0",
+        "ok": true
+      },
+      {
+        "c": 1,
+        "div": "0",
+        "ok": true
+      },
+      {
+        "c": 2,
+        "div": "0",
+        "ok": true
+      },
+      {
+        "c": 3,
+        "div": "0",
+        "ok": true
+      }
+    ],
+    "domain": "smooth locus Q != 0 (then extend by continuity/WF to U)"
+  },
+  "mixed_partials_C": {
+    "status": "Constructed",
+    "pass": true,
+    "identity": "partial_alpha C_beta gamma = partial_beta C_alpha gamma",
+    "checked": 64,
+    "n_failures": 0,
+    "reason": "C_ab = -partial_a partial_b D_F; mixed partials of D commute on Q!=0"
+  },
+  "four_term_cancellation": {
+    "status": "Constructed",
+    "pass": true,
+    "analytic": {
+      "step1": "partial^mu (C_mu c C_nu d) = (partial^mu C_mu c) C_nu d + C_mu c partial^mu C_nu d",
+      "step2": "partial^mu C_mu c = 0 on U => first summand drops",
+      "step3": "partial^mu C_nu d = partial_nu C^mu_d  (mixed partials + raise)",
+      "step4": "C_mu c partial_nu C^mu_d + C_mu d partial_nu C^mu_c - C_a d partial_nu C^a_c - C^a_c partial_nu C_a d = 0 by renaming a<->mu and C-symmetry",
+      "conclusion": "partial^mu S_mu nu; cd = 0 on U"
+    },
+    "numeric_trials": [
+      {
+        "trial": 0,
+        "divC_ok": true,
+        "mixed_ok": true,
+        "divS_max_abs": "0",
+        "divS_zero": true
+      },
+      {
+        "trial": 1,
+        "divC_ok": true,
+        "mixed_ok": true,
+        "divS_max_abs": "0",
+        "divS_zero": true
+      },
+      {
+        "trial": 2,
+        "divC_ok": true,
+        "mixed_ok": true,
+        "divS_max_abs": "0",
+        "divS_zero": true
+      },
+      {
+        "trial": 3,
+        "divC_ok": true,
+        "mixed_ok": true,
+        "divS_max_abs": "0",
+        "divS_zero": true
+      },
+      {
+        "trial": 4,
+        "divC_ok": true,
+        "mixed_ok": true,
+        "divS_max_abs": "0",
+        "divS_zero": true
+      },
+      {
+        "trial": 5,
+        "divC_ok": true,
+        "mixed_ok": true,
+        "divS_max_abs": "0",
+        "divS_zero": true
+      },
+      {
+        "trial": 6,
+        "divC_ok": true,
+        "mixed_ok": true,
+        "divS_max_abs": "0",
+        "divS_zero": true
+      },
+      {
+        "trial": 7,
+        "divC_ok": true,
+        "mixed_ok": true,
+        "divS_max_abs": "0",
+        "divS_zero": true
+      }
+    ],
+    "n_trials": 8,
+    "all_trials_pass": true
+  },
+  "smooth_finite_difference_crosscheck": {
+    "status": "Partial",
+    "pass": false,
+    "method": "central finite difference of generated T at z=(0,1,0,0)",
+    "eps": "1/1000",
+    "samples": [
+      {
+        "nu": 0,
+        "rho": 0,
+        "sigma": 0,
+        "div_approx": "0j",
+        "ok": true
+      },
+      {
+        "nu": 1,
+        "rho": 0,
+        "sigma": 0,
+        "div_approx": "(1.1497964185310807e-06+0j)",
+        "ok": false
+      },
+      {
+        "nu": 0,
+        "rho": 1,
+        "sigma": 1,
+        "div_approx": "0j",
+        "ok": true
+      },
+      {
+        "nu": 2,
+        "rho": 2,
+        "sigma": 3,
+        "div_approx": "0j",
+        "ok": true
+      }
+    ],
+    "note": "Cross-check of analytic cancellation; primary proof is algebraic"
+  },
+  "both_pairs": {
+    "first_pair": {
+      "operator": "partial^mu T_{mu nu rho sigma}",
+      "on_U": 0,
+      "status": "Constructed",
+      "proof": "T=(-S)V; partial^mu S=0 on U; V constant"
+    },
+    "second_pair": {
+      "operator": "partial^rho T_{mu nu rho sigma}",
+      "on_U": 0,
+      "status": "Constructed",
+      "proof": "Exchange symmetry T_{mu nu rho sigma}=T_{rho sigma mu nu}, or repeat the S-argument on the second V factor"
+    },
+    "NOT_pushed_through_z_eq_0": true,
+    "domain": "U = R^4 \\ {0}",
+    "extension_Ward_separate": "Off-diagonal vanishing is NOT the Ward identity of the extended kernel (X-A cor:noether / Gate 4 contact layer)"
+  },
+  "mutations": {
+    "status": "Constructed",
+    "pass": true,
+    "kind": "math_mutation_through_divergence_remainder",
+    "results": {
+      "honest_divS_max": 0,
+      "honest_zero": true,
+      "drop_vertex_trace_max": 12,
+      "drop_vertex_trace_detected": true,
+      "deriv_coeff_2_max": 12,
+      "deriv_coeff_mutation_detected": true,
+      "asymmetric_dC_max": 14,
+      "tensor_mutation_detected": true
+    }
+  },
+  "domain": "U = R^4 \\ {0}",
+  "NOT_extension_Ward": true,
+  "NOT_Em01": true
+}

@@ -1,0 +1,137 @@
+{
+  "flipped_odd_sign": {
+    "stage_codes": {
+      "master": 0,
+      "release": 1
+    },
+    "flag": "required_classical_BV_components_verified",
+    "flag_value": false,
+    "readiness": false,
+    "P3_P4_frozen_as_P5_inputs": false,
+    "P5_entry_earned": false,
+    "release_claim_accepted": false,
+    "publication": "REJECTED",
+    "closure_artifact_exists": false,
+    "master_residuals": [
+      "invariant_kappa1_af1:K(0, 0),K(0, 1),K(0, 2),K(0, 3)",
+      "transformed_kappa1_af0:cb0,cb1,cb2,cb3",
+      "transformed_kappa1_af1:K(0, 0),K(0, 1),K(0, 2),K(0, 3)",
+      "invariant_kappa2_af1:K(0, 0),K(0, 1),K(0, 2),K(0, 3)",
+      "transformed_kappa2_af0:cb0,cb1,cb2,cb3",
+      "transformed_kappa2_af1:K(0, 0),K(0, 1),K(0, 2),K(0, 3)"
+    ],
+    "failed_prerequisites": [
+      "master_engine_parts_exact"
+    ]
+  },
+  "corrupted_ell4_coefficient": {
+    "stage_codes": {
+      "master": 0,
+      "release": 1
+    },
+    "flag": "required_classical_BV_components_verified",
+    "flag_value": false,
+    "readiness": false,
+    "P3_P4_frozen_as_P5_inputs": false,
+    "P5_entry_earned": false,
+    "release_claim_accepted": false,
+    "publication": "REJECTED",
+    "closure_artifact_exists": false,
+    "master_residuals": [
+      "grav_noether_kappa2_af0:Q_terms=[2, 7, 5, 0]",
+      "ell4_sha256_mismatch_vs_P13_quartic_verified"
+    ],
+    "failed_prerequisites": [
+      "master_grav_noether_deterministic_k0_k1_k2",
+      "master_engine_parts_exact",
+      "master_grav_Q_terms_zero_and_flag_true_all_orders",
+      "cross_certificate_quartic_vs_master_agree",
+      "hash_consistency"
+    ]
+  },
+  "dropped_hstar_c_row": {
+    "stage_codes": {
+      "ch": 0,
+      "release": 1
+    },
+    "flag": "ch_dependency_inventory_complete",
+    "flag_value": false,
+    "readiness": false,
+    "P3_P4_frozen_as_P5_inputs": false,
+    "P5_entry_earned": false,
+    "release_claim_accepted": false,
+    "publication": "REJECTED",
+    "closure_artifact_exists": false,
+    "master_residuals": [],
+    "failed_prerequisites": []
+  },
+  "altered_gauge_shift": {
+    "stage_codes": {
+      "gauge": 0,
+      "master": 0,
+      "release": 1
+    },
+    "flag": "gauge_fixing_map_constructed",
+    "flag_value": false,
+    "readiness": false,
+    "P3_P4_frozen_as_P5_inputs": false,
+    "P5_entry_earned": false,
+    "release_claim_accepted": false,
+    "publication": "REJECTED",
+    "closure_artifact_exists": false,
+    "master_residuals": [
+      "transformed_kappa0_af0:b0,b1,b2,b3",
+      "transformed_kappa1_af0:b0,b1,b2,b3"
+    ],
+    "failed_prerequisites": [
+      "master_engine_parts_exact",
+      "canonicity_all_23_antifield_components"
+    ]
+  },
+  "omitted_cstar_term": {
+    "stage_codes": {
+      "master": 0,
+      "release": 1
+    },
+    "flag": "required_classical_BV_components_verified",
+    "flag_value": false,
+    "readiness": false,
+    "P3_P4_frozen_as_P5_inputs": false,
+    "P5_entry_earned": false,
+    "release_claim_accepted": false,
+    "publication": "REJECTED",
+    "closure_artifact_exists": false,
+    "master_residuals": [
+      "invariant_kappa1_af1:K(0, 0),K(0, 1),K(0, 2),K(0, 3)",
+      "transformed_kappa1_af0:c0,c1,c2,c3",
+      "transformed_kappa1_af1:K(0, 0),K(0, 1),K(0, 2),K(0, 3)",
+      "invariant_kappa2_af1:K(0, 0),K(0, 1),K(0, 2),K(0, 3)",
+      "transformed_kappa2_af0:c0,c1,c2,c3",
+      "transformed_kappa2_af1:K(0, 0),K(0, 1),K(0, 2),K(0, 3)"
+    ],
+    "failed_prerequisites": [
+      "master_engine_parts_exact"
+    ]
+  },
+  "stale_hash": {
+    "stage_codes": {
+      "master": 0,
+      "release": 1
+    },
+    "flag": "required_classical_BV_components_verified",
+    "flag_value": false,
+    "readiness": false,
+    "P3_P4_frozen_as_P5_inputs": false,
+    "P5_entry_earned": false,
+    "release_claim_accepted": false,
+    "publication": "REJECTED",
+    "closure_artifact_exists": false,
+    "master_residuals": [
+      "ell4_sha256_mismatch_vs_P13_quartic_verified"
+    ],
+    "failed_prerequisites": [
+      "master_engine_parts_exact",
+      "hash_consistency"
+    ]
+  }
+}

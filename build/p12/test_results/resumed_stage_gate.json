@@ -1,0 +1,104 @@
+{
+ "pdf": {
+  "rc": 3,
+  "stage": "pdf",
+  "pdfs_left": [],
+  "zips_left": [],
+  "manifest_left": false,
+  "stale": [
+   "REJECTED.json",
+   "REJECTED__RELEASE_MANIFEST_EXTERNAL.txt",
+   "REJECTED__dist__XVI-P-full.zip",
+   "REJECTED__dist__XVI-P-review-focus.zip",
+   "REJECTED__manuscript__XVI-P-appendix.pdf",
+   "REJECTED__manuscript__XVI-P-science.pdf",
+   "REJECTED__manuscript__XVI-P.pdf"
+  ],
+  "marker": true,
+  "synced": [],
+  "reasons": [
+   "release.py exit 1",
+   "release_claim_accepted/readiness not true",
+   "failed_prerequisite:master_grav_noether_deterministic_k0_k1_k2",
+   "failed_prerequisite:residual_record_invariants_all_certificates",
+   "failed_prerequisite:master_grav_Q_terms_zero_and_flag_true_all_orders",
+   "failed_prerequisite:cross_certificate_quartic_vs_master_agree"
+  ]
+ },
+ "zip": {
+  "rc": 3,
+  "stage": "zip",
+  "pdfs_left": [],
+  "zips_left": [],
+  "manifest_left": false,
+  "stale": [
+   "REJECTED.json",
+   "REJECTED__RELEASE_MANIFEST_EXTERNAL.txt",
+   "REJECTED__dist__XVI-P-full.zip",
+   "REJECTED__dist__XVI-P-review-focus.zip",
+   "REJECTED__manuscript__XVI-P-appendix.pdf",
+   "REJECTED__manuscript__XVI-P-science.pdf",
+   "REJECTED__manuscript__XVI-P.pdf"
+  ],
+  "marker": true,
+  "synced": [],
+  "reasons": [
+   "release.py exit 1",
+   "release_claim_accepted/readiness not true",
+   "failed_prerequisite:hash_consistency",
+   "closure artifact absent",
+   "pdf_inputs.json absent (PDFs not built by this pipeline)",
+   "pdf readback absent or failed"
+  ]
+ },
+ "manifest": {
+  "rc": 3,
+  "stage": "manifest",
+  "pdfs_left": [],
+  "zips_left": [],
+  "manifest_left": false,
+  "stale": [
+   "REJECTED.json",
+   "REJECTED__RELEASE_MANIFEST_EXTERNAL.txt",
+   "REJECTED__dist__XVI-P-full.zip",
+   "REJECTED__dist__XVI-P-review-focus.zip",
+   "REJECTED__manuscript__XVI-P-appendix.pdf",
+   "REJECTED__manuscript__XVI-P-science.pdf",
+   "REJECTED__manuscript__XVI-P.pdf"
+  ],
+  "marker": true,
+  "synced": [],
+  "reasons": [
+   "release.py exit 1",
+   "release_claim_accepted/readiness not true",
+   "failed_prerequisite:C7_grav_noether_k0_k1_k2_on_exports",
+   "failed_prerequisite:residual_record_invariants_all_certificates",
+   "failed_prerequisite:quartic_C7_Q_terms_zero_and_flag_true_all_orders",
+   "failed_prerequisite:cross_certificate_quartic_vs_master_agree"
+  ]
+ },
+ "manifest_unverified_pdfs": {
+  "rc": 3,
+  "stage": "manifest",
+  "pdfs_left": [],
+  "zips_left": [],
+  "manifest_left": false,
+  "stale": [
+   "REJECTED.json",
+   "REJECTED__RELEASE_MANIFEST_EXTERNAL.txt",
+   "REJECTED__dist__XVI-P-full.zip",
+   "REJECTED__dist__XVI-P-review-focus.zip",
+   "REJECTED__manuscript__XVI-P-appendix.pdf",
+   "REJECTED__manuscript__XVI-P-science.pdf",
+   "REJECTED__manuscript__XVI-P.pdf"
+  ],
+  "marker": true,
+  "synced": [],
+  "reasons": [
+   "pdf_inputs.json absent (PDFs not built by this pipeline)",
+   "pdf readback absent or failed",
+   "zip_not_current:XVI-P-review-focus.zip: not a valid zip",
+   "zip_not_current:XVI-P-full.zip: not a valid zip"
+  ]
+ }
+}

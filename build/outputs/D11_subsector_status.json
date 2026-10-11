@@ -1,0 +1,33 @@
+{
+  "revision": "o70-sync",
+  "D11_subsector": {
+    "status": "Constructed_subsector_under_prescription",
+    "gates": {
+      "Gate0": "Constructed",
+      "Gate1": "Constructed",
+      "Gate2_prefactor": "Constructed",
+      "Gate2_tensor": "Constructed",
+      "Gate3": "Partial",
+      "Gate3_result_3a": "Constructed",
+      "Gate4": "Constructed",
+      "Route1": "Constructed"
+    },
+    "three_results": {
+      "1_tensor": "Constructed",
+      "2_divergences": "Constructed",
+      "3_extension_contacts": "Constructed"
+    },
+    "build_completed": true,
+    "checks_passed": true,
+    "scientific_verdict_earned": true,
+    "symmetry_restored": false,
+    "earned": true,
+    "cert": "O5_D11_scalar_loop_hh.json"
+  },
+  "D12_tadpole": {
+    "id": "D12_hh_scalar_tadpole",
+    "status": "Constructed_prescription",
+    "value_under_prescription": 0,
+    "NOT_default_0": true
+  }
+}

@@ -1,0 +1,20 @@
+# P23 checkpoint (append-only)
+- 2026-10-10T07:17:51Z p23 start from p22 (accepted; indep p22 PASSED 023e5b83). p22 archived under archival/p22.
+- 2026-10-10T07:19:26Z STAGE 1 done: O.1 requirement read (XVI-O/ledgers/O_quantum_target.json, read-only); code/p5_calc/power_counting.py -> P23_O1_scope.json: vertex rule kappa^(legs-2) holds, one-loop kappa^E; E2 enumeration == frozen inventory (9/9); kappa^2 3-pt one-loop EMPTY, enlarge rule not triggered; P.6 entry kappa^3 3-pt inventory 15 graphs; O.1 not closable in XVI-P (O.2 classical master out of scope)
+- 2026-10-10T07:19:55Z STAGE 2 (fix 4a): dred.py p23 block (poly-domain refusal + Dummy-only internal rename); reviewer bypasses rem/resultant/compose/div/Poly.shift/Matrix.subs raise on 4 exprs; contract_registry recognises p23 block
+- 2026-10-10T07:21:50Z STAGE 3: p23_conventions, release_p23 (contract, p22 layer live, EV values vs pinned+archived, live poly probe, O.1 scope, title qualifier, disclosure+pins) written; substantive checks run
+- 2026-10-10T07:23:44Z STAGE 4: docs, tools, tests (test_p23 new; test_p14/21/22 revised) written; pins frozen (16); gates p18..p23 accept
+- 2026-10-10T07:29:16Z PRESYNC #1 launched PID=1908267 (P14_SYNC_DIR=/tmp/p23_presync) log=/tmp/p23/presync1.log -- DO NOT restart; wait for BUILD_RC
+- 2026-10-10T08:31:19Z PRESYNC #1 PID=1908267 BUILD_RC=1 (561 pass, 1 fail: reference_values_p23.json absent -> placeholder)
+- 2026-10-10T08:31:22Z PRESYNC #2 launched PID=1919358 log=/tmp/p23/presync2.log -- DO NOT restart
+- 2026-10-10T09:37:54Z PRESYNC #2 PID=1919358 BUILD_RC=3 (release_p22 rejected)
+- 2026-10-10T09:38:04Z fix: reference_values_p23 registered as p23 generated in contract_registry; re-pinned. PRESYNC #3 launched PID=1928251 log=/tmp/p23/presync3.log -- DO NOT restart
+- 2026-10-10T10:28:03Z PRESYNC #3 PID=1928251 BUILD_RC=0 (562 passed). Source FROZEN.
+- 2026-10-10T10:28:13Z reference_values_p23 written; AUTHOR REBUILD launched PID=1939500 dir=/tmp/p23_author log=/tmp/p23/author.log -- DO NOT restart
+- 2026-10-10T11:05:09Z AUTHOR REBUILD PID=1939500 FAIL (1 test: diagram_inventory.json not in source-only tree). Fix test_p23 (falls back to built P13 ledger); re-pinned; source unfrozen. PRESYNC #4 launched PID=1948605 log=/tmp/p23/presync4.log -- DO NOT restart
+- 2026-10-10T12:05:35Z PRESYNC #4 PID=1948605 BUILD_RC=0 (562). Source FROZEN.
+- 2026-10-10T12:05:39Z reference written; AUTHOR REBUILD #2 launched PID=1959660 dir=/tmp/p23_author log=/tmp/p23/author2.log -- DO NOT restart
+- 2026-10-10T13:00:21Z AUTHOR REBUILD #2 PID=1959660 FAIL: 770/773 equal; P23_O1_scope recorded an absolute ledger path (run-specific). Fix: relative path; re-pinned; unfrozen. PRESYNC #5 launched PID=1971314 log=/tmp/p23/presync5.log -- DO NOT restart
+- 2026-10-10T13:35:50Z PRESYNC #5 PID=1971314 BUILD_RC=0 (562). grep P23 certs/ledgers/status: no absolute paths/timestamps. Source FROZEN.
+- 2026-10-10T13:35:53Z reference written; AUTHOR REBUILD #3 launched PID=1982098 log=/tmp/p23/author3.log -- DO NOT restart
+- 2026-10-10T14:41:55Z AUTHOR REBUILD #3 PID=1982098 PASS 773/773 (tree 262f1e46); report installed 07e8a841. FINAL BUILD launched PID=1993836 (sync /workspace) log=/tmp/p23/final.log -- DO NOT restart

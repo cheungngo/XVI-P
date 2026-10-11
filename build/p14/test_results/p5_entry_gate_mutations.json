@@ -1,0 +1,122 @@
+{
+ "baseline_unmutated": {
+  "rc": 0,
+  "publication": "accepted",
+  "P5_entry_earned": true,
+  "P3_P4_frozen_as_P5_inputs": true,
+  "P5_entry_flags": {
+   "quantum_action_defined": true,
+   "quantum_prescription_defined": true,
+   "D11_matching_defined": true,
+   "counterterm_domain_defined": true,
+   "amplitude_rules_verified": true
+  },
+  "hard_stops_hold": true,
+  "closure_artifact_exists": true
+ },
+ "dred_mutation_not_rejected": {
+  "rc": 1,
+  "publication": "REJECTED",
+  "P5_entry_earned": false,
+  "P3_P4_frozen_as_P5_inputs": true,
+  "P5_entry_flags": {
+   "quantum_action_defined": true,
+   "quantum_prescription_defined": false,
+   "D11_matching_defined": true,
+   "counterterm_domain_defined": true,
+   "amplitude_rules_verified": true
+  },
+  "hard_stops_hold": true,
+  "closure_artifact_exists": false
+ },
+ "counterterm_flag_false": {
+  "rc": 1,
+  "publication": "REJECTED",
+  "P5_entry_earned": false,
+  "P3_P4_frozen_as_P5_inputs": true,
+  "P5_entry_flags": {
+   "quantum_action_defined": true,
+   "quantum_prescription_defined": true,
+   "D11_matching_defined": true,
+   "counterterm_domain_defined": false,
+   "amplitude_rules_verified": true
+  },
+  "hard_stops_hold": true,
+  "closure_artifact_exists": false
+ },
+ "D11_matching_verified_true": {
+  "rc": 1,
+  "publication": "REJECTED",
+  "P5_entry_earned": true,
+  "P3_P4_frozen_as_P5_inputs": true,
+  "P5_entry_flags": {
+   "quantum_action_defined": true,
+   "quantum_prescription_defined": true,
+   "D11_matching_defined": true,
+   "counterterm_domain_defined": true,
+   "amplitude_rules_verified": true
+  },
+  "hard_stops_hold": false,
+  "closure_artifact_exists": false
+ },
+ "D12_value_zero": {
+  "rc": 1,
+  "publication": "REJECTED",
+  "P5_entry_earned": true,
+  "P3_P4_frozen_as_P5_inputs": true,
+  "P5_entry_flags": {
+   "quantum_action_defined": true,
+   "quantum_prescription_defined": true,
+   "D11_matching_defined": true,
+   "counterterm_domain_defined": true,
+   "amplitude_rules_verified": true
+  },
+  "hard_stops_hold": false,
+  "closure_artifact_exists": false
+ },
+ "amplitude_mutation_not_rejected": {
+  "rc": 1,
+  "publication": "REJECTED",
+  "P5_entry_earned": false,
+  "P3_P4_frozen_as_P5_inputs": true,
+  "P5_entry_flags": {
+   "quantum_action_defined": true,
+   "quantum_prescription_defined": true,
+   "D11_matching_defined": true,
+   "counterterm_domain_defined": true,
+   "amplitude_rules_verified": false
+  },
+  "hard_stops_hold": true,
+  "closure_artifact_exists": false
+ },
+ "frozen_classical_file_changed": {
+  "rc": 1,
+  "publication": "REJECTED",
+  "P5_entry_earned": false,
+  "P3_P4_frozen_as_P5_inputs": false,
+  "P5_entry_flags": {
+   "quantum_action_defined": true,
+   "quantum_prescription_defined": true,
+   "D11_matching_defined": true,
+   "counterterm_domain_defined": true,
+   "amplitude_rules_verified": true
+  },
+  "hard_stops_hold": true,
+  "closure_artifact_exists": false
+ },
+ "p13_independent_report_tampered": {
+  "rc": 1,
+  "publication": "REJECTED",
+  "P5_entry_earned": false,
+  "P3_P4_frozen_as_P5_inputs": false,
+  "P5_entry_flags": {
+   "quantum_action_defined": true,
+   "quantum_prescription_defined": true,
+   "D11_matching_defined": true,
+   "counterterm_domain_defined": true,
+   "amplitude_rules_verified": true
+  },
+  "hard_stops_hold": true,
+  "closure_artifact_exists": false
+ }
+}

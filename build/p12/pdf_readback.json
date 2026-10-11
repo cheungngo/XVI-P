@@ -1,0 +1,134 @@
+{
+ "expected_records": 6,
+ "expected_values": [
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ]
+ ],
+ "XVI-P-appendix": {
+  "Q_terms_equal": true,
+  "zero_flags_equal": true,
+  "malformed": [],
+  "read": 6,
+  "read_values": [
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "missing_listing_markers": [],
+  "pass": true
+ },
+ "XVI-P": {
+  "Q_terms_equal": true,
+  "zero_flags_equal": true,
+  "malformed": [],
+  "read": 6,
+  "read_values": [
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "missing_listing_markers": [],
+  "pass": true
+ },
+ "pass": true
+}

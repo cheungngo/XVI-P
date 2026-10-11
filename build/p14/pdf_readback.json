@@ -1,0 +1,324 @@
+{
+ "expected_records": 6,
+ "expected_values": [
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   0
+  ]
+ ],
+ "XVI-P-appendix": {
+  "Q_terms_equal": true,
+  "zero_flags_equal": true,
+  "malformed": [],
+  "read": 6,
+  "read_values": [
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "missing_listing_markers": [],
+  "value_blocks": {
+   "certificates/P23_O1_scope.json": {
+    "snippets": 4,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P22_evanescent.json": {
+    "snippets": 3,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P20_D11_pin.json": {
+    "snippets": 10,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P19_defect.json": {
+    "snippets": 8,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P18_D11_M2.json": {
+    "snippets": 2,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P18_D11.json": {
+    "snippets": 84,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P18_hh_slot.json": {
+    "snippets": 4,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P17_hh_slot.json": {
+    "snippets": 4,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P16_E2_evanescent.json": {
+    "snippets": 3,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P16_batchC.json": {
+    "snippets": 156,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P15_batchA.json": {
+    "snippets": 25,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P15_D13.json": {
+    "snippets": 30,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   }
+  },
+  "footer": {
+   "pages": 828,
+   "footers": 828,
+   "labels": [
+    "XVI-P p23"
+   ],
+   "expected_label": "XVI-P p23",
+   "pass": true
+  },
+  "pass": true
+ },
+ "XVI-P": {
+  "Q_terms_equal": true,
+  "zero_flags_equal": true,
+  "malformed": [],
+  "read": 6,
+  "read_values": [
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "missing_listing_markers": [],
+  "value_blocks": {
+   "certificates/P23_O1_scope.json": {
+    "snippets": 4,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P22_evanescent.json": {
+    "snippets": 3,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P20_D11_pin.json": {
+    "snippets": 10,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P19_defect.json": {
+    "snippets": 8,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P18_D11_M2.json": {
+    "snippets": 2,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P18_D11.json": {
+    "snippets": 84,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P18_hh_slot.json": {
+    "snippets": 4,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P17_hh_slot.json": {
+    "snippets": 4,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P16_E2_evanescent.json": {
+    "snippets": 3,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P16_batchC.json": {
+    "snippets": 156,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P15_batchA.json": {
+    "snippets": 25,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   },
+   "certificates/P15_D13.json": {
+    "snippets": 30,
+    "not_in_order_in_pdf": [],
+    "n_missing": 0,
+    "builder_error_not_in_file": [],
+    "pass": true
+   }
+  },
+  "footer": {
+   "pages": 864,
+   "footers": 864,
+   "labels": [
+    "XVI-P p23"
+   ],
+   "expected_label": "XVI-P p23",
+   "pass": true
+  },
+  "pass": true
+ },
+ "pass": true
+}

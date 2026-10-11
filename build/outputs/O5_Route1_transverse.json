@@ -1,0 +1,130 @@
+{
+  "revision": "o70-sync",
+  "route": "1_manifestly_transverse_differential_operator",
+  "status": "Constructed",
+  "pass": true,
+  "pass_means": "o70-sync four deliverables Constructed: u_mu^R (r=-i pi^2); T=K u with alpha=A^2/60, beta=A^2/18; W_w jet-pullback Pi_w; contact moments L; Ward by substitution. Pi_tr|_U=(i kappa^2/4)T. Kernel CT != bulk BV restore.",
+  "NOT_corpus_P_trace_reversal": {
+    "corpus_P": "XVI-N freezes P as trace reversal; K_corpus = -Box P only",
+    "this_module_operator": "P_tr_{mu nu} = eta_{mu nu} Box - partial_mu partial_nu",
+    "D_ops": "D^{(0)}, D^{(2)} built from P_tr - NOT corpus P",
+    "symbol_collision_avoided": true,
+    "NOT_reusing_corpus_P": true,
+    "name_in_code": "P_tr"
+  },
+  "deliverables": {
+    "1_scalar_extension": "Constructed",
+    "2_global_representation": "Constructed",
+    "3_Ww_reference": "Constructed",
+    "4_contact_moments": "Constructed"
+  },
+  "ansatz_alpha_beta": {
+    "status": "Constructed",
+    "pass": true,
+    "ansatz": "T = alpha D^{(2)} u + beta D^{(0)} u on U, u=(Q-i0)^{-2}",
+    "alpha": "A**2/60",
+    "beta": "A**2/18",
+    "A": "1/(4*pi**2)",
+    "alpha_rational_in_A2": "1/60",
+    "beta_rational_in_A2": "1/18",
+    "coefficients_used": "derived",
+    "NOT_BRST_a": true,
+    "BRST_a_separate": "1/2 (XVI-N ghost normalization)",
+    "NOT_defaulted": true,
+    "acceptance": {
+      "symbolic_components_checked": 256,
+      "symbolic_failures": [],
+      "coefficients_used": "derived",
+      "sampling_role": "corroboration_only",
+      "distributional_identity_proof": "lem:BV_rules_on_U"
+    },
+    "invariant_basis": "documented_structures_NOT_independent_proof",
+    "all_256": "Constructed",
+    "from": "O5_D11_global_representation.json"
+  },
+  "ansatz_a_b": {
+    "status": "Constructed",
+    "pass": true,
+    "alpha": "A**2/60",
+    "beta": "A**2/18",
+    "a": "A**2/60",
+    "b": "A**2/18",
+    "DEPRECATED_letters_a_b": true,
+    "use_alpha_beta": true
+  },
+  "scalar_extension_uR": {
+    "status": "Constructed",
+    "pass": true,
+    "prescription": "analytic_FP_u_mu_R_o70",
+    "prescription_equivalence": "same_FP_as_o68_o69_constructive_holomorphy_added",
+    "residue_r": "-i * pi**2",
+    "from": "O5_D11_scalar_extension.json",
+    "NOT_pass_by_naming": true
+  },
+  "Pi_tr": {
+    "status": "Constructed",
+    "pass": true,
+    "definition": "Pi_tr^R = (i kappa^2/4) * K u_mu^R",
+    "alpha": "A**2/60",
+    "beta": "A**2/18",
+    "prefactor": "i*kappa**2/4",
+    "restricts_to_on_U": "(i kappa^2/4) * T",
+    "NOT_Pi_tr_eq_T": true,
+    "transversality_including_origin": {
+      "status": "Constructed",
+      "argument": "K annihilates divergences as const-coeff operator identity; applied to any distributional u_mu^R \u21d2 partial Pi_tr^R = 0 including at 0. XVI-K lem:defect: we do not claim (Ku)^R=K(u^R) by inheritance; definition is ops-after-extension."
+    },
+    "sd": {
+      "status": "Constructed",
+      "sd_uR_max": 4,
+      "differential_order_K": 4,
+      "sd_bound": 8,
+      "argument": "Differentiation raises sd by at most 1 per derivative (BF / XVI-K). Order-4 const-coeff K raises sd by \u22644, so sd(K u_mu^R) \u2264 4+4 = 8.",
+      "NOT_default_8_without_proof": true
+    }
+  },
+  "Ww_reference": {
+    "status": "Constructed",
+    "prescription_id": "W_w_jet_pullback_via_Pi_tr_o68",
+    "from": "O5_D11_Ww_reference.json"
+  },
+  "counterterm_L": {
+    "status": "Constructed",
+    "pass": true,
+    "definition": "L_{mu nu rho sigma} = sum_{|gamma|<=4} (-1)^{|gamma|} M_{gamma; mu nu rho sigma} partial^gamma delta",
+    "order_max": 4,
+    "Ward_by_substitution": {
+      "status": "Constructed",
+      "alias_of": "kernel_two_point_Ward",
+      "first_pair": "partial^mu (Pi_w^R + L) = 0",
+      "second_pair": "partial^rho (Pi_w^R + L) = 0"
+    },
+    "from": "O5_D11_contact_moments.json",
+    "kernel_CT_earned": true,
+    "bulk_BV_restore": false,
+    "NOT_Em01": true
+  },
+  "mutations": {
+    "status": "Constructed",
+    "pass": true,
+    "honest_residual_zero": true,
+    "mutation_alpha_eq_0_detected": true,
+    "mutation_beta_eq_0_detected": true,
+    "mutation_swap_alpha_beta_detected": true,
+    "exercises_mathematical_routine": true
+  },
+  "UV_subtraction_vs_finite_repair": {
+    "UV": "W_w jet-pullback Pi_w^R (prescription W_w_jet_pullback_via_Pi_tr_o68)",
+    "finite_repair": "L from contact moments",
+    "kept_separate": true
+  },
+  "NOT_Em01": true,
+  "NOT_bulk_BV_restore": true,
+  "insertion_frozen": true,
+  "o66_fixes": {
+    "renamed_a_b_to_alpha_beta": true,
+    "fixed_Pi_tr_U_prefactor": true,
+    "removed_false_pointwise_EG_bound": true,
+    "archived_random_matrix_Amb_primary": true
+  }
+}

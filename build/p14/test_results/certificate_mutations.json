@@ -1,0 +1,36 @@
+{
+ "master_count_flag_true": {
+  "rc": 1,
+  "publication": "REJECTED",
+  "release_claim_accepted": false,
+  "failed_prerequisites": [
+   "master_grav_noether_deterministic_k0_k1_k2",
+   "residual_record_invariants_all_certificates",
+   "master_grav_Q_terms_zero_and_flag_true_all_orders",
+   "cross_certificate_quartic_vs_master_agree"
+  ],
+  "closure_artifact_exists": false
+ },
+ "quartic_count_flag_true": {
+  "rc": 1,
+  "publication": "REJECTED",
+  "release_claim_accepted": false,
+  "failed_prerequisites": [
+   "C7_grav_noether_k0_k1_k2_on_exports",
+   "residual_record_invariants_all_certificates",
+   "quartic_C7_Q_terms_zero_and_flag_true_all_orders",
+   "cross_certificate_quartic_vs_master_agree",
+   "stored_C7_flag_equals_recomputation"
+  ],
+  "closure_artifact_exists": false
+ },
+ "cross_certificate_mismatch": {
+  "rc": 1,
+  "publication": "REJECTED",
+  "release_claim_accepted": false,
+  "failed_prerequisites": [
+   "cross_certificate_quartic_vs_master_agree"
+  ],
+  "closure_artifact_exists": false
+ }
+}

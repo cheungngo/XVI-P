@@ -1,0 +1,404 @@
+{
+  "revision": "o70-sync",
+  "deliverable": 2,
+  "status": "Constructed",
+  "pass": true,
+  "pass_means": "T=K u in D'(U); alpha,beta DERIVED from generated T (=A^2/60, A^2/18); ALL 256 components cleared-polynomial zero (primary); invariant structures documented NOT independent claim; sampling corroboration only; lem:BV_rules_on_U; Pi_tr|_U=(i kappa^2/4)T; sd<=8; corpus P not reused.",
+  "coefficients": {
+    "alpha": "A**2/60",
+    "beta": "A**2/18",
+    "A": "1/(4*pi**2)",
+    "coefficients_used": "derived",
+    "NOT_BRST_a": true,
+    "BRST_a_is": "1/2 (XVI-N ghost normalization; different letter)",
+    "derivation": {
+      "status": "Constructed",
+      "pass": true,
+      "method": "linear_solve_T_vs_D2_D0_at_spacelike_point",
+      "point": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "fit_components": [
+        {
+          "comp": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "D2": "240",
+          "D0": "360",
+          "T": "24*A**2"
+        },
+        {
+          "comp": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "D2": "80",
+          "D0": "264",
+          "T": "16*A**2"
+        }
+      ],
+      "verify_component": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "verify_residual_zero": true,
+      "alpha": "A**2/60",
+      "beta": "A**2/18",
+      "alpha_over_A2": "1/60",
+      "beta_over_A2": "1/18",
+      "alpha_canonical": "A**2/60",
+      "beta_canonical": "A**2/18",
+      "coefficients_used": "derived",
+      "NOT_hardcoded_default": true,
+      "NOT_BRST_a": true,
+      "BRST_a_is": "1/2 (XVI-N ghost normalization; different letter)"
+    }
+  },
+  "K_definition": "K = alpha D^{(2)} + beta D^{(0)}",
+  "target": "T = K u in D'(U), u=(Q-i0)^{-2}",
+  "all_256_symbolic": {
+    "status": "Constructed",
+    "pass": true,
+    "method": "cleared_polynomial_identity_all_256",
+    "symbolic_components_checked": 256,
+    "symbolic_failures": [],
+    "coefficients_used": "derived",
+    "NOT_sampling_as_universal_identity": true
+  },
+  "invariant_basis": {
+    "status": "documented_structures_NOT_independent_proof",
+    "pass": true,
+    "method": "structure_documentation_plus_256_primary",
+    "independent_invariant_basis_verification_claimed": false,
+    "primary_proof": "cleared_polynomial_identity_all_256",
+    "basis_structures_B_j": [
+      "B1: eta_mu_nu eta_rho_sigma / Q^4",
+      "B2: (eta_mu_rho eta_nu_sigma + eta_mu_sigma eta_nu_rho)/2 / Q^4",
+      "B3: (eta_mu_nu z_rho z_sigma + eta_rho_sigma z_mu z_nu) / Q^5",
+      "B4: sym(eta_mu_rho z_nu z_sigma) / Q^5",
+      "B5: z_mu z_nu z_rho z_sigma / Q^6"
+    ],
+    "sample_component_equalities_corroboration": [
+      {
+        "comp": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "t_value": "24*A**2",
+        "k_value": "24*A**2",
+        "t_eq_k": true
+      },
+      {
+        "comp": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "t_value": "16*A**2",
+        "k_value": "16*A**2",
+        "t_eq_k": true
+      },
+      {
+        "comp": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "t_value": "12*A**2",
+        "k_value": "12*A**2",
+        "t_eq_k": true
+      },
+      {
+        "comp": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "t_value": "24*A**2",
+        "k_value": "24*A**2",
+        "t_eq_k": true
+      },
+      {
+        "comp": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "t_value": "-12*A**2",
+        "k_value": "-12*A**2",
+        "t_eq_k": true
+      },
+      {
+        "comp": [
+          0,
+          0,
+          2,
+          3
+        ],
+        "t_value": "0",
+        "k_value": "0",
+        "t_eq_k": true
+      },
+      {
+        "comp": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "t_value": "-16*A**2",
+        "k_value": "-16*A**2",
+        "t_eq_k": true
+      },
+      {
+        "comp": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "t_value": "0",
+        "k_value": "0",
+        "t_eq_k": true
+      }
+    ],
+    "equalities_t_j_eq_k_j": "REMOVED_as_independent_claim \u2014 five coefficients t_j=k_j not separately extracted; rely on 256 symbolic identity",
+    "reduced_T0000_match": {
+      "point": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "Q": -1,
+      "T_0000": "24*A**2",
+      "Ku_0000": "24*A**2",
+      "matched": true,
+      "note": "Full t_j=k_j for all five B_j follows from Ku-T=0 as a rational function (256-cleared identity). Spanning comps listed below show t=k on every evaluated structure class."
+    },
+    "note": "One complete inspectable proof (256 symbolic) is sufficient. Independent invariant-basis verification claim removed.",
+    "NOT_option_B_independent_claim": true
+  },
+  "sampling_corroboration": {
+    "status": "Constructed",
+    "pass": true,
+    "sampling_role": "corroboration_only",
+    "NOT_global_proof": true,
+    "pointwise_all_256": [
+      {
+        "label": "spacelike_axis",
+        "point": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "Q": "-1",
+        "n_fail": 0,
+        "pass": true
+      },
+      {
+        "label": "spacelike_plane",
+        "point": [
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        "Q": "-2",
+        "n_fail": 0,
+        "pass": true
+      },
+      {
+        "label": "timelike",
+        "point": [
+          "2",
+          "1",
+          "0",
+          "0"
+        ],
+        "Q": "3",
+        "n_fail": 0,
+        "pass": true
+      },
+      {
+        "label": "timelike_axis",
+        "point": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "Q": "1",
+        "n_fail": 0,
+        "pass": true
+      },
+      {
+        "label": "generic",
+        "point": [
+          "3",
+          "1",
+          "1",
+          "1"
+        ],
+        "Q": "6",
+        "n_fail": 0,
+        "pass": true
+      },
+      {
+        "label": "near_cone",
+        "point": [
+          "1",
+          "1",
+          "1/2",
+          "0"
+        ],
+        "Q": "-1/4",
+        "n_fail": 0,
+        "pass": true
+      }
+    ],
+    "all_points_pass": true
+  },
+  "lem_BV_rules_on_U": {
+    "lemma_id": "lem:BV_rules_on_U",
+    "status": "Constructed",
+    "pass": true,
+    "differentiation_rule": {
+      "identity": "partial_mu (Q-i0)^{-n} = -2 n z_mu (Q-i0)^{-n-1} on U",
+      "powers_checked": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "off_cone_symbolic": {
+        "n=1": true,
+        "n=2": true,
+        "n=3": true,
+        "n=4": true,
+        "n=5": true,
+        "n=6": true
+      },
+      "all_pass": true,
+      "cone_extension": "On U including nonzero null points: Q is a submersion (XVI-J prop:q); the i0 boundary value has a single conormal orientation. The off-cone identity continues uniquely as a boundary-value identity in D'(U)."
+    },
+    "Q_multiplication": {
+      "identity": "Q * (Q-i0)^{-n} = (Q-i0)^{-n+1} on U",
+      "powers_checked": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "off_cone_symbolic": {
+        "n=1": true,
+        "n=2": true,
+        "n=3": true,
+        "n=4": true,
+        "n=5": true,
+        "n=6": true
+      },
+      "all_pass": true,
+      "cone_extension": "Multiplication by the smooth function Q on U; identity on {Q\u22600} continues by continuity of the BV pairing."
+    },
+    "product_of_powers": {
+      "identity": "(Q-i0)^{-a}(Q-i0)^{-b} = (Q-i0)^{-a-b} on U",
+      "pairs_checked": [
+        "a=1,b=1",
+        "a=1,b=2",
+        "a=2,b=2",
+        "a=2,b=3",
+        "a=3,b=3",
+        "a=1,b=4",
+        "a=2,b=4"
+      ],
+      "off_cone_symbolic": {
+        "a=1,b=1": true,
+        "a=1,b=2": true,
+        "a=2,b=2": true,
+        "a=2,b=3": true,
+        "a=3,b=3": true,
+        "a=1,b=4": true,
+        "a=2,b=4": true
+      },
+      "all_pass": true,
+      "cone_extension": "Both factors share the same single conormal (XVI-J prop:q); H\u00f6rmander product criterion \u21d2 the product exists on U. Equality holds because both sides equal the BV of Q^{-a-b}."
+    },
+    "product_existence_vs_equality": {
+      "existence": "Wavefront / H\u00f6rmander criterion (math-ph/9903028; XVI-J prop:q) establishes that the products of the powers used above *exist* as distributions on U.",
+      "equality": "Existence \u2260 equality. Equality is the separate statement that both sides of (D),(Q),(P) are the same BV expression. A smooth residual multiplied by a power of Q can hide a cone-supported term; denominator clearing alone does not rule that out.",
+      "NOT_distributional_equality": true,
+      "wavefront_supplies_existence_only": true
+    },
+    "cleared_reduction_translates": {
+      "argument": "Both T and K u are built from \u03b7, z_\u03bc and powers (Q-i0)^{-n} by applying (D),(Q),(P). The 256-component cleared-polynomial identity shows that the rational function K u \u2212 T vanishes identically on {Q\u22600} (numer(Q^6(Ku\u2212T))\u22610). A rational residual that is identically zero off the cone has unique BV continuation equal to the zero distribution on U: there is no remaining freedom to add a cone-supported term once the off-cone residual is the zero function. Hence Ku = T in D'(U).",
+      "primary_executable_proof": "cleared_polynomial_identity_all_256",
+      "BV_lemma_role": "identifies the rational expressions with BV algebra"
+    },
+    "distributional_identity_proof": "lem:BV_rules_on_U",
+    "citation_framework": "math-ph/9903028 (Brunetti\u2013Fredenhagen microlocal extension; wavefront product existence); XVI-J prop:q (single-conormal BV of Q-i0 on U). Instantiated for powers n=1..6 used by K u.",
+    "NOT_prose_only": true,
+    "NOT_n2_only": true
+  },
+  "operator_transversality": {
+    "status": "Constructed",
+    "pass": true,
+    "P_tr": "P_tr_{mu nu} = eta_{mu nu} Box - partial_mu partial_nu",
+    "NOT_corpus_P_trace_reversal": true,
+    "D0_div_both_pairs": true,
+    "D2_div_both_pairs": true,
+    "K_div_both_pairs": true,
+    "argument": "sum_mu partial_mu \u2218 P_tr_{mu nu} = partial_nu Box - Box partial_nu = 0; D^{(j)} polynomials in P_tr \u21d2 both index-pair divergences vanish"
+  },
+  "Pi_tr": {
+    "T_tr_R_definition": "T_tr^R = K u_mu^R  (ops AFTER scalar extension)",
+    "Pi_tr_R_definition": "Pi_tr^R = (i kappa^2 / 4) * T_tr^R",
+    "Pi_tr_restricts_on_U": "(i kappa^2 / 4) * T",
+    "NOT_Pi_tr_eq_T": true,
+    "prefactor_from_Gate0": "i*kappa**2/4",
+    "transversality_at_origin": {
+      "status": "Constructed",
+      "argument": "K annihilates divergences as const-coeff operator identity; applied to any distributional u_mu^R \u21d2 partial Pi_tr^R = 0 including at 0. XVI-K lem:defect: we do not claim (Ku)^R=K(u^R) by inheritance; definition is ops-after-extension."
+    },
+    "scaling_degree_K_uR": {
+      "status": "Constructed",
+      "sd_uR_max": 4,
+      "differential_order_K": 4,
+      "sd_bound": 8,
+      "argument": "Differentiation raises sd by at most 1 per derivative (BF / XVI-K). Order-4 const-coeff K raises sd by \u22644, so sd(K u_mu^R) \u2264 4+4 = 8.",
+      "NOT_default_8_without_proof": true
+    },
+    "status": "Constructed",
+    "pass": true
+  },
+  "acceptance": {
+    "symbolic_components_checked": 256,
+    "symbolic_failures": [],
+    "coefficients_used": "derived",
+    "sampling_role": "corroboration_only",
+    "distributional_identity_proof": "lem:BV_rules_on_U"
+  },
+  "NOT_corpus_P": true,
+  "STOP_if_fail": "do_not_promote_contact_verdict"
+}

@@ -1,0 +1,84 @@
+{
+ "log": [
+  {
+   "stage": "clean_fresh"
+  },
+  {
+   "stage": "conventions",
+   "cmd": "/usr/bin/python3 -c import sys; sys.path.insert(0,'code/classical'); import conventions as C; print(C.REVISION)",
+   "rc": 0,
+   "sec": 0.0
+  },
+  {
+   "stage": "boundary_identity_C3",
+   "cmd": "/usr/bin/python3 code/classical/boundary_identity.py",
+   "rc": 0,
+   "sec": 3.5
+  },
+  {
+   "stage": "quartic",
+   "cmd": "/usr/bin/python3 code/classical/quartic.py",
+   "rc": 0,
+   "sec": 135.0
+  },
+  {
+   "stage": "brst_transformations",
+   "cmd": "/usr/bin/python3 code/classical/brst_from_geometry.py",
+   "rc": 0,
+   "sec": 8.6
+  },
+  {
+   "stage": "source_action",
+   "cmd": "/usr/bin/python3 code/classical/source_action.py",
+   "rc": 0,
+   "sec": 4.9
+  },
+  {
+   "stage": "gauge_map",
+   "cmd": "/usr/bin/python3 code/classical/gauge_fixing_map.py",
+   "rc": 0,
+   "sec": 10.6
+  },
+  {
+   "stage": "ch_audit_and_graphs",
+   "cmd": "/usr/bin/python3 code/p4_classical/ch_source_audit.py",
+   "rc": 0,
+   "sec": 6.0
+  },
+  {
+   "stage": "master",
+   "cmd": "/usr/bin/python3 code/classical/master_kappa2.py",
+   "rc": 0,
+   "sec": 58.3
+  },
+  {
+   "stage": "release_gate",
+   "rc": 0
+  },
+  {
+   "stage": "gate_before_pdf",
+   "release_rc": 0
+  },
+  {
+   "stage": "pdf XVI-P-science",
+   "pages": 9
+  },
+  {
+   "stage": "pdf XVI-P-appendix",
+   "pages": 112
+  },
+  {
+   "stage": "pdf XVI-P",
+   "pages": 121
+  },
+  {
+   "stage": "gate_before_zip",
+   "release_rc": 0
+  },
+  {
+   "stage": "gate_before_manifest",
+   "release_rc": 0
+  }
+ ],
+ "sec": 420.8
+}

@@ -1,0 +1,129 @@
+{
+  "revision": "o70-sync",
+  "deliverable": 4,
+  "status": "Constructed",
+  "pass": true,
+  "pass_means": "Moment formulae M_\u03b3=\u27e8Pi_tr,w z^\u03b3/\u03b3!\u27e9 via formal transpose (NOT L2 adjoint); L=sum (-1)^{|\u03b3|} M_\u03b3 \u2202^\u03b3 \u03b4; odd moments vanish by evenness; Pi_w+L=Pi_tr; kernel_two_point_Ward both pairs; L order\u22644, \u2202L bound=5; L Lorentz covariance not_claimed/not_established; s0_C_L not evaluated; C_L kernel CT only \u2014 NOT bulk restore. Active W_w id=W_w_jet_pullback_via_Pi_tr_o68.",
+  "priors": {
+    "scalar_extension": "Constructed",
+    "global_representation": "Constructed",
+    "global_acceptance_ok": true,
+    "Ww_reference": "Constructed",
+    "Ww_prescription_id": "W_w_jet_pullback_via_Pi_tr_o68",
+    "Ww_id_matches_active": true,
+    "priors_ok": true,
+    "STOP_if_global_failed": false
+  },
+  "active_Ww_prescription_id": "W_w_jet_pullback_via_Pi_tr_o68",
+  "odd_moments": {
+    "status": "Constructed",
+    "pass": true,
+    "n_odd": 24,
+    "n_even": 46,
+    "n_total": 70,
+    "proof": "Pi_tr^R is even: Pi_tr^R(-z)=Pi_tr^R(z) as a distribution (u_mu^R even; K has even order and constant coefficients). The bump w is even. For odd multiindex \u03b3, \u03c6_\u03b3=w z^\u03b3/\u03b3! is odd. Pairing of an even distribution with an odd compact test vanishes. Hence M_\u03b3=0 for |\u03b3| odd.",
+    "NOT_metadata_flag": true,
+    "exercises_evenness": true
+  },
+  "moment_formulae": {
+    "M_gamma": "M_{gamma; mu nu rho sigma} = \u27e8Pi_tr^R, w z^gamma/gamma!\u27e9",
+    "via_scalar": "M_gamma = (i kappa^2/4) \u27e8u_mu^R, K^T (w z^gamma/gamma!)\u27e9",
+    "formal_transpose": {
+      "statement": "K is a constant-coefficient PDO of even order. Moving K from Pi_tr=(i\u03ba\u00b2/4) K u onto the test uses the formal transpose K^T of the distributional pairing \u27e8K u, \u03c6\u27e9 = \u27e8u, K^T \u03c6\u27e9. For even-order const-coeff operators with real coefficients, K^T = K on compactly supported smooth tests. XVI-K coherence: this is NOT an arbitrary integration-by-parts identity, and NOT an L2 adjoint unless a sesquilinear form is actually defined.",
+      "NOT_L2_adjoint": true,
+      "status": "Constructed"
+    },
+    "order_max_L": 4,
+    "order_max_partial_L_kernel_divergence": 5,
+    "n_multiindices": 70,
+    "numerical_moments": "optional_not_required_for_distributional_witness"
+  },
+  "L": {
+    "status": "Constructed",
+    "pass": true,
+    "definition": "L_{mu nu rho sigma} = sum_{|gamma|<=4} (-1)^{|gamma|} M_{gamma; mu nu rho sigma} partial^gamma delta",
+    "sign_convention": "Matches XVI-K lem:defect pairing c_{alpha,gamma}=(-1)^{|gamma|} \u27e8q^R, partial_alpha w_gamma\u27e9 adapted to order \u22644",
+    "order_max_L": 4,
+    "kernel_divergence_contact_bound": 5,
+    "order_max_partial_L": 5,
+    "orders_kept_separate": true,
+    "locality": {
+      "support": "{0}",
+      "reason": "Pi_tr and Pi_w agree on U; sd\u22648 \u21d2 difference is origin-supported of order \u22644 (XIII-C floor(s-4); XVI-K). Differentiation may raise the defect order by one \u21d2 \u2202L bound five."
+    },
+    "odd_coefficients_zero": true,
+    "odd_vanishing_from": "evenness_proof",
+    "Lorentz_covariance": "not_claimed",
+    "Lorentz_covariant": "not_established",
+    "NOT_claimed_Lorentz_covariant": true,
+    "NOT_proved_noncovariant": true,
+    "why_not_claimed": "A non-Lorentz-invariant bump does not, by itself, prove that every resulting contact difference L is noncovariant. Covariance of Pi_tr^R need not pass to L; this release records Lorentz covariance of L as not_claimed / not_established (XIII-C separates partial-collision contact from total diagonal).",
+    "numerical_M_gamma": "optional"
+  },
+  "Ward_and_id": {
+    "Pi_w_plus_L_eq_Pi_tr": {
+      "status": "Constructed",
+      "identity": "Pi_w^R + L = Pi_tr^R  (as distributions)",
+      "proof": "\u27e8Pi_w, f\u27e9 = \u27e8Pi_tr, W_w f\u27e9 = \u27e8Pi_tr, f\u27e9 - \u27e8Pi_tr, w J_4 f\u27e9. \u27e8Pi_tr, w J_4 f\u27e9 = sum_\u03b3 \u2202^\u03b3 f(0) M_\u03b3. \u27e8L, f\u27e9 = sum_\u03b3 M_\u03b3 \u2202^\u03b3 f(0) because \u27e8(-1)^{|\u03b3|} M_\u03b3 \u2202^\u03b3 \u03b4, f\u27e9 = M_\u03b3 \u2202^\u03b3 f(0). Hence \u27e8Pi_tr - Pi_w, f\u27e9 = \u27e8L, f\u27e9."
+    },
+    "kernel_two_point_Ward": {
+      "status": "Constructed",
+      "renamed_from": "ST4b_anomaly_cancellation",
+      "NOT_functional_ST4b": true,
+      "first_pair": "partial^mu (Pi_w^R + L)_{mu nu rho sigma} = partial^mu Pi_tr^R = 0",
+      "second_pair": "partial^rho (Pi_w^R + L) = partial^rho Pi_tr^R = 0",
+      "requires_Pi_tr_transverse_at_origin": true,
+      "argument": "Substitution using Pi_w+L=Pi_tr and Deliverable-2 transversality of Pi_tr including at the origin.",
+      "NOT_circular_zero_defect": true,
+      "scope": "kernel_two_point_only"
+    },
+    "Ward_by_substitution": {
+      "status": "Constructed",
+      "alias_of": "kernel_two_point_Ward",
+      "first_pair": "partial^mu (Pi_w^R + L) = 0",
+      "second_pair": "partial^rho (Pi_w^R + L) = 0"
+    },
+    "status": "Constructed",
+    "pass": true
+  },
+  "kernel_two_point_Ward": {
+    "status": "Constructed",
+    "renamed_from": "ST4b_anomaly_cancellation",
+    "NOT_functional_ST4b": true,
+    "first_pair": "partial^mu (Pi_w^R + L)_{mu nu rho sigma} = partial^mu Pi_tr^R = 0",
+    "second_pair": "partial^rho (Pi_w^R + L) = partial^rho Pi_tr^R = 0",
+    "requires_Pi_tr_transverse_at_origin": true,
+    "argument": "Substitution using Pi_w+L=Pi_tr and Deliverable-2 transversality of Pi_tr including at the origin.",
+    "NOT_circular_zero_defect": true,
+    "scope": "kernel_two_point_only"
+  },
+  "C_L": {
+    "normalization": "C_L[h] = (1/2) int h^{mu nu}(x) L_{mu nu rho sigma}(x-y) h^{rho sigma}(y)",
+    "ghost_number": 0,
+    "parity_even": true,
+    "XIII_B_admitted": "even and gh=0",
+    "NOT_antifield_seed": true,
+    "s0_C_L": {
+      "status": "not_evaluated",
+      "minimal_release": true,
+      "note": "Linearized variation s0 C_L is NOT evaluated in the minimal o70-sync release. Kernel divergences verified; functional identity not claimed."
+    },
+    "functional_ST4b": {
+      "status": "not_claimed",
+      "note": "Renamed kernel flag is kernel_two_point_Ward; functional ST4b not claimed."
+    },
+    "NOT_bulk_BV_restore": true,
+    "NOT_XVI_N_broken_square_repair": true,
+    "NOT_Em01": true,
+    "kernel_CT_only": true
+  },
+  "alpha": "A**2/60",
+  "beta": "A**2/18",
+  "residue_r": "-i * pi**2",
+  "s0_C_L_evaluated": false,
+  "functional_ST4b_claimed": false,
+  "NOT_bulk_BV_restore": true,
+  "insertion_frozen": true,
+  "O1": "NOT_CLOSED",
+  "symmetry_restored_bulk": false
+}

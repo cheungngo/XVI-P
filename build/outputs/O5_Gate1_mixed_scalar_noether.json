@@ -1,0 +1,65 @@
+{
+  "revision": "o70-sync",
+  "gate": "O.5_matter_loop_Gate1_mixed_scalar_Noether",
+  "status": "Constructed",
+  "pass": true,
+  "pass_means": "Explicit densitized identities and local density cancellations verified by jet-polynomial / component checks; NOT a finite-kappa citation; separate from antifield CME",
+  "s_q_bridge": {
+    "status": "Constructed",
+    "a": "1/2",
+    "s_q": "kappa a L_c q",
+    "s0_h_mu_nu": "a (d_mu c_nu + d_nu c_mu)",
+    "s1_h": "a L_c h",
+    "s0_phi": 0,
+    "s1_phi": "a c^rho d_rho phi",
+    "XI_B_bridge": "c=2 xi => a L_c = K xi with K from XI-A",
+    "check": "with a=1/2 and c=2 xi: kappa a L_c q = kappa L_xi q = kappa K_xi on q"
+  },
+  "densitized_s0_a1": {
+    "identity": "s0 a1 = a D_c eta",
+    "status": "Constructed",
+    "pass": true,
+    "max_abs_diff": "0",
+    "a": "1/2",
+    "D_c_eta_formula": "-d^nu c^mu - d^mu c^nu + eta^{mu nu} (d.c)"
+  },
+  "densitized_s0_a2_s1_a1": {
+    "identity": "s0 a2 + s1 a1 = a D_c a1",
+    "status": "Constructed",
+    "pass": true,
+    "method": "jet polynomial comparison (h, dh, dc, c as indeterminates)",
+    "sample_diff_00": "0",
+    "a": "1/2"
+  },
+  "local_L1": {
+    "identity": "s0 L1 + s1 L0 = a partial (c L0)",
+    "status": "Constructed",
+    "pass": true,
+    "diff": "0"
+  },
+  "local_L2_boxed": {
+    "identity": "s0 L2 + s1 L1 = a partial (c L1)  [BOXED]",
+    "status": "Constructed",
+    "pass": true,
+    "method": "Reduce via densitized identity s0 a2+s1 a1=a Dc a1 (verified separately); then jet-polynomial identity for weight-1 naturality of L1",
+    "diff": "0",
+    "depends_on": "s0 a2 + s1 a1 = a Dc a1"
+  },
+  "integrated": {
+    "status": "Constructed",
+    "convention": "compact-support / total-divergence equivalence (XI-A)",
+    "statement": "Integrating the boxed density identity yields s0 S_phi2 + s1 S_phi1 = 0 under compact variations",
+    "separate_from_antifield_CME": true,
+    "XVI_N_prepared_action_defect": true,
+    "XVI_N_master_still_broken_QUALIFIED": "QUALIFIED: refers to XVI-N prop:master-square / prop:broken-square prepared-action defect (S_D,S_D)=kappa int c(B_g-B)+O(kappa^2); NOT a blanket claim about S_inv. Distinct from thm:massless-obstruction (insertion). Gate1 is mixed Noether, not an autonomous (S_sc,S_sc)=0.",
+    "XVI_N_master_still_broken": false,
+    "three_objects_separated": {
+      "invariant_baseline": "S_inv",
+      "prepared_defect": "XVI-N prop:master-square on S_D",
+      "insertion_obstruction": "XVI-N thm:massless-obstruction"
+    },
+    "note": "This is mixed metric-scalar Noether, not (S,S)=0 with antifields"
+  },
+  "NOT_antifield_CME": true,
+  "NOT_quantum_Ward": true
+}

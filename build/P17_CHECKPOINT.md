@@ -1,0 +1,18 @@
+# P17 checkpoint (append-only)
+- 20:00 START p17 from p16. p16 independent rebuild PASS (reproducibility/independent_rebuild_report_p16.json 1a886196, tree 90b4a665, zip 56d5887d, same-box). Findings G1-G7 read.
+- 20:00 archival/p16 created: source zip, README_p16, REBUILD_INSTRUCTIONS_p16, RELEASE_MANIFEST_p16, RELEASE_STATUS_p16, science pdf, reference_values_p16, reproducibility/{author,independent}_rebuild_report_p16.json, certificates/P16_*, ledgers/P16_milestones, p16_source_files.json.
+- 20:01 KEY OBSERVATION: P16_batchC longitudinal_projection_p_m_G of D01 and D03 are exact negatives (incl. evanescent t_* structures) -> X_D01+X_D03 = 0 in row (S0,Gamma1^[2]) s2 K:K.c candidate decoupling proof. Plan: code/p5_calc/hh_slot.py (proof + controls + mutations + transverse-subspace coordinates).
+- 20:03 wrote code/p5_calc/hh_slot.py (H1-H4 proof, controls, 4 mutations, transverse-subspace analysis); dred.py p17 revision (G2 parse_d/assert_opaque_d/PlainDimensionSymbol, G1/G3 wording; p16 dred backup /tmp/p17/dred_p16.py); p17_conventions.py skeleton.
+- 20:07 hh_slot run1: slot sum zero all EXT, mutations rejected, 4D sum transverse (dim 2), but p.G-sum zero test false-negative ('0*I' unevaluated after factor) -> exact zero test via cancel(together(expand)); rerun.
+- 20:08 hh_slot run2: VERDICT DECOUPLED (proof) as sum D01+D03; all controls true; coords D01=(-27/160,-71/240,19/60,11/20,-13/30)I, D03=(7/96,1/24,-1/8,-1/24,1/12)I, sum=(-23/240,-61/240,23/120,61/120,-7/20)I = (61/120)k1+(-7/20)k2 in transverse kernel k1=(1/2,-1/2,-1,1,0),k2=(1,0,-2,0,1). Fixed span check (6 orbit labels, 5 pair-symmetric classes); run3 started. p17_conventions full; archival/p16/README.md written.
+- 20:09 run3 OK (span check fixed: basis rank 5 = dim pair-symmetric 4D structures). Added ledger-computed row control; run4 started. Wrote release_p17.py; source_manifest -> p17 (backup /tmp/p17/source_manifest_p16.py).
+- 20:10 build.py patched for p17 (backup /tmp/p17/build_p16.py; patch script /tmp/p17/patch_build.py).
+- 20:10 run4 OK: 17/17 controls true incl. ledger row control; note manuscript/notes/P17_hh_slot.tex + body include. Determinism run PYTHONHASHSEED=1 started (-> /tmp/p17/hh_slot_seed1.json).
+- 20:12 hh_slot deterministic (seed default vs 1 identical). tests/test_p17.py written; test_p14/test_p16 disclosed revisions; rebuild_from_source patched; PARSE_SITES_REVIEWED (23 sites).
+- 20:13 README p17 section, REBUILD_INSTRUCTIONS p17; PARSE_SITES 24 (parse_d added); release_p16+p17 accepted in place; pytest test_p17+test_p16 running (/tmp/p17/pytest_p16_p17.log).
+- 20:17 all tests in place: 134 passed, 1 failed only for the missing reference file -> placeholder reference_values_p17.json written. PRESYNC BUILD #1 started (bg): P14_SYNC_DIR=/tmp/p17_presync, log /tmp/p17_presync_build.log (do not restart; check BUILD_RC).
+- 20:39 presync #1 progressing: through release gates (p16/p17) ok; tests next.
+- 20:44 PRESYNC #1 PASS (BUILD_RC 0): tests 135/135 (baseline 100, cert-mut 31, resumed 4, 0 skipped); gates accepted; PDFs 27/506/533; readback PASS (records + 5 value blocks incl P17_hh_slot + footers XVI-P p17); zips 141/982/144. SOURCE FROZEN. AUTHOR REBUILD started: /tmp/p17_author_rebuild.sh > /tmp/p17_author.log
+- 20:50 RESUMED: author rebuild still running (PID 1242202), waiting; not restarted.
+- 21:14 AUTHOR REBUILD PASS (pass=true, all 10 steps ok, comparison_with_reference ok; tree 2a5a6317 zip 7f4f61df, 144 files, 1456s). Installed reproducibility/author_rebuild_report_p17.json. FINAL BUILD next (--from-stage release17? no: full gate from release17, sync /workspace).
+- 21:14 protected shas checked (pre-final). FINAL BUILD started (full, sync /workspace): log /tmp/p17_final_build.log -- do not restart.

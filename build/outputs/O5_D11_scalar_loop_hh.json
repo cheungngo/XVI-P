@@ -1,0 +1,123 @@
+{
+  "revision": "o70-sync",
+  "gate": "O.5_D11_matter_loop_subsector",
+  "status": "Constructed_subsector_under_prescription",
+  "pass": false,
+  "build_completed": true,
+  "checks_passed": true,
+  "scientific_verdict_earned": true,
+  "final_earned": true,
+  "promotion_predicate": {
+    "prerequisite_checks": true,
+    "revision_checks": true,
+    "prescription_checks": true,
+    "gate_checks": true,
+    "verdict_checks": true
+  },
+  "pass_means": "Authoritative summary from Gates + calculation results 1-3. Subsector earned=True. Scaling fail-safe: Constructed (sd=8). D12 fail-safe: Constructed_prescription (value=0).",
+  "diagram_id": "D11_hh_scalar_loop",
+  "NOT_completed_bulk_quantum_sector": true,
+  "symmetry_restored": false,
+  "symmetry_restored_subsector": true,
+  "authoritative_source": "Gates + d11_tensor/divergences via d11_subsector_summary.py",
+  "withdrawn_o62_builder": "withdrawn/o62-matter/d11_scalar_loop_hh.py",
+  "gates": {
+    "Gate0": "Constructed",
+    "Gate1": "Constructed",
+    "Gate2_prefactor": "Constructed",
+    "Gate2_tensor": "Constructed",
+    "Gate3": "Partial",
+    "Gate3_result_3a": "Constructed",
+    "Gate4": "Constructed",
+    "Route1": "Constructed"
+  },
+  "three_results": {
+    "1_tensor": "Constructed",
+    "2_divergences": "Constructed",
+    "3_extension_contacts": "Constructed"
+  },
+  "revisions": {
+    "Gate0": "o70-sync",
+    "Gate1": "o70-sync",
+    "Gate2": "o70-sync",
+    "Gate3": "o70-sync",
+    "Gate4": "o70-sync",
+    "tensor": "o70-sync",
+    "divs": "o70-sync",
+    "scalar_ext": "o70-sync",
+    "global_rep": "o70-sync",
+    "Ww": "o70-sync",
+    "contact": "o70-sync",
+    "route1": "o70-sync",
+    "verdict": "o70-sync"
+  },
+  "convention_ids_ok": true,
+  "subsector_verdict": "Constructed_subsector_under_prescription",
+  "earned": true,
+  "prefactor": "I*kappa**2/4",
+  "D_F": "i/(k^2+i0)",
+  "scaling": {
+    "status": "Constructed",
+    "scaling_degree_sd": 8,
+    "NOT_default_8": true,
+    "from": "O5_D11_tensor.json"
+  },
+  "tensor_kernel": {
+    "status": "Constructed",
+    "Pi_prefactor": "I*kappa**2/4",
+    "T_0000_witness": "24*A**2/r**8",
+    "NOT_XVI_M_selected_graph": true
+  },
+  "divergences": {
+    "status": "Constructed",
+    "from": "O5_D11_contracted_divergences.json"
+  },
+  "extension": {
+    "status": "Partial",
+    "result_3a": "Constructed",
+    "from_gate": "O5_Gate3_extension.json"
+  },
+  "retained_Ward": {
+    "status": "Constructed",
+    "result_3": {
+      "extension_3a": "Constructed",
+      "contacts_3b": "Constructed",
+      "combined": "Constructed",
+      "method": "Route1_L_equals_Pi_tr_minus_Pi_w"
+    },
+    "from_gate": "O5_Gate4_Ward_D12_onepoint.json",
+    "symmetry_restored": false
+  },
+  "D12_tadpole_companion": {
+    "id": "D12_hh_scalar_tadpole",
+    "status": "Constructed_prescription",
+    "value_under_prescription": 0,
+    "NOT_default_0": true
+  },
+  "one_point": {
+    "status": "Constructed_prescription",
+    "value": 0,
+    "NOT_default_0": true
+  },
+  "intermediate_wording": "D11 Wick/determinant normalization established. Actual tensor product, scaling witness, and off-diagonal Ward verification tracked separately. o70-sync: alpha=A^2/60, beta=A^2/18; u_mu^R (r=-i pi^2); W_w; contact L; kernel Ward by substitution. Bulk O.1 NOT_CLOSED.",
+  "Route1": {
+    "status": "Constructed",
+    "alpha": "A**2/60",
+    "beta": "A**2/18",
+    "NOT_defaulted": true,
+    "a": "A**2/60",
+    "b": "A**2/18",
+    "Pi_tr": "Constructed",
+    "L": "Constructed",
+    "Ward_sub": "Constructed"
+  },
+  "FORBIDDEN_STATUS_rejected_unless_earned": "Constructed_subsector_under_prescription",
+  "four_deliverables": {
+    "1_scalar_extension": "Constructed",
+    "2_global_representation": "Constructed",
+    "3_Ww_reference": "Constructed",
+    "4_contact_moments": "Constructed",
+    "all_pass": true
+  },
+  "acceptance_conjunction_includes_four_deliverables": true
+}
