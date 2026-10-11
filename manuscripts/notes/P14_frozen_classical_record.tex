@@ -1,0 +1,234 @@
+% XVI-P p14: the FROZEN classical P.3/P.4 record. Text of the p13 science note (Conventions .. release gate), verbatim
+% except for the release/test file names. The classical code is byte-identical to p13 (archival/p13/frozen_p13_inputs.json).
+\section{Frozen classical record (P.3/P.4, unchanged since p13)}\label{sec:frozen-classical}
+\scopebox{Frozen P.5 inputs.}{The sections below are the p13 classical record, carried over verbatim (only the
+release-gate and test file names are updated). The code that produces it is byte-identical to the p13 source tree
+\texttt{2b1baf33\ldots}; its certificates keep the names \texttt{P13\_*} and are regenerated in every p14 build. The
+regenerated values are compared with \texttt{archival/p13/reference\_values\_p13.json}
+(\texttt{freeze\_p13.F3\_frozen\_values}).}
+\section{Conventions}
+\noindent Declared once in \texttt{conventions.py}.\par\smallskip
+$\eta=\mathrm{diag}(+,-,-,-)$; $g_{\mu\nu}=\eta_{\mu\nu}+\kappa h_{\mu\nu}$ (affine in $h$);
+$S_{\rm EH}=-(2/\kappa^2)\int\sqrt{-g}R=\sum_k\kappa^{k-2}\int\ell_k$ with $\ell_k=-2[\varepsilon^k]L_{\Gamma\Gamma}$,
+$L_{\Gamma\Gamma}=\sqrt{-g}\,g^{\mu\nu}(\Gamma^\lambda_{\mu\sigma}\Gamma^\sigma_{\nu\lambda}-\Gamma^\lambda_{\mu\nu}\Gamma^\sigma_{\lambda\sigma})$;
+$R^\rho{}_{\sigma\mu\nu}=\partial_\mu\Gamma^\rho_{\nu\sigma}-\partial_\nu\Gamma^\rho_{\mu\sigma}+\Gamma\Gamma-\Gamma\Gamma$,
+$R_{\sigma\nu}=R^\rho{}_{\sigma\rho\nu}$.
+Massless scalar $S_\phi=\tfrac12\int\sqrt{-g}g^{\mu\nu}\partial_\mu\phi\partial_\nu\phi$ with
+$\sqrt{-g}g^{\mu\nu}=\eta+\kappa a_1+\kappa^2a_2$ (XI-A, re-derived in \texttt{P13\_source\_action}).
+Ghost scaling $\xi^\mu=\kappa a c^\mu$, $a=\tfrac12$. Antibracket (XVI-N def:antibracket)
+\[(F,G)=\sum_A\int\Big[\frac{\delta^RF}{\delta\Phi^A}\frac{\delta^LG}{\delta\Phi^*_A}-\frac{\delta^RF}{\delta\Phi^*_A}\frac{\delta^LG}{\delta\Phi^A}\Big],
+\qquad s\Phi=(S,\Phi),\ s\Phi^*=(S,\Phi^*).\]
+Canonical pair for the graviton: $(h_{mn},K^{mn})$, $m\le n$. Divergence test (exact): a local density without
+constant term is a total divergence iff all its Euler derivatives vanish (contractible jet space).
+
+\section{C3 repaired: the boundary identity and its orientation}
+\noindent Builder/output: \texttt{boundary\_identity.py}, \texttt{P13\_boundary\_identity.json}.\par\smallskip
+\textbf{Defect.} The p09/p10 control C3 evaluated the identity on $g=\eta+A(x^0)\,e_{00}$. This metric is locally
+flat ($x^0\mapsto\int\sqrt{1+A}\,dx^0$ removes $A$); its only nonzero symbol is $\Gamma^0{}_{00}$, and
+$\sqrt{-g}R=L_{\Gamma\Gamma}=B^\mu=\partial_\mu B^\mu=0$ identically. The check was therefore vacuous and could not
+detect a sign; the source comment ``keeps $\partial B$ nontrivial'' was false. p09/p10 also stated the orientation as
+$\sqrt{-g}R-L_{\Gamma\Gamma}=+\partial_\mu B^\mu$. That orientation is wrong.
+
+\begin{proposition}[Boundary identity, corrected orientation]
+With $B^\mu=\sqrt{-g}\,(g^{\mu\nu}\Gamma^\lambda_{\nu\lambda}-g^{\lambda\nu}\Gamma^\mu_{\lambda\nu})$,
+\[\sqrt{-g}\,R-L_{\Gamma\Gamma}=-\,\partial_\mu B^\mu .\]
+\end{proposition}
+\begin{proof}[Deterministic proof (three parts)]
+(i) \emph{Orientation.} The statement above, with $-\partial_\mu B^\mu$, replaces the p09/p10 statement; it is used in
+\texttt{conventions.BOUNDARY\_IDENTITY}, the exports and all certificates.
+(ii) \emph{Nontrivial conformal control.} For $g=f\eta$ with $f$ a generic function of all four coordinates, sympy gives
+exactly $\sqrt{-g}R=-3\Box f+\tfrac{3}{2f}(\partial f)^2$, $L_{\Gamma\Gamma}=\tfrac{3}{2f}(\partial f)^2$,
+$B^\mu=3\partial^\mu f$. The identity holds with residual $0$; the p10 orientation leaves $-6\Box f\neq0$.
+(iii) \emph{Generic jet proof.} Let $G^{ab}$ be ten \emph{free} symmetric symbols (the inverse metric), and let the
+40 first jets $g_{ab,c}$ and 100 second jets $g_{ab,cd}$ be free. Use $\partial_cG^{ab}=-G^{ar}g_{rs,c}G^{sb}$ and
+$\partial_c\sqrt{-g}=\tfrac12\sqrt{-g}\,G^{ab}g_{ab,c}$ (Jacobi; both checked exactly via $\partial\det=\mathrm{tr}(\mathrm{adj}\,\partial g)$
+and $\mathrm{adj}\,g=\det g\,\mathbf 1$). Then $(\sqrt{-g}R-L_{\Gamma\Gamma}+\partial_\mu B^\mu)/\sqrt{-g}$ is a polynomial in
+150 variables over $\mathbb Q$ (2406, 1764 and 2442 terms in the three pieces) and is \emph{identically zero} for all ten
+components, first and second jets; with the p10 orientation it has 2736 nonzero terms. Because the identity holds for
+free $G$, it holds a fortiori for $G=g^{-1}$.
+\end{proof}
+\textbf{Integrated-action equivalence is unaffected.} For compactly supported $h$, $\int\partial_\mu B^\mu=0$ with either
+sign, so $S_{\rm EH}=-(2/\kappa^2)\int L_{\Gamma\Gamma}$ and $\ell_k=-2[\varepsilon^k]L_{\Gamma\Gamma}$ are unchanged. The
+error concerned the stated local identity, not the action.
+
+\section{Quartic generator: deterministic acceptance}
+\noindent Builder/output: \texttt{quartic.py}, \texttt{grav\_noether.py}, \texttt{series\_eval.py}, \texttt{jetpoly.py};
+\texttt{P13\_quartic\_verified.json}.\par\smallskip
+$\ell_2,\ell_3,\ell_4$ are built from $L_{\Gamma\Gamma}$ and exported
+(\texttt{exports/ell\{2,3,4\}\_generating\_polynomial.srepr}; $\ell_4$ sha256 \texttt{33ac9e49\ldots e123}, unchanged
+from p10; 3360 monomials, a reproducibility count only). \emph{Acceptance} consists only of exact symbolic identities:
+\begin{center}\footnotesize
+\begin{tabular}{lll}
+\toprule
+control & identity (exact) & status\\
+\midrule
+C1 & $q\,q^{-1}=1+O(\varepsilon^5)$, all 10 symbolic components & deterministic, holds\\
+C2 & $\log(-\det q)=\mathrm{tr}\log(\eta^{-1}q)$, $[\sqrt{\cdot}\,]^2_{\rm series}=-\det q$ to $\varepsilon^4$, 10 comp. & deterministic, holds\\
+C3 & $\sqrt{-g}R-L_{\Gamma\Gamma}=-\partial_\mu B^\mu$ (generic jets + conformal control) & deterministic, holds\\
+C4 & export $\ell_k$ = independent evaluator in $\mathbb Q[50\text{ jet symbols}]$, $k=2,3,4$ & polynomial identity\\
+C5 & $E_{h_{mn}}(\ell_3-\ell_3^{\rm XII\text{-}C})=0$, all 10 components & deterministic, holds\\
+C6 & $E_{h_{mn}}(\ell_2-\ell_2^{\rm FP})=0$, all 10 components & deterministic, holds\\
+C7 & $E_{c^\mu}(s_0\ell_{n+2}+s_1\ell_{n+1})=0$, $n=0,1,2$, on the exports & deterministic, holds\\
+\midrule
+reg. & numeric evaluator at random jets; plane-wave cubic regression & \emph{sampled regression control only}\\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{Identification of the exported coefficients.} The independent evaluator computes $L_{\Gamma\Gamma}(\eta+\varepsilon h)$
+from its definition with the series inverse (C1) and the series $\sqrt{-q}$ (C2), truncated at $\varepsilon^4$ (exact
+for $k\le4$). C4 proves that the exports equal $-2[\varepsilon^k]L_{\Gamma\Gamma}$ as polynomials, so no sampling is
+involved. C3 gives $L_{\Gamma\Gamma}=\sqrt{-g}R+\partial_\mu B^\mu$, hence $\int\ell_k=[\kappa^{k-2}]S_{\rm EH}$ for
+compact support. C5 compares, with the same sign and normalisation, against XVI-N
+\texttt{grav\_density.ell3\_and\_curvature} (XII-C $\ell_3=-2(r_3+b_1r_2+b_2r_1)$), evaluated on \emph{symbolic}
+second jets; the opposite sign is not a divergence. This is not a claim that XII-C is the quartic, and not a Ward
+identity. C7 is exact because $W_n$ is linear in $c$: $W_n\simeq c^\mu E_{c^\mu}(W_n)$, so $W_n$ is a divergence iff
+$E_{c^\mu}(W_n)\equiv0$. At $\kappa^1$ and $\kappa^2$ the $s_0$ piece alone leaves 159 and 2088 terms per component,
+so the cancellation is genuinely mixed.
+Mutations (each rejected by a deterministic test): M1 one $\ell_4$ coefficient $\times\tfrac75$ and M2 sign of $\ell_4$
+(C7 at $\kappa^2$); M3 swapped contraction (C4 for all $k$, C5, C6, C7 at all orders); M4 missing $\varepsilon^2$
+coefficient of $\sqrt{-q}$ (C4 for $\ell_4$; C7 at $\kappa^2$); M5 wrong inverse sign (C1); M6 stale $\ell_4$ hash; M7
+the p10 orientation $+\partial_\mu B^\mu$ (C3 generic and conformal).
+
+\paragraph{Polarization (one convention throughout).}
+$V_4[h_1,h_2,h_3,h_4]:=[t_1t_2t_3t_4]\,\ell_4(\textstyle\sum_it_ih_i)=D^4\ell_4(0)[h_1,h_2,h_3,h_4]$, the
+\emph{unnormalised} fourth variation; the normalised symmetric form would be $V_4/4!$ and is not used.
+Where the factors enter D02: $1/4!$ appears only in $\ell_4(h)=\tfrac1{4!}V_4[h,h,h,h]$ and is cancelled by the $4!$
+assignments of fields to legs; the vertex rule is $i\kappa^2V_4[h_1,..,h_4]$ ($i$ from $e^{iS}$, $\kappa^2$ from
+$S=\sum\kappa^{k-2}\int\ell_k$); the symmetry factor $\tfrac12$ (two legs contracted) enters only at graph level. The
+same statement appears in \texttt{P13\_quartic\_verified.json}, \texttt{exports/V4\_grav.json} and
+\texttt{exports/ell4\_conventions.json}. \texttt{D02\_vertex\_available}=true, \texttt{D02\_quantum\_evaluated}=false.
+
+\section{BRST from finite geometric transformations}
+\noindent Builder/output: \texttt{brst\_from\_geometry.py}.\par\smallskip
+From $\delta g=\mathcal L_\xi g$ with $\xi=\kappa a c$ and the affine metric:
+\begin{align*}
+s h_{\mu\nu}&=\tfrac1\kappa(\mathcal L_\xi g)_{\mu\nu}=a(\partial_\mu c_\nu+\partial_\nu c_\mu)+\kappa a(\mathcal L_ch)_{\mu\nu},\\
+s c^\mu&=\kappa a\,c^\rho\partial_\rho c^\mu,\qquad s\phi=\kappa a\,c^\rho\partial_\rho\phi,\qquad
+s\bar c_\mu=i b_\mu,\qquad s b_\mu=0 .
+\end{align*}
+The ghost law $s\xi^\mu=\lambda\,\xi^\rho\partial_\rho\xi^\mu$ is an ansatz whose coefficient is \emph{derived}:
+$s^2h=s^2\phi=0$ on all jets (115 independent conditions) has the unique solution $\lambda=1$.
+\textbf{Derived $s_2$ per sector:} $s_2h=0$, $s_2c=0$, $s_2\phi=0$, $s_2\bar c=0$, $s_2b=0$.
+Reason (a derivation, not the p09 policy ``no invented $s_2$''): $g$ is affine in $h$ and $\mathcal L_\xi$ is linear
+in $g$, so $\kappa^{-1}\mathcal L_{\kappa ac}g$ has $\kappa$-degree exactly 1; $s\xi$ is quadratic in $\xi$, so
+$sc$ has degree exactly 1; $s\phi$ is linear in $\xi$; the pair $(\bar c,b)$ is $\kappa$-independent.
+$s^2=0$ holds exactly to all orders. Discriminating control: for $g=\eta+\kappa h+\tfrac{\kappa^2}2h\eta^{-1}h$
+the same construction gives $s_2h\neq0$, and dropping it breaks $s^2=0$ at $O(\kappa^2)$.
+
+\section{Source action}
+\noindent Builder/output: \texttt{source\_action.py} (unchanged since p10).\par\smallskip
+$S_{\rm af}=\sum_A\sigma_A\int\Phi^*_A\,s\Phi^A$ (antifield on the left). Requiring the generator rule
+$(S,\Phi^A)=s\Phi^A$ with the XVI-N bracket \emph{derives} $\sigma_A=(-1)^{|\Phi^A|}$:
+$\sigma_h=\sigma_\phi=+1$, $\sigma_c=\sigma_{\bar c}=-1$. The nonminimal coupling $-\int\bar c^{*\mu}\,i b_\mu$ is
+included; $b^*$ does not occur ($sb=0$). $X=S_{\rm af}$ has ghost number $0$, is antifield-linear, and has
+17 / 124 / 0 terms at $\kappa^0/\kappa^1/\kappa^2$. Because $X$ is linear in antifields,
+$(S,S)=2(S_{\rm field},X)+(X,X)$ with $2(S_{\rm field},X)=2\int E_\Phi(S_{\rm field})\,\sigma s\Phi$ of antifield
+number 0 and $(X,X)=-2\sum\Phi^*s^2\Phi$ (mod $d$) of antifield number 1.
+
+\section{Gauge-fixing map in transformed variables}
+\noindent Builder/output: \texttt{gauge\_fixing\_map.py}.\par\smallskip
+$\Psi=-i\int\bar c_\mu(2D^\mu[h]-b^\mu)$. The orientation $\varepsilon=-1$ of
+$\Phi^*_A=\Phi^{*\prime}_A+\varepsilon\,\delta\Psi/\delta\Phi^A$ is derived from the Hessians, and
+$S_\Psi(\Phi,\Phi^{*\prime}):=S(\Phi,\Phi^{*\prime}-\delta\Psi/\delta\Phi)\simeq S+s\Psi$.
+\textbf{Hessians at generic momentum (since p11).} The $(h,b)$ Hessian $M$ is computed for a \emph{symbolic}
+$k=(k_0,k_1,k_2,k_3)$. With $M=\left(\begin{smallmatrix}A&B\\C&D\end{smallmatrix}\right)$, $\det D=-16\neq0$, and the Schur
+complement satisfies $A-BD^{-1}C=k^2P$ identically in $\mathbb Q(k)$, with $\det(k^2P)=64(k^2)^{10}\neq0$. The
+block-inverse formula then gives $(M^{-1})_{hh}=(k^2P)^{-1}$ (graviton kernel $K=-\Box P$). The ghost kinetic term
+$i\bar c\Box c$ and the scalar $-\Box$ are exact as well. No momentum sample is used.
+\textbf{Canonicity} is checked on all 23 antifield components (276 antifield/antifield pairs and 23 antifield/field
+pairs). \textbf{Interface:} $\Gamma_\Psi(\Phi,\Phi^{*\prime}):=\Gamma(\Phi,\Phi^{*\prime}-\delta\Psi/\delta\Phi)$ is a
+\emph{defined classical pullback/interface} along the canonical antifield shift. It is \emph{not} an independently
+established quantum gauge-change theorem; no quantum $\Gamma$ is constructed here.
+
+\section{Master equation through $O(\kappa^2)$ by antifield number}
+\noindent Builder/output: \texttt{master\_kappa2.py}, \texttt{P13\_master\_kappa2.json}.\par\smallskip
+The $\kappa^2$ equation is $2(S_0,S_2)+(S_1,S_1)=0$. The engine parts (antifield, ghost and scalar) are exact symbolic,
+as in p10. \textbf{Since p11,} the gravitational Noether rows are now \emph{deterministic}:
+$W_n=s_0\ell_{n+2}+s_1\ell_{n+1}$ is built as an exact jet polynomial from the sha-checked exports, and
+$E_{c^\mu}(W_n)\equiv0$ is proved for $n=0,1,2$. The plane-wave evaluation is kept only as a regression control.
+
+\begin{lemma}[Multidegree, corrected]
+Let $P_d$ project onto field multidegree $d$ and let $E_u$ be the Euler operator of field $u$. Then
+$E_uP_d=P_{d-e_u}E_u$. ($E_u$ lowers the $u$-degree by one and preserves the others; total derivatives preserve
+multidegree.) Consequently, if $E_uF=0$ for all $u$, then $E_u(P_dF)=P_{d-e_u}(E_uF)=0$ for all $d$ and $u$, so every
+homogeneous component $P_dF$ ($|d|\ge1$) is a divergence; conversely a sum of divergences is a divergence.
+\end{lemma}
+\noindent (p10 stated $E_uP_d=P_dE_u$, which is false; the conclusion survives with the corrected intertwining. It is
+checked on a test polynomial in \texttt{tests/test\_p14.py}.) The divergence test is applied to the summed component;
+per-bracket-pair pieces are reported only to exhibit cancellations.
+
+\begin{center}\small
+\begin{tabular}{llrrl}
+\toprule
+order & component & terms & divergence & per-pair (individually non-divergent)\\
+\midrule
+$\kappa^0$ & af0 grav Noether ($s_0\ell_2$) & exact & yes & --- \\
+ & af0 $(X_\Psi,X_\Psi)$ transformed & 32 & yes & $h,\bar c$ \\
+ & af1, af2 (both variable sets) & 0 & yes & --- \\
+$\kappa^1$ & af0 grav ($s_0\ell_3+s_1\ell_2$) & 2148 & yes & $s_0$ alone: 159 per $\mu$ \\
+ & af0 scalar $2(L_0,X_1)+2(L_1,X_0)$ & 20 & yes & each piece \\
+ & af0 $(X_\Psi,X_\Psi)$ transformed & 372 & yes & $h,c,\bar c$\\
+ & af1 invariant / transformed & 180 / 180 & yes & $h,c$\\
+$\kappa^2$ & af0 grav ($s_0\ell_4+s_1\ell_3$, $s_2=0$) & 15428 & yes & $s_0$ alone: 2088 per $\mu$ \\
+ & af0 scalar $2(L_1,X_1)+2(L_2,X_0)$ & 20 & yes & each piece \\
+ & af0 $(X_\Psi,X_\Psi)$ transformed & 2392 & yes & $h,c$\\
+ & af1 invariant / transformed & 1356 / 1356 & yes & $h,c,\phi$\\
+ & af2 (both) & 0 & yes & ---\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{proposition}[Classical master equation of $S_{\rm inv}$ through $O(\kappa^2)$]
+Under the declared conventions every component of $(S,S)$ through $O(\kappa^2)$ is a total divergence, in invariant
+and in $\Psi$-transformed variables, with all mixed cancellations retained:
+\texttt{required\_master\_residuals}=[\,].
+\end{proposition}
+\begin{proof}[Evidence (deterministic)]
+Engine parts: exact Euler-operator divergence test. Gravitational af0: exact polynomial identity
+$E_{c^\mu}(W_n)\equiv0$ on the exports. Structurally, $\sqrt{-g}R$ is a scalar density, so
+$\delta_\xi(\sqrt{-g}R)=\partial_\mu(\xi^\mu\sqrt{-g}R)$; $L_{\Gamma\Gamma}=\sqrt{-g}R+\partial_\mu B^\mu$ (C3, corrected
+orientation), and $s\,\partial_\mu B^\mu=\partial_\mu sB^\mu$. af1 rows are $-2\sum\Phi^*s^2\Phi$ and vanish by the
+derived nilpotency.
+\end{proof}
+The master certificate has no unconditional \texttt{pass} field. \texttt{execution\_pass} (it ran), \texttt{claim\_status}
+(\texttt{verified} only if there are no residuals, the hashes match and the quartic prerequisite is verified) and
+\texttt{scope} are separate.
+
+\section{$ch$ dependency audit and the enumeration lemma}
+\noindent Builder/output: \texttt{ch\_source\_audit.py}.\par\smallskip
+Pattern: one $c$, one $h$; no $\phi,\bar c,b$ or antifields; ghost number 1; $\kappa^2$; one loop; off-shell. The p10
+audit is unchanged. Six rows are possible and three survive; no coefficient is evaluated in this release: the $h^*c$ row (D13); the
+$K'R_0(c)$ row ($hh$: D01, D02, D03, D11, D12; D11 is the inherited O5 kernel constructed under prescription, not
+re-evaluated in this release); and the order-$\kappa$ one-point row (D14a--c, distinct from D12). The
+$\bar c^{*\prime}$, $b^{*\prime}$, $\phi$ and $(S_2,\cdot)$ rows are derived zero; \texttt{names\_TBD}=[\,].
+
+\begin{lemma}[One-loop enumeration, \texttt{max\_len}=2]
+(i) A connected one-loop graph is 1PI iff every internal line lies on its unique cycle, since a line off the cycle is a
+bridge. So after the quadratic ($\kappa^0$, two-field) terms are absorbed into propagators, a one-loop 1PI graph is a
+cycle of interaction vertices, each with exactly two internal legs.
+(ii) Every retained interaction vertex has coupling order $\kappa^n$ with $n\ge1$. Mechanically, the $\kappa^0$
+inventory contains only two-field monomials.
+(iii) Hence a $\kappa^{\le2}$ contribution has at most two vertices, and \texttt{max\_len}=2 is exhaustive.
+(iv) The auxiliary $b$ occurs only in $\kappa^0$ bilinears ($b^2$, $bh$, $b\bar c^*$; checked). Its Gaussian elimination
+produces only bilinear (kinetic or source-bilinear) terms, never an omitted interaction.
+(v) Source-linear monomials (one quantum leg) cannot sit on the cycle. Attached off it, they create a bridge, i.e.\ a
+one-particle-reducible graph, so they cannot create extra 1PI coefficients.
+\end{lemma}
+\noindent The relation $\Gamma_\Psi\leftrightarrow\Gamma$ used to read off rows is the defined classical
+pullback/interface above, not a quantum gauge-change theorem.
+
+\section{Acceptance propagation and release gate}
+\noindent Builder/output: \texttt{release\_p14.py} (\texttt{classical\_block}: verbatim fork of the p13
+\texttt{release.py}, which is frozen and no longer run), \texttt{RELEASE\_STATUS.json} (key \texttt{classical}),
+\texttt{P14\_release.json}, \texttt{P14\_closure\_release.json}.\par\smallskip
+\texttt{release\_claim\_accepted} := \texttt{execution\_pass} $\wedge$ readiness $\wedge$ (every deterministic
+prerequisite: C1--C7, quartic mutations rejected, deterministic grav Noether in the master, generic-$k$ Hessian, full
+canonicity, enumeration lemma) $\wedge$ hash consistency ($\ell_k$ export file = quartic certificate = master input).
+The closure artifacts are published only if \texttt{release\_claim\_accepted} and readiness both hold. Otherwise the
+release deletes any stale closure artifact, writes \texttt{P14\_release\_rejected.json} and exits nonzero, and the
+build stops before any PDF, zip or sync. End-to-end mutation tests (\texttt{tests/test\_p14.py}, each in an isolated
+copy of the package) run mutation $\to$ stage residual or failed prerequisite $\to$ flag false $\to$ readiness false
+$\to$ publication rejected. They cover a flipped odd-derivative sign, a corrupted $\ell_4$ coefficient in the export file,
+a dropped $h^*c$ row, an altered gauge shift, an omitted $c^*$ term, and a stale $\ell_4$ hash (the recorded hash is
+actually mutated).
+

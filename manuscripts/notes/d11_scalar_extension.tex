@@ -1,0 +1,82 @@
+% o70-sync Deliverable 1: fixed scalar extension $u_\mu^R$
+\section{Fixed scalar extension \(u_\mu^R\) (o70-sync)}
+\label{sec:O-scalar-ext}
+
+\paragraph{Prescription.} One analytic finite-part scheme:
+\[
+u_\zeta(z)=\mu^{2\zeta}(Q-i0)^{-2+\zeta},\qquad
+u_\mu^R=\operatorname{FP}_{\zeta=0}u_\zeta.
+\]
+Frozen: \(\eta=\operatorname{diag}(+---)\); \(Q-i0\); principal logarithm;
+\(\mu>0\) (inverse length); finite part $=$ Laurent constant term;
+\textbf{no} additional finite \(c\delta\).
+Proof identifier: \texttt{lem:analytic\_FP\_u\_mu\_R\_o70}
+(equivalent FP prescription to o68/o69; constructive holomorphy proof added).
+
+\paragraph{Lemma (distributional analytic continuation).}
+\begin{enumerate}
+\item \(u_\zeta\) admits a distributional meromorphic continuation near \(\zeta=0\)
+against arbitrary compact smooth tests, with a simple pole.
+\item Holomorphy on tests supported in \(U\): the pairing equals
+\(\langle(Q-i0)^{-2},f\rangle\) at \(\zeta=0\).
+\item The pole part is local: \(\displaystyle\frac{r\,f(0)}{\zeta}\) with
+\(r=-i\pi^2\), derived below --- not by naming analytic regularization.
+\item \(u_\mu^R\) is Lorentz covariant and even under \(z\mapsto-z\).
+\item \(\mathrm{sd}(u_\mu^R)\le4\); residual \(c\delta\) freedom frozen by
+excluding any added contact (XVI-J \texttt{prop:extension} = freedom only).
+\end{enumerate}
+
+\paragraph{Ordinary integrability near the cone.}
+Near a nonzero null point with local coordinate \(t=Q\), ordinary absolute
+local integrability of \((Q-i0)^{-2+\zeta}\) requires
+\(\int_{-\varepsilon}^{\varepsilon}|t|^{-2+\Re\zeta}\,dt<\infty\), hence
+\(\Re\zeta>1\). At \(\zeta=0\) the \(U\)-supported pairing is obtained by
+boundary-value / analytic-family continuation, not by an ordinary integral.
+
+\paragraph{Proof that \(\phi_{-1+\zeta}\) is holomorphic near \(\zeta=0\).}
+Do \emph{not} argue from the zero of \(4\zeta(\zeta-1)\) alone.
+\begin{enumerate}
+\item Let \(F(\zeta)=(Q-i0)^\zeta\). This is a holomorphic family of
+distributions near \(\zeta=0\): instantiate
+D\"utsch--Fredenhagen--Keller--Rejzner,
+arXiv:1311.5424, Definition~4.2 (analytic regularization) and
+\S4.1--4.2 (complex powers / meromorphic two-point families), with
+hypotheses \(Q-i0\), principal logarithm, tests in \(\mathcal D(\mathbb R^4)\),
+and Gate~0 normalization. (Classical support: Gelfand--Shilov / H\"ormander
+complex powers \((x\pm i0)^\lambda\) are entire in \(\lambda\).)
+\item Const-coeff differentiation under the pairing gives the recurrence
+\(\Box\phi_\lambda=4\lambda(\lambda+1)\phi_{\lambda-1}\), hence
+\[
+\Box F(\zeta)=4\zeta(\zeta+1)\,\phi_{-1+\zeta}.
+\]
+\item \(F(0)=(Q-i0)^0=1\), so \(\Box F(0)=0\). Holomorphy of \(F\) yields
+\(\Box F(\zeta)=\zeta\,G(\zeta)\) with \(G\) holomorphic in \(\mathcal D'\).
+\item Therefore
+\[
+\phi_{-1+\zeta}=\frac{\Box F(\zeta)}{4\zeta(\zeta+1)}=\frac{G(\zeta)}{4(\zeta+1)}
+\]
+is holomorphic near \(\zeta=0\).
+\end{enumerate}
+
+\paragraph{Residue (only after the holomorphy premise).}
+Gate~0 gives \(D_F=-A(Q-i0)^{-1}\) with \(A=1/(4\pi^2)\) and
+\((-\Box)D_F=i\delta\), hence
+\[
+\Box(Q-i0)^{-1}=4\pi^2 i\,\delta.
+\]
+The second recurrence
+\[
+\Box\phi_{-1+\zeta}=4\zeta(-1+\zeta)\,\phi_{-2+\zeta}
+\]
+and the holomorphy of \(\phi_{-1+\zeta}\) yield
+\[
+\langle\phi_{-2+\zeta},f\rangle=\frac{r\,f(0)}{\zeta}+\mathrm{FP}+O(\zeta),
+\qquad\boxed{r=-i\pi^2}.
+\]
+Scale \(\mu^{2\zeta}\) affects only the finite part. Operational Laurent identity:
+\[
+\langle u_\zeta,f\rangle=\frac{r\,f(0)}{\zeta}+\langle u_\mu^R,f\rangle+O(\zeta).
+\]
+Euclidean radial integral (\(|S^3|=2\pi^2\)) is an \emph{independent sign check},
+not the sole justification. Not momentum-space MS; not XVI-J's value-jet
+extension of \(d(z)^2\).

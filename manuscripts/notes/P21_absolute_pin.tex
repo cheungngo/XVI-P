@@ -1,0 +1,42 @@
+% XVI-P p21 note: small release from p20 (absolute D11 pin; gate, scan and disclosure fixes)
+\section{Small release (p21): absolute D11 pin}
+\scopebox{Scope.}{p21 is a small release from p20 with no scope expansion. It follows the findings of the p20
+independent rebuild (PASS; report sha256 e8f358f9\ldots, bound to tree 2c0aa153\ldots{} and zip ca32ce01\ldots; same
+box, not a second machine). No contract revision; the p15--p19 layers are as in p20; the disclosed p21 revisions of
+the p20 layer are \texttt{d11\_pin.py} and \texttt{release\_p20.py}. bulk\_symmetry\_restored is false regardless.
+O.1 stays NOT\_CLOSED.}
+
+\paragraph{Absolute D11 pin (p20: OPEN).} The sign and magnitude of the D11 UV pole are derived from
+$\tfrac12\mathrm{Tr}\ln$ of the minimal scalar loop under the package's declared conventions, each checked verbatim
+in the code:
+\begin{itemize}
+\item $G=\Gamma^{(2)}$: the amplitude rules declare $i\Gamma_1=\int\mathrm{pref}\,N/\prod(q^2+i0)$ and G6 declares
+  $G=\kappa^2N_\epsilon\hat G$, $\hat G=-i\,\mathrm{pref}/\kappa^2\int N/(D_1D_2)$; hence $G=-i\cdot i\Gamma=\Gamma$.
+\item Wick direction: $N_\epsilon=iS_\epsilon/(16\pi^2)$ and the certified bubble pole $\hat I(1,1)=+1/\epsilon$ give
+  $d^dl_M=+i\,d^dl_E$; with $\eta=(+,-,-,-)$ and $S_\phi=\tfrac12\int\sqrt{-g}\,g^{\mu\nu}\partial\phi\partial\phi$
+  this gives $iS_M=-S_E$, so $L^{\rm eff}_M=-L^{\rm eff}_E$.
+\item Heat kernel (Euclidean, $d=4-2\epsilon$): $L_{E,\rm div}=-a_2/(32\pi^2\epsilon)$, so
+  $L_{M,\rm div}=+a_2/(32\pi^2\epsilon)$ with $a_2=C^2/120+R^2/72$ ($\xi=0$).
+\item With $g=\eta+\kappa h$ the Minkowski quadratic forms are $C^2\to\tfrac12p^4hP_2h$ and $R^2\to3p^4hP_0h$.
+\end{itemize}
+Result: $\Gamma^{(2)}|_{\rm pole}=\kappa^2/(16\pi^2\epsilon)\,[p^4P_2/240+p^4P_0/24]$. This equals the package pole
+$\kappa^2N_\epsilon\hat G/\epsilon$ with $c_2=-i/240$, $c_0=-i/24$ exactly (ratio 1 for both spins). No convention
+choice is external; the external inputs are mathematics only (the $a_2$ coefficients and the heat-kernel pole
+formula). A $\times2$ normalisation error and a sign flip keep the 10:1 ratio but are detected by the absolute pin.
+
+\paragraph{Gate.} The top-level \texttt{absolute\_pin\_status} and \texttt{ratio\_pin\_status} (the keys typeset in
+this PDF) must equal the nested statuses. Run standalone, the p20 gate re-checks the p18 layer (quantum inputs
+earned) and the graph inventory instead of trusting the P19 layer record; the p21 gate re-checks all lower layers.
+
+\paragraph{Scan.} The enumerated pattern list is complemented by an allow-list scan (\texttt{tests/test\_p21.py}):
+expression-tree decomposition (\texttt{.args}, \texttt{make\_args}, \texttt{as\_ordered\_terms}, \ldots), sympy
+callable aliases, computed symbol names and value calls mentioning $d$ are refused everywhere except at reviewed
+sites. All eight forms reported by the reviewer are caught. A runtime check confirms that the stored exact-$d$ D11
+amplitudes re-parse with the opaque $d$ and reproduce their poles only through \texttt{substitute\_d}. It also found
+a limitation: \texttt{expr.subs(d, v)} is not intercepted when $d$ occurs only as a power base. The contract is not
+changed in p21; no package value path uses it, and the static rule refuses it. This is a check, not a proof.
+
+\paragraph{Disclosure.} The p20 edit of \texttt{manuscript/notes/P19\_defect.tex} is now listed in
+\texttt{DISCLOSED\_MANUSCRIPT\_REVISIONS}. The reference key \texttt{/p19/change\_log\_vs\_p18}, which was recomputed
+on the current tree, is renamed \texttt{p19\_gate\_change\_log\_vs\_p18\_recomputed\_on\_current\_tree}. The log as
+released stays in the pinned \texttt{archival/p19/reference\_values\_p19.json}.

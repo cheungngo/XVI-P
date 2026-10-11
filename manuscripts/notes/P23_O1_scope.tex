@@ -1,0 +1,42 @@
+\section{p23: the O.1 requirement, one-loop power counting and the P.6 entry inventory}
+\label{sec:p23-o1}
+
+\paragraph{O.1, exactly.} The XVI-O ledger \texttt{O\_quantum\_target.json} (o70-sync; verbatim copy in
+\texttt{provenance/XVI-O}, sha pinned, read only) states the O.1 target: the one-loop $\kappa^2$ bulk two-point sector
+on $S_{\rm inv}$ (graviton, scalar, ghost, including the gh$\,=0$ BV source seeds; frozen gauge fermion; $m=0$).
+O.1 closes iff this sector closes under a \emph{verified} retained quantum identity. Every checklist item must be
+earned: O.2 (classical $\kappa^2$ master, including grav $\ell_4$), O.4 (inventory), O.5 (graphs evaluated), O.6
+(identity verified) and O.7 (remainder cancellation / counterterm solution). The target must first be enlarged if the
+identity constrains more legs or orders at $\kappa^2$.
+\emph{In XVI-P scope:} O.4, O.5, the projected part of O.6/O.7, and the enlarge rule.
+\emph{Out of scope:} O.2 and the bulk ST4b identity, which belong to XVI-O/XVI-N and stay untouched. Hence O.1 is
+\textbf{not closable inside XVI-P}, and it stays NOT\_CLOSED.
+
+\paragraph{Exact one-loop power counting.} Every interaction vertex of the frozen inventory carries
+$\kappa^{\text{legs}-2}$, with antifield sources counted as legs. This is checked vertex by vertex. A one-loop graph
+has $I=V$, so it is $\kappa^{E}$ with $E$ external legs. The one-loop identity at $\kappa^2$ is
+$(S^{(0)},\Gamma_1^{(2)})+(S^{(1)},\Gamma_1^{(1)})$; the term $(S^{(2)},\Gamma_1^{(0)})$ vanishes because
+$\Gamma_1^{(0)}$ is field independent. Only $E=2$ and $E=1$ enter. A mechanical enumeration of all one-loop 1PI graphs
+(declared propagators $hh$, $\phi\phi$, $c\bar c$) gives the following:
+\begin{itemize}
+\item for $E=2$ it reproduces the frozen $\kappa^2$ inventory exactly (D01--D06, D11, D12, D13: 9/9);
+\item for $E=1$ it gives the 3 graphs of the one-point row;
+\item it detects four mutations (a wrong $\kappa$ power, two dropped vertices, a spurious propagator).
+\end{itemize}
+The enlarge rule is \textbf{not triggered}: there is no one-loop three-point sector at $\kappa^2$.
+
+\paragraph{P.6 entry (honest partial).} Three-point functions first appear at $\kappa^3$. The one-loop $\kappa^3$
+three-point inventory has 15 graphs: $hhh$ 5, $h\phi\phi$ 4, $c\bar c h$ 2, $Kch$ 2, $c^*cc$ 1, $\phi^*c\phi$ 1.
+This is a topology-level inventory only. The amplitude rules, the counterterm domain over $\mathbb Q(i)$
+(including evanescent operators), the evaluation, the three-point defect and $\sigma_0$ closure are
+\textbf{not done} in p23, so no defect outcome is claimed.
+
+\paragraph{Fixes from the p22 review.}
+(i) Polynomial-domain refusal (p23 contract revision, one block appended to \texttt{dred.py}). From outside sympy,
+polynomial algebra that can evaluate $d$ raises: \texttt{rem}, \texttt{prem}, \texttt{div}, \texttt{resultant},
+\texttt{compose}, \texttt{Poly.shift}, \texttt{Poly.rem}, and similar. Internal renames of $d$ are admitted only to a
+Dummy, so \texttt{Matrix.subs(d}$\to$\texttt{y)} raises. A live probe runs 9 forms on 4 expressions, and
+rational-function algebra is unchanged.
+(ii) The gate now checks the values $\rho=1/2$, $E_2$ coefficient $-1/16$, SE coefficient $+1/8$, and the summed
+h.h coefficients against both pinned values and the archived p22 certificate.
+(iii) The README title line carries ``two-point functions with QdS external legs''.

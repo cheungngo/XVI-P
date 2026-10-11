@@ -1,0 +1,37 @@
+\section{Classical $S_{\mathrm{inv}}^{[2]}$ / V4 / $\kappa^2$ master (O.2; o61-calc)}
+\label{sec:O-S2}
+
+\paragraph{Foundation repair (o58-fix; retained).}
+Inverse-metric series controls: $q\,q^{-1}_{\mathrm{series}}=\mathbf{1}+O(\varepsilon^5)$ and
+negative diagonal $h_{11}=B\Rightarrow q^{11}=-1-\varepsilon B-\varepsilon^2 B^2-\cdots$.
+$\ell_4=-2[\varepsilon^4](\sqrt{-q}\,R)$; $S_{\mathrm{EH}}=-\frac{2}{\kappa^2}\int\sqrt{-q}\,R$.
+
+\paragraph{Authoritative scalar action (o61-calc).}
+Single source (XI-A):
+\[
+  \mathcal L_q[\phi]=\tfrac12\sqrt{-q}\bigl(q^{\mu\nu}\partial_\mu\phi\partial_\nu\phi-m^2\phi^2\bigr),
+\]
+with $a_1^{\mu\nu}=\tfrac12\tau\eta^{\mu\nu}-\gamma^{\mu\nu}$ and $a_2$ as in XI-A.
+At $m=0$, free Hessian is $-\square$ (not bare $\square$).
+Cubic/quartic vertices
+$V_3=(\kappa/2)a_1\partial\phi\partial\phi$ and $V_4=(\kappa^2/2)a_2\partial\phi\partial\phi$
+are derived from the same $\mathcal L_q$. Old catalogue density $-\sqrt{-q}\,q^{\mu\nu}\partial\phi\partial\phi$ withdrawn.
+$V_{\mathrm{af},h}$ split: $V_{\mathrm{af},h}^{(0)}=h^*R_0(c)$ vs $V_{\mathrm{af},h}^{(1)}=\kappa a\,h^*\mathcal L_c h$.
+$V_{\mathrm{af},\phi}$ at $\kappa^1$ with $a=\tfrac12$ (XVI-N).
+
+\paragraph{Retained classical $\kappa^2$ master (o61-calc).}
+With $S=S_0+\kappa S_1+\kappa^2 S_2$, under compact variations / total-derivative equivalence:
+\begin{align}
+  (S_0,S_0)&=0,\\
+  (S_0,S_1)&=0,\\
+  2(S_0,S_2)+(S_1,S_1)&=0.
+\end{align}
+Indexed/structural evaluation (\texttt{O2\_kappa2\_master\_check.json}):
+$(S_0,S_0)$ \textbf{Constructed}; $(S_0,S_1)$ \textbf{Constructed\_inheritance} (XVI-N through $O(\kappa)$);
+$2(S_0,S_2)+(S_1,S_1)$ \textbf{Partial} --- scalar sector Constructed via finite-$\kappa$ invariance of $\int\mathcal L_q$ plus Taylor;
+gravitational component verification Partial (structural EH invariance; full $\ell_4$ polynomial Unresolved).
+Sparse $\ell_4$ probes alone are not the proof. No invented $s_2$.
+
+\paragraph{Unresolved.}
+Full 10-component $\ell_4$ generating polynomial; explicit gravitational component expand at $O(\kappa^2)$;
+complete ghost/antifield $O(\kappa^2)$ on $D[h]$.

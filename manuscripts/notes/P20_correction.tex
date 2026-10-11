@@ -1,0 +1,76 @@
+% XVI-P p20 note: correction release of p19 (erratum K1; restoration redefined; blind-spot pins)
+\section{Correction release (p20): erratum to p19}
+\scopebox{Scope.}{p20 is a correction release of p19 with no scope expansion. It follows the findings of the p19
+independent rebuild (PASS with findings; report sha256 1b01f1d8\ldots, bound to tree fcf90354\ldots{} and zip
+da924275\ldots; same box, not a second machine). There is no contract revision, and the p15--p18 layers are
+byte-identical. The disclosed p20 revisions of the p19 layer are \texttt{defect.py} and \texttt{release\_p19.py}.
+bulk\_symmetry\_restored is false regardless. O.1 stays NOT\_CLOSED; the insertion stays frozen; XV-B and XIV-J are
+unopened; Route B is not discharged; no $c\,\delta$ is added to $u^R_\mu$.}
+
+\paragraph{Erratum K1 (the p19 text is retracted).} p19 stated that full $\sigma_0$ closure of the MS-bar counterterm
+fails with the derived ghost-equation factor $+1$, that it needs $-1$, and that this was unresolved. The statement is
+wrong; it came from a Grassmann-orientation bookkeeping error.
+\begin{itemize}
+\item The route-G densities are generated in the order (c,cb). The P15 ghost self-energy coordinates $\Sigma$ use the
+  (cb,c) orientation, and $V[\mathrm{c.cb}\#k]=-V[(\mathrm{cb,c})\#k]$. p20 measures this ratio (via
+  \texttt{pw\_vertex}) as $-1$ for $k=0,1$.
+\item In route-G (c,cb) coordinates, $\Sigma$ has pole $(+3/8,-1/4)$ and local part $(2/3,-5/12)$.
+\item The derived factor is $+1$ (the ghost equation $\Sigma=2iD[G_{Kc}]$ reproduces the P15 pole). With it, the
+  \emph{complete} MS-bar counterterm $S_{ct}=-(\text{h.h}+\text{c.K}+\text{c.cb poles})$ is $\sigma_0$-closed in
+  every ghost $+1$ sector (h.c, c.b, c.cbs).
+\item Without the c.cb term, or with $\Sigma$ unconverted (the p19 error), $\sigma_0(S_{ct})$ has 88 entries in the
+  c.b sector.
+\item Tree-level controls: $V_{S_0}[\mathrm{cb,c}]=2iD\,V_{S_0}[K,c]$, and $\sigma_0(S_0^{Kc}+S_0^{\bar cc})=0$ (the
+  $S_0^{Kc}$ part alone has a nonzero image).
+\item In quotient coordinates, the c.K-only data have c.cb components $(-3/8,1/4)$, which cancel against
+  $\Sigma=(+3/8,-1/4)$. The full data including $\Sigma$ have quotient coordinates $0$.
+\end{itemize}
+
+\paragraph{Restoration redefined.} The p19 flag (renormalised $P_{ch}\sigma_0(S_{ct})=0$, $x=0$) follows from the
+identity and locality, so it is not independent. In p20, \texttt{projected\_restoration\_verified} means full
+$\sigma_0$ closure of the complete one-loop $\kappa^2$ MS-bar $S_{ct}$ (including c.cb, $\Sigma$ held fixed) in all
+ghost $+1$ sectors, together with the projected identity. Scope: that counterterm only; not bulk symmetry, not O.1.
+The corrected computation closes, so the flag is earned. The p19 check is kept as a labelled route-consistency
+control, and it holds.
+
+\paragraph{Blind spots.} The full-closure test acts as a mutation detector, with $\Sigma$ held fixed:
+\begin{itemize}
+\item drop D13 and flip K.c are detected (c.b, 88 entries);
+\item drop D01, drop D03, flip D03 and D03 $\times2$ are detected (h.c, 280 entries);
+\item the p19 orientation error is detected;
+\item drop D11 is not detected: D11 is transverse, so its pole is closed by itself.
+\end{itemize}
+
+\paragraph{D11 normalisation pin (\texttt{P20\_D11\_pin.json}).}
+\begin{itemize}
+\item \emph{Derived from package data.} The 4D UV pole of D11 (\texttt{P18\_D11.json}, package orbit convention;
+  transverse; only spin-2 and spin-0s parts) has Barnes--Rivers coefficients $c_2=-i/240$ and $c_0=-i/24$, so
+  $c_0:c_2=10$. The quadratic forms on $g=\eta+h$ are derived here from linearised curvature: $C^2\to\frac12
+  p^4hP_2h$, $R^2\to3p^4hP_0^sh$, and Gauss--Bonnet $\to0$.
+\item \emph{External literature.} The $a_2$ coefficient of a minimally coupled real scalar is
+  $\frac1{120}C^2+\frac1{72}R^2$ (Birrell--Davies \S6.2; 't~Hooft--Veltman 1974). This predicts
+  $\frac1{240}:\frac1{24}=1:10$.
+\item \emph{Ratio pin: PASS.} Drop D11 gives $c_2=c_0=0$ and is detected, and so is a swap of the two $g g$
+  structures.
+\item \emph{Absolute pin: OPEN} \textbf{[superseded in p21: the absolute pin was derived and verified, sign and magnitude (P21, section~1; certificates/P20\_D11\_pin.json, absolute\_pin\_status PASS); the text below is the p20 statement, kept for the record]}. The magnitudes agree up to a common factor $-i$, but the map from $\hat G$ to $a_2$
+  (phase, $N_\epsilon$, $\kappa$ normalisation, sign of $\Gamma$) is not derived. An overall $\times2$ error is caught
+  only by this open pin and by M2 (P18).
+\end{itemize}
+
+\paragraph{J1 wording.} The $\mathbb Q(i)$ counts are the real dimensions under a compatible real structure. The
+earlier wording, ``the physical field'', is replaced.
+
+\paragraph{Scan and gate.} The static scan is still a pattern check, not a proof. It now also flags:
+\begin{itemize}
+\item Add(*listcomp over e.args);
+\item an aliased Poly import;
+\item Poly.\_\_call\_\_;
+\item as\_coefficients\_dict;
+\item a functools.reduce rebuild;
+\item Symbol(name=\ldots);
+\item an explicit-constructor rebuild.
+\end{itemize}
+A standalone reject of the p19 or p20 gate no longer leaves a stale RELEASE\_STATUS.json.
+
+\paragraph{Status.} independent\_rebuild\_passed\_p19 is true (bound to the p19 tree and zip; same box). The p20
+independent rebuild is pending.

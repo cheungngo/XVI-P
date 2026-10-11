@@ -1,0 +1,20 @@
+\section{Diagram inventory (O.4; o61-calc)}
+\label{sec:O-inv}
+
+\paragraph{Status.}
+Manually specified, partially checked inventory (\texttt{NOT\_complete\_claim}).
+Accepts o60-hard repairs (mixed D04/D06; $V_{\mathrm{af},\phi}$ at $\kappa^1$; $m=0$; leg-balance).
+
+\paragraph{o61-calc inventory hardening.}
+\begin{itemize}
+\item D04 derivative accounting: frozen kinetic $h\,\partial\phi\,\partial\phi$; each vertex one external + one
+  internal scalar $\Rightarrow$ $\{\mathrm{total}{:}4,\mathrm{internal}{:}2,\mathrm{external}{:}2,\mathrm{mass}{:}0\}$.
+  Not all-internal. D01--D03, D06 placements derived per representative; IBP changes must be recorded.
+\item Numerical \texttt{kappa\_power}, \texttt{hbar\_power} per graph; vertex-power sums verified.
+\item $V_{\mathrm{af},h}$ split into $\kappa^0$ and $\kappa^1$ vertices with distinct leg counts.
+\item Structured \texttt{internal\_edges} (not prose). Global leg balance $\neq$ connectedness/1PI.
+\item D07--D09 classical tree seeds excluded from one-loop CT free slots (O.7).
+\end{itemize}
+
+\paragraph{Einstein--scalar $hh$.}
+D11 scalar loop and D12 scalar tadpole retained; D11 evaluated as matter-loop subsector (Constructed under prescription for the kernel; Gate~3 spanning still Partial).

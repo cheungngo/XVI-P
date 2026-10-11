@@ -1,0 +1,61 @@
+\section{p22: evanescent components (EV-M2), evanescent counterterms (EV-CT) and the runtime $d$ guard}
+\label{sec:p22-evanescent}
+
+\paragraph{Contract revision (disclosed).} p22 carries one disclosed contract revision, listed in
+\texttt{p22\_conventions.CONTRACT\_REVISION}: (i) evanescent counterterms are admitted outside the p14r 4D domain, and
+(ii) \texttt{code/p5\_entry/dred.py} gains one delimited additive block (the runtime $d$ guard). Outside the block the
+file is byte-identical to the p18 release; \texttt{contract\_registry.dred\_revision} checks this, and the p22 gate pins
+the exact sha256 of the revised file.
+
+\paragraph{EV-M2: the matching statement.} XVI-O has no evanescent counterpart, so the eight evanescent ($\tilde g$)
+structures of D11 cannot be matched to XVI-O. We tested three candidate statements exactly, with $d$ opaque:
+(a) \emph{match a $d$-dimensional continuation of the XVI-O kernel} is refuted for both natural continuations
+($g_4\to\hat g$ and $g_4$ kept), because the exact D11 tensor differs from either continuation of its own 4D part on
+$\tilde{}$ external legs. XVI-O defines no other continuation, so (a) is not a usable statement.
+(b) \emph{Pure local evanescent operators}: proven. Every evanescent pole (D01, D03, D11) is a polynomial in $p$ and
+independent of $d$ after pole extraction.
+(c) \emph{Vanishing in the renormalised result}: proven in a stronger form. After subtraction, every evanescent
+component is identically zero on 4D (hatted) external legs at every $d$, not merely at $O(\epsilon)$.
+The scope is \texttt{D11\_matching\_verified\_scope} = ``4D components: M2 discharged (P18\_D11\_M2, unchanged);
+evanescent components: EV-M2 proven; NOT matched to XVI-O''.
+
+\paragraph{EV-CT: the counterterms.} The coefficient is $-(\text{UV pole})$ in the $N_\epsilon\kappa^2/\epsilon$
+normalisation of P14. There are three pieces:
+\begin{itemize}
+\item h.h operators for the eight $\tilde g$ structures, summed over D01+D03+D11:
+$g_4\tilde g\,(p^2)^2$: $-7i/120$ (twice); $g_{4,mr}\tilde g_{ns}(p^2)^2$: $-i/160$;
+$\tilde g\tilde g\,(p^2)^2$: $i/160$ (twice); $\tilde g\,pp\,p^2$: $7i/120$ (twice), $i/160$. Per-graph values are in
+\texttt{certificates/P22\_evanescent.json}.
+\item the K$'$.c operator for D13 $E_2$, with coefficient $-1/16$;
+\item its ghost-equation partner $\bar c\,\Sigma_{\rm SE}\,c$, with coefficient $+1/8$.
+\end{itemize}
+\textbf{Closure.} $\sigma_0$ of the counterterms is zero in every sector, so full closure holds with the evanescent
+counterterms included.
+In h.c, the per-graph $p\cdot T$ of D01 and D03 cancel in the sum, D11 is transverse, and $E\cdot E_2=0$.
+In c.b, the ghost equation with $\rho=1/2$ (calibrated on the 4D pair) holds exactly in $d$ for $E_2$ and $\Sigma_{\rm SE}$.
+c.cbs is unreachable.
+\textbf{Identity.} The h.h slot values of the counterterm sum are zero in all six external modes, and the K.c slot
+values are zero, so the projected identity is unchanged.
+\textbf{Remnants.} The finite evanescent parts are nonzero, but they vanish identically on hatted external legs. With
+QdS external legs there is no $O(\epsilon)\times$pole effect. If external traces are taken with $g_4$ (Q4S), a finite
+term $7i\,p^2(\hat a\cdot\hat b\,p^2-\hat a\cdot p\,\hat b\cdot p)/60$ arises. It is disclosed as a scheme choice.
+\textbf{Mutations.} Each of the following is detected: dropping the D01 or D03 counterterm; doubling D03; dropping
+the SE partner; flipping the sign of the $E_2$ counterterm; and putting a trace operator in place of $s_0h$.
+\textbf{Status.} P.5 calculation status is \emph{renormalized} (one loop, $\kappa^2$, the two-point functions hh / K$'$.c /
+$\bar c$c, MS-bar in DRED with the p22 evanescent counterterms, external legs in QdS). It does not cover higher points,
+two loops, bulk symmetry or O.1.
+
+\paragraph{Runtime $d$ guard.} The guard intercepts the following calls whenever the caller is outside
+sympy/mpmath/dred: \texttt{subs}, \texttt{xreplace} (including on a bare $d$), \texttt{replace}, \texttt{evalf}/\texttt{n},
+the Poly value and coefficient accessors, \texttt{coeff}, \texttt{as\_independent}, \texttt{as\_coeff\_exponent},
+\texttt{series}, \texttt{collect}, \texttt{limit}, \texttt{Lambda}, and $d==d$. Any of them that would give $d$ a value
+raises \texttt{PrematureD4Substitution}. Authorised paths (\texttt{substitute\_d}, \texttt{authorised\_d}) still work.
+A live probe in the gate runs 30 forms on 4 expressions: every reviewer form from p21, the power-base hole, alias and
+free\_symbols lookups, \texttt{Symbol.\_\_new\_\_} and \texttt{Function} calls. All of them raise, and ordinary algebra is unchanged.
+Some bypasses cannot be intercepted at runtime: identity (\texttt{is}) tests, string round-trips and \texttt{Poly.rep}.
+These are disclosed and covered only by the secondary static allow-list scan.
+
+\paragraph{Gate.} The tools/ and notes prefix exemptions are removed. Every changed, added or removed file relative
+to the p21 zip must be listed in \texttt{DISCLOSED\_REVISIONS\_P22}. The only exceptions are the generated reference
+values and the pinned archival/p21 records. Earlier-layer gates accept the registered p22 revisions only through
+\texttt{contract\_registry}.

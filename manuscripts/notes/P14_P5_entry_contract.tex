@@ -1,0 +1,318 @@
+% XVI-P p14/p14r science note: the P.5 ENTRY contract (quantum object, one prescription + D11 matching note, counterterm
+% domain, executable amplitude rules). No loop is evaluated. Numbers are read from certificates/P14_*.json at build time
+% (manuscript/body/P14-entry-summary.tex, P14-dossier-table.tex).
+\section{Scope of revision p14 (repaired in p14r)}
+\scopebox{p14r = a narrow repair of p14; P.3/P.4 code byte-identical; no loop evaluated.}{%
+\begin{itemize}
+\item The prescription is made operational: executable DRED index rules, tests against premature $d=4$, and the
+withdrawn claim that no evanescent remainder arises (Section~\ref{sec:p14r-dred}).
+\item The D11 M3 labels are corrected, and M3 is made conditional on M2, with an explicit normalization condition.
+\item The counterterm quotient is worded as candidate directions before the identity constraints.
+\item The regeneration coverage is stated, and the independent Hessian-route regeneration W6 is added for D01, D02, D03
+and D12.
+\item The isolated-copy gate tests contain the frozen inputs.
+\end{itemize}
+p14 is archived in \texttt{archival/p14/}.}
+\scopebox{p14 = P.5 entry: the contract is fixed; no loop is evaluated.}{%
+p14 fixes what P.5 will compute and how: the quantum object $\Gamma_\Psi$ in transformed variables
+(Section~\ref{sec:p14-object}); one prescription together with a D11 matching note against XVI-O's frozen D11
+(Section~\ref{sec:p14-presc}); the one-loop counterterm domain at $\kappa^1,\kappa^2$ (Section~\ref{sec:p14-ct}); and
+executable amplitude rules with symbolic integrands for D01, D02, D03, D11 (reference only), D12, D13, D14a--c
+(Section~\ref{sec:p14-amp}). No integral is evaluated: the Batch A/B/C integrals belong to p15 and later.
+Opening P.5 entry earns none of the loop or restoration flags. \texttt{quantum\_inputs\_evaluated},
+\texttt{projected\_defect\_computed}, \texttt{projected\_identity\_verified} and \texttt{projected\_restoration\_verified}
+are not earned; \texttt{bulk\_symmetry\_restored}=false. D12 is Missing, never zero. O.1 is NOT\_CLOSED. The insertion
+stays frozen, XV-B and XIV-J are not opened, Route B is not discharged, and no $c\,\delta$ is added to $u^R_\mu$. XVI-P
+stays \emph{unregistered}: the package is evidence in the sense of XVI-O \texttt{conv:package}, not a series certificate,
+and XVI-A--XVI-O are not edited.}
+
+\section{P.3/P.4 frozen as P.5 inputs}\label{sec:p14-freeze}
+An independent rebuild of p13 passed. A reviewer unpacked \texttt{XVI-P-source-only.zip} (sha256 \texttt{2f85a566\ldots})
+in a fresh environment and ran the source-only entrypoint. All reference values matched (112/112, no mismatch), 77
+values were recomputed by separate code, and a hand-written spot check of the conformal boundary identity agreed.
+The report is archived as \texttt{archival/p13/reproducibility/independent\_rebuild\_report\_p13.json} (sha256 pinned).
+\textbf{Caveat:} the rebuild ran on the same box (shared kernel, TeX Live and poppler) in a fresh virtual environment
+from the source-only zip; it was not on a second machine.
+
+The flag is \emph{bound to the p13 source tree} \texttt{2b1baf33\ldots} and to the p13 zip; p14 changes cannot inherit
+it, and p14 has its own (pending) independent flag. \texttt{P3\_P4\_frozen\_as\_P5\_inputs} is recomputed in every build
+by \texttt{freeze\_p13.py} as the conjunction of three conditions:
+F1, the archived independent report has its pinned hash, \texttt{pass}=true, no mismatch, and is bound to the p13 tree and zip;
+F2, the 54 frozen files (classical P.3/P.4 code, the inherited XVI-O code and notes, pins and inherited data;
+\texttt{archival/p13/frozen\_p13\_inputs.json}) are byte-identical;
+F3, the regenerated classical values (export hashes, the seven classical certificates and two ledgers, residual
+records, pins) equal \texttt{archival/p13/reference\_values\_p13.json}.
+The classical code is therefore unchanged in p14. Its certificates keep their \texttt{P13\_*} names, and the p14 gate
+recomputes the p13 acceptance from them (Section~\ref{sec:frozen-classical}). \textbf{P.5 entry is stated against this
+freeze:} if any of F1--F3 fails, P.5 entry is not earned and publication is rejected.
+
+\section{Milestones (p14 status)}\label{sec:p14-milestones}
+\begin{center}\small
+\begin{tabular}{@{}p{2.6cm}p{9.2cm}p{3.4cm}@{}}
+\toprule
+milestone & definition (unchanged since p13, \texttt{conventions.MILESTONES}) & status (p14)\\
+\midrule
+P.3 & fixed output projection + exhaustive coefficient dependencies + graph topology inventory & complete (frozen)\\
+P.4 & required classical action, transformations, source terms, gauge map and master verification.
+\textbf{P.4 means classical readiness, NOT coupled one-loop restoration.} & earned (frozen)\\
+P.5 entry & quantum prescription, amplitude rules and counterterm domain fixed & earned iff the five contract flags
+hold and P.3/P.4 are frozen (see summary)\\
+P.5 calculation & coefficients evaluated and renormalized & open (p15+)\\
+P.5 identity & projected defect computed and, if possible, cancelled & open\\
+\bottomrule
+\end{tabular}
+\end{center}
+P.5 entry := \texttt{quantum\_action\_defined} $\wedge$ \texttt{quantum\_prescription\_defined} $\wedge$
+\texttt{D11\_matching\_defined} $\wedge$ \texttt{counterterm\_domain\_defined} $\wedge$ \texttt{amplitude\_rules\_verified},
+each recomputed from its certificate, together with \texttt{P3\_P4\_frozen\_as\_P5\_inputs}. The values of this build:
+\input{body/P14-entry-summary.tex}
+
+\section{The quantum object}\label{sec:p14-object}
+\noindent Builder/output: \texttt{quantum\_object.py}, \texttt{P14\_quantum\_object.json}.\par\smallskip
+\textbf{Action.} The action is computed directly in transformed variables:
+\[S_\Psi(\Phi,\Phi^{*\prime})=\sum_k\kappa^{k-2}\!\int\ell_k+S_\phi+X\big(\Phi,\Phi^{*\prime}+\varepsilon\,\partial\Psi/\partial\Phi\big),
+\qquad\varepsilon=-1\ (\text{derived}),\]
+with $\Psi=-i\int\bar c_\mu(2D^\mu[h]-b^\mu)$. By order, $X$ contains $K'c,\ \bar c c,\ b^2,\ bh,\ b\bar c^{*\prime}$ at
+$\kappa^0$; $K'ch,\ \bar cch,\ c^{*\prime}cc,\ \phi^{*\prime}c\phi$ at $\kappa^1$; and nothing at $\kappa^2$. $S_\phi$
+contributes $\phi\phi$, $h\phi\phi$, $hh\phi\phi$. There are no switch or insertion fields: the baseline is $S_{\rm inv}$,
+not $S_D$.
+
+\textbf{Fields and sources.} The integrated fields are $h_{(mn)}$ (10 independent components), $c^\mu$, $\bar c_\mu$,
+$\phi$ and $b^\mu$. The external antifields are $K'_{(mn)}$ ($\sigma_h=+1$), $c^{*\prime}_\mu$, $\bar c^{*\prime\mu}$ and
+$\phi^{*\prime}$; $b^{*\prime}$ is absent because $sb=0$.
+
+\textbf{$b$ is retained and integrated.} Four reasons:
+\begin{itemize}
+\item $b$ occurs only in $\kappa^0$ bilinears, so it has no interaction vertex;
+\item $M_{bb}$ is constant and invertible ($\det=-16$);
+\item the full $(h,b)$ inverse is verified, with Schur complement $q^2P$;
+\item eliminating $b$ (computed) would make $S_\Psi$ \emph{quadratic} in $\bar c^{*\prime}$, whereas retaining it keeps
+$S_\Psi$ linear in every external antifield.
+\end{itemize}
+$\bar c^{*\prime}$ couples only through $\bar c^{*\prime}b$, which has one quantum leg and is tree-level and
+one-particle reducible. So the 1PI $\Gamma_1$ is independent of $\bar c^{*\prime}$ and $b^{*\prime}$, while $K'$,
+$c^{*\prime}$ and $\phi^{*\prime}$ enter through $K'ch$, $c^{*\prime}cc$ and $\phi^{*\prime}c\phi$.
+
+\textbf{1PI convention.} The weight is $e^{iS_\Psi/\hbar}$ and $\Gamma_\Psi=S_\Psi+\hbar\Gamma_1+O(\hbar^2)$, with the
+Legendre transform taken in the fields only (antifields are spectators). $\Gamma_1=\tfrac i2{\rm STr}\log S^{(2)}_\Psi
+=-i\log Z|_{\rm 1PI}$, so that $i\Gamma_1$ is the sum of 1PI one-loop graphs (Gate~0; the Berezin/Wick shadow below).
+
+\textbf{Vacuum and one-point.} The vacuum is normalised by $\Gamma_1[0]=0$. The one-point function (D14a--c) is retained:
+no tadpole cancellation and no background shift are imposed, and no value is assigned.
+
+\textbf{Fourier, propagators and i0.} We use $\partial\to ik$ with incoming momenta. The propagators are
+$\langle hh\rangle=i(P^{-1})_{ab}/(q^2+i0)$ (de Donder; independent components),
+$\langle c^\mu\bar c_\rho\rangle=i(M_0^{-1})_{\mu\rho}=-\delta_{\mu\rho}/(q^2+i0)$ and $\langle\phi\phi\rangle=i/(q^2+i0)$,
+all of them inverses of the verified Hessians; the $i0$ is Feynman throughout.
+
+\textbf{Bookkeeping.} Each $n$-leg vertex is $O(\kappa^{n-2})$. At one loop, $\Gamma_1$ at $\kappa^k$ has exactly $k$
+external legs ($\sum_v(n_v-2)=E$), and this is checked against the prefactor of every exported integrand.
+
+\textbf{Pullback, not theorem.} $\Gamma_\Psi(\Phi,\Phi^{*\prime})=\Gamma(\Phi,\Phi^{*\prime}-\partial\Psi/\partial\Phi)$ is used
+only as the classical pullback (verified at tree level). No quantum gauge-change theorem is asserted.
+
+\section{Prescription and the D11 matching note}\label{sec:p14-presc}
+\noindent Builder/output: \texttt{prescription\_d11.py}, \texttt{P14\_prescription\_D11\_matching.json}.\par\smallskip
+\textbf{One prescription.} Dimensional reduction (DRED), made operational in p14r
+(Section~\ref{sec:p14r-dred}). Subtraction is $\overline{\rm MS}$ at scale $\mu$, and the $i0$ is Feynman. The rules for
+scaleless integrals belong to the definition but are \emph{not applied}: no tadpole (D02, D12, D14a--c) receives a value.
+D12 stays Missing. XVI-O fixed D12 and the one-point function by
+\texttt{dimensional\_regularization\_m0}; P's prescription belongs to the same family, but P does not import that value.
+
+\subsection{Operational DRED rules (p14r)}\label{sec:p14r-dred}
+\noindent Builder/output: \texttt{dred.py}, \texttt{P14\_dred\_rules.json}; \texttt{quantum\_prescription\_defined}
+requires \texttt{dred\_rules\_verified}, and the release gate recomputes it.\par\smallskip
+\begin{description}
+\item[R1, spaces.] The quasi-4-dimensional space Q4S splits as $\mathrm{Q}d\mathrm{S}\oplus\mathrm{Q}(4{-}d)\mathrm{S}$:
+$g^{(4)}=\hat g+\tilde g$, with $\operatorname{tr}g^{(4)}=4$, $\operatorname{tr}\hat g=d$ and $\operatorname{tr}\tilde g=4-d$.
+The metrics are projectors: $\hat g\hat g=\hat g$, $\tilde g\tilde g=\tilde g$, $\hat g\tilde g=0$, $g^{(4)}X=X$.
+\item[R2, momenta.] The loop momentum $l$ \emph{and} the external momenta $p$ lie in Q$d$S ($p\cdot\tilde g=0$; a stated
+choice). Field, vertex and polarisation indices are Q4S indices.
+\item[R3, lifting.] The exported numerators are polynomials in the lower components $l_r,p_r$ ($r=0..3$) at fixed external
+components. They are lifted as $l_r:=l\cdot e_{(r)}=l\cdot\hat e_{(r)}$ and $p_r=p\cdot e_{(r)}$, with $e_{(r)}$ the
+$\eta$-orthonormal basis of Q4S. The vertex tensors are lifted with $\eta\to g^{(4)}$, so nothing is truncated.
+\item[R4, reduction.] $\int l^{\mu_1}\cdots l^{\mu_n}F(l^2,l\cdot p)=\sum_kC_kB_k$, with $B_k$ the symmetric tensors built
+from $\hat g$ and $p$, and $C_k$ given by the exact Gram (Passarino--Veltman) projection in symbolic $d$. Contracting with
+the lifted basis gives $\hat g_{rs}=\eta_{rs}-\tilde G_{rs}$, where the evanescent $\tilde G_{rs}$ satisfy
+$\eta^{rs}\tilde G_{rs}=4-d$ and $\tilde G_{rs}p^s=0$. The checked closed forms are:
+the rank-2 tadpole $\hat g\,J/d$; the rank-4 tadpole $J/(d(d+2))$;
+$B_{00}=(J_{10}p^2-J_{02})/((d-1)p^2)$; and $B_{11}=(dJ_{02}-p^2J_{10})/((d-1)p^4)$.
+\item[R5, order.] \emph{Every} index contraction, including the external 4D projection, is done \emph{before} the
+Laurent expansion. $d$ stays symbolic through the $\overline{\rm MS}$ subtraction and the finite-part extraction, so
+$(d-4)\times$pole terms are retained.
+\item[R6, evanescent.] Evanescent remainders \emph{do} arise in general. The lift of the exported integrands has
+$\tilde G$ parts in every graph, and contraction produces $(4-d)\times$pole finite terms. They are kept. The p14 sentence
+claiming that none arise is withdrawn.
+\end{description}
+\textbf{Tests (generic placeholders $J=a/\epsilon+b+c\epsilon$, $d=4-2\epsilon$; no integral of this theory is evaluated).}
+\begin{itemize}
+\item T1, the $\eta_{00}$ part of $\int l_0l_0F$, has finite part $a/8+b/4$. Substituting $d=4$ before the expansion
+would give $b/4$; the guarded pipeline raises \texttt{PrematureD4Substitution}.
+\item T2, $\eta^{rs}\times$ the $\tilde G$ part, equals $-(4-d)J/d$ with finite part $-a/2$, a $(d-4)\times$pole term.
+\end{itemize}
+The mutations $\operatorname{tr}\hat g=4$ (rules check fails; T1 becomes $b/4$ and T2 becomes 0) and
+expand-before-contract (\texttt{UncontractedObjects}) are both rejected. Background literature (nothing is imported from
+it): W.~Siegel, Phys.\ Lett.\ B84 (1979) 193 and B94 (1980) 37; D.~St\"ockinger, JHEP 0503 (2005) 076, hep-ph/0503129;
+A.~Signer and D.~St\"ockinger, Nucl.\ Phys.\ B808 (2009) 88, arXiv:0807.4424.
+
+\textbf{D11 matching (defined, not verified).}
+\begin{description}
+\item[M0, baseline.] $S_{\rm inv}$, not $S_D$. $a_1=\tfrac12\tau\eta-h$ is XVI-O's vertex (\texttt{lem:d11-prefactor}:
+$\Pi=(i\kappa^2/4)T$).
+\item[M1, exact integrand identity (computed).] For all 100 pairs $(A,B)$ of independent components,
+\[-i\,\mathcal P\,\frac{N^{P}_{AB}(l,p)}{(l^2+i0)((l-p)^2+i0)}=\frac{i\kappa^2}{4}\,R_A^{\mu\nu}R_B^{\rho\sigma}
+V^{ab}_{\mu\nu}V^{cd}_{\rho\sigma}\big[\tilde C_{ac}(l)\tilde C_{bd}(l-p)+\tilde C_{ad}(l)\tilde C_{bc}(l-p)\big],\]
+where:
+\begin{itemize}
+\item $\tilde C_{ab}(k)=k_ak_b\,i/(k^2+i0)$ is the Fourier transform of $C=-\partial\partial D_F$;
+\item $V$ is XVI-O's own \texttt{V\_tensor}, imported from \texttt{code/matter\_loop/d11\_tensor.py};
+\item $R_A$ is the $\eta$-raising map $h^{\mu\nu}=\eta^{\mu a}\eta^{\nu b}h_{ab}$, with orbit multiplicity 2 for
+off-diagonal $A$;
+\item $\mathcal P=\kappa^2/2$ is P's prefactor, which carries the symmetry factor $\tfrac12$.
+\end{itemize}
+The identity matches $\Gamma^{(2)}_1=\tfrac12\int h^{\mu\nu}\Pi_{\mu\nu\rho\sigma}h^{\rho\sigma}$ (XVI-O) with P's ordered
+extraction, and it is bound to the exported D11 integrand by its sha256.
+\item[M2, nonlocal agreement on $U=\mathbb R^4\setminus\{0\}$ (defined only).]
+$\langle\mathcal F^{-1}[P^{\rm DR}_{AB}],f\rangle=\langle R_AR_B\Pi^R_{\rm tr},f\rangle$ for $f\in\mathcal D(U)$, with
+$\Pi^R_{\rm tr}=(i\kappa^2/4)\mathcal K u^R_\mu$, $\alpha=A^2/60$ and $\beta=A^2/18$ (\texttt{lem:BV\_rules\_on\_U},
+all 256 components). This needs the evaluated amplitude, which is p15+ work.
+\item[M3, local difference (conditional on M2).] $L_{\rm match}=\mathcal F^{-1}[P^{\rm DR}]-R R\,\Pi^R_{\rm tr}$.
+The degrees are as follows. The scalar extension $u^R_\mu$ has scaling degree 4. The kernel $\mathcal Ku^R_\mu$
+(with $\mathcal K$ of order 4) has scaling degree at most 8. A contact term has $\mathrm{sd}(\partial^\alpha\delta)=4+|\alpha|$.
+\emph{Kernel scaling degree at most eight; degree of divergence at most four; hence the local ambiguity has derivative
+order at most four.}
+
+\emph{If} M2 holds, then $L_{\rm match}$ is supported at $\{0\}$ and lies in the bounded contact space of Lorentz-covariant
+even $hh$ structures of derivative order $\le4$. This space is enumerated: order 0 ($\mu^4$) has dimension 2 (transverse 0);
+order 2 ($\mu^2p^2$) has dimension 4 (transverse 1, the linearised Einstein--Hilbert structure); order 4 has dimension 5
+(transverse 2). Odd orders cannot occur with four indices built from $p$ and $\eta$.
+
+Exactly degree four is an \emph{explicit normalization condition} N4: no $\mu^4$ and no $\mu^2p^2$ contact. N4 is
+\emph{not} implied by ``no other scale'', since $\mu$ is a scale. Under N4 the space is the 5-dimensional order-4 span,
+equal to the $hh$ sector of the counterterm domain. XVI-O's contact ansatz is a candidate list
+(\texttt{NOT\_proved\_spanning}) with three named order-4 entries, one of them the collective \texttt{L4\_mixed}; its
+lower-order entries are excluded by N4. P's list is the explicit one.
+\item[M4, finite adjustments.] Under M2 and N4, these are booked only as P-side counterterms in the $hh$ sector (without N4
+the order-0/2 contacts would have to be added there). $u^R_\mu$ is not modified
+(no $c\,\delta$), so the scalar-extension prescription \texttt{analytic\_FP\_u\_mu\_R\_o70} is preserved.
+\item[M5, residue.] $r=-i\pi^2$ is an XVI-O-side statement, valid only \emph{after} the constructive holomorphy of
+$F(\zeta)=(Q-i0)^\zeta$ (\texttt{lem:analytic\_FP\_u\_mu\_R\_o70}). P's $1/\epsilon$ pole is P-side, and no pole--residue
+identification is asserted.
+\item[M6/M7.] The XVI-O o70 files are byte-pinned. XVI-O's kernel Ward identity $\partial(\Pi_w+L)=0$ is
+\emph{not} functional ST4b, and the projected identity (XVI-N \texttt{lem:field-only}) is distinct from bulk restoration.
+\end{description}
+Hence \texttt{D11\_matching\_defined}=true and \texttt{D11\_matching\_verified}=false.
+
+\section{Counterterm domain}\label{sec:p14-ct}
+\noindent Builder/output: \texttt{counterterm\_domain.py}, \texttt{P14\_counterterm\_domain.json}.\par\smallskip
+This is an \emph{order-bounded EFT constraint list, not an admission} (XIV-J and XV-B are not opened). The one-loop
+$\kappa^n$ part has $n$ external legs and local dimension $4+n$, with $[\kappa]=-1$; $[h]=[\phi]=[c]=[\bar c]=1$; and
+$[K']=[c^{*\prime}]=[\phi^{*\prime}]=[\bar c^{*\prime}]=[b]=2$. The functionals have ghost number 0, are even under
+$\phi\to-\phi$ (with $\phi^{*\prime}\to-\phi^{*\prime}$), and are Lorentz covariant (parity-odd structures vanish for
+two-leg terms). The permitted species are the legs of loop-capable vertices; $b$, $\bar c^{*\prime}$ and $b^{*\prime}$
+are excluded. The structures are \emph{generated} mechanically from $\eta$ and the leg momentum and turned into
+densities, and their ranks are exact. Total derivatives vanish identically in the two-point representation.
+\begin{itemize}
+\item $\kappa^1$: empty (a one-leg term with derivatives is a total derivative, and there is no dimension-5 field).
+\item $\kappa^2$: 11 structures.
+\begin{itemize}
+\item $hh$, 5: $h\Box^2h$, $\tau\Box^2\tau$, $(\partial\partial h)\Box\tau$, $(\partial h)\Box(\partial h)$,
+$(\partial\partial h)^2$;
+\item $\bar cc$, 2: $\bar c_\mu\Box^2c^\mu$, $\bar c_\mu\partial^\mu\Box\partial_\nu c^\nu$;
+\item $K'c$, 3: $K'^{mn}\partial_m\partial_n\partial_rc^r$, $K'^m{}_m\Box\partial_rc^r$, $K'^{mn}\Box\partial_mc_n$;
+\item $\phi\phi$, 1: $\phi\Box^2\phi$.
+\end{itemize}
+\end{itemize}
+\textbf{Source dependence.} $K'$ enters only via $K'c$. $c^{*\prime}$ and $\phi^{*\prime}$ appear first in three-leg terms
+at $\kappa^3$, outside the order bound.
+
+\textbf{Equivalences.} Apply $\sigma_0=(S^{(0)}_\Psi,\cdot)$ (frozen antibracket) to every generated ghost-number $-1$,
+dimension-5 bilinear $\Xi$. Antifield-linear $\Xi$ are field redefinitions (canonical transformations); field-only $\Xi$
+are $s$-exact. The domain $\cap\operatorname{Im}\sigma_0$ is given in the summary; the $S^{(0)}_\Psi$
+density used for this is checked against the verified Hessians. \emph{Eight candidate directions modulo the computed exact
+equivalences, before imposing the relevant identity constraints.} This is not a cohomological classification, which
+needs $D\cap\ker\sigma_0$ (the $\sigma_0$-closedness constraints) and the quotient
+$(D\cap\ker\sigma_0)/(D\cap\operatorname{Im}\sigma_0)$. $D\cap\ker\sigma_0$ has not been computed, so the count 8 is an
+upper bound only. The enumeration itself is unchanged.
+
+\textbf{Normalisation.} $\overline{\rm MS}$ (pure poles at $\mu$). There is no $\kappa^2$ two-derivative counterterm, so
+neither $\kappa$ nor the $h$ normalisation is renormalised at this order. This is the \emph{imposed} normalization
+condition N4 of M3, not a consequence of masslessness. There is no $\kappa^1$ counterterm.
+Finite adjustments stay inside the domain.
+
+\section{Executable amplitude rules}\label{sec:p14-amp}
+\noindent Builder/output: \texttt{feynman.py}, \texttt{shadow.py}, \texttt{amplitude\_rules.py},
+\texttt{P14\_amplitude\_rules.json}, \texttt{exports/P14\_vertex\_tensors.json}, \texttt{exports/P14\_integrands/*.json}.\par\smallskip
+\textbf{Rules.}
+\begin{itemize}
+\item \emph{Extraction:} ordered, $V[L_1..L_n]=\partial^L_{L_n}\cdots\partial^L_{L_1}S$, with leg 1 leftmost; the Feynman
+vertex is $i\kappa^nV$.
+\item \emph{Graviton legs:} independent components; the multiplicity (1 diagonal, 2 off-diagonal) enters only the tensor form.
+\item \emph{Ghost:} $\bar c$ is on the left in $\bar cch$ and in $M_0$; a closed ghost loop carries $-1$.
+\item \emph{Source:} $K'$ sits left of $c$ in $K'ch$ and in the $\Gamma_1$ coefficient $K'_{a'}G_{a'\nu}c^\nu$.
+\item \emph{Symmetry factors:} $S_f=\tfrac12$ for D01, D02, D11, D12, D14a, D14c and $S_f=1$ for D03, D13, D14b.
+\item \emph{Ghost-loop sign:} $-1$ for D03 and D14b.
+\end{itemize}
+The vertex tensors include every derivative term of the ghost-graviton vertex ($\bar c\,c\,h=2ia\,D^\rho[\mathcal L_ch]$,
+including the transport term $c^r\partial_rh$) and the $K'$ vertex.
+
+\textbf{Controls.}
+\begin{description}
+\item[W1.] Berezin/Wick shadow theory: the symmetry factors and Grassmann signs are fixed independently.
+\item[W2.] A tensor-route recomputation of the multiplicities.
+\item[W3.] Closed forms of the vertices.
+\item[W4.] The primary evidence is the generic symbolic \emph{off-shell} Ward identities at $\kappa^1$ and $\kappa^2$.
+A supplementary check is the ``Ward contraction with two free on-shell graviton legs and an off-shell gauge leg''. W4
+also checks Bose symmetry.
+\item[W5.] Independent sympy regeneration of D14a, D14b, D14c, D11 and D13 \emph{only}, plus a Bose-symmetry check of D01.
+\item[W6 (p14r).] Independent regeneration of D01, D02, D03 and D12 from the one-loop expansion of the functional
+(super)trace log of the field-dependent Hessian of $S_\Psi$ (\texttt{hessian\_route.py}), not from the Feynman-rule
+assembler:
+\[i\Gamma^{AB}=-\tfrac12\operatorname{Tr}(GU_2^{AB})+\tfrac12\operatorname{Tr}(GU_1^AGU_1^B)\ \text{(bosons)},\qquad
+i\Gamma^{AB}=-\operatorname{Tr}(GU_1^AGU_1^B)\ \text{(ghosts)}.\]
+The ingredients are an own monomial differentiation of $\ell_3,\ell_4$, an own inverse of the full $14\times14$ $(h,b)$
+Hessian, and the ghost and scalar Hessians from the $S_\Psi$ densities. Structural checks: $X^{(1)}$ has no field-only
+term and $X^{(2)}=0$, so there is no $\bar cchh$ vertex. The route equals the exported integrands exactly, component by
+component (D01 100, D02 94, D03 100, D12 94; 0 mismatches), and it also rejects the tadpole-factor, ghost-sign,
+multiplicity and transport-term mutations.
+\end{description}
+\textbf{Mutations that must be rejected (all rejected):} wrong tadpole factor, wrong ghost-loop sign, off-diagonal
+multiplicity, reversed source/ghost order, and omitted ghost transport term. D13 has priority; its integrand is exported
+with prefactor $i\kappa^2$ and order $(K',c)$. Integrands are symbolic (not integrated); the per-graph table is in the
+summary above.
+
+\textbf{Isolated-copy gate tests (p14r).} The test copies contain every frozen input (the top-level directories of
+\texttt{frozen\_p13\_inputs.json}, including \texttt{tests/}); the p14 copies lacked \texttt{tests/}, so every copy was
+unfrozen. The expected outcomes are:
+\begin{itemize}
+\item the unmutated copy has freeze true, and publication is accepted;
+\item each P.5-only mutation (DRED mutation not rejected, counterterm flag, amplitude mutation) keeps the freeze
+\emph{true}, turns the named contract flag false, and is rejected;
+\item the hard-stop mutations keep the freeze true and are rejected;
+\item the classical mutations make the freeze false and are rejected.
+\end{itemize}
+
+\section{P.5 entry dossier}\label{sec:p14-dossier}
+One row per claim, each resolved mechanically by \texttt{dossier\_p14.py}: the function exists, the certificate key holds
+the expected value, and the test exists. The five P.3/P.4 chains are carried over unchanged as frozen inputs; the P.5
+entry chain is new.
+\input{body/P14-dossier-table.tex}
+
+\section{Reproducibility contract (p14r)}\label{sec:p14-repro}
+\begin{itemize}
+\item \texttt{author\_rebuild\_passed} is bound to the \emph{p14r} source tree
+(\texttt{reproducibility/author\_rebuild\_report\_p14r.json}).
+\item The p14r \texttt{independent\_rebuild\_passed} is \texttt{pending}.
+\item The p13 independent result is recorded separately and bound to the p13 tree; this is the same-box caveat above.
+\item The source-only archive is \texttt{XVI-P-p14r-source-only.zip}, with reference values in
+\texttt{reproducibility/reference\_values\_p14r.json} and entrypoint \texttt{python3 tools/rebuild\_from\_source.py}.
+\item The p13 source-only zip, its reference values and the independent report are archived unchanged in
+\texttt{archival/p13/}. The p14 release (zip, reference values, author report) is archived in \texttt{archival/p14/}.
+\end{itemize}
+
+\begin{nonclaim}
+No loop is evaluated, no one-loop coefficient is fixed, and no symmetry is restored. P.5 entry fixes a contract: an
+action, a prescription, a matching \emph{definition}, a counterterm \emph{domain} and integrands. P.5 calculation and
+P.5 identity are open. The prepared $S_D$ keeps $(S_D,S_D)\neq0$ (XVI-N prop:broken-square), and no completion
+contradicting XVI-N thm:massless-obstruction is claimed. En01, Em01, Em02-B/D, En02, VII-E and VIII-B are not premises.
+\end{nonclaim}

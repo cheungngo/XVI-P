@@ -1,0 +1,36 @@
+\begin{center}\small
+\begin{tabular}{@{}p{5.2cm}p{10.3cm}@{}}
+\toprule contract item & value (from the certificates of this build)\\ \midrule
+integrated fields & h\_(mn) (10 independent components), c\^{}mu, cbar\_mu, phi, b\^{}mu (retained) \\
+external antifields & K'\_(mn): h*' (10 comps, sigma\_h = +1), c*'\_mu: c*', cbar*'\^{}mu: cbar*', phi*': phi*', b*': absent (s b = 0) \\
+b & RETAINED and integrated; det M\_bb = -16; eliminating b gives 4 terms quadratic in cbar*'; Gamma\_1 independent of bs, cbs \\
+antifield shift & eps = -1 (derived) \\
+prescription & P14\_DRED\_MSbar\_FeynmanI0: MS-bar: subtract the pole in the combination 1/eps - gamma\_E + log 4 pi; scale mu \\
+i0 & Feynman: every propagator denominator q\^{}2 + i0 (eta = +,-,-,-); Wick rotation l0 = i l4 implied \\
+DRED rules & verified = true; T1 finite a/8 + b/4 (premature d=4 would give b/4); T2 finite -a/2 ((d-4) x pole); mutations: premature\_d4 rejected, trace\_ghat\_eq\_4 rejected, contract\_after\_laurent rejected \\
+D11 matching & defined = true, verified = false; M1: 100 component pairs, 0 mismatches; M3 (conditional on M2): kernel sd \textless{}= 8, contact order \textless{}= 4; contact space order\_0 2, order\_2 4, order\_4 5; under N4 5 (transverse 2); M2 defined\_not\_verified \\
+counterterm domain & kappa\^{}1: 0; kappa\^{}2: 11 (h.h 5, c.cb 2, c.K 3, phi.phi 1); sigma\_0-equivalent: 3 (h.h 2, c.cb 0, c.K 0, phi.phi 1); 8 candidate directions modulo the computed exact equivalences, before the identity constraints (D cap ker sigma\_0 not computed) \\
+amplitude controls & W1\_wick\_berezin\_shadow: pass, W2\_multiplicity: pass, W3\_closed\_form\_vertices: pass, W5\_regeneration: pass, W6\_hessian\_route: pass, W4\_ward\_bose: pass; W5 regenerates D14a-c, D11, D13; W6 (Hessian route) regenerates D01, D02, D03, D12 == exports: true \\
+mutations (must be rejected) & wrong\_tadpole\_factor: rejected, wrong\_ghost\_loop\_sign: rejected, offdiag\_multiplicity: rejected, reversed\_source\_ghost\_order: rejected, omit\_ghost\_transport\_term: rejected \\
+P.5 entry flags & quantum\_action\_defined = true, quantum\_prescription\_defined = true, D11\_matching\_defined = true, counterterm\_domain\_defined = true, amplitude\_rules\_verified = true \\
+P3\_P4\_frozen\_as\_P5\_inputs & true (the p13 independent rebuild ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh venv from the source-only zip; it was NOT run on a second machine) \\
+P.5 entry & earned (contract fixed; stated against the P.3/P.4 freeze) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}\small
+\begin{tabular}{@{}lllrrrl@{}}
+\toprule graph & prefactor & denominators & comps & monomials & deg & status \\ \midrule
+D01 & \texttt{kappa**2/2} & l\^{}2+i0, (l-p)\^{}2+i0 & 100 & 3888 & 4 & integrand\_available \\
+D02 & \texttt{-kappa**2/2} & l\^{}2+i0 & 94 & 220 & 2 & integrand\_available \\
+D03 & \texttt{-kappa**2} & (l-p)\^{}2+i0, l\^{}2+i0 & 100 & 2728 & 4 & integrand\_available \\
+D11 & \texttt{kappa**2/2} & l\^{}2+i0, (l-p)\^{}2+i0 & 100 & 1722 & 4 & reference \\
+D12 & \texttt{-kappa**2/2} & l\^{}2+i0 & 94 & 160 & 2 & Missing \\
+D13 & \texttt{I*kappa**2} & l\^{}2+i0, (p-l)\^{}2+i0 & 40 & 396 & 3 & integrand\_available \\
+D14a & \texttt{-kappa/2} & l\^{}2+i0 & 10 & 22 & 2 & integrand\_available \\
+D14b & \texttt{kappa} & l\^{}2+i0 & 4 & 16 & 2 & integrand\_available \\
+D14c & \texttt{-kappa/2} & l\^{}2+i0 & 10 & 22 & 2 & integrand\_available \\
+\bottomrule
+\end{tabular}
+\end{center}

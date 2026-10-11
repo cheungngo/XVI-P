@@ -1,0 +1,105 @@
+% XVI-P p19 note: the projected one-loop kappa^2 ch-identity defect
+\section{P.5 identity step (p19): the projected one-loop $\kappa^2$ ch-identity defect}
+\scopebox{Scope.}{p19 keeps the p14r contract and the p15--p18 calculation layers byte-identical
+(\texttt{release\_p19.py} recomputes their sha256). It assembles the ch projection (P.3, frozen) of the
+$\hbar\kappa^2$ part of $(S_\Psi,\Gamma_\Psi)$ from every evaluated input, exactly in $d$. It then solves for a
+symmetry-restoring counterterm in the declared domain. Only the ch projection is covered (one $c$, one $h$; one loop;
+$\kappa^2$; off shell). bulk\_symmetry\_restored is false. O.1 stays NOT\_CLOSED; the insertion stays frozen; XV-B
+and XIV-J are unopened; Route B is not discharged; no $c\,\delta$ is added to $u^R_\mu$.}
+
+\subsection{Assembly}
+The ledger \texttt{P13\_ch\_dependency\_rows.json} has three surviving rows:
+\begin{itemize}
+\item $R_{hh}$, $(S_0,\Gamma_1^{[2]})$ $s_2K{:}K.c$, inputs D01+D02+D03+D11+D12, with
+  $X_{hh}=\int(s_0h)\,G_{hh}\,h$;
+\item $R_{Kc}$, $(S_0,\Gamma_1^{[2]})$ $s_1h{:}h^2$, input D13, with $X_{Kc}=\int G_{Kc}\,c\,E\,h$, where $E$ is
+  the $h^2$-monomial operator of $S_0$;
+\item $R_{1pt}$, $(S_1,\Gamma_1^{[1]})$, inputs D14a--c.
+\end{itemize}
+Every input is evaluated; none is Missing, and a Missing input is refused rather than set to zero (control). The
+defect is computed for seven external assignments, including ``c hat, h tilde''. For each it is given as the exact
+$d$-dependent value times MB, its pole, its coefficient of $L$ and its MS-bar local part.
+
+\paragraph{Result: the defect is zero, exactly in $d$, in every part and every assignment.}
+\textbf{Why it is zero.} Each surviving row vanishes separately in the projected slot. No counterterm cancellation
+is involved, and no cancellation between rows.
+\begin{itemize}
+\item[(i)] hh row: full-row transverse decoupling. D01 and D03 are each nonzero in the slot and cancel each other
+  (the p17/p18 transverse sum). D11 is transverse by itself, and D02 = D12 = 0.
+\item[(ii)] K.c row: D13 reaches the ch slot only through $T_1$ and $E_1$ ($T_2$, $T_3$ and $E_2$ are longitudinal;
+  $E$ is transverse), and $A_{T_1}=A_{E_1}=0$ exactly in $d$.
+\item[(iii)] One-point row: the tadpoles D14a--c vanish under the declared prescription.
+\end{itemize}
+\textbf{This rests on:}
+\begin{itemize}
+\item M2 / the D11 matching, verified on the \emph{4D components only} (the D11 matching for the evanescent
+  components is not applicable and not verified);
+\item the evanescent decoupling proofs (P16 E2; P17/P18 hh evanescent and full-row decoupling);
+\item the frozen P.3 projection and the P13 ledger;
+\item the declared prescription.
+\end{itemize}
+\textbf{Evanescent decoupling in the assembly.} The evanescent parts of both rows were assembled explicitly and are
+zero for all seven assignments. The evanescent poles themselves are nonzero; they are regulated and not subtracted.
+
+\subsection{Counterterm domain and solve}
+Route G applies $\sigma_0=(S_0,\cdot)$ to the 11 p14r domain densities: h.h\#0--4, c.cb\#0--1, c.K\#0--2,
+$\phi.\phi$. Route C computes the covariant ch images exactly in $d$. Both give rank $P_{ch}\sigma_0=3$.
+\begin{itemize}
+\item Over $\mathbb Q(i)$ (these counts are the real dimensions under a compatible real structure; wording corrected
+  in p20): rank $\sigma_0|_D=5$, $\dim D\cap\ker\sigma_0=6=\dim D\cap{\rm Im}\,
+  \sigma_0$, cohomology 0, and the quotient has dimension 5 (complement h.h\#0--2, c.cb\#0--1).
+\item The h.h + c.K $\Gamma_1$ data, without the ghost self-energy and in route-G (c,cb) labels, have quotient
+  coordinates pole $(0,0,0,-3/8,1/4)$, coefficient of $L$
+  $(0,0,0,3/8,-1/4)$ and local part $(0,0,0,-2/3,5/12)$. The h.h pole is transverse, i.e.\ $\sigma_0$-exact. These coordinates equal $-[\Sigma]$: $\Sigma$ itself has
+  $(+3/8,-1/4)$, and the data including $\Sigma$ have quotient $0$ [clarified in p20].
+\item The linear solve $\Delta+P_{ch}\sigma_0(x)=0$ gives $x=0$ (outcome ZERO); no residual and no obstruction.
+\item The MS-bar counterterm has zero ch image. The h.h + c.K part alone has a nonzero full $\sigma_0$ image in the
+  c.b sector; adding the c.cb ghost self-energy counterterm in the correct orientation closes it [corrected in p20,
+  see the p20 erratum note].
+\end{itemize}
+
+\paragraph{Flags and their definitions.}
+\begin{itemize}
+\item \texttt{projected\_defect\_computed}: $\Delta$ is assembled from all evaluated inputs, exactly in $d$, in
+  all parts and all seven assignments.
+\item \texttt{projected\_identity\_verified}: $\Delta=0$ for the \emph{regulated} $\Gamma_1$.
+\item \texttt{projected\_restoration\_verified} [REDEFINED in p20]: full $\sigma_0$ closure, in every ghost $+1$
+  sector (h.c, c.b, c.cbs), of the \emph{complete} one-loop $\kappa^2$ MS-bar counterterm $S_{ct}$ (h.h + c.K + c.cb,
+  ghost self-energy held fixed, derived relative factor $+1$, orientation converted). The p19 definition
+  ($P_{ch}\sigma_0(S_{ct})=0$, $x=0$) follows from the identity and locality; it is kept only as a labelled
+  route-consistency control.
+\end{itemize}
+\emph{Scope of the restoration flag:} the one-loop $\kappa^2$ counterterm only; not bulk symmetry, not O.1. The
+release gate re-checks each definition from the certificate content. bulk\_symmetry\_restored is false regardless.
+
+\paragraph{K1 [corrected in p20; the p19 text is retracted].} p19 reported that full closure of the MS-bar
+counterterm fails with the derived ghost-equation factor $+1$ and needs $-1$. That was a Grassmann-orientation
+bookkeeping error: the route-G densities are built in the order (c,cb), whereas the P15 $\Sigma$ coordinates are
+(cb,c)-oriented, and $V[\mathrm{c.cb}\#k]=-V[(\mathrm{cb,c})\#k]$. With the measured ratio $-1$ applied, the derived
+factor $+1$ gives full closure (p20 erratum note). The relations below are stated in the (cb,c) orientation:
+\begin{itemize}
+\item The ghost-equation operator $2iD$, verified by P15 as $\Sigma=2iD[G_{Kc}]$, gives
+  $2iD\,V[\mathrm{c.K\#1}]=-V[(\mathrm{cb,c})\#0]$ and $2iD\,V[\mathrm{c.K\#2}]=-V[(\mathrm{cb,c})\#1]$.
+\item Applied to the c.K pole, this reproduces the P15 $\Sigma$ pole $(-3/8,1/4)$ in (cb,c) coordinates, i.e.\
+  $(+3/8,-1/4)$ in the route-G (c,cb) coordinates.
+\end{itemize}
+
+\paragraph{J1: finding about the p14r contract (contract not modified).} The p14r counterterm-domain certificate
+counts Im $\sigma_0$ 3, quotient 8, $D\cap\ker$ 5 and rank $P_{ch}\sigma_0$ 4. These are artefacts of a real/imaginary
+split over $\mathbb Q$: the densities carry an explicit $i$ for odd derivative counts, so an $i$-multiple counts as
+independent. Over $\mathbb Q(i)$ the counts are 6, 5, 6 and 3 (the real dimensions under a compatible real
+structure), and Route C agrees. With the split, p19 reproduces the
+p14r counts (control).
+
+\paragraph{Controls and mutations.} All controls are true. Eight mutations each change the outcome:
+\begin{itemize}
+\item drop D03; drop D01; flip the D03 phase; double D03; trace operator instead of $s_0h$; de Donder $q^2P$ instead
+  of $E$; drop the D03 evanescent part (naive 4D). Each gives OBSTRUCTION (nonlocal residual).
+\item D13 with $G_t$ dropped gives NONZERO but CANCELLABLE (rank 3).
+\end{itemize}
+Recorded blind spots of the projected identity: dropping D11 (transverse by itself), dropping D13
+($A_{T_1}=A_{E_1}=0$) and flipping the K.c row sign (each row vanishes separately). In p20, the full-closure test
+detects the last two, and the D11 normalisation pin covers the first. Removing D11 from the inventory makes the inventory incomplete, and
+projected\_defect\_computed is then not earned.
+
+\input{body/P19-results-table.tex}
