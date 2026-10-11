@@ -1,0 +1,32 @@
+{
+  "revision": "o70-sync",
+  "gate": "O.3",
+  "hard_rule": "Do NOT identify XVI-M selected graph with action graph merely because both contain ell_3",
+  "factors": {
+    "hbar": "set to 1 in formulae unless restored explicitly; power counts track loop order separately",
+    "kappa": "gravitational coupling; order-kappa^2 means total power two in vertices' kappa content for the target",
+    "i_factors": "Fourier partial_mu -> i k_mu as XVI-N; propagators follow Gate S-bv / N-Norm distinctions",
+    "factorials": "F_t seed has NO extra factorial (XVI-I); combinatorial symmetry factors stated per diagram in inventory",
+    "ghost_loop_signs": "Each closed ghost loop contributes minus; recorded per diagram",
+    "propagators": {
+      "scalar": "advanced/retarded E_m^{A/R} inherited; massless E_0 for bulk massless sector",
+      "graviton": "K = -Box P already includes S_gf; G_gr^R = -P E_0^R (XI inverse) NOT equated to X-sheet Delta_R^gr = -4 P E_0^R",
+      "ghost": "from gauge-fixed quadratic; i cbar Box c sector"
+    },
+    "S_bv": "S = 1/(4 pi^2) (Q - i0)^{-1} on R^4\\{0} (Gate S-bv); identification at z=0 not established",
+    "ell_3_policy": {
+      "action_ell_3": "XII-C/XVI-N: ell_3=-2(r_3+b1 r2+b2 r1); Euler_h(ell_3)=J_3",
+      "selected_graph_ell_3": "XVI-M selected graph has its own extension/collapse image",
+      "identification": "FORBIDDEN as a silent step; any map must be an explicit constructed morphism with its own certificate"
+    },
+    "interaction_localization_switches": "sigma_eps, chi_I, g are s-inert externals; bulk S_inv sector sets preparation switches off the identity baseline (sigma=1 removes only V_sigma, leaves B_g if g retained \u2014 O sector uses invariant baseline without claiming prepared quantum theory)",
+    "bulk_mass": "m=0 freeze for bulk quantum target (Track II alignment); arbitrary m>0 Unresolved",
+    "a": "1/2 (XVI-N); V_af_phi = kappa a int phi*(c\u00b7partial phi)",
+    "scalar_Hessian_m0": "-Box (from authoritative Lag_q = +1/2 sqrt(-q) q^{mu nu} dphi dphi)",
+    "scalar_propagator_D11": "D_F(k)=i/(k^2+i0) [Wick]; o61 Delta_F=-D_F; H0 D_F = i delta",
+    "G_F_vs_D_F": "SEPARATE: G_F=inverse; D_F=Wick; XI-B not Hadamard",
+    "D11_Pi_prefactor": "Constructed: Pi = i*kappa^2/4; comb_B=1/2 (Route A/B agree)",
+    "Gamma1_matter": "-i log Z"
+  },
+  "status": "Constructed"
+}

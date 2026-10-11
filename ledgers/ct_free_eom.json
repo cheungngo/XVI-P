@@ -1,0 +1,10 @@
+{
+  "revision": "o58-fix",
+  "ledger": "ct_free_eom",
+  "equivalence_defined_before_use": true,
+  "definition": "NOT YET DEFINED for this package: would identify densities differing by free-field EOM factors (K h, Box phi, etc.) with stated jet order and support.",
+  "status": "Unresolved",
+  "notes": "Do not use free-EOM equivalence until this definition is Constructed. XVI-M also left related equivalences Unresolved.",
+  "entries": [],
+  "complete_sector_solution": false
+}

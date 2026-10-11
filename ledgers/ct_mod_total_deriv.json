@@ -1,0 +1,10 @@
+{
+  "revision": "o58-fix",
+  "ledger": "ct_mod_total_deriv",
+  "equivalence_defined_before_use": true,
+  "definition": "A ~ B iff A-B = partial_mu K^mu for some local K of admitted degree (integrated against compact test densities).",
+  "status": "Constructed_as_framework",
+  "notes": "Standard for action densities. Not yet applied to evaluated amplitudes. o58-fix: graviton O2_dhdh REDUNDANT with O2_hBoxh under compact variation; XVI-M (Riem^2-4Ric^2+R^2)_lin total derivative independence test recorded.",
+  "entries": [],
+  "complete_sector_solution": false
+}

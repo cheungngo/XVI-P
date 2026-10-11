@@ -1,0 +1,57 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p23",
+  "ledger": "milestones (authoritative definitions + status)",
+  "definitions": {
+    "P.3": "fixed output projection + exhaustive coefficient dependencies + graph topology inventory (complete for the declared ch target)",
+    "P.4": "required classical action, transformations, source terms, gauge map and master verification (classical readiness earned); P.4 means classical readiness, NOT coupled one-loop restoration",
+    "P.5_entry": "quantum prescription, amplitude rules and counterterm domain fixed",
+    "P.5_calculation": "coefficients evaluated and renormalized",
+    "P.5_identity": "projected defect computed and, if possible, cancelled"
+  },
+  "order": ["P.3", "P.4", "P.5_entry", "P.5_calculation", "P.5_identity"],
+  "status": {
+    "P.3": "complete (declared ch target)",
+    "P.4": "earned (classical readiness)",
+    "P.5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+    "P.5_calculation": "renormalized (one loop, kappa^2, two-point functions hh / K'.c / cb.c; MS-bar in DRED with the p22 evanescent counterterms; external legs in QdS)",
+    "P.5_identity": "projected defect computed (zero exactly in d, all parts, all seven assignments; each row vanishes separately); projected identity verified; projected restoration verified (p20 definition: full sigma_0 closure of the complete one-loop kappa^2 MS-bar counterterm incl. c.cb, h.c/c.b/c.cbs); K1 corrected in p20 (orientation erratum); D11 ratio pin verified; D11 absolute pin verified (p21); bulk symmetry NOT restored/claimed; O.1 NOT_CLOSED [p21: D11 absolute pin derived and verified] [p22: evanescent counterterms closed; identity unchanged]",
+    "P.6_entry": "inventory (one loop kappa^3 three-point, 15 graphs, topology level); not evaluated",
+    "O.1": "NOT_CLOSED (requirement recorded; not closable inside XVI-P)"
+  },
+  "definition_vs_status_note": "I3 (p18 reviewer): the P.5_calculation DEFINITION reads 'coefficients evaluated and renormalized'; the STATUS states exactly what holds: 4D sector renormalized, evanescent poles regulated and decoupled from the ch slots (not subtracted)",
+  "P5_entry_earned": true,
+  "P3_P4_frozen_as_P5_inputs": true,
+  "P4_is_NOT": "coupled one-loop restoration of the bulk symmetry (bulk_symmetry_restored false)",
+  "author_rebuild_passed": true,
+  "independent_rebuild_passed": "pending",
+  "independent_rebuild_passed_p22": true,
+  "hard_stops": {
+    "bulk_symmetry_restored": false,
+    "symmetry_restored": false,
+    "O1_closure": "NOT_CLOSED",
+    "insertion_status": "Frozen_negative_obstruction_preserved",
+    "XV_B_opened": false,
+    "XIV_J_opened": false,
+    "Route_B_discharged": false,
+    "u_R_c_delta_added": false,
+    "XVI_P_registered": false
+  },
+  "flags": {
+    "projected_defect_computed": "earned",
+    "projected_identity_verified": "earned",
+    "projected_restoration_verified": "earned",
+    "D11_ratio_pin_verified": "earned",
+    "D11_absolute_pin_verified": "earned",
+    "evanescent_M2_verified": "earned",
+    "evanescent_counterterms_verified": "earned",
+    "d_runtime_guard_verified": "earned",
+    "O1_requirement_recorded": "earned",
+    "one_loop_power_counting_verified": "earned",
+    "P6_entry_inventory": "earned",
+    "d_poly_domain_refusal_verified": "earned",
+    "EV_values_verified": "earned",
+    "quantum_inputs_evaluated": "earned",
+    "bulk_symmetry_restored": false
+  }
+}

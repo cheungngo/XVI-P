@@ -1,0 +1,10 @@
+{
+  "revision": "o58-fix",
+  "ledger": "ct_field_redef",
+  "equivalence_defined_before_use": true,
+  "definition": "NOT YET DEFINED: permitted field redefinitions Phi -> Phi + kappa^n R[Phi] with ghost number and locality constraints.",
+  "status": "Unresolved",
+  "notes": "Undefined equivalences must not be used to claim CT solutions.",
+  "entries": [],
+  "complete_sector_solution": false
+}

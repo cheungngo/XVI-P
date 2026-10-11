@@ -1,0 +1,79 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p14r",
+  "ledger": "milestones (authoritative definitions + status)",
+  "definitions": {
+    "P.3": "fixed output projection + exhaustive coefficient dependencies + graph topology inventory (complete for the declared ch target)",
+    "P.4": "required classical action, transformations, source terms, gauge map and master verification (classical readiness earned); P.4 means classical readiness, NOT coupled one-loop restoration",
+    "P.5_entry": "quantum prescription, amplitude rules and counterterm domain fixed",
+    "P.5_calculation": "coefficients evaluated and renormalized",
+    "P.5_identity": "projected defect computed and, if possible, cancelled"
+  },
+  "order": ["P.3", "P.4", "P.5_entry", "P.5_calculation", "P.5_identity"],
+  "status": {
+    "P.3": "complete (declared ch target)",
+    "P.4": "earned (classical readiness)",
+    "P.5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+    "P.5_calculation": "open (not started; Batch A/B/C integrals are p15+)",
+    "P.5_identity": "open"
+  },
+  "P3_complete": true,
+  "P4_classical_readiness_earned": true,
+  "P5_entry_earned": true,
+  "P5_entry_rule": "P.5 entry is earned iff all five contract flags hold (and is stated against the P.3/P.4 freeze)",
+  "P5_entry_flags": {
+    "quantum_action_defined": true,
+    "quantum_prescription_defined": true,
+    "D11_matching_defined": true,
+    "counterterm_domain_defined": true,
+    "amplitude_rules_verified": true
+  },
+  "P4_is_NOT": "coupled one-loop restoration (quantum_inputs_evaluated / projected_identity_verified not earned)",
+  "P3_P4_frozen_as_P5_inputs": true,
+  "frozen_rule": "P.3/P.4 are frozen P.5 inputs iff the p13 independent rebuild passed (bound to the p13 tree) AND the frozen code/values are unchanged",
+  "P5_entry_depends_on": "P3_P4_frozen_as_P5_inputs (p13 independent rebuild; caveat: the p13 independent rebuild ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh venv from the source-only zip; it was NOT run on a second machine)",
+  "history": "archival/p02_p09/notes/P_scope.tex (p06-p08 'P-next.N' labels; its table row 'P4 coupled one-loop restoration' is SUPERSEDED: P.4 = classical readiness); archival/p12/ (p12 used 'classical readiness' without milestone labels); archival/p13/ (p13 release: P.3 complete, P.4 earned, P.5 entry next)",
+  "XVI_O_unaffected": "XVI-P is unregistered package evidence; XVI-O prop:kappa2-master stays Partial",
+  "author_rebuild_passed": false,
+  "independent_rebuild_passed": false,
+  "p13_independent_rebuild": {
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "2b1baf335468944aa800c05eaa8b0b4df67ee893491079fcc944eb8fb0e69a70",
+    "bound_to_source_zip_sha256": "2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266",
+    "report": "archival/p13/reproducibility/independent_rebuild_report_p13.json",
+    "report_sha256": "7ce496cc446f2ef1948de6aaf034b09e9dcab0b9878cd6ae6015cda63a6515e4",
+    "comparisons": {
+      "reference_values_matched": {
+        "compared": 112,
+        "equal": 112
+      },
+      "independent_comparisons": 77,
+      "mismatches": 0
+    },
+    "caveat": "the p13 independent rebuild ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh venv from the source-only zip; it was NOT run on a second machine",
+    "NOT_inherited_by_p14": "bound to the p13 tree; the p14 tree has its own (pending) independent flag"
+  },
+  "hard_stops": {
+    "quantum_inputs_evaluated": "not_earned",
+    "projected_defect_computed": "not_earned",
+    "projected_identity_verified": "not_earned",
+    "projected_restoration_verified": "not_earned",
+    "bulk_symmetry_restored": false,
+    "symmetry_restored": false,
+    "D02_quantum_evaluated": false,
+    "D12_quantum_evaluated": false,
+    "D12_status": "Missing",
+    "D11_matching_verified": false,
+    "O1_closure": "NOT_CLOSED",
+    "insertion_status": "Frozen_negative_obstruction_preserved",
+    "XV_B_opened": false,
+    "XIV_J_opened": false,
+    "Route_B_discharged": false,
+    "P5_entry_opened": true,
+    "P5_calculation_opened": false,
+    "P5_identity_opened": false,
+    "loop_evaluations_performed": false,
+    "u_R_c_delta_added": false
+  },
+  "dossier": "certificates/P14_dossier.json"
+}

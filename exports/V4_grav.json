@@ -1,0 +1,40 @@
+{
+  "id": "V4_grav",
+  "revision": "p13",
+  "status": "Constructed",
+  "quartic_generator_verified": true,
+  "D02_vertex_available": true,
+  "D02_quantum_evaluated": false,
+  "ell4_sha256": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+  "ell4_srepr_path": "exports/ell4_generating_polynomial.srepr",
+  "terms_reproducibility": 3360,
+  "NOT_acceptance_by_term_count": true,
+  "conventions": {
+    "revision": "p13",
+    "eta": "diag(+,-,-,-)",
+    "q": "eta + eps H, eps = kappa, H = h (lowered, symmetric); affine parametrisation",
+    "S_EH": "-(2/kappa^2) int sqrt(-q) R",
+    "density": "L_GG = sqrt(-g) g^{mn}(G^a_{mb} G^b_{na} - G^a_{mn} G^b_{ab})",
+    "boundary_identity": "sqrt(-g) R - L_GG = - d_mu B^mu,  B^mu = sqrt(-g)(g^{mu nu} G^l_{nu l} - g^{l nu} G^mu_{l nu})",
+    "ell_k": "-2 [eps^k] L_GG ; S_EH = sum_k kappa^{k-2} int ell_k (integrated, compact support)",
+    "IBP": "total derivatives dropped only inside the integrated action (orientation of the dropped divergence irrelevant)",
+    "truncation": "O(eps^4) inclusive",
+    "jets": "H{m}{n} = h_mn (m<=n), dH{m}{n}_{r} = d_r h_mn",
+    "a_ghost": "1/2",
+    "polarization": "V4[h1..h4] = [t1 t2 t3 t4] ell_4(sum t_i h_i) = D^4 ell_4(0)[h1..h4] (unnormalised); normalised symmetric form = V4/4!; Feynman vertex i kappa^2 V4; D02 graph symmetry factor 1/2"
+  },
+  "polarization": {
+    "convention": "V4[h1..h4] = [t1 t2 t3 t4] ell_4(sum t_i h_i) = D^4 ell_4(0)[h1..h4] (unnormalised); normalised symmetric form = V4/4!; Feynman vertex i kappa^2 V4; D02 graph symmetry factor 1/2",
+    "definition": "V4[h1,h2,h3,h4] := [t1 t2 t3 t4] ell_4(sum_i t_i h_i) = D^4 ell_4(0)[h1,h2,h3,h4]",
+    "normalisation": "UNnormalised fourth variation; the normalised symmetric 4-linear form is V4/4! (not used)",
+    "implemented_by": "planewave_exact.polarize / series_eval.polarized_ell (inclusion-exclusion) compute V4",
+    "where_factors_enter": {
+      "1/4!": "only in S2 = (1/4!) V4[h,h,h,h]; cancelled by the 4! leg assignments",
+      "i": "vertex factor i from e^{iS}",
+      "kappa": "kappa^2 (S = sum kappa^{k-2} int ell_k)",
+      "D02_symmetry_factor": "1/2 at graph level (two legs contracted)",
+      "D02_vertex_rule": "i kappa^2 V4[h1,h2,h3,h4]"
+    },
+    "D02_quantum_evaluated": false
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "V4_scalar_grav",
+  "aka": "hhphiphi",
+  "order": "kappa^2",
+  "kappa_power": 2,
+  "fields": "phi phi h h",
+  "legs": {
+    "phi": 2,
+    "h": 2
+  },
+  "density": "(kappa^2/2) a2^{mu nu}[h] partial_mu phi partial_nu phi   [m=0]",
+  "a2_definition": "a2^{mu nu}[h] = h^mu_rho h^{rho nu} - (1/2) tau h^{mu nu} + b2[h] eta^{mu nu}, tau = eta_{rho sigma} h^{rho sigma}, b2 = (1/8) tau^2 - (1/4) h_{mu nu} h^{mu nu}",
+  "b2_definition": "(1/8) tau^2 - (1/4) h_{mu nu} h^{mu nu}",
+  "derived_from": "Lag_q |_{kappa^2} = (1/2) sqrt(-q) q^{mu nu} partial_mu phi partial_nu phi  => (kappa^2/2) a2 p p",
+  "Lag_q": "(1/2) sqrt(-q) ( q^{mu nu} partial_mu phi partial_nu phi )  [m=0]",
+  "n_derivatives_total": 2,
+  "derivative_placement_default": "on_phi",
+  "mass_factor": 0,
+  "status": "Constructed",
+  "source_certificates": [
+    "certificates/O2_scalar_action_authoritative.json",
+    "certificates/O2_vertex_catalogue.json"
+  ],
+  "matches_XI_A_V2": true,
+  "usable_by_graph_generator": true,
+  "D12_note": "D12 uses this vertex with phi-phi self-contraction (two h external). Vertex Constructed; D12 amplitude evaluation remains Missing/not evaluated (quantum).",
+  "NOT_D12_evaluated": true,
+  "NOT_defaulted_D12_to_zero": true
+}

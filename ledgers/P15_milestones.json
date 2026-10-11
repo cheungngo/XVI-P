@@ -1,0 +1,49 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p15",
+  "ledger": "milestones (authoritative definitions + status)",
+  "definitions": {
+    "P.3": "fixed output projection + exhaustive coefficient dependencies + graph topology inventory (complete for the declared ch target)",
+    "P.4": "required classical action, transformations, source terms, gauge map and master verification (classical readiness earned); P.4 means classical readiness, NOT coupled one-loop restoration",
+    "P.5_entry": "quantum prescription, amplitude rules and counterterm domain fixed",
+    "P.5_calculation": "coefficients evaluated and renormalized",
+    "P.5_identity": "projected defect computed and, if possible, cancelled"
+  },
+  "order": ["P.3", "P.4", "P.5_entry", "P.5_calculation", "P.5_identity"],
+  "status": {
+    "P.3": "complete (declared ch target)",
+    "P.4": "earned (classical readiness)",
+    "P.5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+    "P.5_calculation": "opened (p15: Batch A D02/D12/D14a-c and Batch B D13 evaluated under the p14r prescription; Batch C D01/D03 and the D11 matching M2 NOT evaluated)",
+    "P.5_identity": "open"
+  },
+  "P5_entry_earned": true,
+  "P3_P4_frozen_as_P5_inputs": true,
+  "P4_is_NOT": "coupled one-loop restoration (quantum_inputs_evaluated / projected_identity_verified not earned)",
+  "author_rebuild_passed": false,
+  "independent_rebuild_passed": false,
+  "independent_rebuild_passed_p14r": true,
+  "hard_stops": {
+    "quantum_inputs_evaluated": "not_earned",
+    "projected_defect_computed": "not_earned",
+    "projected_identity_verified": "not_earned",
+    "projected_restoration_verified": "not_earned",
+    "bulk_symmetry_restored": false,
+    "symmetry_restored": false,
+    "D11_matching_verified": false,
+    "O1_closure": "NOT_CLOSED",
+    "insertion_status": "Frozen_negative_obstruction_preserved",
+    "XV_B_opened": false,
+    "XIV_J_opened": false,
+    "Route_B_discharged": false,
+    "u_R_c_delta_added": false,
+    "D01_evaluated": false,
+    "D03_evaluated": false,
+    "D11_evaluated": false
+  },
+  "flags": {
+    "batchA_evaluated": true,
+    "D13_evaluated": true,
+    "library_certified": true
+  }
+}

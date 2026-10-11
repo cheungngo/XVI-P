@@ -1,0 +1,10 @@
+{
+  "revision": "o58-fix",
+  "ledger": "ct_bv_exact",
+  "equivalence_defined_before_use": true,
+  "definition": "A is BV-exact if A = (S_inv, X) + Q_BRST-exact term in the retained minimal sector, for local X of appropriate ghost number, through the retained order.",
+  "status": "Constructed_as_framework_partial",
+  "notes": "Framework stated; no concrete X exhibiting cancellation of a computed defect is Constructed (amplitudes Conditional).",
+  "entries": [],
+  "complete_sector_solution": false
+}
