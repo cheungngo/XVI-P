@@ -1,0 +1,281 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p14r",
+  "deliverable": "P.5 entry D1: quantum object",
+  "quantum_action_defined": true,
+  "definition": "Q1..Q6 all ok",
+  "S_Psi": "sum_k kappa^{k-2} ell_k + S_phi + X(Phi, Phi*' + eps dPsi/dPhi), eps = -1",
+  "Q1_transformed_variables": {
+    "eps_derived": -1,
+    "gauge_fixing_cert_eps": -1,
+    "S_Psi_equals_S_plus_sPsi_mod_d": true,
+    "NOT_S_D": true,
+    "Psi": "Psi = -i int cbar_mu (2 D^mu[h] - b^mu),  D^mu[h] = d_nu h^{mu nu} - (1/2) d^mu tr h",
+    "X_patterns_by_kappa": {
+      "0": ["b.b", "b.cbs", "c.K", "c.cb", "h.b"],
+      "1": ["c.c.cs", "c.phi.phis", "h.c.K", "h.c.cb"],
+      "2": []
+    },
+    "S_phi_patterns_by_kappa": {
+      "0": ["phi.phi"],
+      "1": ["h.phi.phi"],
+      "2": ["h.h.phi.phi"]
+    },
+    "X_terms_by_kappa_P13": {
+      "0": 17,
+      "1": 124,
+      "2": 0,
+      "3": 0
+    },
+    "no_switch_or_insertion_fields": true,
+    "ok": true
+  },
+  "Q2_fields_antifields_b": {
+    "integrated": ["h_(mn) (10 independent components)", "c^mu", "cbar_mu", "phi", "b^mu (retained)"],
+    "external_antifields": {
+      "K'_(mn)": "h*' (10 comps, sigma_h = +1)",
+      "c*'_mu": "c*'",
+      "cbar*'^mu": "cbar*'",
+      "phi*'": "phi*'",
+      "b*'": "absent (s b = 0)"
+    },
+    "external_antifields_retained_P13": ["K", "cbs", "cs0", "cs1", "cs2", "cs3", "phis"],
+    "b_decision": "RETAINED and integrated",
+    "b_justification": {
+      "b_occurs_only_at_kappa_orders": [0],
+      "b_patterns": ["b.b", "b.cbs", "h.b"],
+      "no_b_interaction_vertex": true,
+      "Mbb_constant_invertible": true,
+      "full_h_b_inverse_verified": true,
+      "schur_complement_equals_q2_P": true,
+      "elimination": {
+        "b_components": ["b0", "b1", "b2", "b3"],
+        "b_hessian_constant": true,
+        "b_hessian_det": "-16",
+        "solution_b0": "-I*cbs0/2 + h00_d0/2 - h01_d1 - h02_d2 - h03_d3 + h11_d0/2 + h22_d0/2 + h33_d0/2",
+        "after_elimination_terms": 144,
+        "cbar_star_quadratic_terms": 4,
+        "cbar_star_linear_terms": 28,
+        "quadratic_example": "-cbs0**2/4",
+        "reading": "eliminating b makes S_Psi QUADRATIC in cbar*' (and shifts the cbar*'-linear terms into h-d
+  +> ependent ones); retaining b keeps S_Psi linear in all external antifields"
+      }
+    },
+    "loop_capable_species": ["K", "c", "cb", "cs", "h", "phi", "phis"],
+    "Gamma1_independent_of": ["bs", "cbs"],
+    "source_spectators": "cbar*' couples only via cbar*'.b (one quantum leg; tree, one-particle reducible thro
+  +> ugh the b-h mixing) and b*' is absent => Gamma_1 (1PI) is independent of cbar*', b*'; K', c*', phi*' ente
+  +> r Gamma_1 through K'.c.h, c*'.c.c, phi*'.c.phi",
+    "ok": true
+  },
+  "Q3_1PI_vacuum_onepoint": {
+    "weight": "e^{i S_Psi/hbar}",
+    "Gamma": "Gamma_Psi[Phi, Phi*'] = S_Psi + hbar Gamma_1 + O(hbar^2); Legendre transform in the fields Phi =
+  +>  (h, c, cbar, b, phi) only; antifields Phi*' are spectators (not transformed)",
+    "Gamma1": "Gamma_1 = (i/2) STr log S_Psi^{(2)} (fields only) = -i log Z|_1PI; i Gamma_1 = sum of 1PI one-l
+  +> oop graphs (graph i's from vertices i kappa^n V and propagators i M^{-1})",
+    "gate0_consistency": {
+      "Gamma_1 = -i log Z in convention sheet": true,
+      "e^{iS/hbar} in convention sheet": true,
+      "W1 Berezin/Wick shadow pass": true
+    },
+    "vacuum_normalization": "Z normalised so that Gamma_1[0] = 0 (field-independent vacuum graphs dropped)",
+    "one_point_normalization": "the one-point function Gamma_1^{(1)} (graphs D14a, D14b, D14c) is RETAINED as 
+  +> part of the object: no tadpole-cancellation condition and no background shift imposed; its value is not a
+  +> ssigned here (no zero is substituted)",
+    "background": "fields of Gamma are the classical (mean) fields; <h> is not shifted",
+    "ok": true
+  },
+  "Q4_fourier_propagators_i0": {
+    "fourier": "f(x) = int d^4k/(2pi)^4 e^{ikx} f~(k), d_mu -> i k_mu, incoming momenta (Gate 0: d -> ik)",
+    "eta": "diag(+,-,-,-)",
+    "graviton": "<h_a h_b>(q) = i (P^{-1})_{ab} / (q^2 + i0)  (independent components; de Donder)",
+    "ghost": "<c^mu(q) cbar_rho(-q)> = i (M0^{-1})_{mu rho} = -delta_{mu rho}/(q^2 + i0), M0 = -i q^2 delta",
+    "scalar": "<phi phi>(q) = i/(q^2 + i0)",
+    "b": "b retained: mixed (h,b) inverse verified; b-lines never enter a loop (no b vertex)",
+    "i0": "Feynman: every propagator denominator q^2 + i0 (D_F = i/(k^2+i0), Gate 0)",
+    "checks": {
+      "Pinv_equals_deDonder": true,
+      "schur_q2P": true,
+      "full_h_b_inverse": true,
+      "ghost_M0_q2_const": true,
+      "D_F convention sheet": true,
+      "d -> ik convention sheet": true,
+      "propagators_match_transformed_Hessians_P13": true
+    },
+    "ok": true
+  },
+  "Q5_kappa_loop_bookkeeping": {
+    "rule": "S_Psi = sum_n kappa^n S^(n); each vertex with n legs is O(kappa^{n-2}); one loop: Gamma_1 at kapp
+  +> a^k has exactly k external legs (sum over vertices of (n_v - 2) = E); hbar counts loops (one loop = hbar^
+  +> 1)",
+    "orders": "P.5 scope: one loop, kappa^1 (one-point) and kappa^2 (two-point incl. K'c)",
+    "vertices": {
+      "V2_grav": {
+        "legs": 2,
+        "kappa_power": 0,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V3_grav": {
+        "legs": 3,
+        "kappa_power": 1,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V4_grav": {
+        "legs": 4,
+        "kappa_power": 2,
+        "kappa_eq_legs_minus_2": true
+      },
+      "M0_ghost": {
+        "legs": 2,
+        "kappa_power": 0,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V_cb_c_h": {
+        "legs": 3,
+        "kappa_power": 1,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V_K_c": {
+        "legs": 2,
+        "kappa_power": 0,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V_K_c_h": {
+        "legs": 3,
+        "kappa_power": 1,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V_cs_c_c": {
+        "legs": 3,
+        "kappa_power": 1,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V_phis_c_phi": {
+        "legs": 3,
+        "kappa_power": 1,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V_b_h": {
+        "legs": 2,
+        "kappa_power": 0,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V_b_b": {
+        "legs": 2,
+        "kappa_power": 0,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V_cbs_b": {
+        "legs": 2,
+        "kappa_power": 0,
+        "kappa_eq_legs_minus_2": true
+      },
+      "M_phi": {
+        "legs": 2,
+        "kappa_power": 0,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V_h_phi_phi": {
+        "legs": 3,
+        "kappa_power": 1,
+        "kappa_eq_legs_minus_2": true
+      },
+      "V_hh_phi_phi": {
+        "legs": 4,
+        "kappa_power": 2,
+        "kappa_eq_legs_minus_2": true
+      }
+    },
+    "graphs": {
+      "D01": {
+        "vertices": ["V3_grav", "V3_grav"],
+        "sum_n_minus_2": 2,
+        "external_legs": 2,
+        "integrand_prefactor": "kappa**2/2",
+        "integrand_kappa_power": 2,
+        "ok": true
+      },
+      "D02": {
+        "vertices": ["V4_grav"],
+        "sum_n_minus_2": 2,
+        "external_legs": 2,
+        "integrand_prefactor": "-kappa**2/2",
+        "integrand_kappa_power": 2,
+        "ok": true
+      },
+      "D03": {
+        "vertices": ["V_cb_c_h", "V_cb_c_h"],
+        "sum_n_minus_2": 2,
+        "external_legs": 2,
+        "integrand_prefactor": "-kappa**2",
+        "integrand_kappa_power": 2,
+        "ok": true
+      },
+      "D11": {
+        "vertices": ["V_h_phi_phi", "V_h_phi_phi"],
+        "sum_n_minus_2": 2,
+        "external_legs": 2,
+        "integrand_prefactor": "kappa**2/2",
+        "integrand_kappa_power": 2,
+        "ok": true
+      },
+      "D12": {
+        "vertices": ["V_hh_phi_phi"],
+        "sum_n_minus_2": 2,
+        "external_legs": 2,
+        "integrand_prefactor": "-kappa**2/2",
+        "integrand_kappa_power": 2,
+        "ok": true
+      },
+      "D13": {
+        "vertices": ["V_K_c_h", "V_cb_c_h"],
+        "sum_n_minus_2": 2,
+        "external_legs": 2,
+        "integrand_prefactor": "I*kappa**2",
+        "integrand_kappa_power": 2,
+        "ok": true
+      },
+      "D14a": {
+        "vertices": ["V3_grav"],
+        "sum_n_minus_2": 1,
+        "external_legs": 1,
+        "integrand_prefactor": "-kappa/2",
+        "integrand_kappa_power": 1,
+        "ok": true
+      },
+      "D14b": {
+        "vertices": ["V_cb_c_h"],
+        "sum_n_minus_2": 1,
+        "external_legs": 1,
+        "integrand_prefactor": "kappa",
+        "integrand_kappa_power": 1,
+        "ok": true
+      },
+      "D14c": {
+        "vertices": ["V_h_phi_phi"],
+        "sum_n_minus_2": 1,
+        "external_legs": 1,
+        "integrand_prefactor": "-kappa/2",
+        "integrand_kappa_power": 1,
+        "ok": true
+      }
+    },
+    "amplitude_cert_present": true,
+    "ok": true
+  },
+  "Q6_pullback_vs_theorem": {
+    "classical_pullback": "Gamma_Psi(Phi,Phi*') := Gamma(Phi, Phi*' + (-1) dPsi/dPhi)",
+    "classical_instance_verified": true,
+    "status_P13": "DEFINED classical pullback/interface along the canonical antifield shift; NOT an independen
+  +> tly established quantum gauge-change theorem (no quantum Gamma is constructed here)",
+    "statement": "Gamma_Psi is DEFINED here directly in transformed variables. The relation Gamma_Psi(Phi,Phi*
+  +> ') = Gamma(Phi, Phi*' - dPsi/dPhi) is used ONLY as the classical pullback (verified at tree level, P13). 
+  +> No quantum gauge-(in)dependence theorem is asserted or used; any such statement is a separate (p15+) obje
+  +> ct.",
+    "quantum_gauge_change_theorem_asserted": false,
+    "ok": true
+  },
+  "loop_evaluations_performed": false,
+  "seconds": 9.0
+}

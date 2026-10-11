@@ -1,0 +1,124 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p15",
+  "deliverable": "P.5 calculation: one-loop integral library",
+  "prescription": "frozen p14r P14_DRED_MSbar_FeynmanI0 (DRED R1-R6, Feynman +i0, MS-bar); S0 stated explicitl
+  +> y",
+  "normalisation": "I = N_eps * Ihat, N_eps = i S_eps/(16 pi^2), S_eps = (4 pi)^eps e^{-gamma_E eps}, mu^{2 ep
+  +> s}; MS-bar = drop the poles of Ihat",
+  "library_certified": true,
+  "B0_massless_laurent": {
+    "pole": "1",
+    "finite": "2 - L",
+    "order_eps": "L**2/2 - 2*L - pi**2/12 + 4",
+    "ok": true
+  },
+  "A0_laurent": {
+    "pole": "m2",
+    "finite": "m2*(1 - Lm)",
+    "ok": true
+  },
+  "B0_exact_d_numeric": {
+    "d_values": [2.6, 3.3, 3.7],
+    "numeric_vs_formula": [
+      [0.29051439745794433, 0.29051439745794433],
+      [0.08354836485354544, 0.08354836485354544],
+      [0.07842730369003323, 0.07842730373608314]
+    ],
+    "ok": true
+  },
+  "T_exact_d_numeric": {
+    "cases": ["d=0.7,k=0", "d=1.5,k=0", "d=-0.6,k=1"],
+    "numeric_vs_formula": [
+      [0.5710341301506534, 0.5710341301506534],
+      [0.5432174056063133, 0.543217405606654],
+      [-1.9177113399413097, -1.9177113399413115]
+    ],
+    "ok": true
+  },
+  "tensor_reduction_vs_feynman_parameters": {
+    "ranks": [0, 1, 2, 3],
+    "checks": 140,
+    "mismatches": [],
+    "n_mismatches": 0,
+    "ok": true,
+    "note": "route 1 uses S0 for every cancelled propagator; route 2 uses none (Delta != 0): agreement certifi
+  +> es S0 on this family"
+  },
+  "J_table": {
+    "J_LIB[0,0]": "MB",
+    "J_LIB[0,1]": "MB*p.p/2",
+    "J_LIB[0,2]": "MB*p.p**2/4",
+    "J_LIB[0,3]": "MB*p.p**3/8",
+    "J_LIB[0,4]": "MB*p.p**4/16"
+  },
+  "scaleless_rule": {
+    "statement": "S0: int d^d l (l^2)^k/(l^2)^nu := 0 when the integrand carries no scale",
+    "lambda_split": {
+      "omega=4": {
+        "omega": 4,
+        "s_at_d4": 4,
+        "sum_zero": true,
+        "IR_part": "Lambda**d/d",
+        "UV_part": "-Lambda**d/d",
+        "IR_pole_at_d4": "0 (no pole)",
+        "UV_pole_at_d4": "0 (no pole)"
+      },
+      "omega=2": {
+        "omega": 2,
+        "s_at_d4": 2,
+        "sum_zero": true,
+        "IR_part": "Lambda**(d - 2)/(d - 2)",
+        "UV_part": "-Lambda**(d - 2)/(d - 2)",
+        "IR_pole_at_d4": "0 (no pole)",
+        "UV_pole_at_d4": "0 (no pole)"
+      },
+      "omega=0": {
+        "omega": 0,
+        "s_at_d4": 0,
+        "sum_zero": true,
+        "IR_part": "Lambda**(d - 4)/(d - 4)",
+        "UV_part": "-Lambda**(d - 4)/(d - 4)",
+        "IR_pole_at_d4": "-1/2",
+        "UV_pole_at_d4": "1/2"
+      },
+      "omega=-2": {
+        "omega": -2,
+        "s_at_d4": -2,
+        "sum_zero": true,
+        "IR_part": "Lambda**(d - 6)/(d - 6)",
+        "UV_part": "-Lambda**(d - 6)/(d - 6)",
+        "IR_pole_at_d4": "0 (no pole)",
+        "UV_pole_at_d4": "0 (no pole)"
+      }
+    },
+    "misuse_guard": {
+      "rejected": true,
+      "reason": "S0 applied to an integral with a scale (A0 with m != 0 (mutation: S0 on a massive tadpole))"
+    }
+  },
+  "mass_regulator_limit": {
+    "k=0": {
+      "exact": "-m2*exp(EulerGamma*(2 - d/2))*exp(Lm*(d/2 - 2))*gamma(1 - d/2)",
+      "m2_power": "d/2 - 1",
+      "vanishes_as_m_to_0_for": "Re d > 2"
+    },
+    "k=1": {
+      "exact": "m2**2*exp(EulerGamma*(2 - d/2))*exp(Lm*(d/2 - 2))*gamma(-d/2)*gamma(d/2 + 1)/gamma(d/2)",
+      "m2_power": "d/2",
+      "vanishes_as_m_to_0_for": "Re d > 0"
+    },
+    "k=2": {
+      "exact": "-m2**3*exp(EulerGamma*(2 - d/2))*exp(Lm*(d/2 - 2))*gamma(-d/2 - 1)*gamma(d/2 + 2)/gamma(d/2)",
+      "m2_power": "d/2 + 1",
+      "vanishes_as_m_to_0_for": "Re d > -2"
+    }
+  },
+  "i0": {
+    "L": "log(-p^2/mu^2 - i0) = log|p^2/mu^2| - i pi theta(p^2)  (Feynman +i0)",
+    "Lm": "log(m^2/mu^2) (m^2 - i0)"
+  },
+  "ok": true,
+  "seconds": 38.6,
+  "S0_ledger_size": 100
+}

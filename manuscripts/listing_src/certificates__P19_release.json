@@ -1,0 +1,1597 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p19",
+  "contract_revision": "p19 (p14r contract + disclosed p15/p16/p17/p18 revisions; none in p19)",
+  "date": "2026-10-09",
+  "version_label": "XVI-P p19",
+  "deliverable": "P.5 identity step (projected one-loop kappa^2 ch-identity defect; counterterm solve; I1-I3)"
+  +> ,
+  "execution_pass": true,
+  "claim_status": "P.5_identity: projected defect assembled from every evaluated input (D01, D02, D03, D11, D1
+  +> 2, D13, D14a-c); outcome ZERO. WHY ZERO: each surviving ch row vanishes separately in the projected slot;
+  +>  no counterterm cancellation and no cancellation between rows is involved: (i) hh row (D01+D02+D03+D11+D1
+  +> 2): full-row transverse decoupling -- D01 and D03 are individually nonzero and cancel against each other 
+  +> in the slot (p17/p18 transverse sum), D11 is transverse by itself, D02 = D12 = 0; (ii) K.c row (D13): D13
+  +>  reaches the ch slot only through T1 and E1 (T2, T3, E2 are longitudinal, E transverse) and A_T1 = A_E1 =
+  +>  0 exactly in d; (iii) one-point row: the tadpoles D14a-c vanish under the declared prescription.  The de
+  +> fect is therefore zero without any counterterm (solve x = 0). RESTS ON: M2 / D11 matching verified on the
+  +>  4D components only (D11_matching_verified_scope = '4D components'; evanescent components of the D11 matc
+  +> hing: not applicable, not verified); the evanescent decoupling proofs (P16 E2 decoupling, P17/P18 hh evan
+  +> escent / full-row decoupling); the frozen P.3 projection and the P13 ch dependency ledger (three survivin
+  +> g rows); the declared prescription (DRED R1-R6, MS-bar, P14_prescription_D11_matching). FLAGS: projected_
+  +> defect_computed=earned, projected_identity_verified=earned, projected_restoration_verified=earned (defini
+  +> tions: flag_definitions). projected_restoration_verified (p20 definition) = full sigma_0 closure of the C
+  +> OMPLETE one-loop kappa^2 MS-bar counterterm (h.h + c.K + c.cb; ghost self-energy held fixed; derived rela
+  +> tive factor +1; orientation converted) in every ghost +1 sector (h.c, c.b, c.cbs): {'closed': True, 'entr
+  +> ies': 0, 'sectors': []}. Scope: that counterterm only -- NOT bulk symmetry (bulk_symmetry_restored=False)
+  +> , O.1 NOT_CLOSED. The p19 criterion (P_ch sigma_0(S_ct) = 0, x = 0) follows from the identity + locality 
+  +> and is kept only as a route-consistency control. ERRATUM (K1): the p19 text 'full closure fails with the 
+  +> derived factor, needs -1, unresolved' was a Grassmann-orientation bookkeeping error and is RETRACTED. J1:
+  +>  the p14r counterterm-domain counts are Q re/im-split artefacts; the Q(i) counts are the real dimensions 
+  +> under a compatible real structure (finding about the p14r contract; contract not modified)",
+  "flag_definitions": {
+    "projected_defect_computed": "Delta = P_ch[(S_Psi, Gamma_Psi)]_{hbar kappa^2} assembled from every evaluat
+  +> ed input of the three surviving rows (none Missing), exact in d, pole + nonlocal + MS-bar local parts, al
+  +> l seven external assignments",
+    "projected_identity_verified": "Delta = 0 for the REGULATED one-loop functional Gamma1: pole, nonlocal and
+  +>  local parts vanish for all seven assignments, exactly in d, with all controls true and every mutation ch
+  +> anging the outcome",
+    "projected_restoration_verified": "p20 definition (replaces p19's, which follows from the identity + local
+  +> ity): FULL sigma_0 closure of the COMPLETE one-loop kappa^2 MS-bar counterterm S_ct = -(pole) in the decl
+  +> ared domain, h.h + c.K + c.cb (ghost self-energy Sigma held fixed at its P15 value, orientation converted
+  +> , derived relative factor +1), in every ghost +1 sector (h.c, c.b, c.cbs), together with projected_identi
+  +> ty_verified.  Scope: the one-loop kappa^2 counterterm only; NOT bulk symmetry, NOT O.1",
+    "bulk_symmetry_restored": "hard stop: False regardless (not claimed; O.1 NOT_CLOSED)"
+  },
+  "projected_restoration_scope": "p20 definition: full sigma_0 closure (h.c, c.b, c.cbs) of the complete one-l
+  +> oop kappa^2 MS-bar counterterm incl. the c.cb ghost self-energy counterterm (held fixed, derived factor +
+  +> 1); NOT bulk symmetry, NOT O.1",
+  "route_consistency_control_p19_criterion": {
+    "label": "route-consistency control (the p19 restoration criterion, NOT a flag): P_ch sigma_0(S_ct) = 0 fo
+  +> r the h.h + c.K MS-bar counterterm and the solve x = 0; implied by the identity + locality",
+    "holds": true
+  },
+  "full_closure_mutation_detector": {
+    "test": "full sigma_0 closure (all ghost +1 sectors) of the complete MS-bar counterterm, Sigma held fixed"
+  +> ,
+    "cases": {
+      "drop_graph_D11": {
+        "closed": true,
+        "entries": 0,
+        "sectors": [],
+        "detected": false
+      },
+      "drop_graph_D13 (c.K data = 0, Sigma held fixed)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      },
+      "flip_sign_Kc (c.K data -> -c.K, Sigma held fixed)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      },
+      "drop_graph_D03": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "drop_graph_D01": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "flip_phase_D03": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "symmetry_factor_D03_x2": {
+        "closed": false,
+        "entries": 280,
+        "sectors": ["h.c"],
+        "detected": true
+      },
+      "Sigma_orientation_unconverted (p19 error)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      }
+    },
+    "reading": "detects drop D13 and flip K.c (the p19 blind spots) through the c.b sector, and the hh-row mut
+  +> ations through h.c; drop D11 stays undetected (D11 transverse => its pole is sigma_0-closed by itself): c
+  +> overed by M2 (P18) and the p20 D11 normalisation pin (P20_D11_pin.json)"
+  },
+  "p20_controls": {
+    "orientation_ratio_uniform_minus_one": true,
+    "tree_ghost_equation_V_cbc_eq_2iD_V_Kc": true,
+    "tree_sigma0_S0Kc_plus_S0cbc_zero": true,
+    "derived_ghost_relation_reproduces_P15_sigma": true,
+    "full_closure_detects_drop_D13_and_flip_Kc": true,
+    "full_closure_detects_p19_orientation_error": true,
+    "S_ct_without_ccb_not_closed (c.cb counterterm is needed)": true
+  },
+  "why_zero": "each surviving ch row vanishes separately in the projected slot; no counterterm cancellation an
+  +> d no cancellation between rows is involved: (i) hh row (D01+D02+D03+D11+D12): full-row transverse decoupl
+  +> ing -- D01 and D03 are individually nonzero and cancel against each other in the slot (p17/p18 transverse
+  +>  sum), D11 is transverse by itself, D02 = D12 = 0; (ii) K.c row (D13): D13 reaches the ch slot only throu
+  +> gh T1 and E1 (T2, T3, E2 are longitudinal, E transverse) and A_T1 = A_E1 = 0 exactly in d; (iii) one-poin
+  +> t row: the tadpoles D14a-c vanish under the declared prescription.  The defect is therefore zero without 
+  +> any counterterm (solve x = 0).",
+  "rests_on": ["M2 / D11 matching verified on the 4D components only (D11_matching_verified_scope = '4D compon
+  +> ents'; evanescent components of the D11 matching: not applicable, not verified)", "the evanescent decoupl
+  +> ing proofs (P16 E2 decoupling, P17/P18 hh evanescent / full-row decoupling)", "the frozen P.3 projection 
+  +> and the P13 ch dependency ledger (three surviving rows)", "the declared prescription (DRED R1-R6, MS-bar,
+  +>  P14_prescription_D11_matching)"],
+  "findings": {
+    "J1_p14r_counterterm_domain_field": "FINDING ABOUT THE p14r CONTRACT (contract NOT modified): the p14r cou
+  +> nterterm-domain counts (Im sigma_0 3, quotient 8, D cap ker 5, P_ch sigma_0 rank 4) are artefacts of a re
+  +> /im split over Q (the densities carry explicit i for odd derivative counts, so i-multiples count as indep
+  +> endent).  The counts over Q(i) -- sigma_0 rank 5, D cap ker 6, D cap Im 6, cohomology 0, quotient 5, P_ch
+  +>  sigma_0 rank 3 (= Route C) -- equal the real dimensions under a compatible real structure.  The p14r cer
+  +> tificate stays as released; both are reported",
+    "K1_ghost_closure_sign": "p20 CORRECTION (erratum to p19): resolved -- an orientation bookkeeping error. W
+  +> ith the P15 Sigma coordinates converted to the route-G (c,cb) orientation (ratio -1), the derived factor 
+  +> +1 gives full sigma_0 closure of the complete MS-bar counterterm in h.c, c.b, c.cbs.  The p19 text 'closu
+  +> re fails / needs -1 / unresolved' is retracted"
+  },
+  "K1_ghost_closure_convention": {
+    "ghost_equation_operator": "2 i D^rho (d13.deDonder_apply), verified by P15: Sigma = 2 i D[G_Kc]",
+    "M_2iD_cK_to_cbc": [
+      ["0", "2"],
+      ["-1", "0"],
+      ["0", "-1"]
+    ],
+    "z_cb_derived_from_cK_pole_cbc_orientation": ["-3/8", "1/4"],
+    "z_cb_P15_sigma_fit_cbc_orientation": ["-3/8", "1/4"],
+    "derived_equals_P15": true,
+    "relative_factor_derived": "1",
+    "orientation_ratio_routeG_over_cbc": ["-1", "-1"],
+    "Sigma_pole_routeG_c_cb_coordinates": ["3/8", "-1/4"],
+    "Sigma_local_routeG_c_cb_coordinates": ["2/3", "-5/12"],
+    "tree_controls": {
+      "ghost_equation_tree_V_cbc_eq_2iD_V_Kc": true,
+      "S0_Kc_terms": 16,
+      "S0_cbc_terms": 40,
+      "sigma0_S0Kc_plus_S0cbc_entries": 0,
+      "sigma0_S0Kc_alone_entries (control, nonzero)": 16,
+      "ok": true
+    },
+    "full_closure_complete_S_ct": {
+      "closed": true,
+      "entries": 0,
+      "sectors": []
+    },
+    "full_closure_S_ct_without_ccb (p19 package S_ct)": {
+      "closed": false,
+      "entries": 88,
+      "sectors": ["c.b"]
+    },
+    "full_closure_unconverted (p19 error)": {
+      "closed": false,
+      "entries": 88,
+      "sectors": ["c.b"],
+      "detected": true
+    },
+    "reading": "ERRATUM to p19: the p19 statement 'closure fails with the derived factor, needs -1, unresolved
+  +> ' was a Grassmann-orientation bookkeeping error (P15 (cb,c) coordinates placed in route-G (c,cb) slots). 
+  +>  Corrected: derived +1, full closure holds (finding K1 of the p19 independent rebuild)."
+  },
+  "scope": "ch projection only (one c, one h; one loop; kappa^2; off-shell); the evanescent poles of the hh an
+  +> d K.c Green functions remain regulated (not subtracted) and decouple from the ch slots; no statement abou
+  +> t higher orders or bulk symmetry.  projected_restoration_verified (p20 definition) additionally tests ful
+  +> l sigma_0 closure of the complete one-loop kappa^2 MS-bar counterterm in all ghost +1 sectors (h.c, c.b, 
+  +> c.cbs) -- a statement about that counterterm only, not bulk symmetry, not O.1",
+  "release_claim_accepted": true,
+  "release_claim_accepted_definition": "p14r contract accepted AND p15..p18 layers accepted and byte-identical
+  +>  (p18 layer with quantum_inputs_evaluated earned) AND contract identity (dred.py byte-identical to p18; n
+  +> o new contract file) AND the inventory recheck AND the defect certificate (all controls, all mutations ch
+  +> ange the outcome, flag implications) AND p19 hard stops",
+  "publication": "accepted",
+  "publication_gated_on": ["execution_pass", "quantum_inputs_evaluated (p18 layer + recheck)", "projected_defe
+  +> ct_computed", "flag implications restoration => identity => computed"],
+  "flags": {
+    "library_certified": true,
+    "batchA_evaluated": {
+      "execution": true,
+      "claim": "D02, D12, D14a, D14b, D14c evaluated under the declared prescription (frozen p14r DRED + MS-ba
+  +> r + Feynman i0 + the explicit scaleless rule S0): each is vanishing_under_declared_prescription with no U
+  +> V pole, finite part 0, no p14r counterterm required",
+      "scope": "massless declared action; DR-specific (S0): with an IR-regulator mass or a cutoff the tadpoles
+  +>  carry m^{2j}/Lambda^{omega} terms whose counterterms are order-0/2 contacts outside the p14r basis (N4) 
+  +> and vanish as m -> 0; D02 is only one of the three hh graphs (D01, D03 not evaluated); no slot is complet
+  +> e; NOT quantum_inputs_evaluated"
+    },
+    "D13_evaluated": {
+      "execution": true,
+      "claim": "D13 (kappa^2 K'.c) evaluated in closed form under the declared prescription: the UV pole of th
+  +> e 4D structures is local and in the span of the three p14r c.K' directions (the evanescent E2 pole is rec
+  +> orded, not absorbed), MS-bar finite part = nonlocal log(-p^2/mu^2) part + local cubic polynomial, two ind
+  +> ependent routes agree exactly in d, ghost equation verified, mutations rejected",
+      "scope": "one graph (D13) of the K'.c slot at kappa^2; MS-bar at mu with N_eps = i S_eps/(16 pi^2); exte
+  +> rnal momenta in QdS (R2); evanescent Gt structures retained (their pole is NONZERO: an evanescent K'.c co
+  +> unterterm outside the p14r 4D basis is needed for full DRED renormalization); NOT quantum_inputs_evaluate
+  +> d; the slot's identity role is not evaluated (Batch C, D11 M2)"
+    },
+    "batchC_evaluated": {
+      "execution": true,
+      "claim": "D01 and D03 evaluated in closed form under the declared prescription (covariant route): exact 
+  +> covariant integrands (verified on all 100 components, regenerated from S_Psi), two independent loop-integ
+  +> ration routes agree exactly in d, 4D UV poles local and in the p14r h.h span, MS-bar finite parts = nonlo
+  +> cal log + local quartic polynomial, evanescent poles recorded (R6), mutations rejected",
+      "scope": "two graphs (D01, D03) of the kappa^2 hh slot; massless; MS-bar at mu; external momenta in QdS;
+  +>  evanescent structures retained (their poles are NONZERO and not absorbed: no evanescent h.h counterterm 
+  +> is declared); D11 NOT evaluated, so the hh slot is incomplete; NOT quantum_inputs_evaluated"
+    },
+    "E2_decoupled_from_ch_slot": {
+      "execution": true,
+      "claim": "DECOUPLED (proof)",
+      "scope": "the ch-projected one-loop kappa^2 identity (row (S0,Gamma1^[2]) s1 h:h^2); the E2 pole remains
+  +>  a UV pole of the epsilon-scalar K'.c Green function outside this projection"
+    },
+    "hh_evanescent_decoupled_from_ch_slot": {
+      "execution": true,
+      "claim": "DECOUPLED (proof): as the sum D01 + D03 (+ D02 = D12 = 0); not graph by graph",
+      "scope": "the ch-projected one-loop kappa^2 identity, row (S0,Gamma1^[2]) s2 K:K.c, contributions of D01
+  +>  + D03 (D02 = D12 = 0); the summed evanescent poles remain (transverse) UV poles of the hh Green function
+  +>  outside this projection; D11 (same row) NOT evaluated"
+    },
+    "D11_matching_M2": {
+      "execution": true,
+      "claim": "DISCHARGED (4D components)",
+      "scope": "4D (hatted) components; the evanescent gt structures are epsilon-scalar components outside the
+  +>  4D statement of M2 (their L-coefficients are nonzero and recorded); IR: the massless bubble at p^2 != 0 
+  +> is IR finite in DR (no scaleless pieces enter the nonlocal part); the XVI-N massless obstruction concerns
+  +>  the classical insertion and is not touched"
+    },
+    "hh_slot_full_row_decoupled": {
+      "execution": true,
+      "claim": "DECOUPLED (proof, full row): p_m G = 0 exactly in d for D11 by itself and for D01 + D03 as a s
+  +> um; no evanescent structure survives in the slot",
+      "scope": "row (S0,Gamma1^[2]) s2 K:K.c; D01 + D02 + D03 + D11 + D12; the summed evanescent poles remain 
+  +> (transverse) UV poles of the hh Green function outside this projection"
+    },
+    "projected_ch_identity": {
+      "execution": true,
+      "claim": "ZERO",
+      "scope": "ch projection only (one c, one h; one loop; kappa^2; off-shell); the evanescent poles of the h
+  +> h and K.c Green functions remain regulated (not subtracted) and decouple from the ch slots; no statement 
+  +> about higher orders or bulk symmetry.  projected_restoration_verified (p20 definition) additionally tests
+  +>  full sigma_0 closure of the complete one-loop kappa^2 MS-bar counterterm in all ghost +1 sectors (h.c, c
+  +> .b, c.cbs) -- a statement about that counterterm only, not bulk symmetry, not O.1"
+    }
+  },
+  "projected_defect_computed": "earned",
+  "projected_identity_verified": "earned",
+  "projected_restoration_verified": "earned",
+  "projected_defect_summary": {
+    "defect_zero_exact_in_d": true,
+    "evanescent_in_assembly": "verified explicitly: the evanescent (gt) parts of the hh row (D01+D03+D11) and 
+  +> of the K.c row (D13 E1, E2) give ZERO for all seven external assignments, exactly in d; the evanescent po
+  +> les themselves are nonzero (P18_hh_slot, P15_D13) -- they drop from the ch slots by the decoupling proofs
+  +> , not by convention",
+    "quotient_coordinates": {
+      "complement_directions": ["h.h#0", "h.h#1", "h.h#2", "c.cb#0", "c.cb#1"],
+      "pole": ["0", "0", "0", "-3/8", "1/4"],
+      "nonlocal_L": ["0", "0", "0", "3/8", "-1/4"],
+      "local": ["0", "0", "0", "-2/3", "5/12"],
+      "reading": "coordinates modulo D cap Im sigma_0 (field redefinitions / s-exact); the h.h pole is transve
+  +> rse, i.e. in D cap Im sigma_0, so its quotient coordinates vanish"
+    },
+    "D_cap_ker_sigma0": {
+      "computed": true,
+      "dim": 6,
+      "dim_D_cap_Im_sigma0": 6,
+      "cohomology_dim": 0,
+      "sector_ranks": {
+        "h.h": {
+          "dim": 5,
+          "sigma0_rank": 3,
+          "P_ch_sigma0_rank": 3
+        },
+        "c.cb": {
+          "dim": 2,
+          "sigma0_rank": 2,
+          "P_ch_sigma0_rank": 0
+        },
+        "c.K": {
+          "dim": 3,
+          "sigma0_rank": 3,
+          "P_ch_sigma0_rank": 1
+        },
+        "phi.phi": {
+          "dim": 1,
+          "sigma0_rank": 0,
+          "P_ch_sigma0_rank": 0
+        }
+      }
+    },
+    "field_note": "Route G is computed over Q(i) (primary) and, for comparison, over Q with the re/im split us
+  +> ed by the p14r domain certificate.  The p14r densities carry explicit factors i for odd derivative counts
+  +>  (c.K: 3 derivatives), so over Q an i-multiple counts as independent: e.g. the ch image of c.K#0 is i tim
+  +> es an h.h image.  The counts over Q(i) equal the real dimensions under a compatible real structure (one r
+  +> eal coefficient per density, the i fixed by reality of the action); ranks and solvability are quoted over
+  +>  Q(i)."
+  },
+  "counterterm_solve": {
+    "system": "Delta + P_ch sigma_0(x) = 0, x in the declared domain D (11 directions), part by part",
+    "rank_P_ch_sigma0_routeG": 3,
+    "rank_routeC": 3,
+    "routeC_image_relations": [
+      ["1/2", "-1/2", "-1", "1", "0", "0", "0", "0"],
+      ["1", "0", "-2", "0", "1", "0", "0", "0"],
+      ["-2*I", "0", "2*I", "0", "0", "1", "0", "0"],
+      ["0", "0", "0", "0", "0", "0", "1", "0"],
+      ["0", "0", "0", "0", "0", "0", "0", "1"]
+    ],
+    "outcome": "ZERO",
+    "residual": null,
+    "solution": "x = 0 (no counterterm needed beyond the MS-bar poles); the identity-preserving finite renorma
+  +> lisations are ker(P_ch sigma_0) cap D (dim 8), of which 2 modulo D cap Im sigma_0",
+    "MSbar_counterterm_ch_image_zero": true,
+    "MSbar_counterterm_full_sigma0_image_sectors": ["c.b"],
+    "full_closure_relative_factor_table_UNCONVERTED_p19_error": {
+      "1": false,
+      "-1": true,
+      "I": false,
+      "-I": false
+    },
+    "full_closure_reading": "p20 (corrects p19): with the P15 Sigma coordinates converted from the (cb,c) to t
+  +> he route-G (c,cb) orientation (measured ratio -1), the DERIVED factor +1 gives full sigma_0 closure of th
+  +> e complete MS-bar counterterm (h.h + c.K + c.cb) in every ghost +1 sector; the p19 table above (factors 1
+  +> , -1, i, -i on UNCONVERTED coordinates) is the bookkeeping error, kept for the erratum",
+    "K1_ghost_closure_convention": {
+      "ghost_equation_operator": "2 i D^rho (d13.deDonder_apply), verified by P15: Sigma = 2 i D[G_Kc]",
+      "M_2iD_cK_to_cbc": [
+        ["0", "2"],
+        ["-1", "0"],
+        ["0", "-1"]
+      ],
+      "z_cb_derived_from_cK_pole_cbc_orientation": ["-3/8", "1/4"],
+      "z_cb_P15_sigma_fit_cbc_orientation": ["-3/8", "1/4"],
+      "derived_equals_P15": true,
+      "relative_factor_derived": "1",
+      "orientation_ratio_routeG_over_cbc": ["-1", "-1"],
+      "Sigma_pole_routeG_c_cb_coordinates": ["3/8", "-1/4"],
+      "Sigma_local_routeG_c_cb_coordinates": ["2/3", "-5/12"],
+      "tree_controls": {
+        "ghost_equation_tree_V_cbc_eq_2iD_V_Kc": true,
+        "S0_Kc_terms": 16,
+        "S0_cbc_terms": 40,
+        "sigma0_S0Kc_plus_S0cbc_entries": 0,
+        "sigma0_S0Kc_alone_entries (control, nonzero)": 16,
+        "ok": true
+      },
+      "full_closure_complete_S_ct": {
+        "closed": true,
+        "entries": 0,
+        "sectors": []
+      },
+      "full_closure_S_ct_without_ccb (p19 package S_ct)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"]
+      },
+      "full_closure_unconverted (p19 error)": {
+        "closed": false,
+        "entries": 88,
+        "sectors": ["c.b"],
+        "detected": true
+      },
+      "reading": "ERRATUM to p19: the p19 statement 'closure fails with the derived factor, needs -1, unresolv
+  +> ed' was a Grassmann-orientation bookkeeping error (P15 (cb,c) coordinates placed in route-G (c,cb) slots)
+  +> .  Corrected: derived +1, full closure holds (finding K1 of the p19 independent rebuild)."
+    },
+    "note_full_sigma0": "the h.h + c.K MS-bar counterterm ALONE has a nonzero (c, b) image (delta S0/delta h c
+  +> arries b); adding the c.cb ghost self-energy counterterm (correct orientation, derived factor +1) closes 
+  +> it: see K1_ghost_closure_convention.full_closure_complete_S_ct"
+  },
+  "defect_controls": {
+    "inventory_complete_no_missing": true,
+    "missing_input_refused_not_zero": true,
+    "s0h_longitudinal": true,
+    "E_transverse": true,
+    "hh_row_zero_exact_in_d_all_7": true,
+    "hh_row_evanescent_part_zero_all_7": true,
+    "hh_row_D01_D03_individually_nonzero": true,
+    "Kc_row_zero_exact_in_d_all_7": true,
+    "Kc_row_evanescent_part_zero_all_7": true,
+    "Kc_slot_map_nontrivial_T1_E1": true,
+    "E2_alone_zero_all_7": true,
+    "D13_A_T1_A_E1_zero_exact": true,
+    "onepoint_row_D14abc_vanishing": true,
+    "defect_zero_pole_nonlocal_local_all_7": true,
+    "defect_independent_of_row_signs": true,
+    "routeG_S0_check": true,
+    "routeG_defect_zero_by_sector": true,
+    "routeG_hh_local_data_in_span": true,
+    "routes_agree_on_ch_image_rank": true,
+    "routeG_hh_kernel_equals_p18_transverse_subspace": true,
+    "D_cap_Im_inside_D_cap_ker_sigma0": true,
+    "D_cap_Im_inside_ker_P_ch_sigma0": true,
+    "ghost_equation_relation_reproduces_P15_sigma_pole": true,
+    "MSbar_counterterm_in_ker_P_ch_sigma0": true,
+    "mutations_all_change_outcome": true,
+    "routeG_Q_split_reproduces_p14r_counts": true
+  },
+  "defect_mutations": {
+    "drop_graph_D03": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counter
+  +> term can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "-p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b
+  +> ^.p)/48",
+          "QdS (hat)": "-p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/48",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "hh row without the ghost loop D03"
+    },
+    "drop_graph_D01": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counter
+  +> term can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^
+  +> .p)/48",
+          "QdS (hat)": "p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/48",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "hh row without the graviton bubble D01"
+    },
+    "flip_phase_D03": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counter
+  +> term can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "-p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b
+  +> ^.p)/24",
+          "QdS (hat)": "-p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/24",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/8"
+        }
+      },
+      "note": "relative sign of D03 flipped"
+    },
+    "symmetry_factor_D03_x2": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counter
+  +> term can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p**2*(a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p - a~.c~*b^
+  +> .p)/48",
+          "QdS (hat)": "p.p**2*(a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/48",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "D03 doubled"
+    },
+    "wrong_projection_trace_operator_hh": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counter
+  +> term can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "-3*c^.p*p.p*(6*a.b*p.p - 6*a^.p*b^.p - a~.b~*p.p)/16",
+          "QdS (hat)": "-9*c^.p*p.p*(a^.b^*p.p - a^.p*b^.p)/8",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-15*a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "eta_mn p_v in place of s0 h (not the P.3 projection)"
+    },
+    "wrong_projection_gauge_fixed_operator_Kc": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counter
+  +> term can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p*(a.b*c^.p*p.p - 3*a.c*b^.p*p.p - 3*a^.p*b.c*p.p + 4*a^.p*b^.p*c^.p - a^.p
+  +> *b~.c~*p.p - a~.c~*b^.p*p.p)/16",
+          "QdS (hat)": "p.p*(a^.b^*c^.p*p.p - 3*a^.c^*b^.p*p.p - 3*a^.p*b^.c^*p.p + 4*a^.p*b^.p*c^.p)/16",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "-a~.c~*b^.p*p.p**2/4",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "a~.b~*c^.p*p.p**2/16"
+        }
+      },
+      "note": "de Donder q^2 P in place of the h^2-monomial operator E (not the P.3 projection)"
+    },
+    "naive_4D_D03_evanescent_dropped": {
+      "outcome": "OBSTRUCTION (nonlocal residual: the L-coefficient of the defect is nonzero; no local counter
+  +> term can cancel it)",
+      "changes_outcome": true,
+      "residual": {
+        "nonlocal_L": {
+          "Q4S (declared, R2)": "p.p**2*(a^.p*b~.c~ - 2*a~.b~*c^.p + a~.c~*b^.p)/48",
+          "QdS (hat)": "0",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "a~.c~*b^.p*p.p**2/48",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/24"
+        }
+      },
+      "note": "D03 Gt parts dropped"
+    },
+    "naive_4D_D13_Gt_dropped": {
+      "outcome": "NONZERO, CANCELLABLE by a counterterm in the declared domain",
+      "changes_outcome": true,
+      "residual": {
+        "local": {
+          "Q4S (declared, R2)": "-c^.p*p.p*(a.b*p.p - a^.p*b^.p)/12",
+          "QdS (hat)": "-c^.p*p.p*(a^.b^*p.p - a^.p*b^.p)/12",
+          "c tilde, h hat": "0",
+          "c tilde, h mixed": "0",
+          "c hat, h mixed": "0",
+          "all tilde": "0",
+          "c hat, h tilde": "-a~.b~*c^.p*p.p**2/12"
+        }
+      },
+      "note": "D13 evaluated with Gt dropped (P15_D13 mutation fit: T1 = -(d-4)/(16(d-1)))",
+      "finite_counterterm": {
+        "rank": 3,
+        "solvable": true,
+        "solution": ["(6*x3 + 12*x4 - 24*I*x5 - I)/12", "-x3/2", "-(12*x3 + 24*x4 - 24*I*x5 - I)/12", "x3", "x
+  +> 4", "x5", "x6", "x7"]
+      }
+    }
+  },
+  "defect_insensitive_variations": {
+    "drop_graph_D11": {
+      "outcome": "ZERO",
+      "changes_outcome": false,
+      "why_blind": "D11 is transverse by itself (p_m G_D11 = 0 exactly in d): the slot cannot see it; covered 
+  +> by M2 (P18) and by the inventory refusal below"
+    },
+    "drop_graph_D13": {
+      "outcome": "ZERO",
+      "changes_outcome": false,
+      "why_blind": "A_T1 = A_E1 = 0 and T2, T3, E2 are longitudinal: D13 reaches the slot with zero; covered b
+  +> y the D13 certificate (two routes, mutations)"
+    },
+    "flip_row_sign_Kc": {
+      "outcome": "ZERO",
+      "changes_outcome": false,
+      "why_blind": "each row vanishes separately"
+    }
+  },
+  "quantum_inputs_evaluated": "earned",
+  "quantum_inputs_inventory": [
+    {
+      "graph": "D01",
+      "slot_row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "evaluated": true,
+      "status": "regulated"
+    },
+    {
+      "graph": "D02",
+      "slot_row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "graph": "D03",
+      "slot_row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "evaluated": true,
+      "status": "regulated"
+    },
+    {
+      "graph": "D11",
+      "slot_row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "evaluated": true,
+      "status": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)"
+    },
+    {
+      "graph": "D12",
+      "slot_row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "graph": "D13",
+      "slot_row": "(S0,Gamma1^[2]) s1 h:h^2",
+      "evaluated": true,
+      "status": "evaluated"
+    },
+    {
+      "graph": "D14a",
+      "slot_row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "graph": "D14b",
+      "slot_row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    },
+    {
+      "graph": "D14c",
+      "slot_row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "evaluated": true,
+      "status": "vanishing_under_declared_prescription"
+    }
+  ],
+  "D11_matching_verified": true,
+  "D11_matching_verified_scope": "4D components",
+  "D11_evanescent_components_matching": "not_applicable_not_verified",
+  "M3_status": "unconditional on the 4D components (M2 discharged there; cited analytic inputs above)",
+  "D11_evaluated": true,
+  "hh_full_row_decoupling_proven": true,
+  "evanescent_hh_counterterm_added": false,
+  "batchA_evaluated": true,
+  "D13_evaluated": true,
+  "batchC_evaluated": true,
+  "library_certified": true,
+  "E2_status": "decoupled_from_ch_slot_proven",
+  "E2_decoupling_proven": true,
+  "hh_evanescent_status": "decoupled_from_ch_slot_proven_as_sum",
+  "hh_evanescent_decoupling_proven": true,
+  "D01_evaluated": true,
+  "D03_evaluated": true,
+  "graphs": {
+    "D02": {
+      "status": "vanishing_under_declared_prescription",
+      "UV_pole": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm
+  +>  0",
+      "finite_part": "0 (all components)",
+      "routes_agree": true,
+      "kappa_order": 2,
+      "slot": "kappa^2 hh two-point (part of the hh slot with D01, D03 -- D01/D03 NOT evaluated in p15)"
+    },
+    "D12": {
+      "status": "vanishing_under_declared_prescription",
+      "UV_pole": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm
+  +>  0",
+      "finite_part": "0 (all components)",
+      "routes_agree": true,
+      "kappa_order": 2,
+      "slot": "kappa^2 hh two-point, scalar tadpole (D12 slot; kept separate from the one-point slot)"
+    },
+    "D14a": {
+      "status": "vanishing_under_declared_prescription",
+      "UV_pole": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm
+  +>  0",
+      "finite_part": "0 (all components)",
+      "routes_agree": true,
+      "kappa_order": 1,
+      "slot": "order-kappa one-point slot"
+    },
+    "D14b": {
+      "status": "vanishing_under_declared_prescription",
+      "UV_pole": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm
+  +>  0",
+      "finite_part": "0 (all components)",
+      "routes_agree": true,
+      "kappa_order": 1,
+      "slot": "order-kappa one-point slot"
+    },
+    "D14c": {
+      "status": "vanishing_under_declared_prescription",
+      "UV_pole": "none: no 1/eps pole (every member is a pure power divergence, omega > 0); MS-bar counterterm
+  +>  0",
+      "finite_part": "0 (all components)",
+      "routes_agree": true,
+      "kappa_order": 1,
+      "slot": "order-kappa one-point slot"
+    },
+    "D13": {
+      "status": "regulated",
+      "sector_status": {
+        "4D_structures_T1_T3": "renormalized",
+        "evanescent_structures_E1_E2": "regulated: pole nonzero (E2), recorded and retained (R6); its countert
+  +> erm is an evanescent K'.c operator NOT in the p14r 4D basis (the p14r contract declares no evanescent cou
+  +> nterterm: open contract item, not absorbed)"
+      },
+      "UV_pole": {
+        "T1": "0",
+        "T2": "3/16",
+        "T3": "-1/4",
+        "E1": "0",
+        "E2": "1/16"
+      },
+      "MSbar_finite": {
+        "T1": "0",
+        "T2": "1/3 - 3*L/16",
+        "T3": "L/4 - 5/12",
+        "E1": "0",
+        "E2": "1/6 - L/16"
+      },
+      "UV_pole_in_p14r_cK_basis": ["0", "3/8", "-1/4"],
+      "evanescent_pole_nonzero": true,
+      "E2_ch_slot": "decoupled_from_ch_slot_proven"
+    },
+    "D01": {
+      "status": "regulated",
+      "sector_status": {
+        "4D": "renormalized (pole in the p14r h.h span)",
+        "evanescent": "regulated: evanescent poles NONZERO, retained (R6); no evanescent h.h counterterm is de
+  +> clared"
+      },
+      "UV_pole": {
+        "g4_mn g4_rs (p.p)^2": "-27*I/80",
+        "g4_mn gt_rs (p.p)^2": "13*I/120",
+        "g4_mn p_r p_s (p.p)^1": "19*I/60",
+        "g4_mr g4_ns (p.p)^2": "-71*I/240",
+        "g4_mr gt_ns (p.p)^2": "-3*I/80",
+        "g4_mr p_n p_s (p.p)^1": "11*I/40",
+        "g4_rs gt_mn (p.p)^2": "13*I/120",
+        "g4_rs p_m p_n (p.p)^1": "19*I/60",
+        "gt_mn gt_rs (p.p)^2": "-I/240",
+        "gt_mn p_r p_s (p.p)^1": "-3*I/20",
+        "gt_mr gt_ns (p.p)^2": "-I/240",
+        "gt_mr p_n p_s (p.p)^1": "7*I/120",
+        "gt_rs p_m p_n (p.p)^1": "-3*I/20",
+        "p_m p_n p_r p_s": "-13*I/15"
+      },
+      "MSbar_finite": {
+        "g4_mn g4_rs (p.p)^2": "I*(405*L - 982)/1200",
+        "g4_mn gt_rs (p.p)^2": "I*(523 - 195*L)/1800",
+        "g4_mn p_r p_s (p.p)^1": "I*(724 - 285*L)/900",
+        "g4_mr g4_ns (p.p)^2": "I*(1065*L - 1946)/3600",
+        "g4_mr gt_ns (p.p)^2": "I*(45*L - 118)/1200",
+        "g4_mr p_n p_s (p.p)^1": "I*(97 - 55*L)/200",
+        "g4_rs gt_mn (p.p)^2": "I*(523 - 195*L)/1800",
+        "g4_rs p_m p_n (p.p)^1": "I*(724 - 285*L)/900",
+        "gt_mn gt_rs (p.p)^2": "I*(15*L - 46)/3600",
+        "gt_mn p_r p_s (p.p)^1": "I*(90*L - 241)/600",
+        "gt_mr gt_ns (p.p)^2": "I*(15*L - 46)/3600",
+        "gt_mr p_n p_s (p.p)^1": "I*(277 - 105*L)/1800",
+        "gt_rs p_m p_n (p.p)^1": "I*(90*L - 241)/600",
+        "p_m p_n p_r p_s": "I*(780*L - 1597)/900"
+      },
+      "UV_pole_in_p14r_hh_basis": ["-27*I/160", "-71*I/240", "19*I/60", "11*I/20", "-13*I/30"],
+      "evanescent_pole_nonzero": true,
+      "ch_slot": "decoupled as the sum D01 + D03 (evanescent and 4D parts; certificates/P17_hh_slot.json); NOT
+  +>  graph by graph"
+    },
+    "D03": {
+      "status": "regulated",
+      "sector_status": {
+        "4D": "renormalized (pole in the p14r h.h span)",
+        "evanescent": "regulated: evanescent poles NONZERO, retained (R6); no evanescent h.h counterterm is de
+  +> clared"
+      },
+      "UV_pole": {
+        "g4_mn g4_rs (p.p)^2": "7*I/48",
+        "g4_mn gt_rs (p.p)^2": "-I/24",
+        "g4_mn p_r p_s (p.p)^1": "-I/8",
+        "g4_mr g4_ns (p.p)^2": "I/24",
+        "g4_mr gt_ns (p.p)^2": "I/24",
+        "g4_mr p_n p_s (p.p)^1": "-I/48",
+        "g4_rs gt_mn (p.p)^2": "-I/24",
+        "g4_rs p_m p_n (p.p)^1": "-I/8",
+        "gt_mn p_r p_s (p.p)^1": "I/12",
+        "gt_mr p_n p_s (p.p)^1": "-I/16",
+        "gt_rs p_m p_n (p.p)^1": "I/12",
+        "p_m p_n p_r p_s": "I/6"
+      },
+      "MSbar_finite": {
+        "g4_mn g4_rs (p.p)^2": "I*(50 - 21*L)/144",
+        "g4_mn gt_rs (p.p)^2": "I*(3*L - 8)/72",
+        "g4_mn p_r p_s (p.p)^1": "I*(3*L - 8)/24",
+        "g4_mr g4_ns (p.p)^2": "I*(2 - 3*L)/72",
+        "g4_mr gt_ns (p.p)^2": "I*(8 - 3*L)/72",
+        "g4_mr p_n p_s (p.p)^1": "I*(3*L + 4)/144",
+        "g4_rs gt_mn (p.p)^2": "I*(3*L - 8)/72",
+        "g4_rs p_m p_n (p.p)^1": "I*(3*L - 8)/24",
+        "gt_mn p_r p_s (p.p)^1": "I*(8 - 3*L)/36",
+        "gt_mr p_n p_s (p.p)^1": "I*(3*L - 8)/48",
+        "gt_rs p_m p_n (p.p)^1": "I*(8 - 3*L)/36",
+        "p_m p_n p_r p_s": "I*(5 - 3*L)/18"
+      },
+      "UV_pole_in_p14r_hh_basis": ["7*I/96", "I/24", "-I/8", "-I/24", "I/12"],
+      "evanescent_pole_nonzero": true,
+      "ch_slot": "decoupled as the sum D01 + D03 (evanescent and 4D parts; certificates/P17_hh_slot.json); NOT
+  +>  graph by graph"
+    },
+    "D11": {
+      "status": "evaluated",
+      "certificate": "certificates/P18_D11.json",
+      "sector_status": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)",
+      "M2": "DISCHARGED (4D components)",
+      "ch_slot": "decoupled by itself (p_m G_D11 = 0 exactly in d)"
+    }
+  },
+  "D12_status": "vanishing_under_declared_prescription",
+  "contract_identity": {
+    "p14r_contract_files": 12,
+    "changed_vs_p14r": ["code/p5_entry/dred.py"],
+    "added": [],
+    "dred_byte_identical_to_p18": true,
+    "dred_registry_state_p22": "p18 + p22 guard block",
+    "contract_revision_in_p19": false,
+    "disclosed_revisions_p19": {}
+  },
+  "p18_layer": {
+    "p18_layer_files_byte_identical": true,
+    "P18_release_accepted": true,
+    "P18_quantum_inputs_evaluated": "earned",
+    "I1_gate": "the p19 gate requires the p18 layer record's quantum_inputs_evaluated == 'earned'"
+  },
+  "change_log_vs_p18": {
+    "base": "archival/p18/p18_source_files.json (pinned; files of the p18 zip sha256 7c7d5451adb459092edc2606e
+  +> 1b3322909325000d47bab89c14b7f7a6d25c92f)",
+    "base_pinned_ok": true,
+    "reference_file": "reproducibility/reference_values_p23.json listed as added by declaration (written after
+  +>  the author build)",
+    "added": ["archival/p18/README.md", "archival/p18/p18_source_files.json", "archival/p18/reference_values_p
+  +> 18.json", "archival/p18/reproducibility/author_rebuild_report_p18.json", "archival/p18/reproducibility/in
+  +> dependent_rebuild_report_p18.json", "archival/p19/README.md", "archival/p19/p19_source_files.json", "arch
+  +> ival/p19/reference_values_p19.json", "archival/p19/reproducibility/author_rebuild_report_p19.json", "arch
+  +> ival/p19/reproducibility/independent_rebuild_report_p19.json", "archival/p20/README.md", "archival/p20/p2
+  +> 0_source_files.json", "archival/p20/reference_values_p20.json", "archival/p20/reproducibility/author_rebu
+  +> ild_report_p20.json", "archival/p20/reproducibility/independent_rebuild_report_p20.json", "archival/p21/R
+  +> EADME.md", "archival/p21/p21_source_files.json", "archival/p21/reference_values_p21.json", "archival/p21/
+  +> reproducibility/author_rebuild_report_p21.json", "archival/p21/reproducibility/independent_rebuild_report
+  +> _p21.json", "archival/p22/README.md", "archival/p22/certificates/P22_evanescent.json", "archival/p22/p22_
+  +> source_files.json", "archival/p22/reference_values_p22.json", "archival/p22/reproducibility/author_rebuil
+  +> d_report_p22.json", "archival/p22/reproducibility/independent_rebuild_report_p22.json", "code/p5_calc/con
+  +> tract_registry.py", "code/p5_calc/d11_pin.py", "code/p5_calc/defect.py", "code/p5_calc/evanescent.py", "c
+  +> ode/p5_calc/p19_conventions.py", "code/p5_calc/p20_conventions.py", "code/p5_calc/p21_conventions.py", "c
+  +> ode/p5_calc/p22_conventions.py", "code/p5_calc/p23_conventions.py", "code/p5_calc/power_counting.py", "co
+  +> de/p5_calc/release_p19.py", "code/p5_calc/release_p20.py", "code/p5_calc/release_p21.py", "code/p5_calc/r
+  +> elease_p22.py", "code/p5_calc/release_p23.py", "manuscript/notes/P19_defect.tex", "manuscript/notes/P20_c
+  +> orrection.tex", "manuscript/notes/P21_absolute_pin.tex", "manuscript/notes/P22_evanescent.tex", "manuscri
+  +> pt/notes/P23_O1_scope.tex", "provenance/XVI-O/O_quantum_target.json", "reproducibility/reference_values_p
+  +> 23.json", "tests/test_p19.py", "tests/test_p20.py", "tests/test_p21.py", "tests/test_p22.py", "tests/test
+  +> _p23.py"],
+    "removed": ["reproducibility/reference_values_p18.json"],
+    "modified": ["README.md", "REBUILD_INSTRUCTIONS.md", "code/p5_calc/release_p18.py", "code/p5_entry/dred.py
+  +> ", "manuscript/body/XVI-P-body.tex", "tests/test_p14.py", "tests/test_p16.py", "tests/test_p17.py", "test
+  +> s/test_p18.py", "tools/build.py", "tools/rebuild_from_source.py", "tools/source_manifest.py"],
+    "contract_files_changed": ["code/p5_entry/dred.py"],
+    "non_contract_files_changed": ["README.md", "REBUILD_INSTRUCTIONS.md", "archival/p18/README.md", "archival
+  +> /p18/p18_source_files.json", "archival/p18/reference_values_p18.json", "archival/p18/reproducibility/auth
+  +> or_rebuild_report_p18.json", "archival/p18/reproducibility/independent_rebuild_report_p18.json", "archiva
+  +> l/p19/README.md", "archival/p19/p19_source_files.json", "archival/p19/reference_values_p19.json", "archiv
+  +> al/p19/reproducibility/author_rebuild_report_p19.json", "archival/p19/reproducibility/independent_rebuild
+  +> _report_p19.json", "archival/p20/README.md", "archival/p20/p20_source_files.json", "archival/p20/referenc
+  +> e_values_p20.json", "archival/p20/reproducibility/author_rebuild_report_p20.json", "archival/p20/reproduc
+  +> ibility/independent_rebuild_report_p20.json", "archival/p21/README.md", "archival/p21/p21_source_files.js
+  +> on", "archival/p21/reference_values_p21.json", "archival/p21/reproducibility/author_rebuild_report_p21.js
+  +> on", "archival/p21/reproducibility/independent_rebuild_report_p21.json", "archival/p22/README.md", "archi
+  +> val/p22/certificates/P22_evanescent.json", "archival/p22/p22_source_files.json", "archival/p22/reference_
+  +> values_p22.json", "archival/p22/reproducibility/author_rebuild_report_p22.json", "archival/p22/reproducib
+  +> ility/independent_rebuild_report_p22.json", "code/p5_calc/contract_registry.py", "code/p5_calc/d11_pin.py
+  +> ", "code/p5_calc/defect.py", "code/p5_calc/evanescent.py", "code/p5_calc/p19_conventions.py", "code/p5_ca
+  +> lc/p20_conventions.py", "code/p5_calc/p21_conventions.py", "code/p5_calc/p22_conventions.py", "code/p5_ca
+  +> lc/p23_conventions.py", "code/p5_calc/power_counting.py", "code/p5_calc/release_p18.py", "code/p5_calc/re
+  +> lease_p19.py", "code/p5_calc/release_p20.py", "code/p5_calc/release_p21.py", "code/p5_calc/release_p22.py
+  +> ", "code/p5_calc/release_p23.py", "manuscript/body/XVI-P-body.tex", "manuscript/notes/P19_defect.tex", "m
+  +> anuscript/notes/P20_correction.tex", "manuscript/notes/P21_absolute_pin.tex", "manuscript/notes/P22_evane
+  +> scent.tex", "manuscript/notes/P23_O1_scope.tex", "provenance/XVI-O/O_quantum_target.json", "reproducibili
+  +> ty/reference_values_p18.json", "reproducibility/reference_values_p23.json", "tests/test_p14.py", "tests/t
+  +> est_p16.py", "tests/test_p17.py", "tests/test_p18.py", "tests/test_p19.py", "tests/test_p20.py", "tests/t
+  +> est_p21.py", "tests/test_p22.py", "tests/test_p23.py", "tools/build.py", "tools/rebuild_from_source.py", 
+  +> "tools/source_manifest.py"],
+    "counts": {
+      "added": 53,
+      "removed": 1,
+      "modified": 12
+    }
+  },
+  "disclosed_test_revisions_p19": {
+    "tests/test_p14.py": "names p18 -> p19 (reference file, source zip, author report, status revision); gener
+  +> ated prefixes certificates/ledgers P19_, manuscript/body/P19-",
+    "tests/test_p18.py": "rs() reads the p18 LAYER record certificates/P18_release.json; the live p18 independ
+  +> ent report is bound to the p18 tree (pending or False here); test-file change log accepts p18 or disclose
+  +> d p19 revisions; build label is the current revision"
+  },
+  "P5_entry_earned": true,
+  "P5_entry_flags": {
+    "quantum_action_defined": true,
+    "quantum_prescription_defined": true,
+    "D11_matching_defined": true,
+    "counterterm_domain_defined": true,
+    "amplitude_rules_verified": true
+  },
+  "P3_P4_frozen_as_P5_inputs": true,
+  "classical": {
+    "flags": {
+      "quartic_generator_verified": true,
+      "ch_projection_defined": true,
+      "ch_dependency_inventory_complete": true,
+      "gauge_fixing_map_constructed": true,
+      "required_classical_BV_components_verified": true
+    },
+    "classical_readiness_for_ch_identity": true,
+    "release_claim_accepted": true,
+    "deterministic_prerequisites": {
+      "C1_inverse_10comp": true,
+      "C2_det_tracelog_10comp": true,
+      "C3_boundary_identity_generic_and_conformal": true,
+      "C4_export_equals_independent_evaluator": true,
+      "C5_cubic_regression_Euler": true,
+      "C6_quadratic_regression_Euler": true,
+      "C7_grav_noether_k0_k1_k2_on_exports": true,
+      "quartic_mutations_all_rejected": true,
+      "master_grav_noether_deterministic_k0_k1_k2": true,
+      "master_engine_parts_exact": true,
+      "graviton_hessian_generic_symbolic_k": true,
+      "canonicity_all_23_antifield_components": true,
+      "ch_enumeration_lemma_mechanical": true,
+      "residual_record_invariants_all_certificates": true,
+      "quartic_C7_Q_terms_zero_and_flag_true_all_orders": true,
+      "master_grav_Q_terms_zero_and_flag_true_all_orders": true,
+      "cross_certificate_quartic_vs_master_agree": true,
+      "stored_C7_flag_equals_recomputation": true
+    },
+    "failed_prerequisites": [],
+    "hash_consistency": {
+      "consistent": true,
+      "ell": {
+        "ell2": {
+          "export_file": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+          "quartic_cert": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+          "master_input": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0"
+        },
+        "ell3": {
+          "export_file": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+          "quartic_cert": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+          "master_input": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1"
+        },
+        "ell4": {
+          "export_file": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+          "quartic_cert": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+          "master_input": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123"
+        }
+      }
+    },
+    "required_master_residuals": [],
+    "residual_records": {
+      "invariant_violations": {},
+      "quartic_C7_per_order": {
+        "kappa0": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa1": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa2": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        }
+      },
+      "master_grav_per_order": {
+        "kappa0": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa1": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa2": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        }
+      },
+      "cross_certificate": {
+        "same_inputs": true,
+        "differences": [],
+        "agree": true,
+        "quartic_parameters": {
+          "a_ghost": "1/2",
+          "transport_term": 1,
+          "s0": "a(eta_nn d_m c^n + eta_mm d_n c^m)",
+          "s1": "a(c^r d_r h_mn + h_rn d_m c^r + h_mr d_n c^r)",
+          "ell_sha256": {
+            "ell2": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+            "ell3": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+            "ell4": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123"
+          }
+        },
+        "master_parameters": {
+          "a_ghost": "1/2",
+          "transport_term": 1,
+          "s0": "a(eta_nn d_m c^n + eta_mm d_n c^m)",
+          "s1": "a(c^r d_r h_mn + h_rn d_m c^r + h_mr d_n c^r)",
+          "ell_sha256": {
+            "ell2": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+            "ell3": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+            "ell4": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123"
+          }
+        }
+      }
+    },
+    "hard_stops_p13_hold": true,
+    "hard_stops_p13": {
+      "quantum_inputs_evaluated": "not_earned",
+      "projected_identity_verified": "not_earned",
+      "D02_quantum_evaluated": false,
+      "D12_quantum_evaluated": false,
+      "D12_status": "Missing",
+      "symmetry_restored": false,
+      "O1_closure": "NOT_CLOSED",
+      "insertion_status": "Frozen_negative_obstruction_preserved",
+      "XV_B_opened": false,
+      "Route_B_discharged": false,
+      "P5_opened": false,
+      "loop_evaluations_performed": false,
+      "u_R_c_delta_added": false
+    },
+    "certificates": "P13_* (frozen P.3/P.4 inputs, regenerated by byte-identical p13 code)"
+  },
+  "hard_stops": {
+    "bulk_symmetry_restored": false,
+    "symmetry_restored": false,
+    "O1_closure": "NOT_CLOSED",
+    "insertion_status": "Frozen_negative_obstruction_preserved",
+    "XV_B_opened": false,
+    "XIV_J_opened": false,
+    "Route_B_discharged": false,
+    "u_R_c_delta_added": false,
+    "XVI_P_registered": false
+  },
+  "hard_stops_hold": true,
+  "milestones": {
+    "definitions": {
+      "P.3": "fixed output projection + exhaustive coefficient dependencies + graph topology inventory (comple
+  +> te for the declared ch target)",
+      "P.4": "required classical action, transformations, source terms, gauge map and master verification (cla
+  +> ssical readiness earned); P.4 means classical readiness, NOT coupled one-loop restoration",
+      "P.5_entry": "quantum prescription, amplitude rules and counterterm domain fixed",
+      "P.5_calculation": "coefficients evaluated and renormalized",
+      "P.5_identity": "projected defect computed and, if possible, cancelled"
+    },
+    "order": ["P.3", "P.4", "P.5_entry", "P.5_calculation", "P.5_identity"],
+    "status": {
+      "P.3": "complete (declared ch target)",
+      "P.4": "earned (classical readiness)",
+      "P.5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+      "P.5_calculation": "evaluated; 4D sector renormalized (MS-bar, declared domain); evanescent regulated (p
+  +> oles retained, not subtracted), decoupled from the ch slots (p15-p18 inputs D01, D02, D03, D11, D12, D13,
+  +>  D14a-c)",
+      "P.5_identity": "projected defect computed (zero exactly in d: pole, nonlocal and local parts, all seven
+  +>  external assignments); projected identity verified; projected restoration verified for the renormalised 
+  +> Gamma_R = Gamma1 + S_ct (ch projection, one loop, kappa^2 only; zero because each row vanishes separately
+  +> , no counterterm cancellation); projected restoration (p20 definition): full sigma_0 closure of the compl
+  +> ete one-loop kappa^2 MS-bar counterterm incl. c.cb (K1 orientation corrected in p20; p19 'closure fails' 
+  +> retracted); bulk symmetry NOT restored/claimed; O.1 NOT_CLOSED"
+    },
+    "definition_vs_status_note": "I3 (p18 reviewer): the P.5_calculation DEFINITION reads 'coefficients evalua
+  +> ted and renormalized'; the STATUS states exactly what holds: 4D sector renormalized, evanescent poles reg
+  +> ulated and decoupled from the ch slots (not subtracted)",
+    "P5_entry_earned": true,
+    "P3_P4_frozen_as_P5_inputs": true,
+    "P4_is_NOT": "coupled one-loop restoration of the bulk symmetry (bulk_symmetry_restored false)"
+  },
+  "author_rebuild_passed": false,
+  "independent_rebuild_passed": false,
+  "independent_rebuild_passed_p18": true,
+  "independent_rebuild_passed_p17": true,
+  "independent_rebuild_passed_p16": true,
+  "independent_rebuild_passed_p15": true,
+  "independent_rebuild_passed_p14r": true,
+  "independent_rebuild_passed_p13": true,
+  "rebuild_flag_scope": "author_rebuild_passed and independent_rebuild_passed refer to the CURRENT (p19) sourc
+  +> e tree only (independent: pending until a reviewer report for this tree exists); independent_rebuild_pass
+  +> ed_p18 refers to the p18 tree bfab3b4b318fc37f2fcca209d097d27a24955e3b3d8469f5a8ab2e904ace7094 / zip 7c7d
+  +> 5451adb459092edc2606e1b3322909325000d47bab89c14b7f7a6d25c92f (same-box caveat) and is not inherited by p1
+  +> 9",
+  "p18_independent_rebuild": {
+    "report": "archival/p18/reproducibility/independent_rebuild_report_p18.json",
+    "present": true,
+    "report_sha256": "893f167ef7124d981c0569ca386035aed06e0dbb0c90a2362a6ceeafd1930cb2",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "bfab3b4b318fc37f2fcca209d097d27a24955e3b3d8469f5a8ab2e904ace7094",
+    "bound_to_source_zip_sha256": "7c7d5451adb459092edc2606e1b3322909325000d47bab89c14b7f7a6d25c92f",
+    "tree_matches_p18": true,
+    "zip_matches_p18": true,
+    "mismatches": 0,
+    "findings": ["I1_release_p18_publication_not_gated_on_quantum_inputs_evaluated", "I2_scan_pattern_gaps", "
+  +> I3_scope_of_M2_and_evaluated", "I4_table_row_count", "I5_slot_blind_to_D11_normalisation", "I6_test_p16_v
+  +> ictim_restriction", "I7_pdftotext_dehyphenation", "H1_H5_resolution", "bug_fixes_disclosed"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared k
+  +> ernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-
+  +> only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p19": "bound to the p18 tree/zip; the p19 tree has its own (pending) independent flag",
+    "archived_p18_records_pinned": {
+      "archival/p18/reference_values_p18.json": true,
+      "archival/p18/reproducibility/author_rebuild_report_p18.json": true,
+      "archival/p18/reproducibility/independent_rebuild_report_p18.json": true,
+      "archival/p18/p18_source_files.json": true
+    },
+    "pins_ok": true
+  },
+  "p17_independent_rebuild": {
+    "report": "archival/p17/reproducibility/independent_rebuild_report_p17.json",
+    "present": true,
+    "report_sha256": "92542a2215c24b984e2220f69ac52698d6b09dbb6b860402bbc367d970c176eb",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "2a5a6317f7322db910c26fb257e589b28aa017df740879194e0ac2eb505ddd92",
+    "bound_to_source_zip_sha256": "7f4f61df9ce9c6483d76fa7b7b024591d6abfbae80ddc3dc0bee387245d25416",
+    "tree_matches_p17": true,
+    "zip_matches_p17": true,
+    "mismatches": 0,
+    "findings": ["H1_static_scan_pattern_gaps", "H2_assignment_table_omits_c_hat_h_tilde", "H3_stale_comments"
+  +> , "H4_curly_apostrophes_in_typeset_listings", "H5_parse_d_srepr", "H6_scope", "G1_G2_G3_G4_resolution"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared k
+  +> ernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-
+  +> only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p18": "bound to the p17 tree/zip; the p18 tree has its own (pending) independent flag",
+    "archived_p17_records_pinned": {
+      "archival/p17/reference_values_p17.json": true,
+      "archival/p17/reproducibility/author_rebuild_report_p17.json": true,
+      "archival/p17/reproducibility/independent_rebuild_report_p17.json": true,
+      "archival/p17/p17_source_files.json": true
+    },
+    "pins_ok": true
+  },
+  "p16_independent_rebuild": {
+    "report": "archival/p16/reproducibility/independent_rebuild_report_p16.json",
+    "present": true,
+    "report_sha256": "1a8861964afe7ae4d4b38aaae5381230d8cda82610c51ef2b7919ebd6e326843",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "90b4a6659cddd341436a59d285a56eb14bdd575bb56e69faf4ba75be4d7b549e",
+    "bound_to_source_zip_sha256": "56d5887daa7a96dcc7cf2f70c6735e802125c9b19a33ac17a3ef975e330fef57",
+    "tree_matches_p16": true,
+    "zip_matches_p16": true,
+    "mismatches": 0,
+    "findings": ["G1_static_scan_scope_narrower_than_disclosure", "G2_plain_symbol_d_from_stored_strings", "G3
+  +> _hook_coverage_detail", "G4_change_log_omits_new_reference_file", "G5_test_p15_assertion_relaxed", "G6_im
+  +> aginary_normalisation", "G7_scope", "F3_F4_F5_from_p15"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared k
+  +> ernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-
+  +> only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p17": "bound to the p16 tree/zip; the p17 tree has its own (pending) independent flag",
+    "archived_p16_records_pinned": {
+      "archival/p16/reference_values_p16.json": true,
+      "archival/p16/reproducibility/author_rebuild_report_p16.json": true,
+      "archival/p16/reproducibility/independent_rebuild_report_p16.json": true,
+      "archival/p16/p16_source_files.json": true
+    },
+    "pins_ok": true
+  },
+  "p15_independent_rebuild": {
+    "report": "archival/p15/reproducibility/independent_rebuild_report_p15.json",
+    "present": true,
+    "report_sha256": "6bc760c24f48d61fe066dde62cbe5b41daa7e4eafc347f8fd72e1a84fcab4713",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "79f5375272d6e7327721572ae7eeff59d6bf69d2eb13d353204d38ce9c1dc84f",
+    "bound_to_source_zip_sha256": "54325c1ff6c079e0389f96d9c0875524c73f6a706e079fd1734c1b1701c707d3",
+    "tree_matches_p15": true,
+    "zip_matches_p15": true,
+    "mismatches": 0,
+    "findings": ["F1_F2_resolved", "F3_opaque_d_bypass", "F4_stale_page_footer_label", "F5_non_contract_change
+  +> s", "F6_D13_spot_check_scope", "F7_evanescent_E2_pole"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared k
+  +> ernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-
+  +> only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p16": "bound to the p15 tree/zip; the p16 tree has its own (pending) independent flag",
+    "archived_p15_records_pinned": {
+      "archival/p15/reference_values_p15.json": true,
+      "archival/p15/reproducibility/author_rebuild_report_p15.json": true,
+      "archival/p15/p15_source_files.json": true
+    },
+    "pins_ok": true
+  },
+  "p14r_independent_rebuild": {
+    "report": "archival/p14r/reproducibility/independent_rebuild_report_p14r.json",
+    "present": true,
+    "report_sha256": "09cda7db0d1f8e1cf7409212e4ee88ef60f21975e1367472f2c3ed45f1f7004b",
+    "report_sha256_pinned": true,
+    "pass": true,
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "a64c0ae365980fa6b077f991df4316347527613075e87f17fecfe422db6e3894",
+    "bound_to_source_zip_sha256": "19e8bf599daf102d8e23382544e6c6991ea307b2c3f31a0a97ad66d0b8a3dba3",
+    "tree_matches_p14r": true,
+    "zip_matches_p14r": true,
+    "mismatches": 0,
+    "findings": ["F1_premature_d4_guard_heuristic", "F2_trace_ghat_4_mutation_scope"],
+    "caveat": "SAME-BOX caveat: this independent rebuild ran on the same machine as the author build (shared k
+  +> ernel, TeX Live, poppler, platform string identical) in a fresh directory and fresh venv from the source-
+  +> only zip; it was NOT run on a second machine.",
+    "live_report_identical_to_archived": true,
+    "NOT_inherited_by_p15": "bound to the p14r tree/zip; the p15 tree has its own (pending) independent flag",
+    "archived_p14r_records_pinned": {
+      "archival/p14r/reference_values_p14r.json": true,
+      "archival/p14r/reproducibility/author_rebuild_report_p14r.json": true
+    }
+  },
+  "p13_independent_rebuild": {
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "2b1baf335468944aa800c05eaa8b0b4df67ee893491079fcc944eb8fb0e69a70",
+    "bound_to_source_zip_sha256": "2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266",
+    "report": "archival/p13/reproducibility/independent_rebuild_report_p13.json",
+    "report_sha256": "7ce496cc446f2ef1948de6aaf034b09e9dcab0b9878cd6ae6015cda63a6515e4",
+    "comparisons": {
+      "reference_values_matched": {
+        "compared": 112,
+        "equal": 112
+      },
+      "independent_comparisons": 77,
+      "mismatches": 0
+    },
+    "caveat": "the p13 independent rebuild ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh v
+  +> env from the source-only zip; it was NOT run on a second machine",
+    "NOT_inherited_by_p14": "bound to the p13 tree; the p14 tree has its own (pending) independent flag"
+  },
+  "M2_summary": {
+    "verdict": "DISCHARGED (4D components)",
+    "D11_matching_verified_scope": "4D components",
+    "evanescent_components_matching": {
+      "status": "not_applicable_not_verified",
+      "what_they_are": "the 8 D11 structures carrying gt (the (4-d)-dimensional part of g4 = ghat + gt): compo
+  +> nents of the hh two-point function with at least one index pair in the epsilon-scalar (4-d) directions of
+  +>  DRED; they vanish on hatted 4D components",
+      "why_not_matched": "XVI-O (u^R_mu, K, Pi_tr^R) is strictly four-dimensional and has NO evanescent counte
+  +> rpart; M2 is a 4D statement, so there is nothing to match them to. Their L-coefficients are nonzero (reco
+  +> rded below); they are retained (R6) and drop out of the ch-projected slot (p_m G_D11 = 0 for the evanesce
+  +> nt part separately)"
+    },
+    "M3_status": {
+      "status": "unconditional on the 4D components (M2 discharged there; cited analytic inputs above)",
+      "statement": "L_match = FT^-1[P^DR] - R R Pi_tr^R is supported at {0}; with kernel scaling degree <= 8 i
+  +> t is a finite sum of d^alpha delta with |alpha| <= 4 (bounds 4/8/4 of P14 M3)",
+      "evanescent_components": "not applicable (no XVI-O counterpart; see evanescent_components_matching)"
+    },
+    "statement": "M2 (P14_prescription_D11_matching.json): for all f in D(U), U = R^4 \\ {0}: <FT^-1[P^DR_AB],
+  +>  f> = <R_A R_B Pi_tr^R, f>, Pi_tr^R = (i kappa^2/4) K u^R, alpha = A^2/60, beta = A^2/18",
+    "route_B": {
+      "equation": "X_AB = -4 pi^2 c_FT A^2 Y_AB = -(i/4) Y_AB on every 4D component pair",
+      "pairs": 100,
+      "nonzero_pairs": 100,
+      "mismatches": 0,
+      "first": [],
+      "agree": true,
+      "constant": "-I/4"
+    },
+    "FT_constant": {
+      "master_pole": "1",
+      "master_finite": "2 - L",
+      "pole_is_1": true,
+      "L_coefficient_of_MB": "-1",
+      "c_FT_from_DR_bubble": "I*pi**2",
+      "c_FT_from_minus_r": "I*pi**2",
+      "r_certificate": "-i * pi**2",
+      "r_certificate_as_expected": true,
+      "agree": true
+    },
+    "controls": {
+      "route_B_all_100_pairs_agree": true,
+      "FT_constant_two_calibrations_agree": true,
+      "route_A_M1_integrand_identity": true,
+      "route_A_XVI_O_K_u_equals_T": true,
+      "D11_transverse_exact_in_d": true,
+      "routes_FP_PV_agree": true,
+      "covariant_fit_exact_unique": true,
+      "mutations_all_rejected": true
+    },
+    "analytic_inputs_cited": ["Fourier transform of (Q - i0)^zeta (Gel'fand-Shilov): meromorphic in zeta, resi
+  +> due at zeta = -2 is r delta, so FT[u^R] = -r log(-p^2 - i0) + const (Route B; cross-checked by the DR bub
+  +> ble)", "a polynomial in p is the Fourier transform of a distribution supported at {0}", "Route A only: tw
+  +> o extensions of the product V V (C C + C C) from U differ by a distribution supported at 0 (XVI-O lem:BV_
+  +> rules_on_U, Constructed)"],
+    "scope": "4D (hatted) components; the evanescent gt structures are epsilon-scalar components outside the 4
+  +> D statement of M2 (their L-coefficients are nonzero and recorded); IR: the massless bubble at p^2 != 0 is
+  +>  IR finite in DR (no scaleless pieces enter the nonlocal part); the XVI-N massless obstruction concerns t
+  +> he classical insertion and is not touched",
+    "M3_consequence": "with M2 discharged, L_match = FT^-1[P^DR] - R R Pi_tr^R is supported at 0; both sides a
+  +> re transverse and homogeneous of degree four in p (massless; no mu^4, mu^2 p^2 contacts, consistent with 
+  +> N4), so L_match lies in the 2-dim transverse subspace of the p14r h.h span; its coordinates need the XVI-
+  +> O finite constant of u^R and are NOT computed (M4: booked as P-side hh counterterm; u^R_mu unmodified, no
+  +>  c delta)"
+  },
+  "D11_summary": {
+    "status": "renormalized (4D) / regulated (evanescent poles nonzero, retained R6)",
+    "prescription": "operational DRED (R1-R6), d opaque, MS-bar, Feynman +i0, N4 contact exclusions, M3 bounds
+  +>  4/8/4, exactly-degree-four normalization (massless: every local term is a homogeneous quartic in p)",
+    "prescription_usage": {
+      "exactly_degree_four_normalization": "every structure S_s (p.p)^e of Ghat has total momentum degree 4 (c
+  +> omputed per structure: g4_mn g4_rs (p.p)^2: 4, g4_mn gt_rs (p.p)^2: 4, g4_mn p_r p_s (p.p)^1: 4, g4_mr g4
+  +> _ns (p.p)^2: 4, g4_mr gt_ns (p.p)^2: 4, g4_mr p_n p_s (p.p)^1: 4, g4_rs gt_mn (p.p)^2: 4, g4_rs p_m p_n (
+  +> p.p)^1: 4, gt_mn gt_rs (p.p)^2: 4, gt_mn p_r p_s (p.p)^1: 4, gt_mr gt_ns (p.p)^2: 4, gt_mr p_n p_s (p.p)^
+  +> 1: 4, gt_rs p_m p_n (p.p)^1: 4, p_m p_n p_r p_s: 4)",
+      "N4_contact_exclusions": "used as stated: the order-0/2 contacts (mu^4, mu^2 p^2) excluded by N4 do not 
+  +> arise (massless; every pole and local MS-bar term is a homogeneous quartic in p), so N4 removes nothing h
+  +> ere and no order-0/2 counterterm is needed",
+      "M3_bounds_4_8_4": "degree of divergence 4; local terms of derivative order exactly 4 <= 4"
+    },
+    "UV_pole_in_p14r_hh_basis": ["-I/160", "-I/480", "I/80", "I/240", "-I/120"],
+    "evanescent_pole_nonzero": true,
+    "controls": {
+      "exactly_degree_four_every_structure": true,
+      "N4_no_order_0_or_2_contact_arises": true,
+      "export_sha_pinned": true,
+      "covariant_form_exact": true,
+      "covariant_form_unique": true,
+      "orbit_consistent": true,
+      "route_FP_equals_route_PV_exact_in_d": true,
+      "integrand_equals_XVI_O_convolution_M1": true,
+      "exchange_symmetric_mn_rs": true,
+      "nonlocal_equals_minus_pole": true,
+      "pole_4D_in_p14r_hh_span": true,
+      "R5_d_retained": true,
+      "M2_discharged": true,
+      "mutations_all_rejected": true
+    }
+  },
+  "hh_slot_summary": {
+    "verdict": "DECOUPLED (proof, full row): p_m G = 0 exactly in d for D11 by itself and for D01 + D03 as a s
+  +> um; no evanescent structure survives in the slot",
+    "row": "(S0,Gamma1^[2]) s2 K:K.c",
+    "graphs": "D01 + D02 + D03 + D11 + D12 (D02 = D12 = 0, P15_batchA.json)",
+    "how_D11_decouples": "graph by graph: D11 (scalar loop, conserved matter stress tensor) is transverse by i
+  +> tself, 4D and evanescent parts separately; its evanescent poles are nonzero but transverse. Hence D11 mut
+  +> ations of phase or symmetry factor are NOT detectable by the slot (they are tested by M2 instead); the sl
+  +> ot sees D11 only through a non-longitudinal operator (trace operator control: nonzero)",
+    "surviving_evanescent_structures_in_slot": [],
+    "consequence": "no evanescent h.h counterterm is required by the ch-projected identity at one loop (D11 in
+  +> cluded), so NO contract revision is made for it.  The summed evanescent poles of the hh Green function ar
+  +> e nonzero but transverse; renormalising the hh Green function itself would need evanescent h.h counterter
+  +> ms -- outside this projection and NOT claimed.",
+    "controls": {
+      "operator_longitudinal": true,
+      "p_dot_G_D11_zero_exact_in_d": true,
+      "p_dot_G_sum_zero_exact_in_d": true,
+      "p_dot_G_evanescent_sum_zero": true,
+      "slot_sum_zero_all_7_assignments": true,
+      "evanescent_slot_sum_zero_all_7_assignments": true,
+      "D01_D03_individually_nonzero_incl_c_hat_h_tilde": true,
+      "D11_reaches_slot_under_trace_operator": true,
+      "4D_pole_sum_D01_D03_D11_transverse": true,
+      "4D_pole_D11_transverse": true,
+      "mutations_all_rejected": true
+    }
+  },
+  "D13_summary": {
+    "status": "regulated",
+    "sector_status": {
+      "4D_structures_T1_T3": "renormalized",
+      "evanescent_structures_E1_E2": "regulated: pole nonzero (E2), recorded and retained (R6); its counterter
+  +> m is an evanescent K'.c operator NOT in the p14r 4D basis (the p14r contract declares no evanescent count
+  +> erterm: open contract item, not absorbed)"
+    },
+    "convention": "G_{(mn) nu}(p) = V_Gamma1[K'_(mn)(-p), c^nu(p)] = kappa^2 * (i S_eps/(16 pi^2)) * Ghat, Gha
+  +> t = sum A_i(d) T_i * MB, MB = Ihat(1,1) = 1/eps + 2 - L + O(eps), L = log(-p^2/mu^2 - i0); indices lower 
+  +> (K' slot dual to h_(mn), c^nu -> lower nu); p_r lower components; p^2 = eta^{rs} p_r p_s",
+    "UV_pole_in_p14r_cK_basis": {
+      "coordinates": ["0", "3/8", "-1/4"],
+      "basis": [
+        {
+          "density": "(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 1, 
+  +> 1))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 2, 2))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 3, 3))] + (-
+  +> I)*[('c', 0, ()), ('K', (1, 1), (0, 0, 0))] + (I)*[('c', 0, ()), ('K', (1, 1), (0, 1, 1))] + (I)*[('c', 0
+  +> , ",
+          "T_coordinates": ["1", "0", "0"]
+        },
+        {
+          "density": "(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 1, 
+  +> 1))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 2, 2))] + (-I)*[('c', 0, ()), ('K', (0, 0), (0, 3, 3))] + (I
+  +> /2)*[('c', 0, ()), ('K', (0, 1), (0, 0, 1))] + (-I/2)*[('c', 0, ()), ('K', (0, 1), (1, 1, 1))] + (-I/2)*[
+  +> ('",
+          "T_coordinates": ["0", "1/2", "0"]
+        },
+        {
+          "density": "(I)*[('c', 0, ()), ('K', (0, 0), (0, 0, 0))] + (I)*[('c', 0, ()), ('K', (0, 1), (0, 0, 1
+  +> ))] + (I)*[('c', 0, ()), ('K', (0, 2), (0, 0, 2))] + (I)*[('c', 0, ()), ('K', (0, 3), (0, 0, 3))] + (I)*[
+  +> ('c', 0, ()), ('K', (1, 1), (0, 1, 1))] + (I)*[('c', 0, ()), ('K', (1, 2), (0, 1, 2))] + (I)*[('c', 0, ()
+  +> ),",
+          "T_coordinates": ["0", "0", "1"]
+        }
+      ]
+    },
+    "local_polynomial_in_p14r_cK_basis": ["0", "2/3", "-5/12"],
+    "MSbar_counterterm": "delta S = - kappa^2 (i S_eps/(16 pi^2)) (1/eps) * sum_k z_k O_k  (O_k the p14r c.K' 
+  +> densities, z = UV_pole coordinates); plus, for the evanescent structures, an evanescent counterterm (Gt_m
+  +> n p_nu p^2, (Gt p + Gt p) p^2) NOT in the p14r basis",
+    "evanescent_pole_nonzero": true,
+    "evanescent_counterterm_declared_in_p14r": false,
+    "local_ambiguity": "finite renormalization along the three p14r c.K' directions: G^R -> G^R + kappa^2 (i/(
+  +> 16 pi^2)) sum_k f_k O_k; a change of scale mu -> mu' shifts the local polynomial by + A_i(4) log(mu'^2/mu
+  +> ^2) along the UV-pole direction",
+    "renormalization_conditions": "MS-bar at mu: counterterm = pure pole (P14 normalization condition 0); no l
+  +> ower-degree K'.c contact (mu^2 K' dc) is generated (no scale but mu; pole is cubic in p); u^R_mu (XVI-O) 
+  +> not modified; an alternative momentum subtraction at p^2 = -M^2 differs by the finite renormalization A_i
+  +> (4) log(M^2/mu^2) - (local MS-bar polynomial) along the same directions",
+    "controls": {
+      "export_sha_pinned": true,
+      "route1_equals_route2_exact_in_d": true,
+      "covariant_fit_exact": true,
+      "fits_agree": true,
+      "pole_local_in_p14r_cK_span": true,
+      "ghost_equation_2iD_G_equals_ghost_self_energy": true,
+      "ghost_self_energy_pole_in_p14r_c_cb_span": true,
+      "nonlocal_equals_minus_pole": true,
+      "R5_d_retained": true,
+      "R5_structural_safeguard_active": true,
+      "mutations_all_rejected": true
+    }
+  },
+  "E2_summary": {
+    "outcome": "DECOUPLED (proof)",
+    "E2_status": "decoupled_from_ch_slot_proven",
+    "proof": {
+      "L1": "p_m E^{(mn)(rs)} = 0 (covariant identity; only g4.p = p used, no trace) -> {'residual_terms': 0, 
+  +> 'transverse': True}",
+      "L2": "E2_{(mn)nu} = (gt_{m nu} p_n + gt_{n nu} p_m) p^2 is longitudinal in (mn)",
+      "L3": "E2 . E = 0 identically: slot value 0 for every external assignment, exact in d",
+      "L4": "T1, E1 (non-longitudinal) give nonzero slot values; A_T1 = A_E1 = 0 for D13",
+      "order": "one loop: the ch projection of the one-loop identity is LINEAR in Gamma1; the E2 contribution 
+  +> is exactly zero (not O(eps)); no product of evanescent poles arises at this order"
+    },
+    "consequence": "the E2 pole does not enter the ch-projected identity; no evanescent counterterm is needed 
+  +> for the slot, so NO contract revision is made for E2.  The E2 pole remains a UV pole of the epsilon-scala
+  +> r (Gt) component of the K'.c Green function of Gamma1 (R6: retained, recorded); its renormalization is re
+  +> levant only outside the ch projection (other projections, higher loops) and is NOT claimed here",
+    "D13_graph_status": "regulated (unchanged: the E2 pole is not absorbed by a declared counterterm); ch-slot
+  +>  status: zero contribution (proven)",
+    "D13_slot_contribution": {
+      "Q4S (declared, R2)": "0",
+      "QdS (hat)": "0",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0"
+    },
+    "controls": {
+      "E_covariant_form_exact": true,
+      "E_covariant_form_unique": true,
+      "L1_E_transverse": true,
+      "L2_E2_longitudinal": true,
+      "L3_E2_slot_zero_all_externals": true,
+      "L4_slot_map_nontrivial": true,
+      "D13_A_T1_and_A_E1_zero": true,
+      "D13_slot_contribution_zero": true,
+      "mutations_all_rejected": true
+    }
+  },
+  "batchC_summary": {
+    "finding_C1_component_route": {
+      "statement": "the p14r per-component R3 lift produces Gt-quadratic component sums for rank-4 numerators 
+  +> (D01/D03) whose abstract value cannot be recovered after the component sums; the linear realization Gt = 
+  +> (4-d)M is not faithful there; Batch C therefore uses the covariant route (C1-C5), which evaluates the sam
+  +> e rules R1-R6 with free external indices only",
+      "components_with_Gt_quadratic_terms": {
+        "D01": 100,
+        "D03": 10
+      },
+      "demonstration": {
+        "expression": "sum_rs eta^rr eta^ss Gt_rs Gt_rs",
+        "abstract_value": "4 - d",
+        "realized_values": ["163215913117273*(d - 4)**2/154303081175887", "5518289693389*(d - 4)**2/3537691962
+  +> 25", "2454341204199841*(d - 4)**2/2188546635429025", "42946156473193*(d - 4)**2/18012647945161"],
+        "realization_dependent": true,
+        "equals_abstract": false
+      },
+      "D13_unaffected": "rank 3, linear in Gt; reproduced exactly by the covariant route (control)",
+      "contract_change": false
+    },
+    "D01_plus_D03_4D_pole_in_p14r_hh_basis": ["-23*I/240", "-61*I/240", "23*I/120", "61*I/120", "-7*I/20"],
+    "controls": {
+      "D13_reproduced_by_covariant_route": true,
+      "hh_basis_fits_exact": true,
+      "R5_structural_safeguard_active": true,
+      "mutations_all_rejected": true,
+      "D01_evaluated": true,
+      "D03_evaluated": true
+    },
+    "D11": "NOT evaluated (M2 undischarged); the hh slot is incomplete (D01 + D02 + D03 + D11 + D12)"
+  },
+  "one_point_slot_kappa1": {
+    "graphs": ["D14a", "D14b", "D14c"],
+    "kappa_order": 1,
+    "status": "vanishing_under_declared_prescription",
+    "note": "the order-kappa one-point slot; kept separate from D12 (kappa^2 hh)"
+  },
+  "reproducibility": {
+    "contract": "REBUILD_INSTRUCTIONS.md",
+    "entrypoint": "python3 tools/rebuild_from_source.py",
+    "source_zip": "XVI-P-p23-source-only.zip",
+    "reference_values": "reproducibility/reference_values_p23.json",
+    "author": {
+      "report": "reproducibility/author_rebuild_report_p19.json",
+      "present": true,
+      "report_pass": true,
+      "report_source_tree_sha256": "fcf90354d746e244fa2839048118bd8d64b1859ffd3825c0bfa3e1138ee88f36",
+      "current_source_tree_sha256": "262f1e46ecddcede2279e838299302669c80cd2f6d7644aee7cb54cb4c6a4fe4",
+      "bound_to_current_source": false,
+      "report_records_source_zip_sha256": true,
+      "inherited_mode": "vendored",
+      "environment": {
+        "python": "3.13.5",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0",
+        "pytest": "9.1.1",
+        "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+        "pdftotext": "pdftotext version 25.03.0",
+        "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+      }
+    },
+    "independent": {
+      "report": "reproducibility/independent_rebuild_report_p19.json",
+      "present": true,
+      "report_pass": true,
+      "report_source_tree_sha256": "fcf90354d746e244fa2839048118bd8d64b1859ffd3825c0bfa3e1138ee88f36",
+      "current_source_tree_sha256": "262f1e46ecddcede2279e838299302669c80cd2f6d7644aee7cb54cb4c6a4fe4",
+      "bound_to_current_source": false,
+      "report_records_source_zip_sha256": false,
+      "inherited_mode": null,
+      "environment": {
+        "python": "3.13.5",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0",
+        "pytest": "9.1.1",
+        "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+        "pdftotext": "pdftotext version 25.03.0",
+        "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+        "venv": "/workspace/indep_rebuild_p19/venv"
+      }
+    },
+    "p18_archive": "archival/p18",
+    "kind": "package evidence (XVI-O conv:package); not a mathematical certificate"
+  },
+  "XVI_P_registered": false,
+  "XVI_M_sha256": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+  "XVI_M_pin_ok": true,
+  "symmetry_restored": false,
+  "bulk_symmetry_restored": false,
+  "O1_closure": "NOT_CLOSED",
+  "insertion_status": "Frozen_negative_obstruction_preserved",
+  "XV_B_opened": false,
+  "XIV_J_opened": false,
+  "Route_B_discharged": false,
+  "u_R_c_delta_added": false,
+  "inputs_content_sha256_ignoring_timings_and_run_specific_keys": {
+    "P14_release.json": "23b5b7bd32da5e33b794827ae40dc2de0a73a547c9ec26d7a69b08b87e727b63",
+    "P15_release.json": "6010e0f56336e10d594a2834dc16395aebe89690224b08f293b82fa5db4797de",
+    "P16_release.json": "f81db7fdaf2e28a4451cfabb97db61b46b7f472e4b45ed911b8326b87d2893d6",
+    "P17_release.json": "97a548b4d29495bf648d1cb93b00f886980128a9d2eb5d8f7ddbd50f09ab13f1",
+    "P18_release.json": "93543ccdd7c0b3f4f95d0c3f6d12afcd078e5f04c4abebb35a7bd22ddeb5f938",
+    "P19_defect.json": "8ce344b285f7a5c4c81776659b690f78f464e1b33d909f2c72b8300ff1dc754e"
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p20",
+  "deliverable": "D11 normalisation pin via the trace-anomaly / C^2 coefficient (p19 reviewer blind spot)",
+  "source_certificate": "certificates/P18_D11.json",
+  "graph": "D11 (hh scalar loop, minimal coupling h.phi^2)",
+  "input_4D_UV_pole": {
+    "g4_mn g4_rs (p.p)^2": "-I/80",
+    "g4_mn p_r p_s (p.p)^1": "I/80",
+    "g4_mr g4_ns (p.p)^2": "-I/480",
+    "g4_mr p_n p_s (p.p)^1": "I/480",
+    "g4_rs p_m p_n (p.p)^1": "I/80",
+    "p_m p_n p_r p_s": "-I/60"
+  },
+  "orbit_convention": "covariant.orbit over the symmetric pairs (m,n), (r,s) (as in the D11 fit)",
+  "spin_decomposition": {
+    "c2_spin2": "-I/240",
+    "c0_spin0s": "-I/24",
+    "projector_norms": ["5", "1"],
+    "transverse": true,
+    "only_spin2_and_spin0s": true,
+    "ratio_c0_over_c2": "10"
+  },
+  "curvature_quadratic_forms_derived": {
+    "Riem2": {
+      "P2": "1",
+      "P0s": "1"
+    },
+    "Ric2": {
+      "P2": "1/4",
+      "P0s": "1"
+    },
+    "R2": {
+      "P2": "0",
+      "P0s": "3"
+    },
+    "C2": {
+      "P2": "1/2",
+      "P0s": "0"
+    },
+    "E_GaussBonnet": {
+      "P2": "0",
+      "P0s": "0"
+    }
+  },
+  "literature_a2_minimal_scalar": {
+    "C2": "1/120",
+    "R2_xi0": "1/72",
+    "source": "Birrell & Davies, Quantum Fields in Curved Space (CUP 1982), sec. 6.2 (a_2 of a scalar field); 
+  +> 't Hooft & Veltman, Ann. Inst. H. Poincare A20 (1974) 69 -- EXTERNAL, not package-derived",
+    "predicted_spin2": "1/240",
+    "predicted_spin0s": "1/24",
+    "predicted_ratio": "10"
+  },
+  "ratio_pin": {
+    "status": "PASS",
+    "statement": "spin-0 : spin-2 of the D11 4D UV pole = 10 : 1, derived from the certificate; equals the min
+  +> imal-scalar a_2 prediction (1/72)(3) : (1/120)(1/2)"
+  },
+  "absolute_pin": {
+    "status": "PASS",
+    "observed_common_factor_c2_vs_bare_a2": "-I",
+    "observed_common_factor_c0_vs_bare_a2": "-I",
+    "derivation_p21": {
+      "package_declarations_checked": {
+        "N_eps = i S_eps/(16 pi^2)": true,
+        "Gamma_1 = -i * graph sum": true,
+        "i Gamma_1 = int prefactor N/prod(q^2+i0)": true,
+        "G6: G = kappa^2 N_eps Ghat, Ghat = -i prefactor/kappa^2 int N/(D1D2)": true,
+        "g = eta + kappa h": true,
+        "S_phi = (1/2) int sqrt(-g) g^{mu nu} d phi d phi (minimal, xi = 0)": true,
+        "eta = (+,-,-,-)": true,
+        "d = 4 - 2 eps; Ihat(1,1) pole = +1/eps": true
+      },
+      "steps": {
+        "1_G_equals_Gamma2": "1",
+        "2_wick_sign_s_W_from_N_eps_and_Ihat_pole": "1",
+        "3_i_S_M_over_S_E (must be -1)": "-1",
+        "4_L_M_eff_over_L_E_eff": "-1",
+        "5_L_M_div_per_a2_over_eps": "1/(32*pi**2)",
+        "6_minkowski_quadratic_forms": {
+          "Riem2": {
+            "P2": "1",
+            "P0s": "1"
+          },
+          "Ric2": {
+            "P2": "1/4",
+            "P0s": "1"
+          },
+          "R2": {
+            "P2": "0",
+            "P0s": "3"
+          },
+          "C2": {
+            "P2": "1/2",
+            "P0s": "0"
+          },
+          "E_GaussBonnet": {
+            "P2": "0",
+            "P0s": "0"
+          }
+        }
+      },
+      "package_Gamma2_pole_per_kappa2_over_eps": {
+        "spin2": "1/(3840*pi**2)",
+        "spin0s": "1/(384*pi**2)"
+      },
+      "heat_kernel_prediction_per_kappa2_over_eps": {
+        "spin2": "1/(3840*pi**2)",
+        "spin0s": "1/(384*pi**2)"
+      },
+      "ratio_package_over_prediction": {
+        "spin2": "1",
+        "spin0s": "1"
+      },
+      "external_inputs": ["a_2 coefficients of a minimally coupled real scalar: C^2/120, (1/2)(xi-1/6)^2 R^2 (
+  +> Birrell-Davies sec. 6.2; 't Hooft-Veltman 1974)", "heat-kernel pole Tr ln Delta|_div = -(1/(16 pi^2 eps))
+  +>  int a_2 (Euclidean, d = 4-2eps)"],
+      "convention_choices_external": "none: every convention (G vs Gamma^(2), Minkowski i, Wick direction, sig
+  +> n of W_div, N_eps, kappa normalisation, signature) is fixed by the package declarations checked above",
+      "status": "PASS"
+    },
+    "statement": "p21: SIGN and MAGNITUDE derived exactly from 1/2 Tr ln of the minimal scalar loop under the 
+  +> package's declared conventions (G = Gamma^(2); N_eps = i/(16 pi^2) and the +1/eps bubble pole fix the Wic
+  +> k direction, i S_M = -S_E, L_M = -L_E; g = eta + kappa h; eta = (+,-,-,-)): Gamma^(2)|_pole = kappa^2/(16
+  +>  pi^2 eps) [p^4 P2/240 + p^4 P0s/24], equal to the package pole kappa^2 N_eps Ghat/eps exactly (ratio 1, 
+  +> both spins).  External inputs are mathematics only (a_2 coefficients; heat-kernel pole formula); no exter
+  +> nal convention choice.  p20 had left this OPEN."
+  },
+  "mutations": {
+    "drop_graph_D11": {
+      "c2": "0",
+      "c0": "0",
+      "ratio": "None",
+      "ratio_pin_passes": false,
+      "detected_by_ratio_pin": true,
+      "absolute_pin_passes": false,
+      "detected_by_absolute_pin": true
+    },
+    "D11_normalisation_x2": {
+      "c2": "-I/120",
+      "c0": "-I/12",
+      "ratio": "10",
+      "ratio_pin_passes": true,
+      "detected_by_ratio_pin": false,
+      "absolute_pin_passes": false,
+      "detected_by_absolute_pin": true
+    },
+    "D11_sign_flip": {
+      "c2": "I/240",
+      "c0": "I/24",
+      "ratio": "10",
+      "ratio_pin_passes": true,
+      "detected_by_ratio_pin": false,
+      "absolute_pin_passes": false,
+      "detected_by_absolute_pin": true
+    },
+    "swap_g4g4_structures": {
+      "c2": "-I/40",
+      "c0": "-I/32",
+      "ratio": "5/4",
+      "ratio_pin_passes": false,
+      "detected_by_ratio_pin": true,
+      "absolute_pin_passes": false,
+      "detected_by_absolute_pin": true
+    }
+  },
+  "reading": "drop D11 and a structure swap are detected by the ratio pin; an overall x2 or a sign flip keeps 
+  +> the ratio and is detected by the absolute pin (p21) and, for x2, by M2 (P18)",
+  "corrected_in_revision": "p21 (absolute pin derived; p20 had it OPEN)",
+  "D11_absolute_pin_verified": true,
+  "D11_ratio_pin_verified": true,
+  "c2_spin2": "-I/240",
+  "c0_spin0s": "-I/24",
+  "ratio_c0_over_c2": "10",
+  "ratio_pin_status": "PASS",
+  "absolute_pin_status": "PASS",
+  "seconds": 5.3
+}

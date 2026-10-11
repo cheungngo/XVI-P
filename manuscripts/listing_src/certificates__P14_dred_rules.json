@@ -1,0 +1,192 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p14r",
+  "deliverable": "P.5 entry: operational DRED rules (executable)",
+  "dred_rules_verified": true,
+  "rules": {
+    "R1_spaces": "Q4S = QdS (+) Q(4-d)S; g4 = ghat + gtilde; tr g4 = 4, tr ghat = d, tr gtilde = 4-d; ghat.gha
+  +> t = ghat, gtilde.gtilde = gtilde, ghat.gtilde = 0, g4.X = X",
+    "R2_momenta": "loop momentum l in QdS; external momenta p in QdS (p.gtilde = 0, stated choice); field/vert
+  +> ex/polarisation indices in Q4S",
+    "R3_lifting": "exported lower components l_r = l.e_(r) = l.ehat_(r), p_r = p.e_(r), e_(r) the eta-orthonor
+  +> mal basis of Q4S; vertex tensors lifted with eta -> g4",
+    "R4_reduction": "Gram/PV projection on symmetric ghat/p tensors with symbolic d; ghat_rs = eta_rs - Gt_rs,
+  +>  eta^{rs} Gt_rs = 4-d, Gt_rs p^s = 0",
+    "R5_order": "all contractions (incl. external 4D projection) BEFORE the Laurent expansion; d kept symbolic
+  +>  through MS-bar subtraction and finite-part extraction; (d-4) x pole retained",
+    "R6_evanescent": "evanescent remainders arise in general and are retained (Gt structures; (4-d) x pole fin
+  +> ite terms); the p14 'none arise' statement is withdrawn"
+  },
+  "literature_background_only": ["W. Siegel, Phys. Lett. B84 (1979) 193", "W. Siegel, Phys. Lett. B94 (1980) 3
+  +> 7", "D. Stockinger, JHEP 0503 (2005) 076, hep-ph/0503129", "A. Signer, D. Stockinger, Nucl. Phys. B808 (2
+  +> 009) 88, arXiv:0807.4424"],
+  "trace_rules_check": {
+    "tr_g4_is_4": true,
+    "tr_ghat_is_symbolic_d": true,
+    "tr_ghat_plus_tr_gtilde_is_4": true,
+    "tr_gtilde_is_4_minus_d_nonzero": true,
+    "pass": true
+  },
+  "known_reductions": {
+    "rank2_tadpole_eq_ghat_over_d": true,
+    "rank4_tadpole_eq_sym_ghatghat_over_d_dplus2": true,
+    "rank2_two_point_B00": true,
+    "rank2_two_point_B11": true,
+    "pass": true
+  },
+  "toy_checks": {
+    "placeholders": "J = a/eps + b + c eps (generic symbols; not a loop value); d = 4 - 2 eps",
+    "T1_four_d_part": {
+      "finite": "a/8 + b/4",
+      "pole": "a/(4*epsilon)",
+      "equals_reference": true
+    },
+    "T2_evanescent_trace": {
+      "finite": "-a/2",
+      "pole": "0",
+      "equals_reference": true,
+      "pre_laurent": "J_T[1,0] - 4*J_T[1,0]/d",
+      "is_d_minus_4_times_pole": true
+    },
+    "reference": {
+      "T1_finite": "a/8 + b/4",
+      "T1_pole": "a/(4*epsilon)",
+      "T2_finite": "-a/2",
+      "T2_pole": "0"
+    }
+  },
+  "mutations": {
+    "premature_d4": {
+      "rejected": true,
+      "reason": "PrematureD4Substitution: d -> 4 outside substitute_d (R5: d is opaque before the Laurent expa
+  +> nsion)",
+      "finite_part_if_not_caught": "b/4",
+      "finite_part_differs": true
+    },
+    "trace_ghat_eq_4": {
+      "rules_check": {
+        "tr_g4_is_4": true,
+        "tr_ghat_is_symbolic_d": false,
+        "tr_ghat_plus_tr_gtilde_is_4": true,
+        "tr_gtilde_is_4_minus_d_nonzero": false,
+        "pass": false
+      },
+      "structurally_refused": true,
+      "T1_finite": "b/4",
+      "T2_finite": "0",
+      "rejected": true
+    },
+    "contract_after_laurent": {
+      "rejected": true,
+      "reason": "UncontractedObjects: ['Gt_00', 'Gt_11', 'Gt_22', 'Gt_33']"
+    }
+  },
+  "mutations_all_rejected": true,
+  "lift_of_exported_integrands": {
+    "D01": {
+      "present": true,
+      "components": 100,
+      "max_l_rank": 4,
+      "components_with_evanescent_part": 100,
+      "scalar_integrals": "J_D01[a,b] symbols (NOT evaluated)"
+    },
+    "D02": {
+      "present": true,
+      "components": 94,
+      "max_l_rank": 2,
+      "components_with_evanescent_part": 70,
+      "scalar_integrals": "J_D02[a,b] symbols (NOT evaluated)"
+    },
+    "D03": {
+      "present": true,
+      "components": 100,
+      "max_l_rank": 4,
+      "components_with_evanescent_part": 100,
+      "scalar_integrals": "J_D03[a,b] symbols (NOT evaluated)"
+    },
+    "D11": {
+      "present": true,
+      "components": 100,
+      "max_l_rank": 4,
+      "components_with_evanescent_part": 100,
+      "scalar_integrals": "J_D11[a,b] symbols (NOT evaluated)"
+    },
+    "D12": {
+      "present": true,
+      "components": 94,
+      "max_l_rank": 2,
+      "components_with_evanescent_part": 94,
+      "scalar_integrals": "J_D12[a,b] symbols (NOT evaluated)"
+    },
+    "D13": {
+      "present": true,
+      "components": 40,
+      "max_l_rank": 3,
+      "components_with_evanescent_part": 40,
+      "scalar_integrals": "J_D13[a,b] symbols (NOT evaluated)"
+    },
+    "D14a": {
+      "present": true,
+      "components": 10,
+      "max_l_rank": 2,
+      "components_with_evanescent_part": 10,
+      "scalar_integrals": "J_D14a[a,b] symbols (NOT evaluated)"
+    },
+    "D14b": {
+      "present": true,
+      "components": 4,
+      "max_l_rank": 2,
+      "components_with_evanescent_part": 4,
+      "scalar_integrals": "J_D14b[a,b] symbols (NOT evaluated)"
+    },
+    "D14c": {
+      "present": true,
+      "components": 10,
+      "max_l_rank": 2,
+      "components_with_evanescent_part": 10,
+      "scalar_integrals": "J_D14c[a,b] symbols (NOT evaluated)"
+    }
+  },
+  "evanescent_parts_present_in_exports": true,
+  "p15_contract_correction": {
+    "finding": "F1_premature_d4_guard_heuristic (reproducibility/independent_rebuild_report_p14r.json)",
+    "old_safeguard": "heuristic: raise iff the reduction introduced d and d is absent before the Laurent expan
+  +> sion (false positive and false negative on the reviewer's eta-trace toy)",
+    "new_safeguard": "structural/provenance: OpaqueDimension d (subs/xreplace raise outside substitute_d); sub
+  +> stitute_d records every authorised substitution; numeric traces of ghat/gtilde refused (NumericTraceForbi
+  +> dden) unless display_only",
+    "released_p14r_values_affected": false,
+    "why_unaffected": "in p14r Pipeline.laurent was applied only to the toy placeholders; no loop integral was
+  +>  evaluated",
+    "regression_toys": {
+      "eta_trace_correct": {
+        "finite": "a1*m**4",
+        "raised": false,
+        "ok": true
+      },
+      "eta_trace_premature_d4": {
+        "raised": true,
+        "reason": "d -> 4 outside substitute_d (R5: d is opaque before the Laurent expansion)",
+        "finite_if_forced": "m**4*(a1 - 1/2)",
+        "ok": true
+      },
+      "A0_mixing": {
+        "correct_finite": "a1*m**4",
+        "mixed_refused": true,
+        "finite_if_forced": "m**4*(a1 + 1/2)",
+        "shift": "m**4/2",
+        "ok": true
+      },
+      "B0_mixing": {
+        "correct_finite": "0",
+        "mixed_refused": true,
+        "finite_if_forced": "-p2/6",
+        "shift": "-p2/6",
+        "ok": true
+      },
+      "pass": true
+    }
+  },
+  "loop_evaluations_performed": false,
+  "seconds": 85.0
+}

@@ -1,0 +1,227 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p16",
+  "deliverable": "p16 priority 1: E2 evanescent pole vs the ch slot",
+  "question": "does the D13 E2 pole (1/16; A_E2 = 3/(16(d-1))) decouple from the ch-projected slot?",
+  "outcome": "DECOUPLED (proof)",
+  "E2_status": "decoupled_from_ch_slot_proven",
+  "slot": {
+    "row": "(S0, Gamma1^[2]) s1 h:h^2 (ledgers/P13_ch_dependency_rows.json; the only row containing D13)",
+    "functional": "X_D13[c,h] = int G_{(mn) nu}(p) c^nu(p) E^{(mn)(rs)}(p) h_(rs)(-p)",
+    "E": "operator of the h^2 monomials of S_Psi^(0) (counterterm_domain.S0_density, pw_vertex extraction; exa
+  +> ct covariant form recovered, unique)",
+    "E_fit": {
+      "n_ansatz": 16,
+      "n_used": 5,
+      "exact": true,
+      "bad_components": [],
+      "rank": 16,
+      "unique": true,
+      "offdiag_weight": "2",
+      "upper": true
+    },
+    "E_covariant": [
+      [
+        "-1/2",
+        [
+          ["g4", "m", "r"],
+          ["p", "n"],
+          ["p", "s"]
+        ]
+      ],
+      [
+        "-1/2",
+        [
+          ["g4", "m", "s"],
+          ["p", "n"],
+          ["p", "r"]
+        ]
+      ],
+      [
+        "-1/2",
+        [
+          ["g4", "n", "r"],
+          ["p", "m"],
+          ["p", "s"]
+        ]
+      ],
+      [
+        "-1/2",
+        [
+          ["g4", "n", "s"],
+          ["p", "m"],
+          ["p", "r"]
+        ]
+      ],
+      [
+        "-p.p",
+        [
+          ["g4", "m", "n"],
+          ["g4", "r", "s"]
+        ]
+      ],
+      [
+        "1",
+        [
+          ["g4", "m", "n"],
+          ["p", "r"],
+          ["p", "s"]
+        ]
+      ],
+      [
+        "1",
+        [
+          ["g4", "r", "s"],
+          ["p", "m"],
+          ["p", "n"]
+        ]
+      ],
+      [
+        "p.p/2",
+        [
+          ["g4", "m", "r"],
+          ["g4", "n", "s"]
+        ]
+      ],
+      [
+        "p.p/2",
+        [
+          ["g4", "m", "s"],
+          ["g4", "n", "r"]
+        ]
+      ]
+    ]
+  },
+  "proof": {
+    "L1": "p_m E^{(mn)(rs)} = 0 (covariant identity; only g4.p = p used, no trace) -> {'residual_terms': 0, 't
+  +> ransverse': True}",
+    "L2": "E2_{(mn)nu} = (gt_{m nu} p_n + gt_{n nu} p_m) p^2 is longitudinal in (mn)",
+    "L3": "E2 . E = 0 identically: slot value 0 for every external assignment, exact in d",
+    "L4": "T1, E1 (non-longitudinal) give nonzero slot values; A_T1 = A_E1 = 0 for D13",
+    "order": "one loop: the ch projection of the one-loop identity is LINEAR in Gamma1; the E2 contribution is
+  +>  exactly zero (not O(eps)); no product of evanescent poles arises at this order"
+  },
+  "slot_table": {
+    "T1": {
+      "Q4S (declared, R2)": "-2*c^.p*p.p*(a.b*p.p - a^.p*b^.p)",
+      "QdS (hat)": "-2*c^.p*p.p*(a^.b^*p.p - a^.p*b^.p)",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0"
+    },
+    "T2": {
+      "Q4S (declared, R2)": "0",
+      "QdS (hat)": "0",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0"
+    },
+    "T3": {
+      "Q4S (declared, R2)": "0",
+      "QdS (hat)": "0",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0"
+    },
+    "E1": {
+      "Q4S (declared, R2)": "c^.p*p.p*(d*a.b*p.p - d*a^.p*b^.p - 4*a.b*p.p + 4*a^.p*b^.p + a~.b~*p.p)",
+      "QdS (hat)": "c^.p*p.p*(d - 4)*(a^.b^*p.p - a^.p*b^.p)",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0"
+    },
+    "E2": {
+      "Q4S (declared, R2)": "0",
+      "QdS (hat)": "0",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0"
+    }
+  },
+  "external_assignments": {
+    "Q4S (declared, R2)": ["c", "a", "b"],
+    "QdS (hat)": ["c^", "a^", "b^"],
+    "c tilde, h hat": ["c~", "a^", "b^"],
+    "c tilde, h mixed": ["c~", "a~", "b^"],
+    "c hat, h mixed": ["c^", "a~", "b^"],
+    "all tilde": ["c~", "a~", "b~"]
+  },
+  "D13_slot_contribution": {
+    "Q4S (declared, R2)": "0",
+    "QdS (hat)": "0",
+    "c tilde, h hat": "0",
+    "c tilde, h mixed": "0",
+    "c hat, h mixed": "0",
+    "all tilde": "0"
+  },
+  "consequence": "the E2 pole does not enter the ch-projected identity; no evanescent counterterm is needed fo
+  +> r the slot, so NO contract revision is made for E2.  The E2 pole remains a UV pole of the epsilon-scalar 
+  +> (Gt) component of the K'.c Green function of Gamma1 (R6: retained, recorded); its renormalization is rele
+  +> vant only outside the ch projection (other projections, higher loops) and is NOT claimed here",
+  "D13_graph_status": "regulated (unchanged: the E2 pole is not absorbed by a declared counterterm); ch-slot s
+  +> tatus: zero contribution (proven)",
+  "mutations": {
+    "M1_gauge_fixed_operator_qq2P": {
+      "E2_slot_nonzero": true,
+      "rejected": true,
+      "slot_values": {
+        "Q4S (declared, R2)": "p.p**2*(a^.p*b~.c~ + a~.c~*b^.p)",
+        "QdS (hat)": "0",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "a~.c~*b^.p*p.p**2",
+        "c hat, h mixed": "0",
+        "all tilde": "0"
+      },
+      "reason": "L1 fails: p_m (q^2 P)^(mn)(rs) has 3 residual terms (q^2 P is not the h^2-monomial operator o
+  +> f the slot and is not transverse)",
+      "accepted_as_rejection": true
+    },
+    "M2_E1_in_place_of_E2": {
+      "E2_slot_nonzero": true,
+      "rejected": true,
+      "slot_values": {
+        "Q4S (declared, R2)": "c^.p*p.p*(d*a.b*p.p - d*a^.p*b^.p - 4*a.b*p.p + 4*a^.p*b^.p + a~.b~*p.p)",
+        "QdS (hat)": "c^.p*p.p*(d - 4)*(a^.b^*p.p - a^.p*b^.p)",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "0",
+        "c hat, h mixed": "0",
+        "all tilde": "0"
+      },
+      "reason": "L2 fails: gt_mn p_nu p^2 is not longitudinal in (mn)",
+      "accepted_as_rejection": true
+    },
+    "M3_wrong_index_slot": {
+      "E2_slot_nonzero": true,
+      "rejected": true,
+      "slot_values": {
+        "Q4S (declared, R2)": "c^.p*p.p*(d*a.b*p.p - d*a^.p*b^.p - 4*a.b*p.p + 4*a^.p*b^.p + a~.b~*p.p)",
+        "QdS (hat)": "c^.p*p.p*(d - 4)*(a^.b^*p.p - a^.p*b^.p)",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "0",
+        "c hat, h mixed": "0",
+        "all tilde": "0"
+      },
+      "reason": "L2 fails for the mis-slotted structure (gt_mn p_nu term)",
+      "accepted_as_rejection": true
+    }
+  },
+  "controls": {
+    "E_covariant_form_exact": true,
+    "E_covariant_form_unique": true,
+    "L1_E_transverse": true,
+    "L2_E2_longitudinal": true,
+    "L3_E2_slot_zero_all_externals": true,
+    "L4_slot_map_nontrivial": true,
+    "D13_A_T1_and_A_E1_zero": true,
+    "D13_slot_contribution_zero": true,
+    "mutations_all_rejected": true
+  },
+  "E2_decoupling_proven": true,
+  "authorised_d_substitutions": {},
+  "seconds": 5.6
+}

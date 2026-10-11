@@ -1,0 +1,329 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p14r",
+  "deliverable": "P.5 entry D2: quantum prescription and D11 matching note",
+  "quantum_prescription_defined": true,
+  "D11_matching_defined": true,
+  "D11_matching_verified": false,
+  "D11_matching_verified_reason": "M2 (nonlocal agreement on U) and L_match require the evaluated DR D11 ampli
+  +> tude (p15+); only M0, M1, M3-space, M4-M7 are established",
+  "prescription": {
+    "id": "P14_DRED_MSbar_FeynmanI0",
+    "regularization": "dimensional reduction (DRED), operational rules R1-R6 (certificates/P14_dred_rules.json
+  +> , code/p5_entry/dred.py): quasi-4D metric g4 = ghat + gtilde, tr g4 = 4, tr ghat = d, tr gtilde = 4 - d; 
+  +> loop momentum l and external momenta p in the d-dimensional space QdS (p.gtilde = 0); field/vertex/polari
+  +> sation indices quasi-4D; int d^d l/(2 pi)^d with mu^{2 eps}",
+    "lifting": "exported numerators are polynomials in lower components l_r, p_r at fixed external indices; l_
+  +> r := l.e_(r) (e_(r) the eta-orthonormal basis of Q4S), p_r = p.e_(r); vertex tensors lifted with eta -> g
+  +> 4",
+    "subtraction": "MS-bar: subtract the pole in the combination 1/eps - gamma_E + log 4 pi; scale mu",
+    "i0": "Feynman: every propagator denominator q^2 + i0 (eta = +,-,-,-); Wick rotation l0 = i l4 implied",
+    "tensor_reduction": "Gram/Passarino-Veltman projection on symmetric ghat/p tensors with symbolic d; free q
+  +> uasi-4D indices are projected with ghat_rs = eta_rs - Gt_rs (Gt_rs evanescent, eta^{rs} Gt_rs = 4-d, Gt_r
+  +> s p^s = 0)",
+    "order_of_operations": "ALL index contractions (incl. the external 4D projection) BEFORE the Laurent expan
+  +> sion; d symbolic through MS-bar subtraction and finite-part extraction; (d-4) x pole terms retained; prem
+  +> ature d = 4 is detected (PrematureD4Substitution)",
+    "evanescent": "evanescent remainders DO arise (Gt structures in every exported graph; (4-d) x pole finite 
+  +> terms after contraction); they are retained, never dropped (the p14 'none arise' statement is withdrawn)"
+  +> ,
+    "literature_background_only": "Siegel PLB 84 (1979) 193, PLB 94 (1980) 37; Stockinger hep-ph/0503129; Sign
+  +> er-Stockinger arXiv:0807.4424",
+    "scaleless_integrals": "PART of the definition (DR value of a scaleless massless integral) but NOT APPLIED
+  +>  in p14: no tadpole value is assigned; D12 stays Missing; never replaced by zero",
+    "massless": true,
+    "IR": "no IR regulator needed at the integrand level; IR/UV separation of scaleless integrals is deferred 
+  +> together with their evaluation (p15+)",
+    "applies_to": ["D01", "D02", "D03", "D11 (P side, matching only)", "D12", "D13", "D14a", "D14b", "D14c"],
+    "consistency_with_XVI_O": "XVI-O fixes D12/one-point by dimensional_regularization_m0 (coincident prescrip
+  +> tion); P's DR is the same family; P does NOT import XVI-O's prescription VALUE 0 (D12 Missing). XVI-O's D
+  +> 11 extension is analytic FP in position space (NOT momentum MS); the two are related only through matchin
+  +> g (M2-M4), not identified."
+  },
+  "prescription_checks": {
+    "propagators_are_verified_Hessian_inverses": true,
+    "scalar_i0_matches_Gate0": true,
+    "XVI_O_coincident_prescription_is_DR_m0": true,
+    "XVI_O_D11_is_NOT_momentum_MS": true,
+    "no_value_imported_D12": true,
+    "quantum_object_defined": true,
+    "operational_DRED_rules_verified": true,
+    "evanescent_remainders_retained": true,
+    "all_denominators_feynman_i0": true
+  },
+  "power_counting": {
+    "D01": {
+      "denominators": ["l^2+i0", "(l-p)^2+i0"],
+      "numerator_degree": 4,
+      "superficial_degree": 4,
+      "all_feynman_i0": true
+    },
+    "D02": {
+      "denominators": ["l^2+i0"],
+      "numerator_degree": 2,
+      "superficial_degree": 4,
+      "all_feynman_i0": true
+    },
+    "D03": {
+      "denominators": ["(l-p)^2+i0", "l^2+i0"],
+      "numerator_degree": 4,
+      "superficial_degree": 4,
+      "all_feynman_i0": true
+    },
+    "D11": {
+      "denominators": ["l^2+i0", "(l-p)^2+i0"],
+      "numerator_degree": 4,
+      "superficial_degree": 4,
+      "all_feynman_i0": true
+    },
+    "D12": {
+      "denominators": ["l^2+i0"],
+      "numerator_degree": 2,
+      "superficial_degree": 4,
+      "all_feynman_i0": true
+    },
+    "D13": {
+      "denominators": ["l^2+i0", "(p-l)^2+i0"],
+      "numerator_degree": 3,
+      "superficial_degree": 3,
+      "all_feynman_i0": true
+    },
+    "D14a": {
+      "denominators": ["l^2+i0"],
+      "numerator_degree": 2,
+      "superficial_degree": 4,
+      "all_feynman_i0": true
+    },
+    "D14b": {
+      "denominators": ["l^2+i0"],
+      "numerator_degree": 2,
+      "superficial_degree": 4,
+      "all_feynman_i0": true
+    },
+    "D14c": {
+      "denominators": ["l^2+i0"],
+      "numerator_degree": 2,
+      "superficial_degree": 4,
+      "all_feynman_i0": true
+    }
+  },
+  "D12_status": "Missing",
+  "D12_value_imported": false,
+  "matching": {
+    "baseline_M0": {
+      "baseline": "S_inv (XVI-N invariant extended action), NOT S_D",
+      "no_switch_fields": true,
+      "a1_vertex_XVI_O": "a1 = (1/2) tau eta - h",
+      "a1_P": "a1 = (1/2) tau eta - h (scalar_B_series, XI-A)",
+      "NOT_S_D_P13": true,
+      "pass": true
+    },
+    "lemmas_referenced": {
+      "lem:d11-prefactor": {
+        "XVI_O": "Pi = (i kappa^2/4) T",
+        "status": "Constructed",
+        "pass": true,
+        "used_in": "M1 (prefactor i kappa^2/4 imported, compared exactly)"
+      },
+      "lem:analytic_FP_u_mu_R_o70": {
+        "prescription_id": "analytic_FP_u_mu_R_o70",
+        "pass": true,
+        "u_mu_R": {
+          "definition": "FP_{zeta=0}[ mu^{2 zeta} (Q-i0)^{-2+zeta} ]",
+          "restricts_to": "(Q-i0)^{-2} on U",
+          "sd_max": 4,
+          "Lorentz_covariant": true,
+          "even": true,
+          "extra_c_delta": false
+        },
+        "used_in": "M2/M5 (XVI-O side only)"
+      },
+      "lem:BV_rules_on_U": {
+        "status": "Constructed",
+        "pass": true,
+        "all_256_symbolic": true,
+        "alpha": "A**2/60",
+        "beta": "A**2/18",
+        "used_in": "M2 (XVI-O's Pi_tr^R on U is the matching target)"
+      }
+    },
+    "M1_integrand_identity": {
+      "identity": "-i * prefactor_P * N^P_{AB}(l,p)/(D1 D2)  ==  (i kappa^2/4) R_A R_B V V [C~(l)C~(l-p) + C~(
+  +> l)C~(l-p)]_{AB}",
+      "D1": "l^2 + i0",
+      "D2": "(l-p)^2 + i0",
+      "P_prefactor": "kappa**2/2",
+      "P_routing": {
+        "A": ["h_a: p", "phi: -l", "phi: l-p"],
+        "B": ["h_b: -p", "phi: l", "phi: p-l"],
+        "propagators": ["<phi phi>(l)", "<phi phi>(l-p)"]
+      },
+      "XVI_O_V_tensor": "code/matter_loop/d11_tensor.py::V_tensor (frozen, imported)",
+      "XVI_O_prefactor": "i kappa^2/4 (O5_Gate2_normalized_D11)",
+      "C_tilde": "C~_ab(k) = k_a k_b * i/(k^2+i0)  (FT of C = -d_a d_b D_F, d -> ik)",
+      "raising_map": "h^{mu nu} = eta^{mu a} eta^{nu b} h_ab; d/dh_(ab) carries orbit multiplicity 2 for a != 
+  +> b",
+      "normalisation": "Gamma_1^(2) = (1/2) int h^{mu nu} Pi_{mu nu rho sigma} h^{rho sigma} (XVI-O) <-> Gamma
+  +> _1^{AB} = d^2 Gamma_1/dh_A dh_B (P ordered extraction); i Gamma_1 = graph sum",
+      "component_pairs_checked": 100,
+      "nonzero_pairs": 100,
+      "mismatches": [],
+      "recomputed_integrand_sha256": "6afa9cc07776ed4a77077986ffa3aa2ab50936cff13068f98fba9c3017958609",
+      "exported_integrand_sha256": "6afa9cc07776ed4a77077986ffa3aa2ab50936cff13068f98fba9c3017958609",
+      "bound_to_export": true,
+      "pass": true,
+      "seconds": 1.8
+    },
+    "M2_nonlocal_agreement_on_U": {
+      "definition": "for all test functions f in D(U), U = R^4 \\ {0}: <FT^{-1}[P^DR_{AB}](z), f> = <R_A R_B P
+  +> i_tr^R(z), f>, Pi_tr^R = (i kappa^2/4) K u^R_mu (alpha = A^2/60, beta = A^2/18, A = 1/(4 pi^2)); mu-indep
+  +> endent on U",
+      "status": "defined_not_verified",
+      "requires": "evaluated DR D11 amplitude (Batch, p15+)",
+      "integrand_level_evidence": "M1 (exact integrand identity) -- not a proof of M2"
+    },
+    "M3_local_difference": {
+      "definition": "L_match := FT^{-1}[P^DR_{AB}] - R_A R_B Pi_tr^R, a distribution supported at z = 0 IF M2 
+  +> holds",
+      "labels": {
+        "scalar_extension_scaling_degree": 4,
+        "kernel_differential_order": 4,
+        "kernel_scaling_degree_bound": 8,
+        "degree_of_divergence_bound": 4,
+        "local_contact_derivative_order_bound": 4,
+        "contact_scaling_degree_rule": "sd(d^alpha delta) = 4 + |alpha|  (in 4 dimensions)",
+        "labels_consistent": true
+      },
+      "wording": "Kernel scaling degree at most eight; degree of divergence at most four; hence the local ambi
+  +> guity has derivative order at most four.",
+      "conditional_on": "M2_nonlocal_agreement_on_U (defined, NOT verified)",
+      "conditional_statement": "IF M2 holds, then L_match vanishes on U = R^4 \\ {0}, hence is supported at {0
+  +> }; with kernel scaling degree <= 8 it is a finite sum of d^alpha delta with 4 + |alpha| <= 8, i.e. it lie
+  +> s in the bounded contact space of derivative order <= 4",
+      "bounded_contact_space": {
+        "order_0": {
+          "mu_power": 4,
+          "dimension": 2,
+          "transverse_subspace_dimension": 0
+        },
+        "order_2": {
+          "mu_power": 2,
+          "dimension": 4,
+          "transverse_subspace_dimension": 1
+        },
+        "order_4": {
+          "mu_power": 0,
+          "dimension": 5,
+          "transverse_subspace_dimension": 2
+        }
+      },
+      "odd_orders": "absent: four tensor indices built from p and eta need an even number of p's",
+      "normalization_condition": "normalization condition N4 (EXPLICIT, imposed): L_match is homogeneous of de
+  +> gree exactly four in p, i.e. it contains no mu^4 (order-0) and no mu^2 p^2 (order-2) contact terms.  This
+  +>  is NOT implied by 'no other scale': mu itself is a scale, so mu^{4-|alpha|} d^alpha delta with |alpha| =
+  +>  0, 2 are dimensionally allowed",
+      "lower_degree_contacts_excluded_by_N4": {
+        "order_0_mu4": 2,
+        "order_2_mu2": 4
+      },
+      "under_N4": "L_match lies in the order-4 (degree-4) hh span",
+      "dimension": 5,
+      "transverse_subspace_dimension": 2,
+      "matches_counterterm_hh_sector": true,
+      "XVI_O_contact_ansatz_ids": ["L0_hh", "L0_tr", "L2_Box", "L2_trBox", "L2_divdiv", "L2_divtr", "L4_Box2",
+  +>  "L4_trBox2", "L4_mixed"],
+      "XVI_O_order4_elements": 3,
+      "XVI_O_ansatz_NOT_proved_spanning": true,
+      "comparison_with_XVI_O_ansatz": "XVI-O's contact ansatz is a candidate list (NOT_proved_spanning) with 3
+  +>  named order-4 entries, one of them the collective 'L4_mixed'; P enumerates the order-4 space explicitly:
+  +>  5 structures (transverse subspace 2). No contradiction; P's list is the explicit one used for M3/M4",
+      "XVI_O_order_lt_4_elements_excluded_by_N4": ["L0_hh", "L0_tr", "L2_Box", "L2_trBox", "L2_divdiv", "L2_di
+  +> vtr"],
+      "pass": true,
+      "status": "conditional on M2; space enumerated; degree 4 imposed by N4; L_match not computed"
+    },
+    "M4_finite_adjustments": {
+      "rule": "under M2 and N4, L_match (and any finite renormalization) is booked ONLY as P-side counterterms
+  +>  in the hh sector of P14_counterterm_domain (5 elements; transverse subspace 2 if the P amplitude is tran
+  +> sverse); u^R_mu is NOT modified; without N4 the order-0/2 contacts (mu^4, mu^2 p^2) would have to be adde
+  +> d to that sector",
+      "u_R_extra_c_delta_XVI_O": false,
+      "u_R_c_delta_added_by_P": false,
+      "scalar_extension_prescription_preserved": true,
+      "XVI_O_D11_kernel_counterterm": "earned"
+    },
+    "M5_residue": {
+      "r": "-i * pi**2",
+      "derived_from": "constructive_F_holomorphy_THEN_second_recurrence_plus_Gate0",
+      "holomorphy_proof_pass": true,
+      "statement": "r = -i pi^2 is XVI-O-side, valid only AFTER constructive holomorphy of F(zeta) = (Q-i0)^ze
+  +> ta; P's MS-bar 1/eps pole is P-side; no identification of the P pole with r is asserted in p14"
+    },
+    "M6_provenance": {
+      "files": 24,
+      "all_pinned_ok": true,
+      "pins": {
+        "code/matter_loop/d11_Ww_reference.py": "445b0fed527cedb2af36aab30ce08c87a88f7b2654f523dd427c993c8c590
+  +> f71",
+        "code/matter_loop/d11_contact_moments.py": "2b6d3f28853d091e87a07a2a6ede52e9cd0da0dfdb90812006952fb2e8
+  +> d2f5c0",
+        "code/matter_loop/d11_divergences.py": "a2cf807e6f76b2bec13acfce8a6949080261e32958fa278a6eeeb1fadc222b
+  +> 26",
+        "code/matter_loop/d11_extension.py": "e92082154d3f68470001d9bfb4ad334eddd59d3b6021c2eb2b3c46f19f5159d5
+  +> ",
+        "code/matter_loop/d11_global_representation.py": "fabe63f6b455d21fa697858a005af16578f94405f5673559f361
+  +> 3609484e99e6",
+        "code/matter_loop/d11_normalized.py": "c02f97ae926269c1765c5410b4b897aa664a141978224a95af4572b4b2caeeb
+  +> 0",
+        "code/matter_loop/d11_route1_transverse.py": "7d02ca8fa2c9fc2354a732ba9c1121e64968580bf8c393047da5d7a8
+  +> e85fde86",
+        "code/matter_loop/d11_scalar_extension.py": "21a8836b69c2c9599450e1369e2e5d7cfce1ca9f61a6ec5a2ac87b2d7
+  +> 12e21d0",
+        "code/matter_loop/d11_subsector_summary.py": "0e3a735a3f33d26fd5a1a0e56b3317c8ef7145f23ffe4916e7b92858
+  +> e60087b1",
+        "code/matter_loop/d11_tensor.py": "6e916fa960449f4f187415de8b4a9a2c0aa211717de1237b5951987fe85efe77",
+        "code/matter_loop/d11_ward_d12.py": "0b4fdbf1f4f5296d056a34636b9005bc34a505f35786c43d29996796ccfff21a"
+  +> ,
+        "notes/O_scope_and_dependencies.tex": "24aa7e9e6b23edbfa9705559bcbb0e4d037bfd328a8427995d2cd74f0253b54
+  +> 8",
+        "notes/S_inv_order2_scaffold.tex": "0a1fb17a3160fc26f411280dd30749a7322f377680f1b79e03647bbfe4ab1d41",
+        "notes/counterterm_ledgers.tex": "54681d431f114c2d58e74dab3c0f8535ebe0fce8ed7611bad3447b809c59b094",
+        "notes/d11_scalar_extension.tex": "d7ca98981e4e5f1c0ac0a89c35cf6a577965ac4766867f40d6a8dcdc5d852d61",
+        "notes/diagram_inventory_note.tex": "5044c224d2825c88c93e830273f613d99fbdef4815d465d9a372fd79acd1ced6"
+  +> ,
+        "notes/insertion_status_freeze.tex": "88cdebb51e068efdc1057f66d6f578bb1e4b6ac9fdd13ca0500de5f36b7a4403
+  +> ",
+        "notes/matter_loop_subsector.tex": "3f1c74e798a5fac9f600f17480dbb6f4dc0d7adacb15872c411df1aeeb7c3e85",
+        "notes/quantum_convention_sheet.tex": "044b9410ef54d478b18225585835bf57fff8f7b290f7913620e7b8c5be93e1b
+  +> 9",
+        "notes/renormalized_amplitudes.tex": "107bc032d8b9c4d8e06f49c0427d661b5341099cd8779c1650147b9c20c61324
+  +> ",
+        "notes/retained_quantum_identity.tex": "e89109ad9a1c619153348cfd5e5b117507fe987a021c8857f466eb949ace36
+  +> 56",
+        "notes/symmetry_defect_note.tex": "e123af1ca785edc294a84bf3e6425e2ba46d508eeba5c4de1ba3defe0702c67a"
+      }
+    },
+    "M7_projected_vs_bulk": {
+      "XVI_O_kernel_Ward_NOT_functional_ST4b": true,
+      "symmetry_restored_bulk_XVI_O": false,
+      "statement": "projected (XVI-N lem:field-only; the ch projection of the fixed one-loop kappa^2 identity)
+  +>  is distinct from bulk BV restoration; the XVI-O kernel two-point Ward identity d(Pi_w + L) = 0 is NOT fu
+  +> nctional ST4b"
+    },
+    "conventions": {
+      "XVI_O_index_convention": {
+        "calculation_convention": "raised h^{mu nu}; lower kernel indices T_{mu nu rho sigma}",
+        "science_volume_lowered_h": "h_{mu nu} = eta_{mu a} eta_{nu b} h^{ab}",
+        "inverse": "h^{mu nu} = eta^{mu a} eta^{nu b} h_{ab}",
+        "Ward_operators": "partial^mu T_{mu nu rho sigma},  partial^rho T_{mu nu rho sigma}",
+        "explicit_eta_map": true
+      },
+      "XVI_O_Pi": "Pi = (i kappa^2/4) T,  T = V V (CC+CC)",
+      "P_components": "independent lower h_(mn), m<=n",
+      "map": "h^{mu nu} = eta^{mu a} eta^{nu b} h_ab; d/dh_(ab) carries orbit multiplicity 2 for a != b",
+      "W_w_reference_id": "W_w_jet_pullback_via_Pi_tr_o68"
+    }
+  },
+  "loop_evaluations_performed": false,
+  "seconds": 11.6
+}

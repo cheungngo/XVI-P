@@ -1,0 +1,87 @@
+{
+  "revision": "p13",
+  "gate": "P13_source_action",
+  "bracket": "(F,G) = sum_A int [ (d^R F/d Phi^A)(d^L G/d Phi*_A) - (d^R F/d Phi*_A)(d^L G/d Phi^A) ]",
+  "generator_rule": "s Phi^A = (S, Phi^A);  s Phi*_A = (S, Phi*_A)  (XVI-N: NOT (Phi*,S))",
+  "sigma_solutions": {
+    "h": [1],
+    "c": [-1],
+    "cb": [-1],
+    "phi": [1]
+  },
+  "sigma_unique": true,
+  "sigma": {
+    "h": 1,
+    "c": -1,
+    "cb": -1,
+    "phi": 1
+  },
+  "sigma_closed_form": "sigma_A = (-1)^{|Phi^A|}  (derived: right derivative of Phi* X past X gives (-1)^{|Phi
+  +> |+1}, generator rule adds -1)",
+  "sigma_closed_form_check": {
+    "h": true,
+    "c": true,
+    "cb": true,
+    "phi": true
+  },
+  "matches_XVI_N_S_af": true,
+  "S_af": "int K^{mn}(s h)_mn + int phi*(s phi) - int c*_mu (s c^mu) - int cbar*^mu (s cbar_mu) = int K^{mn}[a
+  +> (d_m c_n+d_n c_m) + kappa a (L_c h)_mn] + kappa a int phi* c.d phi - kappa a int c*_mu c^r d_r c^mu - i i
+  +> nt cbar*^mu b_mu",
+  "K_vs_symmetric_hstar": "K^{mn} = w_mn h*^{mn}, w=1 (m=n), 2 (m<n); pairing over all 16 components",
+  "nonminimal_included": true,
+  "b_star_term": "absent (s b = 0)",
+  "X_terms_by_kappa_order": {
+    "0": 17,
+    "1": 124,
+    "2": 0,
+    "3": 0
+  },
+  "X_kappa2_terms": 0,
+  "X_ghost_number": [0],
+  "antifield_linear": true,
+  "antifield_transformations_X_part": {
+    "K(0, 0)": {
+      "terms": 11,
+      "kappa_orders": [
+        "1"
+      ]
+    },
+    "cs0": {
+      "terms": 38,
+      "kappa_orders": [
+        "1"
+      ]
+    },
+    "cbs0": {
+      "terms": 0,
+      "kappa_orders": []
+    },
+    "phis()": {
+      "terms": 8,
+      "kappa_orders": [
+        "1"
+      ]
+    }
+  },
+  "S_field": {
+    "grav": "S_EH = -(2/kappa^2) int sqrt(-g) R ;  ell_k = -2 [eps^k] L_GammaGamma ; S_EH = sum_k kappa^(k-2) 
+  +> int ell_k (mod boundary)",
+    "scalar": "S_phi = (1/2) int sqrt(-g) g^{mu nu} d_mu phi d_nu phi (m=0);  sqrt(-g) g^{mu nu} = eta + kappa
+  +>  a1 + kappa^2 a2 (XI-A a1,a2; O2_scalar_action_authoritative)",
+    "scalar_B_identification": {
+      "B0_eta": true,
+      "a1_matches_XI_A": true,
+      "a2_matches_XI_A": true
+    },
+    "grav_identification": "exports/ell{2,3,4}_generating_polynomial.srepr (sha in P13_quartic_verified)"
+  },
+  "baseline": "S_inv (unprepared, sigma_eps == 1, no insertion I_t); prepared S_D keeps (S_D,S_D) != 0 (XVI-N 
+  +> prop:broken-square)",
+  "execution_pass": true,
+  "claim_status": "source_action_constructed",
+  "scope": "S_inv extended action through O(kappa^2), antifield-linear (closed algebra), nonminimal (cbar,b) p
+  +> air",
+  "pass": true,
+  "seconds": 4.64
+}

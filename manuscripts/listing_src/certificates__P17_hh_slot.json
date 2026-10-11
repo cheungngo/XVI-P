@@ -1,0 +1,381 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p17",
+  "deliverable": "D01/D03 evanescent poles vs the ch-projected slot (row (S0,Gamma1^[2]) s2 K:K.c)",
+  "question": "do the evanescent (gt) UV poles of D01/D03 enter the ch-projected one-loop identity?",
+  "verdict": "DECOUPLED (proof): as the sum D01 + D03 (+ D02 = D12 = 0); not graph by graph",
+  "status": "decoupled_from_ch_slot_proven_as_sum",
+  "surviving_evanescent_structures_in_slot": [],
+  "row": "(S0, Gamma1^[2]) s2 K:K.c (ledgers/P13_ch_dependency_rows.json; graphs D01, D02, D03, D11, D12); the
+  +>  hh two-point function enters no other ch row (computed from the ledger: rows_with_D01_D03)",
+  "rows_with_D01_D03": {
+    "(S0,Gamma1^[2]) s2 K:K.c": {
+      "Gamma1_pattern": "h^2",
+      "S_monomial": "K.c",
+      "differentiated": "K",
+      "graphs": ["D01_hh_bubble_cubic", "D02_hh_tadpole_quartic", "D03_hh_ghost_loop", "D11_hh_scalar_loop", "
+  +> D12_hh_scalar_tadpole"],
+      "status": "surviving_unevaluated"
+    }
+  },
+  "functional": "X_hh[c,h] = int (s h)_{(mn)}(p; c) G^{(mn)(rs)}(p) h_(rs)(-p)",
+  "operator_s_h": {
+    "exact": true,
+    "unique": true,
+    "offdiag_weight": 1,
+    "upper": false,
+    "n_components": 16,
+    "rank": 4,
+    "n_ansatz": 4,
+    "covariant": [
+      [
+        "I/2",
+        [
+          ["g4", "m", "v"],
+          ["p", "n"]
+        ]
+      ]
+    ]
+  },
+  "proof": {
+    "H1": "s h read off S_Psi^(0) (K.c monomial): exact unique covariant form, longitudinal in (mn)",
+    "H2": "X_g depends on G only through p_m G^{(mn)(rs)}; p in QdS so p.gt = 0 removes gt on (mn)",
+    "H3": "p_m (G_D01 + G_D03)^{(mn)(rs)} = 0 identically in d (4D and evanescent parts separately); X_{D01+D0
+  +> 3} = 0 for every external assignment; D02 = D12 = 0 (P15_batchA.json)",
+    "H4": "controls: X_D01, X_D03 individually nonzero (also their evanescent parts); 4D poles individually no
+  +> t transverse",
+    "order": "one loop: the ch projection is linear in Gamma1; the cancellation is exact in d (not O(eps)); no
+  +>  product of evanescent poles arises"
+  },
+  "p_dot_G": {
+    "D01": {
+      "(('g', '4', 'n', 'r'), ('v', 'p', 's'))": "-I*p.p**2/(16*(d - 1))",
+      "(('g', '4', 'n', 's'), ('v', 'p', 'r'))": "-I*p.p**2/(16*(d - 1))",
+      "(('g', '4', 'r', 's'), ('v', 'p', 'n'))": "-I*p.p**2*(d - 3)/(16*(d - 1))",
+      "(('g', 't', 'n', 'r'), ('v', 'p', 's'))": "I*p.p**2/(16*(d - 1))",
+      "(('g', 't', 'n', 's'), ('v', 'p', 'r'))": "I*p.p**2/(16*(d - 1))",
+      "(('g', 't', 'r', 's'), ('v', 'p', 'n'))": "-I*p.p**2/(8*(d - 1))"
+    },
+    "D03": {
+      "(('g', '4', 'n', 'r'), ('v', 'p', 's'))": "I*p.p**2/(16*(d - 1))",
+      "(('g', '4', 'n', 's'), ('v', 'p', 'r'))": "I*p.p**2/(16*(d - 1))",
+      "(('g', '4', 'r', 's'), ('v', 'p', 'n'))": "I*p.p**2*(d - 3)/(16*(d - 1))",
+      "(('g', 't', 'n', 'r'), ('v', 'p', 's'))": "-I*p.p**2/(16*(d - 1))",
+      "(('g', 't', 'n', 's'), ('v', 'p', 'r'))": "-I*p.p**2/(16*(d - 1))",
+      "(('g', 't', 'r', 's'), ('v', 'p', 'n'))": "I*p.p**2/(8*(d - 1))"
+    },
+    "D01+D03": {},
+    "evanescent_D01": {
+      "(('g', 't', 'n', 'r'), ('v', 'p', 's'))": "I*p.p**2/(16*(d - 1))",
+      "(('g', 't', 'n', 's'), ('v', 'p', 'r'))": "I*p.p**2/(16*(d - 1))",
+      "(('g', 't', 'r', 's'), ('v', 'p', 'n'))": "-I*p.p**2/(8*(d - 1))"
+    },
+    "evanescent_D03": {
+      "(('g', 't', 'n', 'r'), ('v', 'p', 's'))": "-I*p.p**2/(16*(d - 1))",
+      "(('g', 't', 'n', 's'), ('v', 'p', 'r'))": "-I*p.p**2/(16*(d - 1))",
+      "(('g', 't', 'r', 's'), ('v', 'p', 'n'))": "I*p.p**2/(8*(d - 1))"
+    },
+    "evanescent_D01+D03": {}
+  },
+  "slot_values": {
+    "D01": {
+      "Q4S (declared, R2)": "p.p**2*(d*a.b*c^.p - 3*a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.p
+  +>  - a~.c~*b^.p)/(16*(d - 1))",
+      "QdS (hat)": "p.p**2*(d*a^.b^*c^.p - 3*a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/(16*(d - 1))",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0"
+    },
+    "D03": {
+      "Q4S (declared, R2)": "-p.p**2*(d*a.b*c^.p - 3*a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^.
+  +> p - a~.c~*b^.p)/(16*(d - 1))",
+      "QdS (hat)": "-p.p**2*(d*a^.b^*c^.p - 3*a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/(16*(d - 1))",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0"
+    },
+    "D01+D03": {
+      "Q4S (declared, R2)": "0",
+      "QdS (hat)": "0",
+      "c tilde, h hat": "0",
+      "c tilde, h mixed": "0",
+      "c hat, h mixed": "0",
+      "all tilde": "0"
+    }
+  },
+  "per_structure": {
+    "D01": {
+      "g4_mn g4_rs (p.p)^2": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "g4_mn gt_rs (p.p)^2": {
+        "evanescent": true,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "g4_mn p_r p_s (p.p)^1": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "g4_mr g4_ns (p.p)^2": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "g4_mr gt_ns (p.p)^2": {
+        "evanescent": true,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": true
+      },
+      "g4_mr p_n p_s (p.p)^1": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "g4_rs gt_mn (p.p)^2": {
+        "evanescent": true,
+        "reaches_slot": false,
+        "gt_on_differentiated_pair": true
+      },
+      "g4_rs p_m p_n (p.p)^1": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "gt_mn gt_rs (p.p)^2": {
+        "evanescent": true,
+        "reaches_slot": false,
+        "gt_on_differentiated_pair": true
+      },
+      "gt_mn p_r p_s (p.p)^1": {
+        "evanescent": true,
+        "reaches_slot": false,
+        "gt_on_differentiated_pair": true
+      },
+      "gt_mr gt_ns (p.p)^2": {
+        "evanescent": true,
+        "reaches_slot": false,
+        "gt_on_differentiated_pair": true
+      },
+      "gt_mr p_n p_s (p.p)^1": {
+        "evanescent": true,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": true
+      },
+      "gt_rs p_m p_n (p.p)^1": {
+        "evanescent": true,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "p_m p_n p_r p_s": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      }
+    },
+    "D03": {
+      "g4_mn g4_rs (p.p)^2": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "g4_mn gt_rs (p.p)^2": {
+        "evanescent": true,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "g4_mn p_r p_s (p.p)^1": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "g4_mr g4_ns (p.p)^2": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "g4_mr gt_ns (p.p)^2": {
+        "evanescent": true,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": true
+      },
+      "g4_mr p_n p_s (p.p)^1": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "g4_rs gt_mn (p.p)^2": {
+        "evanescent": true,
+        "reaches_slot": false,
+        "gt_on_differentiated_pair": true
+      },
+      "g4_rs p_m p_n (p.p)^1": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "gt_mn p_r p_s (p.p)^1": {
+        "evanescent": true,
+        "reaches_slot": false,
+        "gt_on_differentiated_pair": true
+      },
+      "gt_mr p_n p_s (p.p)^1": {
+        "evanescent": true,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": true
+      },
+      "gt_rs p_m p_n (p.p)^1": {
+        "evanescent": true,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      },
+      "p_m p_n p_r p_s": {
+        "evanescent": false,
+        "reaches_slot": true,
+        "gt_on_differentiated_pair": false
+      }
+    }
+  },
+  "evanescent_poles_D01_plus_D03_in_hh_green_function": {
+    "g4_mn gt_rs (p.p)^2": "I/15",
+    "g4_mr gt_ns (p.p)^2": "I/240",
+    "g4_rs gt_mn (p.p)^2": "I/15",
+    "gt_mn gt_rs (p.p)^2": "-I/240",
+    "gt_mn p_r p_s (p.p)^1": "-I/15",
+    "gt_mr gt_ns (p.p)^2": "-I/240",
+    "gt_mr p_n p_s (p.p)^1": "-I/240",
+    "gt_rs p_m p_n (p.p)^1": "-I/15"
+  },
+  "consequence": "no evanescent h.h counterterm is required by the ch-projected identity at one loop, so NO co
+  +> ntract revision is made for it.  The summed evanescent poles of the hh Green function are nonzero (list a
+  +> bove) but TRANSVERSE; renormalising the hh Green function itself would need evanescent h.h counterterms -
+  +> - relevant only outside this projection and NOT claimed.  D11 (same row) is NOT evaluated: its slot contr
+  +> ibution is open.",
+  "four_D_poles": {
+    "basis_dimension": 5,
+    "span_is_all_4D_structures": true,
+    "longitudinal_constraint_rank": 3,
+    "transverse_subspace_dimension": 2,
+    "transverse_basis_in_p14r_coordinates": [
+      ["1/2", "-1/2", "-1", "1", "0"],
+      ["1", "0", "-2", "0", "1"]
+    ],
+    "graphs": {
+      "D01": {
+        "coordinates_p14r_basis": ["-27*I/160", "-71*I/240", "19*I/60", "11*I/20", "-13*I/30"],
+        "in_span": true,
+        "transverse": false
+      },
+      "D03": {
+        "coordinates_p14r_basis": ["7*I/96", "I/24", "-I/8", "-I/24", "I/12"],
+        "in_span": true,
+        "transverse": false
+      },
+      "D01+D03": {
+        "coordinates_p14r_basis": ["-23*I/240", "-61*I/240", "23*I/120", "61*I/120", "-7*I/20"],
+        "in_span": true,
+        "transverse": true
+      }
+    },
+    "n_4D_orbit_labels": 6,
+    "dim_pair_symmetric_4D_structures": 5,
+    "basis_rank": 5,
+    "note": "the five p14r h.h directions span all five symmetric 4-derivative 4D structures, so span membersh
+  +> ip is automatic; the sharper, non-automatic statement is transversality: the summed pole lies in the 2-di
+  +> m transverse subspace, the individual poles do not"
+  },
+  "phase_convention_G6": "G = kappa^2 N_eps Ghat, N_eps = i S_eps/(16 pi^2) for every graph; D01/D03 Ghat = -i
+  +>  pref/kappa^2 int (real export prefactors kappa^2/2, -kappa^2) carry an overall I; D13 Ghat (prefactor I 
+  +> kappa^2) is real; s h = i(...) so X_hh is real like the D13 slot; the D01/D03 relative phase is tested by
+  +>  H3 (mutation M1 breaks it); the D13 vs hh relative phase is not tested by a nonzero identity (both slot 
+  +> contributions vanish)",
+  "D11": "NOT evaluated (M2 undischarged); its contribution to this row is open",
+  "controls": {
+    "ledger_hh_graphs_enter_exactly_one_row": true,
+    "H1_operator_exact_unique": true,
+    "H1_operator_longitudinal": true,
+    "vertex_equals_P16_certificate": true,
+    "H3_p_dot_G_sum_zero_exact_in_d": true,
+    "H3_evanescent_part_p_dot_G_sum_zero": true,
+    "H3_4D_part_p_dot_G_sum_zero": true,
+    "H3_slot_sum_zero_all_external_assignments": true,
+    "H4_D01_slot_nonzero": true,
+    "H4_D03_slot_nonzero": true,
+    "H4_evanescent_parts_individually_reach_slot": true,
+    "H4_4D_poles_individually_not_transverse": true,
+    "4D_pole_sum_transverse": true,
+    "transverse_subspace_dimension_2": true,
+    "hh_basis_spans_all_pair_symmetric_4D_structures": true,
+    "D01_plus_D03_coordinates_in_transverse_kernel": true,
+    "mutations_all_rejected": true
+  },
+  "mutations": {
+    "M1_wrong_relative_sign_D03": {
+      "summed_slot_nonzero": true,
+      "rejected": true,
+      "accepted_as_rejection": true,
+      "slot_values": {
+        "Q4S (declared, R2)": "p.p**2*(d*a.b*c^.p - 3*a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c^
+  +> .p - a~.c~*b^.p)/(8*(d - 1))",
+        "QdS (hat)": "p.p**2*(d*a^.b^*c^.p - 3*a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/(8*(d - 1))",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "0",
+        "c hat, h mixed": "0",
+        "all tilde": "0"
+      }
+    },
+    "M2_D03_times_2_symmetry_factor": {
+      "summed_slot_nonzero": true,
+      "rejected": true,
+      "accepted_as_rejection": true,
+      "slot_values": {
+        "Q4S (declared, R2)": "-p.p**2*(d*a.b*c^.p - 3*a.b*c^.p + a.c*b^.p + a^.p*b.c - a^.p*b~.c~ + 2*a~.b~*c
+  +> ^.p - a~.c~*b^.p)/(16*(d - 1))",
+        "QdS (hat)": "-p.p**2*(d*a^.b^*c^.p - 3*a^.b^*c^.p + a^.c^*b^.p + a^.p*b^.c^)/(16*(d - 1))",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "0",
+        "c hat, h mixed": "0",
+        "all tilde": "0"
+      }
+    },
+    "M3_D03_evanescent_dropped_naive_4D": {
+      "summed_slot_nonzero": true,
+      "rejected": true,
+      "accepted_as_rejection": true,
+      "slot_values": {
+        "Q4S (declared, R2)": "-p.p**2*(a^.p*b~.c~ - 2*a~.b~*c^.p + a~.c~*b^.p)/(16*(d - 1))",
+        "QdS (hat)": "0",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "-a~.c~*b^.p*p.p**2/(16*(d - 1))",
+        "c hat, h mixed": "0",
+        "all tilde": "0"
+      }
+    },
+    "M4_trace_operator_in_place_of_s_h": {
+      "summed_slot_nonzero": true,
+      "rejected": true,
+      "accepted_as_rejection": true,
+      "slot_values": {
+        "Q4S (declared, R2)": "c^.p*p.p*(7*d*a.b*p.p - 7*d*a^.p*b^.p - 2*a.b*p.p + 2*a^.p*b^.p - 5*a~.b~*p.p)/
+  +> (8*(d - 1))",
+        "QdS (hat)": "c^.p*p.p*(7*d - 2)*(a^.b^*p.p - a^.p*b^.p)/(8*(d - 1))",
+        "c tilde, h hat": "0",
+        "c tilde, h mixed": "0",
+        "c hat, h mixed": "0",
+        "all tilde": "0"
+      }
+    }
+  },
+  "decoupling_proven": true,
+  "authorised_d_substitutions": {
+    "hh_slot: UV pole A(4) of a 4D structure (after exact-d algebra)": 12,
+    "hh_slot: evanescent UV pole A(4) (record only)": 14
+  },
+  "quantum_inputs_evaluated": "not_earned",
+  "seconds": 49.8
+}

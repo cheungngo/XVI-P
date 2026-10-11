@@ -1,0 +1,195 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p18",
+  "deliverable": "D11 matching premise M2",
+  "statement": "M2 (P14_prescription_D11_matching.json): for all f in D(U), U = R^4 \\ {0}: <FT^-1[P^DR_AB], f
+  +> > = <R_A R_B Pi_tr^R, f>, Pi_tr^R = (i kappa^2/4) K u^R, alpha = A^2/60, beta = A^2/18",
+  "verdict": "DISCHARGED (4D components)",
+  "D11_matching_verified": true,
+  "D11_matching_verified_scope": "4D components",
+  "evanescent_components_matching": {
+    "status": "not_applicable_not_verified",
+    "what_they_are": "the 8 D11 structures carrying gt (the (4-d)-dimensional part of g4 = ghat + gt): compone
+  +> nts of the hh two-point function with at least one index pair in the epsilon-scalar (4-d) directions of D
+  +> RED; they vanish on hatted 4D components",
+    "why_not_matched": "XVI-O (u^R_mu, K, Pi_tr^R) is strictly four-dimensional and has NO evanescent counterp
+  +> art; M2 is a 4D statement, so there is nothing to match them to. Their L-coefficients are nonzero (record
+  +> ed below); they are retained (R6) and drop out of the ch-projected slot (p_m G_D11 = 0 for the evanescent
+  +>  part separately)"
+  },
+  "route_B": {
+    "equation": "X_AB = -4 pi^2 c_FT A^2 Y_AB = -(i/4) Y_AB on every 4D component pair",
+    "pairs": 100,
+    "nonzero_pairs": 100,
+    "mismatches": 0,
+    "first": [],
+    "agree": true,
+    "constant": "-I/4"
+  },
+  "FT_constant": {
+    "master_pole": "1",
+    "master_finite": "2 - L",
+    "pole_is_1": true,
+    "L_coefficient_of_MB": "-1",
+    "c_FT_from_DR_bubble": "I*pi**2",
+    "c_FT_from_minus_r": "I*pi**2",
+    "r_certificate": "-i * pi**2",
+    "r_certificate_as_expected": true,
+    "agree": true
+  },
+  "route_A": {
+    "M1": {
+      "component_pairs_checked": 100,
+      "nonzero_pairs": 100,
+      "mismatches": [],
+      "pass": true,
+      "recomputed_integrand_sha256": "6afa9cc07776ed4a77077986ffa3aa2ab50936cff13068f98fba9c3017958609",
+      "exported_integrand_sha256": "6afa9cc07776ed4a77077986ffa3aa2ab50936cff13068f98fba9c3017958609"
+    },
+    "XVI_O": {
+      "alpha_beta_rederived": {
+        "alpha": "A**2/60",
+        "beta": "A**2/18",
+        "match": true
+      },
+      "K_u_equals_T_all_256": {
+        "status": "Constructed",
+        "pass": true,
+        "components": 256,
+        "failures": 0
+      },
+      "ok": true
+    }
+  },
+  "transversality": {
+    "p_dot_G_4D_part": {},
+    "p_dot_G_evanescent_part": {},
+    "transverse_exact_in_d": true
+  },
+  "mutations": {
+    "alpha_beta_swapped": {
+      "pairs": 100,
+      "nonzero_pairs": 100,
+      "mismatches": 100,
+      "first": [
+        [0, 0],
+        [0, 1],
+        [0, 2]
+      ],
+      "agree": false,
+      "constant": "-I/4",
+      "rejected": true,
+      "accepted_as_rejection": true
+    },
+    "offdiagonal_weight_1": {
+      "pairs": 100,
+      "nonzero_pairs": 100,
+      "mismatches": 84,
+      "first": [
+        [0, 1],
+        [0, 2],
+        [0, 3]
+      ],
+      "agree": false,
+      "constant": "-I/4",
+      "rejected": true,
+      "accepted_as_rejection": true
+    },
+    "FT_log_constant_sign_flipped": {
+      "pairs": 100,
+      "nonzero_pairs": 100,
+      "mismatches": 100,
+      "first": [
+        [0, 0],
+        [0, 1],
+        [0, 2]
+      ],
+      "agree": false,
+      "constant": "I/4",
+      "rejected": true,
+      "accepted_as_rejection": true
+    },
+    "symmetry_factor_doubled": {
+      "pairs": 100,
+      "nonzero_pairs": 100,
+      "mismatches": 100,
+      "first": [
+        [0, 0],
+        [0, 1],
+        [0, 2]
+      ],
+      "agree": false,
+      "constant": "-I/4",
+      "rejected": true,
+      "accepted_as_rejection": true
+    },
+    "D01_in_place_of_D11": {
+      "pairs": 100,
+      "nonzero_pairs": 100,
+      "mismatches": 100,
+      "first": [
+        [0, 0],
+        [0, 1],
+        [0, 2]
+      ],
+      "agree": false,
+      "constant": "-I/4",
+      "rejected": true,
+      "accepted_as_rejection": true
+    },
+    "D0_dropped_beta_0": {
+      "pairs": 100,
+      "nonzero_pairs": 100,
+      "mismatches": 100,
+      "first": [
+        [0, 0],
+        [0, 1],
+        [0, 2]
+      ],
+      "agree": false,
+      "constant": "-I/4",
+      "rejected": true,
+      "accepted_as_rejection": true
+    }
+  },
+  "controls": {
+    "route_B_all_100_pairs_agree": true,
+    "FT_constant_two_calibrations_agree": true,
+    "route_A_M1_integrand_identity": true,
+    "route_A_XVI_O_K_u_equals_T": true,
+    "D11_transverse_exact_in_d": true,
+    "routes_FP_PV_agree": true,
+    "covariant_fit_exact_unique": true,
+    "mutations_all_rejected": true
+  },
+  "analytic_inputs_cited": ["Fourier transform of (Q - i0)^zeta (Gel'fand-Shilov): meromorphic in zeta, residu
+  +> e at zeta = -2 is r delta, so FT[u^R] = -r log(-p^2 - i0) + const (Route B; cross-checked by the DR bubbl
+  +> e)", "a polynomial in p is the Fourier transform of a distribution supported at {0}", "Route A only: two 
+  +> extensions of the product V V (C C + C C) from U differ by a distribution supported at 0 (XVI-O lem:BV_ru
+  +> les_on_U, Constructed)"],
+  "scope": "4D (hatted) components; the evanescent gt structures are epsilon-scalar components outside the 4D 
+  +> statement of M2 (their L-coefficients are nonzero and recorded); IR: the massless bubble at p^2 != 0 is I
+  +> R finite in DR (no scaleless pieces enter the nonlocal part); the XVI-N massless obstruction concerns the
+  +>  classical insertion and is not touched",
+  "evanescent_L_coefficients": {
+    "g4_mn gt_rs (p.p)^2": "I/120",
+    "g4_mr gt_ns (p.p)^2": "-I/480",
+    "g4_rs gt_mn (p.p)^2": "I/120",
+    "gt_mn gt_rs (p.p)^2": "I/480",
+    "gt_mn p_r p_s (p.p)^1": "-I/120",
+    "gt_mr gt_ns (p.p)^2": "I/480",
+    "gt_mr p_n p_s (p.p)^1": "I/480",
+    "gt_rs p_m p_n (p.p)^1": "-I/120"
+  },
+  "M3_status": {
+    "status": "unconditional on the 4D components (M2 discharged there; cited analytic inputs above)",
+    "statement": "L_match = FT^-1[P^DR] - R R Pi_tr^R is supported at {0}; with kernel scaling degree <= 8 it 
+  +> is a finite sum of d^alpha delta with |alpha| <= 4 (bounds 4/8/4 of P14 M3)",
+    "evanescent_components": "not applicable (no XVI-O counterpart; see evanescent_components_matching)"
+  },
+  "M3_consequence": "with M2 discharged, L_match = FT^-1[P^DR] - R R Pi_tr^R is supported at 0; both sides are
+  +>  transverse and homogeneous of degree four in p (massless; no mu^4, mu^2 p^2 contacts, consistent with N4
+  +> ), so L_match lies in the 2-dim transverse subspace of the p14r h.h span; its coordinates need the XVI-O 
+  +> finite constant of u^R and are NOT computed (M4: booked as P-side hh counterterm; u^R_mu unmodified, no c
+  +>  delta)"
+}

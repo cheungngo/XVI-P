@@ -1,0 +1,181 @@
+{
+  "revision": "p13",
+  "gate": "ch_projection_defined / ch_dependency_inventory_complete",
+  "variables": "transformed (Phi, Phi*'), S_Psi with external antifields; Psi = Psi = -i int cbar_mu (2 D^mu[h
+  +> ] - b^mu),  D^mu[h] = d_nu h^{mu nu} - (1/2) d^mu tr h",
+  "ch_pattern": {
+    "c": 1,
+    "h": 1,
+    "phi": 0,
+    "cbar": 0,
+    "b": 0,
+    "antifields": 0,
+    "ghost_number": 1,
+    "coupling": "kappa^2",
+    "loop": "one",
+    "domain": "off-shell, compact smooth smearings"
+  },
+  "method": "p11 (e): mechanical ch dependency audit in TRANSFORMED variables + generated one-loop graph inven
+  +> tory.",
+  "vertex_inventory": {
+    "kappa0": ["K.c", "b.cbs", "b.h", "b^2", "c.cb", "h^2", "phi^2"],
+    "kappa1": ["K.c.h", "c.cb.h", "c.phi.phis", "c^2.cs", "h.phi^2", "h^3"],
+    "kappa2": ["h^2.phi^2", "h^4"]
+  },
+  "vertex_sources": {
+    "0|K.c": ["X_Psi (antifield + s Psi)"],
+    "0|b.cbs": ["X_Psi (antifield + s Psi)"],
+    "0|b.h": ["X_Psi (antifield + s Psi)"],
+    "0|b^2": ["X_Psi (antifield + s Psi)"],
+    "0|c.cb": ["X_Psi (antifield + s Psi)"],
+    "1|K.c.h": ["X_Psi (antifield + s Psi)"],
+    "1|c.cb.h": ["X_Psi (antifield + s Psi)"],
+    "1|c.phi.phis": ["X_Psi (antifield + s Psi)"],
+    "1|c^2.cs": ["X_Psi (antifield + s Psi)"],
+    "0|phi^2": ["scalar"],
+    "1|h.phi^2": ["scalar"],
+    "2|h^2.phi^2": ["scalar"],
+    "0|h^2": ["ell_2"],
+    "1|h^3": ["ell_3"],
+    "2|h^4": ["ell_4"]
+  },
+  "rows_total": 6,
+  "rows_surviving": 3,
+  "rows_derived_zero": 3,
+  "surviving_rows": [
+    {
+      "id": "(S0,Gamma1^[2]) s2 K:K.c",
+      "bracket": "(S0, Gamma1^[2])",
+      "summand": 2,
+      "S_monomial": "K.c",
+      "differentiated": "K",
+      "Gamma1_pattern": "h^2",
+      "Gamma1_order": "kappa^2",
+      "graphs": ["D01_hh_bubble_cubic", "D02_hh_tadpole_quartic", "D03_hh_ghost_loop", "D11_hh_scalar_loop", "
+  +> D12_hh_scalar_tadpole"],
+      "status": "surviving_unevaluated",
+      "reason": "surviving: one-loop graphs exist; coefficient not evaluated in this release"
+    },
+    {
+      "id": "(S0,Gamma1^[2]) s1 h:h^2",
+      "bracket": "(S0, Gamma1^[2])",
+      "summand": 1,
+      "S_monomial": "h^2",
+      "differentiated": "h",
+      "Gamma1_pattern": "K.c",
+      "Gamma1_order": "kappa^2",
+      "graphs": ["D13_Kc_ghost_graviton_loop"],
+      "status": "surviving_unevaluated",
+      "reason": "surviving: one-loop graphs exist; coefficient not evaluated in this release"
+    },
+    {
+      "id": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "bracket": "(S1, Gamma1^[1])",
+      "summand": 2,
+      "S_monomial": "K.c.h",
+      "differentiated": "K",
+      "Gamma1_pattern": "h",
+      "Gamma1_order": "kappa^1",
+      "graphs": ["D14a_h_onepoint_grav_tadpole", "D14b_h_onepoint_ghost_tadpole", "D14c_h_onepoint_scalar_tadp
+  +> ole"],
+      "status": "surviving_unevaluated",
+      "reason": "surviving: one-loop graphs exist; coefficient not evaluated in this release"
+    }
+  ],
+  "hstar_c_row": [
+    {
+      "id": "(S0,Gamma1^[2]) s1 h:h^2",
+      "bracket": "(S0, Gamma1^[2])",
+      "summand": 1,
+      "S_monomial": "h^2",
+      "differentiated": "h",
+      "Gamma1_pattern": "K.c",
+      "Gamma1_order": "kappa^2",
+      "graphs": ["D13_Kc_ghost_graviton_loop"],
+      "status": "surviving_unevaluated",
+      "reason": "surviving: one-loop graphs exist; coefficient not evaluated in this release"
+    }
+  ],
+  "onepoint_kappa_slot": [
+    {
+      "id": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "bracket": "(S1, Gamma1^[1])",
+      "summand": 2,
+      "S_monomial": "K.c.h",
+      "differentiated": "K",
+      "Gamma1_pattern": "h",
+      "Gamma1_order": "kappa^1",
+      "graphs": ["D14a_h_onepoint_grav_tadpole", "D14b_h_onepoint_ghost_tadpole", "D14c_h_onepoint_scalar_tadp
+  +> ole"],
+      "status": "surviving_unevaluated",
+      "reason": "surviving: one-loop graphs exist; coefficient not evaluated in this release"
+    }
+  ],
+  "phi_rows": {
+    "count": 0,
+    "all_derived_zero_or_impossible": true,
+    "parity_argument": "phi -> -phi is a symmetry of S_Psi (phi appears in even powers in every non-antifield 
+  +> monomial and phis.phi pairs); ch is phi-even"
+  },
+  "checks": {
+    "names_TBD_empty": true,
+    "regenerated_rows_match_published": true,
+    "hstar_c_row_present": true,
+    "onepoint_slot_distinct_from_D12": true,
+    "b_has_no_interaction_vertex": true,
+    "no_kappa2_ghost_vertex": true,
+    "cbar_star_rows_derived_zero": true,
+    "b_star_rows_derived_zero": true,
+    "S2_rows_derived_zero": true,
+    "enumeration_lemma_holds": true
+  },
+  "enumeration_lemma": {
+    "statement": "(p11; justifies max_len = 2).  (i) A connected one-loop graph is 1PI iff every internal line
+  +>  lies\non its unique cycle (a line off the cycle is a bridge); hence every vertex of a one-loop 1PI graph
+  +>  lies on the cycle\nwith exactly two internal legs, and all quadratic (kappa^0, two-field) terms are abso
+  +> rbed into propagators, so the\ngraph is a cycle of interaction vertices.  (ii) Every retained interaction
+  +>  vertex has coupling order kappa^n, n >= 1\n(checked mechanically: the kappa^0 inventory contains only tw
+  +> o-field monomials).  (iii) Hence a kappa^order\ncontribution with order <= 2 has at most `order` <= 2 ver
+  +> tices: max_len = 2 is exhaustive.  (iv) The auxiliary b\noccurs only in kappa^0 two-field monomials (chec
+  +> ked), so its Gaussian elimination produces only bilinear terms\n(the de Donder kinetic term and source-bi
+  +> linear terms) and no omitted interaction.  (v) Source-linear monomials\n(exactly one quantum leg) cannot 
+  +> sit on a cycle (two internal legs needed); attached off the cycle they create a\nbridge, i.e. a one-parti
+  +> cle-reducible graph, so they cannot contribute extra 1PI coefficients.",
+    "mechanical_checks": {
+      "kappa0_monomials_all_two_field": true,
+      "kappa0_multi_field_monomials": [],
+      "min_interaction_vertex_order": 1,
+      "all_interaction_vertices_kappa_ge_1": true,
+      "max_vertices_at_kappa2": 2,
+      "max_len_used": 2,
+      "max_len_exhaustive": true,
+      "b_monomials": [
+        [0, "b.cbs"],
+        [0, "b.h"],
+        [0, "b^2"]
+      ],
+      "b_only_in_kappa0_bilinears": true,
+      "source_linear_excluded_reason": "vertex_options requires >= 2 quantum legs; one-leg insertions are brid
+  +> ges (1PR)"
+    },
+    "holds": true,
+    "interface": "Gamma_Psi(Phi,Phi*') := Gamma(Phi, Phi*' - dPsi/dPhi) is a defined classical pullback/interf
+  +> ace, not an independently established quantum gauge-change theorem"
+  },
+  "dropped_rows_mutation": [],
+  "regeneration": {
+    "missing_from_published": [],
+    "extra_in_published": [],
+    "complete": true
+  },
+  "names_TBD": [],
+  "ch_projection_defined": true,
+  "ch_dependency_inventory_complete": true,
+  "values": "no surviving coefficient is evaluated in this release (no loop evaluated here); D11 carries an in
+  +> herited O5 kernel constructed under prescription, not re-evaluated in this release",
+  "execution_pass": true,
+  "claim_status": "earned",
+  "scope": "pattern-level dependency inventory of the projected kappa^2 one-loop source identity; not evaluati
+  +> on",
+  "seconds": 5.6
+}

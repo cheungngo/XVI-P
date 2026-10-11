@@ -1,0 +1,1888 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p14r",
+  "document": "P.5 entry dossier (with the frozen P.3/P.4 chains)",
+  "status_of_this_document": "package evidence for XVI-P (unregistered; XVI-O conv:package): an archive, a lis
+  +> ting and a manifest are not a series certificate. Does not update XVI-O (prop:kappa2-master stays Partial
+  +>  there; symmetry_restored false; O.1 NOT_CLOSED).",
+  "milestone_definitions": {
+    "P.3": "fixed output projection + exhaustive coefficient dependencies + graph topology inventory (complete
+  +>  for the declared ch target)",
+    "P.4": "required classical action, transformations, source terms, gauge map and master verification (class
+  +> ical readiness earned); P.4 means classical readiness, NOT coupled one-loop restoration",
+    "P.5_entry": "quantum prescription, amplitude rules and counterterm domain fixed",
+    "P.5_calculation": "coefficients evaluated and renormalized",
+    "P.5_identity": "projected defect computed and, if possible, cancelled"
+  },
+  "milestone_status": {
+    "definitions": {
+      "P.3": "fixed output projection + exhaustive coefficient dependencies + graph topology inventory (comple
+  +> te for the declared ch target)",
+      "P.4": "required classical action, transformations, source terms, gauge map and master verification (cla
+  +> ssical readiness earned); P.4 means classical readiness, NOT coupled one-loop restoration",
+      "P.5_entry": "quantum prescription, amplitude rules and counterterm domain fixed",
+      "P.5_calculation": "coefficients evaluated and renormalized",
+      "P.5_identity": "projected defect computed and, if possible, cancelled"
+    },
+    "order": ["P.3", "P.4", "P.5_entry", "P.5_calculation", "P.5_identity"],
+    "status": {
+      "P.3": "complete (declared ch target)",
+      "P.4": "earned (classical readiness)",
+      "P.5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+      "P.5_calculation": "open (not started; Batch A/B/C integrals are p15+)",
+      "P.5_identity": "open"
+    },
+    "P3_complete": true,
+    "P4_classical_readiness_earned": true,
+    "P5_entry_earned": true,
+    "P5_entry_rule": "P.5 entry is earned iff all five contract flags hold (and is stated against the P.3/P.4 
+  +> freeze)",
+    "P5_entry_flags": {
+      "quantum_action_defined": true,
+      "quantum_prescription_defined": true,
+      "D11_matching_defined": true,
+      "counterterm_domain_defined": true,
+      "amplitude_rules_verified": true
+    },
+    "P4_is_NOT": "coupled one-loop restoration (quantum_inputs_evaluated / projected_identity_verified not ear
+  +> ned)",
+    "P3_P4_frozen_as_P5_inputs": true,
+    "frozen_rule": "P.3/P.4 are frozen P.5 inputs iff the p13 independent rebuild passed (bound to the p13 tre
+  +> e) AND the frozen code/values are unchanged",
+    "P5_entry_depends_on": "P3_P4_frozen_as_P5_inputs (p13 independent rebuild; caveat: the p13 independent re
+  +> build ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh venv from the source-only zip; it
+  +>  was NOT run on a second machine)",
+    "history": "archival/p02_p09/notes/P_scope.tex (p06-p08 'P-next.N' labels; its table row 'P4 coupled one-l
+  +> oop restoration' is SUPERSEDED: P.4 = classical readiness); archival/p12/ (p12 used 'classical readiness'
+  +>  without milestone labels); archival/p13/ (p13 release: P.3 complete, P.4 earned, P.5 entry next)",
+    "XVI_O_unaffected": "XVI-P is unregistered package evidence; XVI-O prop:kappa2-master stays Partial"
+  },
+  "chains": [
+    {
+      "milestone": "P.3",
+      "chain": "projection -> dependency rows -> graphs [frozen P.3/P.4 input]",
+      "rows": [
+        {
+          "id": "P3.1",
+          "claim": "ch output projection fixed (c^1 h^1, ghost number 1, kappa^2, one loop, transformed variab
+  +> les)",
+          "file": "code/p4_classical/ch_source_audit.py",
+          "functions": ["main"],
+          "checks": [
+            {
+              "source": "certificates/P13_ch_source_audit.json",
+              "key": "/ch_projection_defined",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_ch_source_audit.json",
+              "key": "/ch_pattern/ghost_number",
+              "expect": 1,
+              "value": "1",
+              "ok": true
+            }
+          ],
+          "tests": ["test_ch_rows_and_quantum_input_slots"],
+          "functions_found": {
+            "main": true
+          },
+          "tests_found": {
+            "test_ch_rows_and_quantum_input_slots": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P3.2",
+          "claim": "vertex inventory generated from S_Psi (not copied)",
+          "file": "code/p4_classical/ch_source_audit.py",
+          "functions": ["S_psi_inventory", "vertex_options"],
+          "checks": [
+            {
+              "source": "certificates/P13_ch_source_audit.json",
+              "key": "/vertex_inventory",
+              "expect": "NONEMPTY",
+              "value": "{\"kappa0\": [\"K.c\", \"b.cbs\", \"b.h\", \"b^2\", \"c....",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_ch_source_audit.json",
+              "key": "/checks/b_has_no_interaction_vertex",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_ch_rows_and_quantum_input_slots"],
+          "functions_found": {
+            "S_psi_inventory": true,
+            "vertex_options": true
+          },
+          "tests_found": {
+            "test_ch_rows_and_quantum_input_slots": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P3.3",
+          "claim": "dependency rows exhaustive: regenerated rows equal the published rows",
+          "file": "code/p4_classical/ch_source_audit.py",
+          "functions": ["audit", "regenerate_and_compare"],
+          "checks": [
+            {
+              "source": "certificates/P13_ch_source_audit.json",
+              "key": "/checks/regenerated_rows_match_published",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_ch_source_audit.json",
+              "key": "/regeneration/complete",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_e2e_dropped_hstar_c_row"],
+          "functions_found": {
+            "audit": true,
+            "regenerate_and_compare": true
+          },
+          "tests_found": {
+            "test_e2e_dropped_hstar_c_row": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P3.4",
+          "claim": "6 rows: 3 surviving, 3 derived zero (S2, cbar*, b* rows)",
+          "file": "code/p4_classical/ch_source_audit.py",
+          "functions": ["audit"],
+          "checks": [
+            {
+              "source": "certificates/P13_ch_source_audit.json",
+              "key": "/rows_total",
+              "expect": 6,
+              "value": "6",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_ch_source_audit.json",
+              "key": "/rows_surviving",
+              "expect": 3,
+              "value": "3",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_ch_source_audit.json",
+              "key": "/rows_derived_zero",
+              "expect": 3,
+              "value": "3",
+              "ok": true
+            }
+          ],
+          "tests": ["test_ch_rows_and_quantum_input_slots"],
+          "functions_found": {
+            "audit": true
+          },
+          "tests_found": {
+            "test_ch_rows_and_quantum_input_slots": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P3.5",
+          "claim": "enumeration lemma (justifies max_len = 2) checked mechanically",
+          "file": "code/p4_classical/ch_source_audit.py",
+          "functions": ["enumeration_lemma"],
+          "checks": [
+            {
+              "source": "certificates/P13_ch_source_audit.json",
+              "key": "/enumeration_lemma/holds",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_enumeration_lemma"],
+          "functions_found": {
+            "enumeration_lemma": true
+          },
+          "tests_found": {
+            "test_enumeration_lemma": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P3.6",
+          "claim": "graph topologies generated and named; no unnamed graph",
+          "file": "code/p4_classical/ch_source_audit.py",
+          "functions": ["enumerate_graphs", "name_graph"],
+          "checks": [
+            {
+              "source": "ledgers/P13_graph_inventory.json",
+              "key": "/names_TBD",
+              "expect": [],
+              "value": "[]",
+              "ok": true
+            },
+            {
+              "source": "ledgers/P13_graph_inventory.json",
+              "key": "/graphs",
+              "expect": "NONEMPTY",
+              "value": "{\"D03_hh_ghost_loop\": {\"external\": \"h^2\", \"ka...",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_ch_source_audit.json",
+              "key": "/checks/names_TBD_empty",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_ch_rows_and_quantum_input_slots"],
+          "functions_found": {
+            "enumerate_graphs": true,
+            "name_graph": true
+          },
+          "tests_found": {
+            "test_ch_rows_and_quantum_input_slots": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P3.7",
+          "claim": "P.3 flags",
+          "file": "code/p5_entry/release_p14.py",
+          "functions": ["classical_block"],
+          "checks": [
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/flags/ch_projection_defined",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/flags/ch_dependency_inventory_complete",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_milestones_consistent"],
+          "functions_found": {
+            "classical_block": true
+          },
+          "tests_found": {
+            "test_milestones_consistent": true
+          },
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "milestone": "P.4",
+      "chain": "classical coefficient -> export -> verification [frozen P.3/P.4 input]",
+      "rows": [
+        {
+          "id": "P4.A1",
+          "claim": "C3 boundary identity sqrt(-g)R - L_GG = -d_mu B^mu on generic jets",
+          "file": "code/classical/boundary_identity.py",
+          "functions": ["generic_jet_proof"],
+          "checks": [
+            {
+              "source": "certificates/P13_boundary_identity.json",
+              "key": "/C3_proved",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_C3_boundary_identity_generic_and_conformal"],
+          "functions_found": {
+            "generic_jet_proof": true
+          },
+          "tests_found": {
+            "test_C3_boundary_identity_generic_and_conformal": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.A2",
+          "claim": "ell_2, ell_3, ell_4 built and exported; export hash == quartic cert == master input",
+          "file": "code/classical/quartic.py",
+          "functions": ["build_and_export"],
+          "checks": [
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/hash_consistency/consistent",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_quartic_verified.json",
+              "key": "/ell4_sha256",
+              "expect": "NONEMPTY",
+              "value": "\"33ac9e49c4d1644ee47f09b80983f4ea29827d33af93...",
+              "ok": true
+            }
+          ],
+          "tests": ["test_stale_ell4_hash_blocks_master"],
+          "functions_found": {
+            "build_and_export": true
+          },
+          "tests_found": {
+            "test_stale_ell4_hash_blocks_master": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.A3",
+          "claim": "C1 inverse, C2 det/trace-log (10 symbolic components)",
+          "file": "code/classical/quartic.py",
+          "functions": ["inverse_control", "det_tracelog_generic"],
+          "checks": [
+            {
+              "source": "certificates/P13_quartic_verified.json",
+              "key": "/acceptance_controls_deterministic/C1",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_quartic_verified.json",
+              "key": "/acceptance_controls_deterministic/C2",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_quartic_acceptance_all_deterministic"],
+          "functions_found": {
+            "inverse_control": true,
+            "det_tracelog_generic": true
+          },
+          "tests_found": {
+            "test_quartic_acceptance_all_deterministic": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.A4",
+          "claim": "C4 export == independent evaluator (exact polynomial identity)",
+          "file": "code/classical/quartic.py",
+          "functions": ["export_identity"],
+          "checks": [
+            {
+              "source": "certificates/P13_quartic_verified.json",
+              "key": "/acceptance_controls_deterministic/C4",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_quartic_acceptance_all_deterministic"],
+          "functions_found": {
+            "export_identity": true
+          },
+          "tests_found": {
+            "test_quartic_acceptance_all_deterministic": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.A5",
+          "claim": "C5/C6 ell_3 = XII-C, ell_2 = XI-A Fierz-Pauli modulo divergences (pinned XVI-N grav_densit
+  +> y)",
+          "file": "code/classical/quartic.py",
+          "functions": ["regression_deterministic", "xvin_symbolic"],
+          "checks": [
+            {
+              "source": "certificates/P13_quartic_verified.json",
+              "key": "/acceptance_controls_deterministic/C5",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_quartic_verified.json",
+              "key": "/acceptance_controls_deterministic/C6",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_quartic_acceptance_all_deterministic"],
+          "functions_found": {
+            "regression_deterministic": true,
+            "xvin_symbolic": true
+          },
+          "tests_found": {
+            "test_quartic_acceptance_all_deterministic": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.A6",
+          "claim": "C7 gravitational Noether identities on the exports, kappa^0..kappa^2",
+          "file": "code/classical/grav_noether.py",
+          "functions": ["noether"],
+          "checks": [
+            {
+              "source": "certificates/P13_quartic_verified.json",
+              "key": "/controls/C7_accepted_orders",
+              "expect": "ALL_TRUE",
+              "value": "{\"kappa0\": true, \"kappa1\": true, \"kappa2\": true}",
+              "ok": true
+            }
+          ],
+          "tests": ["test_grav_noether_exact_and_mutation"],
+          "functions_found": {
+            "noether": true
+          },
+          "tests_found": {
+            "test_grav_noether_exact_and_mutation": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.A7",
+          "claim": "quartic mutations rejected; quartic flag",
+          "file": "code/classical/quartic.py",
+          "functions": ["main"],
+          "checks": [
+            {
+              "source": "certificates/P13_quartic_verified.json",
+              "key": "/mutations_all_rejected",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/flags/quartic_generator_verified",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_e2e_corrupted_ell4_coefficient"],
+          "functions_found": {
+            "main": true
+          },
+          "tests_found": {
+            "test_e2e_corrupted_ell4_coefficient": true
+          },
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "milestone": "P.4",
+      "chain": "transformations -> source terms [frozen P.3/P.4 input]",
+      "rows": [
+        {
+          "id": "P4.B1",
+          "claim": "ghost law derived from s^2 = 0 (unique lambda = 1)",
+          "file": "code/classical/brst_from_geometry.py",
+          "functions": ["solve_ghost_law"],
+          "checks": [
+            {
+              "source": "certificates/P13_brst_derivation.json",
+              "key": "/ghost_law_derivation/lam_solutions",
+              "expect": ["1"],
+              "value": "[\"1\"]",
+              "ok": true
+            }
+          ],
+          "tests": ["test_brst_and_source_terms_derived"],
+          "functions_found": {
+            "solve_ghost_law": true
+          },
+          "tests_found": {
+            "test_brst_and_source_terms_derived": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.B2",
+          "claim": "s_2 derived zero in every sector; s nilpotent at all orders",
+          "file": "code/classical/brst_from_geometry.py",
+          "functions": ["per_sector_expansion", "nilpotency"],
+          "checks": [
+            {
+              "source": "certificates/P13_brst_derivation.json",
+              "key": "/s2_per_sector",
+              "expect": "ALL_EQ:derived_zero",
+              "value": "{\"h\": \"derived_zero\", \"c\": \"derived_zero\", \"p...",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_brst_derivation.json",
+              "key": "/nilpotency_exact_all_orders",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_brst_and_source_terms_derived"],
+          "functions_found": {
+            "per_sector_expansion": true,
+            "nilpotency": true
+          },
+          "tests_found": {
+            "test_brst_and_source_terms_derived": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.B3",
+          "claim": "sigma_A derived from the generator rule (unique); antifield-linear, no kappa^2 X terms",
+          "file": "code/classical/source_action.py",
+          "functions": ["derive_sigma", "build_X_inv"],
+          "checks": [
+            {
+              "source": "certificates/P13_source_action.json",
+              "key": "/sigma_unique",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_source_action.json",
+              "key": "/X_kappa2_terms",
+              "expect": 0,
+              "value": "0",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_source_action.json",
+              "key": "/antifield_linear",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_brst_and_source_terms_derived", "test_e2e_flipped_odd_sign", "test_e2e_omitted_cstar
+  +> _term"],
+          "functions_found": {
+            "derive_sigma": true,
+            "build_X_inv": true
+          },
+          "tests_found": {
+            "test_brst_and_source_terms_derived": true,
+            "test_e2e_flipped_odd_sign": true,
+            "test_e2e_omitted_cstar_term": true
+          },
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "milestone": "P.4",
+      "chain": "gauge map -> Hessians -> source convention [frozen P.3/P.4 input]",
+      "rows": [
+        {
+          "id": "P4.C1",
+          "claim": "antifield shift orientation derived (eps = -1); S_Psi = S + s Psi mod d",
+          "file": "code/classical/gauge_fixing_map.py",
+          "functions": ["build", "shift_map"],
+          "checks": [
+            {
+              "source": "certificates/P13_gauge_fixing_map.json",
+              "key": "/derived_eps",
+              "expect": -1,
+              "value": "-1",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_gauge_fixing_map.json",
+              "key": "/S_Psi_equals_S_plus_sPsi_mod_d",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_e2e_altered_gauge_shift"],
+          "functions_found": {
+            "build": true,
+            "shift_map": true
+          },
+          "tests_found": {
+            "test_e2e_altered_gauge_shift": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.C2",
+          "claim": "canonicity of the map on all 299 (anti)field pairs",
+          "file": "code/classical/gauge_fixing_map.py",
+          "functions": ["canonicity"],
+          "checks": [
+            {
+              "source": "certificates/P13_gauge_fixing_map.json",
+              "key": "/canonicity/pass",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_gauge_fixing_map.json",
+              "key": "/canonicity/pairs_tested",
+              "expect": 299,
+              "value": "299",
+              "ok": true
+            }
+          ],
+          "tests": ["test_gauge_hessian_generic_and_full_canonicity"],
+          "functions_found": {
+            "canonicity": true
+          },
+          "tests_found": {
+            "test_gauge_hessian_generic_and_full_canonicity": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.C3",
+          "claim": "graviton Hessian at generic symbolic k: Schur complement k^2 P, propagator (k^2 P)^-1",
+          "file": "code/classical/gauge_fixing_map.py",
+          "functions": ["hessian_check"],
+          "checks": [
+            {
+              "source": "certificates/P13_gauge_fixing_map.json",
+              "key": "/propagators/graviton/schur_equals_k2P",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_gauge_fixing_map.json",
+              "key": "/propagators/graviton/propagator_hh_equals_inv_k2P",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_gauge_hessian_generic_and_full_canonicity"],
+          "functions_found": {
+            "hessian_check": true
+          },
+          "tests_found": {
+            "test_gauge_hessian_generic_and_full_canonicity": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.C4",
+          "claim": "ghost (i cbar Box c) and scalar (-Box) kinetic terms; propagators match transformed Hessia
+  +> ns",
+          "file": "code/classical/gauge_fixing_map.py",
+          "functions": ["ghost_kinetic_check"],
+          "checks": [
+            {
+              "source": "certificates/P13_gauge_fixing_map.json",
+              "key": "/propagators/ghost/match",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_gauge_fixing_map.json",
+              "key": "/propagators/scalar/match",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_gauge_fixing_map.json",
+              "key": "/propagators_match_transformed_Hessians",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_gauge_hessian_generic_and_full_canonicity"],
+          "functions_found": {
+            "ghost_kinetic_check": true
+          },
+          "tests_found": {
+            "test_gauge_hessian_generic_and_full_canonicity": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.C5",
+          "claim": "source convention Gamma_Psi(Phi,Phi*') := Gamma(Phi, Phi*' - dPsi/dPhi): classical pullbac
+  +> k, NOT a quantum theorem",
+          "file": "code/classical/gauge_fixing_map.py",
+          "functions": ["build"],
+          "checks": [
+            {
+              "source": "certificates/P13_gauge_fixing_map.json",
+              "key": "/source_identity_relation_defined",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_gauge_fixing_map.json",
+              "key": "/source_identity_relation/status",
+              "expect": "CONTAINS:NOT an independently established quantum",
+              "value": "\"DEFINED classical pullback/interface along t...",
+              "ok": true
+            }
+          ],
+          "tests": ["test_gauge_hessian_generic_and_full_canonicity"],
+          "functions_found": {
+            "build": true
+          },
+          "tests_found": {
+            "test_gauge_hessian_generic_and_full_canonicity": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.C6",
+          "claim": "gauge-map flag",
+          "file": "code/p5_entry/release_p14.py",
+          "functions": ["classical_block"],
+          "checks": [
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/flags/gauge_fixing_map_constructed",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_milestones_consistent"],
+          "functions_found": {
+            "classical_block": true
+          },
+          "tests_found": {
+            "test_milestones_consistent": true
+          },
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "milestone": "P.4",
+      "chain": "master component -> residual record -> acceptance gate [frozen P.3/P.4 input]",
+      "rows": [
+        {
+          "id": "P4.D1",
+          "claim": "master equation at kappa^0: every antifield-number component; grav af0 record; gate",
+          "file": "code/classical/master_kappa2.py",
+          "functions": ["run", "XX_by_order", "grav_deterministic"],
+          "checks": [
+            {
+              "source": "certificates/P13_master_kappa2.json",
+              "key": "/table_by_kappa_and_antifield_number/kappa0",
+              "expect": "ALL_TRUE",
+              "value": "{\"af0_grav_Noether\": true, \"af0_scalar_Noethe...",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_master_kappa2.json",
+              "key": "/details/grav_af0_deterministic/kappa0/Q_terms",
+              "expect": [0, 0, 0, 0],
+              "value": "[0, 0, 0, 0]",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_master_kappa2.json",
+              "key": "/details/grav_af0_deterministic/kappa0/Q_identically_zero",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/residual_records/master_grav_per_order/kappa0/accepted",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_residual_records_regenerated_and_agree"],
+          "functions_found": {
+            "run": true,
+            "XX_by_order": true,
+            "grav_deterministic": true
+          },
+          "tests_found": {
+            "test_residual_records_regenerated_and_agree": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.D2",
+          "claim": "master equation at kappa^1: every antifield-number component; grav af0 record; gate",
+          "file": "code/classical/master_kappa2.py",
+          "functions": ["run", "XX_by_order", "grav_deterministic"],
+          "checks": [
+            {
+              "source": "certificates/P13_master_kappa2.json",
+              "key": "/table_by_kappa_and_antifield_number/kappa1",
+              "expect": "ALL_TRUE",
+              "value": "{\"af0_grav_Noether\": true, \"af0_scalar_Noethe...",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_master_kappa2.json",
+              "key": "/details/grav_af0_deterministic/kappa1/Q_terms",
+              "expect": [0, 0, 0, 0],
+              "value": "[0, 0, 0, 0]",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_master_kappa2.json",
+              "key": "/details/grav_af0_deterministic/kappa1/Q_identically_zero",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/residual_records/master_grav_per_order/kappa1/accepted",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_residual_records_regenerated_and_agree"],
+          "functions_found": {
+            "run": true,
+            "XX_by_order": true,
+            "grav_deterministic": true
+          },
+          "tests_found": {
+            "test_residual_records_regenerated_and_agree": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.D3",
+          "claim": "master equation at kappa^2: every antifield-number component; grav af0 record; gate",
+          "file": "code/classical/master_kappa2.py",
+          "functions": ["run", "XX_by_order", "grav_deterministic"],
+          "checks": [
+            {
+              "source": "certificates/P13_master_kappa2.json",
+              "key": "/table_by_kappa_and_antifield_number/kappa2",
+              "expect": "ALL_TRUE",
+              "value": "{\"af0_grav_Noether\": true, \"af0_scalar_Noethe...",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_master_kappa2.json",
+              "key": "/details/grav_af0_deterministic/kappa2/Q_terms",
+              "expect": [0, 0, 0, 0],
+              "value": "[0, 0, 0, 0]",
+              "ok": true
+            },
+            {
+              "source": "certificates/P13_master_kappa2.json",
+              "key": "/details/grav_af0_deterministic/kappa2/Q_identically_zero",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/residual_records/master_grav_per_order/kappa2/accepted",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_residual_records_regenerated_and_agree"],
+          "functions_found": {
+            "run": true,
+            "XX_by_order": true,
+            "grav_deterministic": true
+          },
+          "tests_found": {
+            "test_residual_records_regenerated_and_agree": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.D4",
+          "claim": "no required master residual; no unconditional pass field",
+          "file": "code/classical/master_kappa2.py",
+          "functions": ["master_residuals"],
+          "checks": [
+            {
+              "source": "certificates/P13_master_kappa2.json",
+              "key": "/required_master_residuals",
+              "expect": [],
+              "value": "[]",
+              "ok": true
+            }
+          ],
+          "tests": ["test_master_no_unconditional_pass_and_deterministic"],
+          "functions_found": {
+            "master_residuals": true
+          },
+          "tests_found": {
+            "test_master_no_unconditional_pass_and_deterministic": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.D5",
+          "claim": "count/flag invariant on every record; quartic and master records agree",
+          "file": "code/classical/certio.py",
+          "functions": ["invariant_violations", "cross_check"],
+          "checks": [
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/deterministic_prerequisites/residual_record_invariants_all_certificates",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/residual_records/cross_certificate/agree",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_certificate_mutation_rejects_publication", "test_certio_rejects_inconsistent_record_
+  +> before_serialization"],
+          "functions_found": {
+            "invariant_violations": true,
+            "cross_check": true
+          },
+          "tests_found": {
+            "test_certificate_mutation_rejects_publication": true,
+            "test_certio_rejects_inconsistent_record_before_serialization": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.D6",
+          "claim": "acceptance gate: release_claim_accepted and classical readiness (P.4)",
+          "file": "code/p5_entry/release_p14.py",
+          "functions": ["classical_block"],
+          "checks": [
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/release_claim_accepted",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/classical_readiness_for_ch_identity",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/classical/flags/required_classical_BV_components_verified",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_release_accepted_and_hard_stops"],
+          "functions_found": {
+            "classical_block": true
+          },
+          "tests_found": {
+            "test_release_accepted_and_hard_stops": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P4.D7",
+          "claim": "publication gate re-invoked before every pdf/zip/manifest stage, also on resumed builds",
+          "file": "tools/build.py",
+          "functions": ["publication_gate", "pdf_readback"],
+          "checks": [],
+          "tests": ["test_resumed_stage_build_blocked"],
+          "functions_found": {
+            "publication_gate": true,
+            "pdf_readback": true
+          },
+          "tests_found": {
+            "test_resumed_stage_build_blocked": true
+          },
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "milestone": "P.5_entry",
+      "chain": "quantum object -> prescription/D11 matching -> counterterm domain -> amplitude rules -> gate",
+      "rows": [
+        {
+          "id": "P5E.1",
+          "claim": "quantum object in transformed variables: S_Psi parts, eps = -1, b retained (elimination ma
+  +> kes S quadratic in cbar*'), Gamma_1 independent of cbar*', b*'; pullback != quantum theorem",
+          "file": "code/p5_entry/quantum_object.py",
+          "functions": ["main", "patterns", "b_elimination"],
+          "checks": [
+            {
+              "source": "certificates/P14_quantum_object.json",
+              "key": "/quantum_action_defined",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_quantum_object.json",
+              "key": "/Q1_transformed_variables/eps_derived",
+              "expect": -1,
+              "value": "-1",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_quantum_object.json",
+              "key": "/Q2_fields_antifields_b/b_decision",
+              "expect": "RETAINED and integrated",
+              "value": "\"RETAINED and integrated\"",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_quantum_object.json",
+              "key": "/Q2_fields_antifields_b/Gamma1_independent_of",
+              "expect": ["bs", "cbs"],
+              "value": "[\"bs\", \"cbs\"]",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_quantum_object.json",
+              "key": "/Q5_kappa_loop_bookkeeping/ok",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_quantum_object.json",
+              "key": "/Q6_pullback_vs_theorem/quantum_gauge_change_theorem_asserted",
+              "expect": false,
+              "value": "false",
+              "ok": true
+            }
+          ],
+          "tests": ["test_quantum_object"],
+          "functions_found": {
+            "main": true,
+            "patterns": true,
+            "b_elimination": true
+          },
+          "tests_found": {
+            "test_quantum_object": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P5E.2",
+          "claim": "ONE prescription: operational DRED (rules R1-R6), MS-bar, Feynman i0; scaleless rules defi
+  +> ned but not applied; quantum_prescription_defined requires the verified DRED rules",
+          "file": "code/p5_entry/prescription_d11.py",
+          "functions": ["main"],
+          "checks": [
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/quantum_prescription_defined",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/prescription/id",
+              "expect": "P14_DRED_MSbar_FeynmanI0",
+              "value": "\"P14_DRED_MSbar_FeynmanI0\"",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/prescription_checks",
+              "expect": "ALL_TRUE",
+              "value": "{\"propagators_are_verified_Hessian_inverses\":...",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/prescription_checks/operational_DRED_rules_verified",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/D12_status",
+              "expect": "Missing",
+              "value": "\"Missing\"",
+              "ok": true
+            }
+          ],
+          "tests": ["test_prescription_and_D11_matching"],
+          "functions_found": {
+            "main": true
+          },
+          "tests_found": {
+            "test_prescription_and_D11_matching": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P5E.2b",
+          "claim": "operational DRED: g4 = ghat + gtilde (tr d, 4-d), l and p in QdS, l_r = l.e_(r) lifting, g
+  +> hat-projected Gram/PV reduction, contractions before Laurent with d symbolic; evanescent parts retained; 
+  +> premature d=4, tr ghat=4 and expand-before-contract are rejected",
+          "file": "code/p5_entry/dred.py",
+          "functions": ["reduce_tensor", "eta_trace_Gt", "toy_four_d_part", "toy_evanescent_trace", "known_red
+  +> uctions", "lift_exported", "main"],
+          "checks": [
+            {
+              "source": "certificates/P14_dred_rules.json",
+              "key": "/dred_rules_verified",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_dred_rules.json",
+              "key": "/mutations_all_rejected",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_dred_rules.json",
+              "key": "/mutations/premature_d4/rejected",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_dred_rules.json",
+              "key": "/mutations/trace_ghat_eq_4/rejected",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_dred_rules.json",
+              "key": "/mutations/contract_after_laurent/rejected",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_dred_rules.json",
+              "key": "/toy_checks/T1_four_d_part/finite",
+              "expect": "a/8 + b/4",
+              "value": "\"a/8 + b/4\"",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_dred_rules.json",
+              "key": "/toy_checks/T2_evanescent_trace/finite",
+              "expect": "-a/2",
+              "value": "\"-a/2\"",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_dred_rules.json",
+              "key": "/known_reductions/pass",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_dred_rules.json",
+              "key": "/evanescent_parts_present_in_exports",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_dred_rules.json",
+              "key": "/loop_evaluations_performed",
+              "expect": false,
+              "value": "false",
+              "ok": true
+            }
+          ],
+          "tests": ["test_dred_rules_certificate", "test_dred_premature_d4_changes_finite_part_and_is_caught",
+  +>  "test_dred_evanescent_trace_is_d_minus_4_times_pole", "test_dred_trace_ghat_eq_4_rejected", "test_dred_k
+  +> nown_reductions_and_contraction_engine"],
+          "functions_found": {
+            "reduce_tensor": true,
+            "eta_trace_Gt": true,
+            "toy_four_d_part": true,
+            "toy_evanescent_trace": true,
+            "known_reductions": true,
+            "lift_exported": true,
+            "main": true
+          },
+          "tests_found": {
+            "test_dred_rules_certificate": true,
+            "test_dred_premature_d4_changes_finite_part_and_is_caught": true,
+            "test_dred_evanescent_trace_is_d_minus_4_times_pole": true,
+            "test_dred_trace_ghat_eq_4_rejected": true,
+            "test_dred_known_reductions_and_contraction_engine": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P5E.3",
+          "claim": "D11 matching DEFINED (M1 exact integrand identity vs XVI-O V_tensor, 100 pairs; M3 CONDITI
+  +> ONAL on M2: sd(u^R) 4, kernel sd <= 8, contact derivative order <= 4, contact space orders 0/2/4 = 2/4/5,
+  +>  degree 4 imposed by normalization condition N4; no c delta; r = -i pi^2 XVI-O side only); NOT verified",
+          "file": "code/p5_entry/prescription_d11.py",
+          "functions": ["M1_identity", "M3_local_space", "M3_contact_analysis"],
+          "checks": [
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/D11_matching_defined",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/D11_matching_verified",
+              "expect": false,
+              "value": "false",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/matching/M1_integrand_identity/mismatches",
+              "expect": [],
+              "value": "[]",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/matching/M1_integrand_identity/component_pairs_checked",
+              "expect": 100,
+              "value": "100",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/matching/M1_integrand_identity/bound_to_export",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/matching/M3_local_difference/labels/scalar_extension_scaling_degree",
+              "expect": 4,
+              "value": "4",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/matching/M3_local_difference/labels/kernel_scaling_degree_bound",
+              "expect": 8,
+              "value": "8",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/matching/M3_local_difference/labels/local_contact_derivative_order_bound",
+              "expect": 4,
+              "value": "4",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/matching/M3_local_difference/lower_degree_contacts_excluded_by_N4/order_2_mu2",
+              "expect": 4,
+              "value": "4",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/matching/M3_local_difference/dimension",
+              "expect": 5,
+              "value": "5",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/matching/M3_local_difference/transverse_subspace_dimension",
+              "expect": 2,
+              "value": "2",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/matching/M4_finite_adjustments/u_R_c_delta_added_by_P",
+              "expect": false,
+              "value": "false",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_prescription_D11_matching.json",
+              "key": "/matching/M5_residue/r",
+              "expect": "-i * pi**2",
+              "value": "\"-i * pi**2\"",
+              "ok": true
+            }
+          ],
+          "tests": ["test_prescription_and_D11_matching"],
+          "functions_found": {
+            "M1_identity": true,
+            "M3_local_space": true,
+            "M3_contact_analysis": true
+          },
+          "tests_found": {
+            "test_prescription_and_D11_matching": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P5E.4",
+          "claim": "counterterm domain: kappa^1 empty, kappa^2 basis 11 (hh 5, cbar c 2, K'c 3, phi phi 1) gen
+  +> erated mechanically; eight candidate directions modulo the computed exact equivalences, before imposing t
+  +> he identity constraints (no cohomological classification: D cap ker sigma_0 not computed); constraint lis
+  +> t, not an admission",
+          "file": "code/p5_entry/counterterm_domain.py",
+          "functions": ["structures", "admissible_pairs", "rank", "main"],
+          "checks": [
+            {
+              "source": "certificates/P14_counterterm_domain.json",
+              "key": "/counterterm_domain_defined",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_counterterm_domain.json",
+              "key": "/kappa1/basis_size",
+              "expect": 0,
+              "value": "0",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_counterterm_domain.json",
+              "key": "/kappa2/basis_size",
+              "expect": 11,
+              "value": "11",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_counterterm_domain.json",
+              "key": "/equivalences/quotient_dimension",
+              "expect": 8,
+              "value": "8",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_counterterm_domain.json",
+              "key": "/equivalences/D_cap_ker_sigma0_computed",
+              "expect": false,
+              "value": "false",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_counterterm_domain.json",
+              "key": "/equivalences/S0_density_check/ok",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_counterterm_domain.json",
+              "key": "/XIV_J_opened",
+              "expect": false,
+              "value": "false",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_counterterm_domain.json",
+              "key": "/XV_B_opened",
+              "expect": false,
+              "value": "false",
+              "ok": true
+            }
+          ],
+          "tests": ["test_counterterm_domain"],
+          "functions_found": {
+            "structures": true,
+            "admissible_pairs": true,
+            "rank": true,
+            "main": true
+          },
+          "tests_found": {
+            "test_counterterm_domain": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P5E.5",
+          "claim": "amplitude rules: vertices (incl. ghost-graviton derivative terms, K' vertex), propagators,
+  +>  ordering, multiplicities, symmetry factors, signs; symbolic integrands; W1-W6 controls (W5 regenerates o
+  +> nly D14a-c, D11, D13; W6 regenerates D01, D02, D03, D12)",
+          "file": "code/p5_entry/amplitude_rules.py",
+          "functions": ["build_integrands", "verify", "W2", "W3", "W4", "W5"],
+          "checks": [
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/amplitude_rules_verified",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/controls/W1_wick_berezin_shadow/pass",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/controls/W4_ward_bose/pass",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/integrands_only",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/loop_evaluations_performed",
+              "expect": false,
+              "value": "false",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/graphs/D12/D12_status",
+              "expect": "Missing",
+              "value": "\"Missing\"",
+              "ok": true
+            }
+          ],
+          "tests": ["test_amplitude_rules_and_mutations"],
+          "functions_found": {
+            "build_integrands": true,
+            "verify": true,
+            "W2": true,
+            "W3": true,
+            "W4": true,
+            "W5": true
+          },
+          "tests_found": {
+            "test_amplitude_rules_and_mutations": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P5E.5b",
+          "claim": "independent Hessian/Tr-log regeneration of D01, D02, D03, D12 from the field-dependent Hes
+  +> sian of S_Psi (own (h,b) inverse; not the Feynman-rule assembler) == exported integrands",
+          "file": "code/p5_entry/hessian_route.py",
+          "functions": ["ell_table", "graviton_inverse", "ghost_inverse", "reference", "W6", "compare_exports"
+  +> ],
+          "checks": [
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/controls/W6_hessian_route/pass",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/W6_exports/all_agree",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/W6_exports/D01/n_mismatches",
+              "expect": 0,
+              "value": "0",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/W6_exports/D03/n_mismatches",
+              "expect": 0,
+              "value": "0",
+              "ok": true
+            }
+          ],
+          "tests": ["test_hessian_route_regenerates_D01_D02_D03_D12"],
+          "functions_found": {
+            "ell_table": true,
+            "graviton_inverse": true,
+            "ghost_inverse": true,
+            "reference": true,
+            "W6": true,
+            "compare_exports": true
+          },
+          "tests_found": {
+            "test_hessian_route_regenerates_D01_D02_D03_D12": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P5E.6",
+          "claim": "mutations rejected: tadpole factor, ghost-loop sign, off-diagonal multiplicity, source/gho
+  +> st order, ghost transport term",
+          "file": "code/p5_entry/amplitude_rules.py",
+          "functions": ["apply_mutations", "main"],
+          "checks": [
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/mutations_all_rejected",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/mutations/omit_ghost_transport_term/rejected",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/mutations/reversed_source_ghost_order/rejected",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_amplitude_rules_and_mutations"],
+          "functions_found": {
+            "apply_mutations": true,
+            "main": true
+          },
+          "tests_found": {
+            "test_amplitude_rules_and_mutations": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P5E.7",
+          "claim": "Berezin/Wick shadow fixes symmetry factors and Grassmann signs independently",
+          "file": "code/p5_entry/shadow.py",
+          "functions": ["expect", "gamma1", "run_shadows"],
+          "checks": [
+            {
+              "source": "certificates/P14_amplitude_rules.json",
+              "key": "/controls/W1_wick_berezin_shadow/pass",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            }
+          ],
+          "tests": ["test_amplitude_rules_and_mutations"],
+          "functions_found": {
+            "expect": true,
+            "gamma1": true,
+            "run_shadows": true
+          },
+          "tests_found": {
+            "test_amplitude_rules_and_mutations": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P5E.8",
+          "claim": "P.3/P.4 freeze bound to the p13 tree (independent rebuild passed; same-box caveat); frozen
+  +>  code and values unchanged",
+          "file": "code/p5_entry/freeze_p13.py",
+          "functions": ["freeze", "F1_independent", "F2_frozen_code", "F3_frozen_values"],
+          "checks": [
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/P3_P4_frozen_as_P5_inputs",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/p13_independent_rebuild/bound_to_source_tree_sha256",
+              "expect": "2b1baf335468944aa800c05eaa8b0b4df67ee893491079fcc944eb8fb0e69a70",
+              "value": "\"2b1baf335468944aa800c05eaa8b0b4df67ee8934910...",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/p13_independent_rebuild/caveat",
+              "expect": "CONTAINS:SAME box",
+              "value": "\"the p13 independent rebuild ran on the SAME ...",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/freeze/F2/changed_or_missing",
+              "expect": [],
+              "value": "[]",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/freeze/F3/differences",
+              "expect": [],
+              "value": "[]",
+              "ok": true
+            }
+          ],
+          "tests": ["test_freeze_binding"],
+          "functions_found": {
+            "freeze": true,
+            "F1_independent": true,
+            "F2_frozen_code": true,
+            "F3_frozen_values": true
+          },
+          "tests_found": {
+            "test_freeze_binding": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P5E.9",
+          "claim": "P.5 entry gate: earned iff all five contract flags hold; loop/restoration flags NOT earned
+  +> ",
+          "file": "code/p5_entry/release_p14.py",
+          "functions": ["_main", "p5_entry_flags", "milestones_p14"],
+          "checks": [
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/P5_entry_flags",
+              "expect": "ALL_TRUE",
+              "value": "{\"quantum_action_defined\": true, \"quantum_pre...",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/P5_entry_earned",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/hard_stops_hold",
+              "expect": true,
+              "value": "true",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/hard_stops/quantum_inputs_evaluated",
+              "expect": "not_earned",
+              "value": "\"not_earned\"",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/hard_stops/projected_identity_verified",
+              "expect": "not_earned",
+              "value": "\"not_earned\"",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/hard_stops/bulk_symmetry_restored",
+              "expect": false,
+              "value": "false",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/D11_matching_verified",
+              "expect": false,
+              "value": "false",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/D12_status",
+              "expect": "Missing",
+              "value": "\"Missing\"",
+              "ok": true
+            },
+            {
+              "source": "RELEASE_STATUS.json",
+              "key": "/hard_stops/O1_closure",
+              "expect": "NOT_CLOSED",
+              "value": "\"NOT_CLOSED\"",
+              "ok": true
+            }
+          ],
+          "tests": ["test_p5_entry_gate_and_hard_stops"],
+          "functions_found": {
+            "_main": true,
+            "p5_entry_flags": true,
+            "milestones_p14": true
+          },
+          "tests_found": {
+            "test_p5_entry_gate_and_hard_stops": true
+          },
+          "resolved": true
+        },
+        {
+          "id": "P5E.10",
+          "claim": "publication gate (p14) re-invoked before pdf/zip/manifest stages",
+          "file": "tools/build.py",
+          "functions": ["publication_gate", "pdf_readback"],
+          "checks": [],
+          "tests": ["test_resumed_stage_build_blocked"],
+          "functions_found": {
+            "publication_gate": true,
+            "pdf_readback": true
+          },
+          "tests_found": {
+            "test_resumed_stage_build_blocked": true
+          },
+          "resolved": true
+        }
+      ]
+    }
+  ],
+  "quantum_input_slots": [
+    {
+      "slot": "hh at kappa^2",
+      "Gamma1_pattern": "h^2",
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "graphs": ["D01", "D02", "D03", "D11", "D12"],
+      "graph_names": ["D01_hh_bubble_cubic", "D02_hh_tadpole_quartic", "D03_hh_ghost_loop", "D11_hh_scalar_loo
+  +> p", "D12_hh_scalar_tadpole"],
+      "status": "named dependency; NOT an evaluated coefficient",
+      "graph_status": {
+        "D01_hh_bubble_cubic": "listed_unevaluated",
+        "D02_hh_tadpole_quartic": "vertex_available_quantum_unevaluated",
+        "D03_hh_ghost_loop": "listed_unevaluated",
+        "D11_hh_scalar_loop": "Constructed_kernel_under_prescription (inherited O5; not re-evaluated)",
+        "D12_hh_scalar_tadpole": "Missing (D12_quantum_evaluated=false)"
+      },
+      "evidence": {
+        "file": "code/p4_classical/ch_source_audit.py",
+        "function": "audit",
+        "certificate": "certificates/P13_ch_source_audit.json",
+        "key": "/surviving_rows/0",
+        "test": "test_ch_rows_and_quantum_input_slots"
+      },
+      "resolved": true
+    },
+    {
+      "slot": "K'c at kappa^2",
+      "Gamma1_pattern": "K.c",
+      "row": "(S0,Gamma1^[2]) s1 h:h^2",
+      "graphs": ["D13"],
+      "graph_names": ["D13_Kc_ghost_graviton_loop"],
+      "status": "named dependency; NOT an evaluated coefficient",
+      "graph_status": {
+        "D13_Kc_ghost_graviton_loop": "listed_unevaluated (generated from S_Psi; h* c row; coefficient not eva
+  +> luated)"
+      },
+      "evidence": {
+        "file": "code/p4_classical/ch_source_audit.py",
+        "function": "audit",
+        "certificate": "certificates/P13_ch_source_audit.json",
+        "key": "/surviving_rows/1",
+        "test": "test_ch_rows_and_quantum_input_slots"
+      },
+      "resolved": true
+    },
+    {
+      "slot": "h one-point at kappa",
+      "Gamma1_pattern": "h",
+      "row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "graphs": ["D14a", "D14b", "D14c"],
+      "graph_names": ["D14a_h_onepoint_grav_tadpole", "D14b_h_onepoint_ghost_tadpole", "D14c_h_onepoint_scalar
+  +> _tadpole"],
+      "status": "named dependency; NOT an evaluated coefficient",
+      "graph_status": {
+        "D14a_h_onepoint_grav_tadpole": "listed_unevaluated; order-kappa one-point slot, DISTINCT from D12",
+        "D14b_h_onepoint_ghost_tadpole": "listed_unevaluated; order-kappa one-point slot, DISTINCT from D12",
+        "D14c_h_onepoint_scalar_tadpole": "listed_unevaluated; order-kappa one-point slot, DISTINCT from D12"
+      },
+      "evidence": {
+        "file": "code/p4_classical/ch_source_audit.py",
+        "function": "audit",
+        "certificate": "certificates/P13_ch_source_audit.json",
+        "key": "/surviving_rows/2",
+        "test": "test_ch_rows_and_quantum_input_slots"
+      },
+      "resolved": true
+    }
+  ],
+  "hard_stops": {
+    "quantum_inputs_evaluated": "not_earned",
+    "projected_defect_computed": "not_earned",
+    "projected_identity_verified": "not_earned",
+    "projected_restoration_verified": "not_earned",
+    "bulk_symmetry_restored": false,
+    "symmetry_restored": false,
+    "D02_quantum_evaluated": false,
+    "D12_quantum_evaluated": false,
+    "D12_status": "Missing",
+    "D11_matching_verified": false,
+    "O1_closure": "NOT_CLOSED",
+    "insertion_status": "Frozen_negative_obstruction_preserved",
+    "XV_B_opened": false,
+    "XIV_J_opened": false,
+    "Route_B_discharged": false,
+    "P5_entry_opened": true,
+    "P5_calculation_opened": false,
+    "P5_identity_opened": false,
+    "loop_evaluations_performed": false,
+    "u_R_c_delta_added": false
+  },
+  "reproducibility": {
+    "author_rebuild_passed": false,
+    "independent_rebuild_passed": false
+  },
+  "p13_independent_rebuild": {
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "2b1baf335468944aa800c05eaa8b0b4df67ee893491079fcc944eb8fb0e69a70",
+    "bound_to_source_zip_sha256": "2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266",
+    "report": "archival/p13/reproducibility/independent_rebuild_report_p13.json",
+    "report_sha256": "7ce496cc446f2ef1948de6aaf034b09e9dcab0b9878cd6ae6015cda63a6515e4",
+    "comparisons": {
+      "reference_values_matched": {
+        "compared": 112,
+        "equal": 112
+      },
+      "independent_comparisons": 77,
+      "mismatches": 0
+    },
+    "caveat": "the p13 independent rebuild ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh v
+  +> env from the source-only zip; it was NOT run on a second machine",
+    "NOT_inherited_by_p14": "bound to the p13 tree; the p14 tree has its own (pending) independent flag"
+  },
+  "P3_P4_frozen_as_P5_inputs": true,
+  "all_links_resolved": true,
+  "n_rows": 42,
+  "n_slots": 3
+}

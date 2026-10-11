@@ -1,0 +1,521 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p14r",
+  "date": "2026-10-08",
+  "deliverable": "P.5 entry contract",
+  "execution_pass": true,
+  "claim_status": "P.5_entry: earned (contract fixed); classical_readiness (frozen P.4): earned",
+  "scope": "P.5 entry: the quantum object, ONE prescription with the D11 matching note, the one-loop counterte
+  +> rm domain and executable amplitude rules for the fixed one-loop kappa^2 ch identity on the S_inv baseline
+  +> ; integrands only; NO loop evaluation; NOT quantum inputs, NOT the projected identity, NOT bulk restorati
+  +> on, NOT the prepared S_D, NOT the insertion",
+  "release_claim_accepted": true,
+  "release_claim_accepted_definition": "p13 classical release claim (recomputed from the frozen inputs) AND p1
+  +> 4/p14r hard stops AND P5_entry_earned (all five contract flags AND P3_P4_frozen_as_P5_inputs)",
+  "P5_entry_earned": true,
+  "P5_entry_flags": {
+    "quantum_action_defined": true,
+    "quantum_prescription_defined": true,
+    "D11_matching_defined": true,
+    "counterterm_domain_defined": true,
+    "amplitude_rules_verified": true
+  },
+  "P5_entry_records": {
+    "quantum_action_defined": {
+      "certificate": "P14_quantum_object.json",
+      "present": true,
+      "value": true,
+      "revision": "p14r",
+      "content_sha256_ignoring_timings": "d1edb02102eaa396e7dedc82b8dbca6ffb28c67b280b62c93639c611b7a4fde2"
+    },
+    "quantum_prescription_defined": {
+      "certificate": "P14_prescription_D11_matching.json",
+      "present": true,
+      "value": true,
+      "revision": "p14r",
+      "content_sha256_ignoring_timings": "93889d4304b5a01f4ecfe00e5858a6ff99aa97ba1bb41262e3b8a306186cad45",
+      "dred_certificate_present": true,
+      "dred_rules_ok": true
+    },
+    "D11_matching_defined": {
+      "certificate": "P14_prescription_D11_matching.json",
+      "present": true,
+      "value": true,
+      "revision": "p14r",
+      "content_sha256_ignoring_timings": "93889d4304b5a01f4ecfe00e5858a6ff99aa97ba1bb41262e3b8a306186cad45",
+      "M1_pass": true,
+      "D11_matching_verified": false
+    },
+    "counterterm_domain_defined": {
+      "certificate": "P14_counterterm_domain.json",
+      "present": true,
+      "value": true,
+      "revision": "p14r",
+      "content_sha256_ignoring_timings": "e6431c0ab8c301beba0c80546e49e10970438b3e3893735acfff7cd125001215",
+      "kappa1": 0,
+      "kappa2": 11,
+      "by_sector": {
+        "h.h": 5,
+        "c.cb": 2,
+        "c.K": 3,
+        "phi.phi": 1
+      }
+    },
+    "amplitude_rules_verified": {
+      "certificate": "P14_amplitude_rules.json",
+      "present": true,
+      "value": true,
+      "revision": "p14r",
+      "content_sha256_ignoring_timings": "fbd79f7a506ef6d3ac2f1f5c99890126b234cb2f7c2f281d76f369c7ac33621b",
+      "controls_all_pass": true,
+      "mutations_all_rejected": true,
+      "W6_hessian_route_and_exports": true
+    }
+  },
+  "P5_entry_qualification": "P.5 entry = the contract is fixed, nothing is evaluated. Qualifications (p14r): t
+  +> he DRED prescription is operational at the level of index algebra, lifting, ghat-projected tensor reducti
+  +> on and the order contraction -> Laurent (tested on generic placeholders and applied to the lifted exporte
+  +> d integrands), but no scalar integral is evaluated and the scaleless-integral rules are not applied; D11 
+  +> M3 is conditional on M2 and its degree-4 form on the imposed normalization condition N4; the counterterm 
+  +> count 8 is a count of candidate directions modulo the computed exact equivalences, before the identity co
+  +> nstraints (D cap ker sigma_0 not computed); D11_matching_verified = false; D12 Missing.",
+  "P5_entry_dependency": "P.5 entry is stated against the P.3/P.4 freeze: P3_P4_frozen_as_P5_inputs = True (p1
+  +> 3 independent rebuild passed, bound to the p13 tree; the p13 independent rebuild ran on the SAME box (sha
+  +> red kernel, TeX Live, poppler) in a fresh venv from the source-only zip; it was NOT run on a second machi
+  +> ne)",
+  "P3_P4_frozen_as_P5_inputs": true,
+  "freeze": {
+    "P3_P4_frozen_as_P5_inputs": true,
+    "definition": "F1 independent_rebuild_passed(p13 tree) AND F2 frozen code byte-identical AND F3 frozen val
+  +> ues equal",
+    "independent_rebuild_passed_p13": true,
+    "frozen_code_unchanged": true,
+    "frozen_values_unchanged": true,
+    "bound_to": {
+      "p13_source_tree_sha256": "2b1baf335468944aa800c05eaa8b0b4df67ee893491079fcc944eb8fb0e69a70",
+      "p13_source_zip_sha256": "2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266"
+    },
+    "caveat": "the p13 independent rebuild ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh v
+  +> env from the source-only zip; it was NOT run on a second machine",
+    "F1": {
+      "report": "archival/p13/reproducibility/independent_rebuild_report_p13.json",
+      "present": true,
+      "sha256_ok": true,
+      "report_pass": true,
+      "report_independent_rebuild_passed": true,
+      "mismatches": 0,
+      "independent_comparisons": 77,
+      "compared_with_reference": {
+        "compared": 112,
+        "equal": 112
+      },
+      "bound_source_tree_sha256": "2b1baf335468944aa800c05eaa8b0b4df67ee893491079fcc944eb8fb0e69a70",
+      "bound_zip_sha256": "2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266",
+      "bound_to_p13_tree": true,
+      "bound_to_p13_zip": true,
+      "caveat": "the p13 independent rebuild ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh
+  +>  venv from the source-only zip; it was NOT run on a second machine",
+      "live_report_present": true,
+      "live_report_identical_to_archived": true
+    },
+    "F2": {
+      "files": 54,
+      "changed_or_missing": [],
+      "list_sha256_ok": true,
+      "archived_zip_sha256_ok": true,
+      "list_equals_archived_zip": true
+    },
+    "F3": {
+      "compared": 70,
+      "equal": 70,
+      "differences": [],
+      "reference_sha256_ok": true
+    }
+  },
+  "D11_matching_verified": false,
+  "D12_status": "Missing",
+  "projected_vs_bulk": "projected (XVI-N lem:field-only; the ch projection of the fixed one-loop kappa^2 ident
+  +> ity) is distinct from bulk BV restoration; the XVI-O kernel two-point Ward identity d(Pi_w + L) = 0 is NO
+  +> T functional ST4b",
+  "classical": {
+    "flags": {
+      "quartic_generator_verified": true,
+      "ch_projection_defined": true,
+      "ch_dependency_inventory_complete": true,
+      "gauge_fixing_map_constructed": true,
+      "required_classical_BV_components_verified": true
+    },
+    "classical_readiness_for_ch_identity": true,
+    "release_claim_accepted": true,
+    "deterministic_prerequisites": {
+      "C1_inverse_10comp": true,
+      "C2_det_tracelog_10comp": true,
+      "C3_boundary_identity_generic_and_conformal": true,
+      "C4_export_equals_independent_evaluator": true,
+      "C5_cubic_regression_Euler": true,
+      "C6_quadratic_regression_Euler": true,
+      "C7_grav_noether_k0_k1_k2_on_exports": true,
+      "quartic_mutations_all_rejected": true,
+      "master_grav_noether_deterministic_k0_k1_k2": true,
+      "master_engine_parts_exact": true,
+      "graviton_hessian_generic_symbolic_k": true,
+      "canonicity_all_23_antifield_components": true,
+      "ch_enumeration_lemma_mechanical": true,
+      "residual_record_invariants_all_certificates": true,
+      "quartic_C7_Q_terms_zero_and_flag_true_all_orders": true,
+      "master_grav_Q_terms_zero_and_flag_true_all_orders": true,
+      "cross_certificate_quartic_vs_master_agree": true,
+      "stored_C7_flag_equals_recomputation": true
+    },
+    "failed_prerequisites": [],
+    "hash_consistency": {
+      "consistent": true,
+      "ell": {
+        "ell2": {
+          "export_file": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+          "quartic_cert": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+          "master_input": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0"
+        },
+        "ell3": {
+          "export_file": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+          "quartic_cert": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+          "master_input": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1"
+        },
+        "ell4": {
+          "export_file": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+          "quartic_cert": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123",
+          "master_input": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123"
+        }
+      }
+    },
+    "required_master_residuals": [],
+    "residual_records": {
+      "invariant_violations": {},
+      "quartic_C7_per_order": {
+        "kappa0": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa1": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa2": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        }
+      },
+      "master_grav_per_order": {
+        "kappa0": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa1": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        },
+        "kappa2": {
+          "residual_counts": [0, 0, 0, 0],
+          "zero_flag": true,
+          "accepted": true
+        }
+      },
+      "cross_certificate": {
+        "same_inputs": true,
+        "differences": [],
+        "agree": true,
+        "quartic_parameters": {
+          "a_ghost": "1/2",
+          "transport_term": 1,
+          "s0": "a(eta_nn d_m c^n + eta_mm d_n c^m)",
+          "s1": "a(c^r d_r h_mn + h_rn d_m c^r + h_mr d_n c^r)",
+          "ell_sha256": {
+            "ell2": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+            "ell3": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+            "ell4": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123"
+          }
+        },
+        "master_parameters": {
+          "a_ghost": "1/2",
+          "transport_term": 1,
+          "s0": "a(eta_nn d_m c^n + eta_mm d_n c^m)",
+          "s1": "a(c^r d_r h_mn + h_rn d_m c^r + h_mr d_n c^r)",
+          "ell_sha256": {
+            "ell2": "8af76ef7b97d190159001df33e715dabb759060e49fb1eb6d896f74ec7745ce0",
+            "ell3": "60c73cd39c9e15316d366288ad133237bf4afbd151dfef7b0a89a6dec55e39c1",
+            "ell4": "33ac9e49c4d1644ee47f09b80983f4ea29827d33af93248d7037bdafa5c6e123"
+          }
+        }
+      }
+    },
+    "hard_stops_p13_hold": true,
+    "hard_stops_p13": {
+      "quantum_inputs_evaluated": "not_earned",
+      "projected_identity_verified": "not_earned",
+      "D02_quantum_evaluated": false,
+      "D12_quantum_evaluated": false,
+      "D12_status": "Missing",
+      "symmetry_restored": false,
+      "O1_closure": "NOT_CLOSED",
+      "insertion_status": "Frozen_negative_obstruction_preserved",
+      "XV_B_opened": false,
+      "Route_B_discharged": false,
+      "P5_opened": false,
+      "loop_evaluations_performed": false,
+      "u_R_c_delta_added": false
+    },
+    "certificates": "P13_* (frozen P.3/P.4 inputs, regenerated by byte-identical p13 code)"
+  },
+  "statuses": {
+    "quartic_generator_verified": "earned",
+    "ch_projection_defined": "earned",
+    "ch_dependency_inventory_complete": "earned",
+    "gauge_fixing_map_constructed": "earned",
+    "required_classical_BV_components_verified": "earned",
+    "classical_readiness_for_ch_identity": "earned",
+    "quantum_inputs_evaluated": "not_earned",
+    "projected_identity_verified": "not_earned",
+    "propagators_match_transformed_Hessians": true,
+    "source_identity_relation_defined": true,
+    "source_identity_relation": "defined classical pullback/interface (related, not identical): Gamma_Psi(Phi,
+  +> Phi*') := Gamma(Phi, Phi*' - dPsi/dPhi); not a quantum theorem",
+    "D02_vertex_available": true,
+    "D02_quantum_evaluated": false,
+    "D12_quantum_evaluated": false,
+    "D12_status": "Missing",
+    "quantum_action_defined": "earned",
+    "quantum_prescription_defined": "earned",
+    "D11_matching_defined": "earned",
+    "counterterm_domain_defined": "earned",
+    "amplitude_rules_verified": "earned",
+    "D11_matching_verified": false,
+    "P5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)"
+  },
+  "ch_surviving_rows_unevaluated": [
+    {
+      "row": "(S0,Gamma1^[2]) s2 K:K.c",
+      "Gamma1_pattern": "h^2",
+      "graphs": ["D01_hh_bubble_cubic", "D02_hh_tadpole_quartic", "D03_hh_ghost_loop", "D11_hh_scalar_loop", "
+  +> D12_hh_scalar_tadpole"],
+      "value": "not evaluated (P.5 calculation is p15+); integrands exported where available"
+    },
+    {
+      "row": "(S0,Gamma1^[2]) s1 h:h^2",
+      "Gamma1_pattern": "K.c",
+      "graphs": ["D13_Kc_ghost_graviton_loop"],
+      "value": "not evaluated (P.5 calculation is p15+); integrands exported where available"
+    },
+    {
+      "row": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "Gamma1_pattern": "h",
+      "graphs": ["D14a_h_onepoint_grav_tadpole", "D14b_h_onepoint_ghost_tadpole", "D14c_h_onepoint_scalar_tadp
+  +> ole"],
+      "value": "not evaluated (P.5 calculation is p15+); integrands exported where available"
+    }
+  ],
+  "remaining_blockers": [
+    {
+      "id": "Batch A/B/C one-loop integrals (D01, D02, D03, D12, D13, D14a-c; D11 matching M2/L_match)",
+      "status": "integrands exported; not evaluated (p15+)",
+      "blocks": "quantum_inputs_evaluated"
+    },
+    {
+      "id": "D12_quantum_evaluation",
+      "status": "Missing",
+      "blocks": "quantum_inputs_evaluated"
+    },
+    {
+      "id": "D11_matching_verification (M2 on U, L_match)",
+      "status": "defined, not verified",
+      "blocks": "D11_matching_verified"
+    }
+  ],
+  "hard_stops": {
+    "quantum_inputs_evaluated": "not_earned",
+    "projected_defect_computed": "not_earned",
+    "projected_identity_verified": "not_earned",
+    "projected_restoration_verified": "not_earned",
+    "bulk_symmetry_restored": false,
+    "symmetry_restored": false,
+    "D02_quantum_evaluated": false,
+    "D12_quantum_evaluated": false,
+    "D12_status": "Missing",
+    "D11_matching_verified": false,
+    "O1_closure": "NOT_CLOSED",
+    "insertion_status": "Frozen_negative_obstruction_preserved",
+    "XV_B_opened": false,
+    "XIV_J_opened": false,
+    "Route_B_discharged": false,
+    "P5_entry_opened": true,
+    "P5_calculation_opened": false,
+    "P5_identity_opened": false,
+    "loop_evaluations_performed": false,
+    "u_R_c_delta_added": false
+  },
+  "hard_stops_hold": true,
+  "certificate_hard_stops": {
+    "D11_matching_verified_false": true,
+    "D12_Missing_in_prescription": true,
+    "D12_Missing_in_amplitudes": true,
+    "no_graph_value": true,
+    "no_loop_evaluation": true
+  },
+  "milestones": {
+    "definitions": {
+      "P.3": "fixed output projection + exhaustive coefficient dependencies + graph topology inventory (comple
+  +> te for the declared ch target)",
+      "P.4": "required classical action, transformations, source terms, gauge map and master verification (cla
+  +> ssical readiness earned); P.4 means classical readiness, NOT coupled one-loop restoration",
+      "P.5_entry": "quantum prescription, amplitude rules and counterterm domain fixed",
+      "P.5_calculation": "coefficients evaluated and renormalized",
+      "P.5_identity": "projected defect computed and, if possible, cancelled"
+    },
+    "order": ["P.3", "P.4", "P.5_entry", "P.5_calculation", "P.5_identity"],
+    "status": {
+      "P.3": "complete (declared ch target)",
+      "P.4": "earned (classical readiness)",
+      "P.5_entry": "earned (contract fixed; stated against the P.3/P.4 freeze)",
+      "P.5_calculation": "open (not started; Batch A/B/C integrals are p15+)",
+      "P.5_identity": "open"
+    },
+    "P3_complete": true,
+    "P4_classical_readiness_earned": true,
+    "P5_entry_earned": true,
+    "P5_entry_rule": "P.5 entry is earned iff all five contract flags hold (and is stated against the P.3/P.4 
+  +> freeze)",
+    "P5_entry_flags": {
+      "quantum_action_defined": true,
+      "quantum_prescription_defined": true,
+      "D11_matching_defined": true,
+      "counterterm_domain_defined": true,
+      "amplitude_rules_verified": true
+    },
+    "P4_is_NOT": "coupled one-loop restoration (quantum_inputs_evaluated / projected_identity_verified not ear
+  +> ned)",
+    "P3_P4_frozen_as_P5_inputs": true,
+    "frozen_rule": "P.3/P.4 are frozen P.5 inputs iff the p13 independent rebuild passed (bound to the p13 tre
+  +> e) AND the frozen code/values are unchanged",
+    "P5_entry_depends_on": "P3_P4_frozen_as_P5_inputs (p13 independent rebuild; caveat: the p13 independent re
+  +> build ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh venv from the source-only zip; it
+  +>  was NOT run on a second machine)",
+    "history": "archival/p02_p09/notes/P_scope.tex (p06-p08 'P-next.N' labels; its table row 'P4 coupled one-l
+  +> oop restoration' is SUPERSEDED: P.4 = classical readiness); archival/p12/ (p12 used 'classical readiness'
+  +>  without milestone labels); archival/p13/ (p13 release: P.3 complete, P.4 earned, P.5 entry next)",
+    "XVI_O_unaffected": "XVI-P is unregistered package evidence; XVI-O prop:kappa2-master stays Partial"
+  },
+  "author_rebuild_passed": false,
+  "independent_rebuild_passed": false,
+  "independent_rebuild_passed_p13": true,
+  "rebuild_flag_scope": "author_rebuild_passed and independent_rebuild_passed refer to the CURRENT (p14r) sour
+  +> ce tree only; independent_rebuild_passed_p13 refers to the p13 source tree 2b1baf335468944aa800c05eaa8b0b
+  +> 4df67ee893491079fcc944eb8fb0e69a70 / zip 2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266
+  +>  and is not inherited by p14r changes; it carries the P3_P4_frozen_as_P5_inputs freeze. Caveat: the p13 i
+  +> ndependent rebuild ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh venv from the source
+  +> -only zip; it was NOT run on a second machine",
+  "p13_independent_rebuild": {
+    "independent_rebuild_passed": true,
+    "bound_to_source_tree_sha256": "2b1baf335468944aa800c05eaa8b0b4df67ee893491079fcc944eb8fb0e69a70",
+    "bound_to_source_zip_sha256": "2f85a566c49689dea329df9fe3ea213eb6495759d4e95546495e245e7fdf3266",
+    "report": "archival/p13/reproducibility/independent_rebuild_report_p13.json",
+    "report_sha256": "7ce496cc446f2ef1948de6aaf034b09e9dcab0b9878cd6ae6015cda63a6515e4",
+    "comparisons": {
+      "reference_values_matched": {
+        "compared": 112,
+        "equal": 112
+      },
+      "independent_comparisons": 77,
+      "mismatches": 0
+    },
+    "caveat": "the p13 independent rebuild ran on the SAME box (shared kernel, TeX Live, poppler) in a fresh v
+  +> env from the source-only zip; it was NOT run on a second machine",
+    "NOT_inherited_by_p14": "bound to the p13 tree; the p14 tree has its own (pending) independent flag"
+  },
+  "reproducibility": {
+    "contract": "REBUILD_INSTRUCTIONS.md",
+    "entrypoint": "python3 tools/rebuild_from_source.py",
+    "source_zip": "XVI-P-p23-source-only.zip",
+    "reference_values": "reproducibility/reference_values_p23.json",
+    "author": {
+      "report": "reproducibility/author_rebuild_report_p14r.json",
+      "present": true,
+      "report_pass": true,
+      "report_source_tree_sha256": "a64c0ae365980fa6b077f991df4316347527613075e87f17fecfe422db6e3894",
+      "current_source_tree_sha256": "262f1e46ecddcede2279e838299302669c80cd2f6d7644aee7cb54cb4c6a4fe4",
+      "bound_to_current_source": false,
+      "report_records_source_zip_sha256": true,
+      "inherited_mode": "vendored",
+      "environment": {
+        "python": "3.13.5",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0",
+        "pytest": "9.1.1",
+        "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+        "pdftotext": "pdftotext version 25.03.0",
+        "platform": "Linux-6.12.94+-x86_64-with-glibc2.41"
+      }
+    },
+    "independent": {
+      "report": "reproducibility/independent_rebuild_report_p14r.json",
+      "present": true,
+      "report_pass": true,
+      "report_source_tree_sha256": "a64c0ae365980fa6b077f991df4316347527613075e87f17fecfe422db6e3894",
+      "current_source_tree_sha256": "262f1e46ecddcede2279e838299302669c80cd2f6d7644aee7cb54cb4c6a4fe4",
+      "bound_to_current_source": false,
+      "report_records_source_zip_sha256": false,
+      "inherited_mode": null,
+      "environment": {
+        "python": "3.13.5",
+        "sympy": "1.14.0",
+        "mpmath": "1.3.0",
+        "pytest": "9.1.1",
+        "pdftex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+        "pdftotext": "pdftotext version 25.03.0",
+        "pdfinfo": "pdfinfo version 25.03.0",
+        "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+        "venv": "/workspace/indep_rebuild_p14r/venv",
+        "pip_installed": "sympy==1.14.0 mpmath==1.3.0 pytest==9.1.1 (exact versions via pip)"
+      }
+    },
+    "p13_archive": "archival/p13",
+    "kind": "package evidence (XVI-O conv:package); not a mathematical certificate"
+  },
+  "XVI_P_registered": false,
+  "symmetry_restored": false,
+  "bulk_symmetry_restored": false,
+  "O1_closure": "NOT_CLOSED",
+  "insertion_status": "Frozen_negative_obstruction_preserved",
+  "XV_B_opened": false,
+  "XIV_J_opened": false,
+  "Route_B_discharged": false,
+  "obstruction": "XVI-N thm:massless-obstruction respected; no completion of the prepared/inserted functional;
+  +>  no c delta added to u^R_mu (XVI-J prop:extension); counterterm domain is a constraint list, not an admis
+  +> sion",
+  "not_premises": ["En01-A", "En01-B", "En01-C", "Em01 family", "Em02-B", "Em02-D", "En02-A", "En02-B", "VII-E
+  +> ", "VIII-B"],
+  "baseline": "S_inv (unprepared, sigma_eps == 1, no insertion I_t); prepared S_D keeps (S_D,S_D) != 0 (XVI-N 
+  +> prop:broken-square)",
+  "ghost_normalization_a": "1/2",
+  "XVI_M_sha256": "41aa109935f40ddee3109de62c46329c189b5408007970cc90ed5611dc4739ea",
+  "XVI_M_pin_ok": true,
+  "XVI_A_to_O_edited": false,
+  "XVI_O_o70_sync": "read-only",
+  "inputs_content_sha256_ignoring_timings": {
+    "P13_quartic_verified.json": "9ea00e3fac0551c01076311a0fe5f169a2c8952a1ca3521ced0df6d073e3eca4",
+    "P13_boundary_identity.json": "fc0d07742b7bb4895f34b978738d1056a1b2859ba70ad909b8a35f116c7acf27",
+    "P13_brst_derivation.json": "e9a9a3027b8c36b27d42101af6d4e5c032094a28e10183710d95c0c3955dfdc5",
+    "P13_source_action.json": "d98816405eb974e19e989f7b9a779fd9993205f6f33fc5cf0d004f69008e4ca8",
+    "P13_gauge_fixing_map.json": "0484aa54f81bc7c61701a7801dc86ef76363e5f909255c40ca9d20bfa0603454",
+    "P13_master_kappa2.json": "e82b4975ccc20b6423ab0b2ce098ff91681e1e33daa74016913ee2560cb07418",
+    "P13_ch_source_audit.json": "b8a5a2b2ee13b7cd9264fec7de6f7246bb0e129b9d4d96a5d218545670c7212c",
+    "P14_quantum_object.json": "d1edb02102eaa396e7dedc82b8dbca6ffb28c67b280b62c93639c611b7a4fde2",
+    "P14_prescription_D11_matching.json": "93889d4304b5a01f4ecfe00e5858a6ff99aa97ba1bb41262e3b8a306186cad45",
+    "P14_counterterm_domain.json": "e6431c0ab8c301beba0c80546e49e10970438b3e3893735acfff7cd125001215",
+    "P14_amplitude_rules.json": "fbd79f7a506ef6d3ac2f1f5c99890126b234cb2f7c2f281d76f369c7ac33621b"
+  },
+  "publication": "accepted"
+}

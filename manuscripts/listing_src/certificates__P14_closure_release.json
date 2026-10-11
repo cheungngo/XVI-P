@@ -1,0 +1,40 @@
+{
+  "landmark": "XVI-P",
+  "revision": "p14r",
+  "P5_entry_earned": true,
+  "P5_entry_flags": {
+    "quantum_action_defined": true,
+    "quantum_prescription_defined": true,
+    "D11_matching_defined": true,
+    "counterterm_domain_defined": true,
+    "amplitude_rules_verified": true
+  },
+  "P3_P4_frozen_as_P5_inputs": true,
+  "P5_entry_dependency": "P.5 entry is stated against the P.3/P.4 freeze: P3_P4_frozen_as_P5_inputs = True (p1
+  +> 3 independent rebuild passed, bound to the p13 tree; the p13 independent rebuild ran on the SAME box (sha
+  +> red kernel, TeX Live, poppler) in a fresh venv from the source-only zip; it was NOT run on a second machi
+  +> ne)",
+  "release_claim_accepted": true,
+  "P5_entry_qualification": "P.5 entry = the contract is fixed, nothing is evaluated. Qualifications (p14r): t
+  +> he DRED prescription is operational at the level of index algebra, lifting, ghat-projected tensor reducti
+  +> on and the order contraction -> Laurent (tested on generic placeholders and applied to the lifted exporte
+  +> d integrands), but no scalar integral is evaluated and the scaleless-integral rules are not applied; D11 
+  +> M3 is conditional on M2 and its degree-4 form on the imposed normalization condition N4; the counterterm 
+  +> count 8 is a count of candidate directions modulo the computed exact equivalences, before the identity co
+  +> nstraints (D cap ker sigma_0 not computed); D11_matching_verified = false; D12 Missing.",
+  "classical_readiness_for_ch_identity": true,
+  "scope": "P.5 entry: the quantum object, ONE prescription with the D11 matching note, the one-loop counterte
+  +> rm domain and executable amplitude rules for the fixed one-loop kappa^2 ch identity on the S_inv baseline
+  +> ; integrands only; NO loop evaluation; NOT quantum inputs, NOT the projected identity, NOT bulk restorati
+  +> on, NOT the prepared S_D, NOT the insertion",
+  "quantum_inputs_evaluated": "not_earned",
+  "projected_defect_computed": "not_earned",
+  "projected_identity_verified": "not_earned",
+  "projected_restoration_verified": "not_earned",
+  "bulk_symmetry_restored": false,
+  "D11_matching_verified": false,
+  "D12_status": "Missing",
+  "O1_closure": "NOT_CLOSED",
+  "release_certificate": "certificates/P14_release.json",
+  "hashes_of_release_files": "external manifest only (RELEASE_MANIFEST_EXTERNAL.txt)"
+}
