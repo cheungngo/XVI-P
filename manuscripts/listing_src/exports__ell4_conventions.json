@@ -1,0 +1,17 @@
+{
+  "revision": "p13",
+  "eta": "diag(+,-,-,-)",
+  "q": "eta + eps H, eps = kappa, H = h (lowered, symmetric); affine parametrisation",
+  "S_EH": "-(2/kappa^2) int sqrt(-q) R",
+  "density": "L_GG = sqrt(-g) g^{mn}(G^a_{mb} G^b_{na} - G^a_{mn} G^b_{ab})",
+  "boundary_identity": "sqrt(-g) R - L_GG = - d_mu B^mu,  B^mu = sqrt(-g)(g^{mu nu} G^l_{nu l} - g^{l nu} G^mu
+  +> _{l nu})",
+  "ell_k": "-2 [eps^k] L_GG ; S_EH = sum_k kappa^{k-2} int ell_k (integrated, compact support)",
+  "IBP": "total derivatives dropped only inside the integrated action (orientation of the dropped divergence i
+  +> rrelevant)",
+  "truncation": "O(eps^4) inclusive",
+  "jets": "H{m}{n} = h_mn (m<=n), dH{m}{n}_{r} = d_r h_mn",
+  "a_ghost": "1/2",
+  "polarization": "V4[h1..h4] = [t1 t2 t3 t4] ell_4(sum t_i h_i) = D^4 ell_4(0)[h1..h4] (unnormalised); normal
+  +> ised symmetric form = V4/4!; Feynman vertex i kappa^2 V4; D02 graph symmetry factor 1/2"
+}

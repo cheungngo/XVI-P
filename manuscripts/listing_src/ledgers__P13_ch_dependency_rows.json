@@ -1,0 +1,79 @@
+{
+  "revision": "p13",
+  "rows": [
+    {
+      "id": "(S0,Gamma1^[2]) s2 K:K.c",
+      "bracket": "(S0, Gamma1^[2])",
+      "summand": 2,
+      "S_monomial": "K.c",
+      "differentiated": "K",
+      "Gamma1_pattern": "h^2",
+      "Gamma1_order": "kappa^2",
+      "graphs": ["D01_hh_bubble_cubic", "D02_hh_tadpole_quartic", "D03_hh_ghost_loop", "D11_hh_scalar_loop", "
+  +> D12_hh_scalar_tadpole"],
+      "status": "surviving_unevaluated",
+      "reason": "surviving: one-loop graphs exist; coefficient not evaluated in this release"
+    },
+    {
+      "id": "(S0,Gamma1^[2]) s1 b:b.h",
+      "bracket": "(S0, Gamma1^[2])",
+      "summand": 1,
+      "S_monomial": "b.h",
+      "differentiated": "b",
+      "Gamma1_pattern": "bs.c",
+      "Gamma1_order": "kappa^2",
+      "graphs": [],
+      "status": "derived_zero",
+      "reason": "derived zero: Gamma1 cannot depend on bs (no S_Psi vertex carries it with two quantum legs)"
+    },
+    {
+      "id": "(S0,Gamma1^[2]) s1 cb:c.cb",
+      "bracket": "(S0, Gamma1^[2])",
+      "summand": 1,
+      "S_monomial": "c.cb",
+      "differentiated": "cb",
+      "Gamma1_pattern": "cbs.h",
+      "Gamma1_order": "kappa^2",
+      "graphs": [],
+      "status": "derived_zero",
+      "reason": "derived zero: Gamma1 cannot depend on cbs (no S_Psi vertex carries it with two quantum legs)"
+    },
+    {
+      "id": "(S0,Gamma1^[2]) s1 h:h^2",
+      "bracket": "(S0, Gamma1^[2])",
+      "summand": 1,
+      "S_monomial": "h^2",
+      "differentiated": "h",
+      "Gamma1_pattern": "K.c",
+      "Gamma1_order": "kappa^2",
+      "graphs": ["D13_Kc_ghost_graviton_loop"],
+      "status": "surviving_unevaluated",
+      "reason": "surviving: one-loop graphs exist; coefficient not evaluated in this release"
+    },
+    {
+      "id": "(S1,Gamma1^[1]) s2 K:K.c.h",
+      "bracket": "(S1, Gamma1^[1])",
+      "summand": 2,
+      "S_monomial": "K.c.h",
+      "differentiated": "K",
+      "Gamma1_pattern": "h",
+      "Gamma1_order": "kappa^1",
+      "graphs": ["D14a_h_onepoint_grav_tadpole", "D14b_h_onepoint_ghost_tadpole", "D14c_h_onepoint_scalar_tadp
+  +> ole"],
+      "status": "surviving_unevaluated",
+      "reason": "surviving: one-loop graphs exist; coefficient not evaluated in this release"
+    },
+    {
+      "id": "(S1,Gamma1^[1]) s1 cb:c.cb.h",
+      "bracket": "(S1, Gamma1^[1])",
+      "summand": 1,
+      "S_monomial": "c.cb.h",
+      "differentiated": "cb",
+      "Gamma1_pattern": "cbs",
+      "Gamma1_order": "kappa^1",
+      "graphs": [],
+      "status": "derived_zero",
+      "reason": "derived zero: Gamma1 cannot depend on cbs (no S_Psi vertex carries it with two quantum legs)"
+    }
+  ]
+}
